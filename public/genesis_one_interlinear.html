@@ -1,3 +1,4 @@
+<!-- From https://gemini.google.com/app/7e98c63d5cfae0cd -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,7 +94,7 @@
             top: 0;
             right: 0;
             width: 90%;
-            max-width: 400px;
+            max-width: 600px; /* Increased drawer width */
             height: 100%;
             background-color: white;
             box-shadow: -2px 0 8px rgba(0,0,0,0.15);
@@ -105,6 +106,13 @@
         }
         #drawer.active {
             transform: translateX(0);
+        }
+        .occurrences-grid {
+            display: grid;
+            grid-template-columns: auto auto 1fr;
+            gap: 0.25rem 1rem;
+            max-height: 40vh;
+            overflow-y: auto;
         }
     </style>
 </head>
@@ -118,7 +126,7 @@
 
         <main class="grid grid-cols-1 gap-6">
             <!-- Pre-creation State -->
-            <div class="card">
+            <div id="day0" class="card">
                 <h2 class="card-title">Pre-creation State</h2>
                 <div class="interlinear-grid">
                     <div class="english-line"><span class="h7225">In the beginning</span>, <span class="h1254">created</span> <span class="h430">God</span> <span class="h853">the</span> <span class="h8064">heavens(skies)</span> <span class="h853">and the</span> <span class="h776">earth(land)</span>,</div>
@@ -132,7 +140,7 @@
             <!-- Days 1-6 -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                  <!-- Day 1 -->
-                <div class="card">
+                <div id="day1" class="card">
                     <h2 class="card-title">Day 1: Environment = Heavens (skies)</h2>
                     <div class="interlinear-grid">
                         <div class="english-line">and <span class="h559 repeated-said">God said</span> (1),</div>
@@ -155,7 +163,7 @@
                     </div>
                 </div>
                  <!-- Day 4 -->
-                <div class="card">
+                <div id="day4" class="card">
                     <h2 class="card-title">Day 4: Inhabitants = Heavens</h2>
                     <div class="interlinear-grid">
                         <div class="english-line">and <span class="h559 repeated-said">God said</span> (5),</div>
@@ -183,7 +191,7 @@
                         <div class="hebrew-line"><span class="h5414">וַיִּתֵּ֥ן</span> <span class="h853">אֹתָ֛ם</span> <span class="h430">אֱלֹהִ֖ים</span> <span class="h7549">בִּרְקִ֣יעַ</span> <span class="h8064">הַשָּׁמָ֑יִם</span></div>
                         
                         <div class="english-line">to <span class="h215">give light</span> on <span class="h776">the land</span>, and <span class="h4910">to rule</span> the <span class="h3117">day</span> and the <span class="h3915">night</span>,</div>
-                        <div class="hebrew-line"><span class="h215">לְהָאִ֖יר</span> <span class="h5921">עַל</span> <span class="h776">הָאָֽרֶץ׃</span> <span class="h4910">וְלִמְשֹׁל֙</span> <span class="h3117">בַּיּ֣וֹם</span> <span class="h3915">וּבַלַּ֔יְלָה</span></div>
+                        <div class="hebrew-line"><span class="h215">לְהָאִ֖יר</span> <span class="h5921">עַל</span> <span class="h776">הָאָֽרֶץ׃</span> <span class="h4910">וְלִמְשֹׁל֙</span> <span class="h3117">בַּיּ֣وֹם</span> <span class="h3915">וּבַלַּ֔יְלָה</span></div>
 
                         <div class="english-line">and <span class="h914">to separate</span> the <span class="h216">light</span> from the <span class="h2822">darkness</span>.;</div>
                         <div class="hebrew-line"><span class="h914">וּֽלֲהַבְדִּ֔יל</span> <span class="h996">בֵּ֥ין</span> <span class="h216">הָא֖וֹר</span> <span class="h996">וּבֵ֣ין</span> <span class="h2822">הַחֹ֑שֶׁךְ</span></div>
@@ -196,14 +204,14 @@
                     </div>
                 </div>
                  <!-- Day 2 -->
-                <div class="card">
+                <div id="day2" class="card">
                     <h2 class="card-title">Day 2: Environment = Splitting the Waters</h2>
                     <div class="interlinear-grid">
                         <div class="english-line">and <span class="h559 repeated-said">God said</span> (2),</div>
                         <div class="hebrew-line"><span class="h559 repeated-said">וַיֹּ֣אמֶר</span> <span class="h430 repeated-said">אֱלֹהִ֔ים</span></div>
                         
                         <div class="english-line">“<span class="h1961 repeated-let">Let there be</span> a <span class="h7549">dome</span> <span class="h8432">in the middle of</span> the <span class="h4325">waters</span>,</div>
-                        <div class="hebrew-line"><span class="h1961 repeated-let">יְהִ֥י</span> <span class="h7549">רָקִ֖יעַ</span> <span class="h8432">בְּת֣וֹךְ</span> <span class="h4325">לָמָֽיִם׃</span></div>
+                        <div class="hebrew-line"><span class="h1961 repeated-let">יְהִ֥י</span> <span class="h7549">רָקִ֖יעַ</span> <span class="h8432">בְּת֣وֹךְ</span> <span class="h4325">לָמָֽיִם׃</span></div>
 
                         <div class="english-line">and <span class="h1961">let it</span> <span class="h914">separate</span> the <span class="h4325">waters</span> <span class="h996">from</span> the <span class="h4325">waters</span>.”</div>
                         <div class="hebrew-line"><span class="h1961">וִיהִ֣י</span> <span class="h914">מַבְדִּ֔יל</span> <span class="h996">בֵּ֥ין</span> <span class="h4325">לָמָֽיִם׃</span> <span class="h4325">לָמָֽיִם׃</span></div>
@@ -225,14 +233,14 @@
                     </div>
                 </div>
                  <!-- Day 5 -->
-                <div class="card">
+                <div id="day5" class="card">
                     <h2 class="card-title">Day 5: Inhabitants = Waters & Skies</h2>
                     <div class="interlinear-grid">
                         <div class="english-line">and <span class="h559 repeated-said">God said</span> (6),</div>
                         <div class="hebrew-line"><span class="h559 repeated-said">וַיֹּ֣אמֶר</span> <span class="h430 repeated-said">אֱלֹהִ֔ים</span></div>
                         
                         <div class="english-line">“<span class="h8317 repeated-let">Let the waters swarm</span> with a <span class="h8318">swarm of</span> <span class="h2416">living</span> <span class="h5315">creatures</span>, and let <span class="h5775">birds</span> <span class="h5774">fly</span> <span class="h5921">above</span> <span class="h776">the land</span></div>
-                        <div class="hebrew-line"><span class="h8317 repeated-let">יִשְׁרְצ֣וּ</span> <span class="h4325">הַמַּ֔יִם</span> <span class="h8318">שֶׁ֖רֶץ</span> <span class="h5315">נֶ֣פֶשׁ</span> <span class="h2416">חַיָּ֑ה</span> <span class="h5775">וְעוֹף֙</span> <span class="h5774">יְעוֹפֵ֣ף</span> <span class="h5921">עַל</span> <span class="h776">הָאָ֔רֶץ</span></div>
+                        <div class="hebrew-line"><span class="h8317 repeated-let">יִשְׁרְצ֣וּ</span> <span class="h4325">הַמַּ֔יִם</span> <span class="h8318">שֶׁ֖רֶץ</span> <span class="h5315">נֶ֣פֶשׁ</span> <span class="h2416">חַיָּ֑ה</span> <span class="h5775">וְעوֹף֙</span> <span class="h5774">יְעوֹפֵ֣ף</span> <span class="h5921">עַל</span> <span class="h776">הָאָ֔רֶץ</span></div>
 
                         <div class="english-line"><span class="h5921">against</span> <span class="h6440">the face of the</span> <span class="h7549">dome of the</span> <span class="h8064">skies</span>”</div>
                         <div class="hebrew-line"><span class="h5921">עַל</span> <span class="h6440">פְּנֵ֖י</span> <span class="h7549">רְקִ֥יעַ</span> <span class="h8064">הַשָּׁמָֽיִם׃</span></div>
@@ -253,21 +261,21 @@
                         <div class="hebrew-line"><span class="h1288">וַיְבָ֧רֶךְ</span> <span class="h853">אֹתָ֛ם</span> <span class="h430">אֱלֹהִ֖ים</span> <span class="h559">לֵאמֹ֑ר</span> <span class="h6509">פְּר֣וּ</span> <span class="h7235">יִ֥רֶב</span></div>
 
                         <div class="english-line">and <span class="h4390">fill</span> the <span class="h4325">waters</span> in the <span class="h3220">seas</span>, and let <span class="h5775">birds</span> <span class="h7235">multiply</span> on the <span class="h776">land</span>.”</div>
-                        <div class="hebrew-line"><span class="h4390">וּמִלְא֤וּ</span> <span class="h853">אֶת</span> <span class="h4325">הַמַּ֙יִם֙</span> <span class="h3220">בַּיַּמִּ֔ים</span> <span class="h5775">וְהָע֖וֹף</span> <span class="h7235">יִ֥רֶב</span> <span class="h776">בָּאָֽרֶץ׃</span></div>
+                        <div class="hebrew-line"><span class="h4390">וּמִלְא֤וּ</span> <span class="h853">אֶת</span> <span class="h4325">הַמַּ֙יִם֙</span> <span class="h3220">בַּיַּמִּ֔ים</span> <span class="h5775">וְהָע֖وֹף</span> <span class="h7235">יִ֥רֶב</span> <span class="h776">בָּאָֽרֶץ׃</span></div>
                         
                         <div class="english-line">and <span class="h1961">there was</span> <span class="h6153">evening</span> and <span class="h1961">there was</span> <span class="h1242">morning</span>, a <span class="h2549">fifth</span> <span class="h3117">day</span>.</div>
                         <div class="hebrew-line"><span class="h1961">וַֽיְהִי</span> <span class="h6153">עֶ֥רֶב</span> <span class="h1961">וַֽיְהִי</span> <span class="h1242">בֹ֖קֶר</span> <span class="h3117">י֥וֹם</span> <span class="h2549">חֲמִישִֽׁי׃</span></div>
                     </div>
                 </div>
                  <!-- Day 3 -->
-                <div class="card">
+                <div id="day3" class="card">
                      <h2 class="card-title">Day 3: Environment = Land & Vegetation</h2>
                      <div class="interlinear-grid">
                         <div class="english-line">and <span class="h559 repeated-said">God said</span> (3),</div>
                         <div class="hebrew-line"><span class="h559 repeated-said">וַיֹּ֣אמֶר</span> <span class="h430 repeated-said">אֱלֹהִ֗ים</span></div>
 
                         <div class="english-line">“<span class="h6960 repeated-let">Let the</span> <span class="h4325">waters</span> <span class="h8478">below</span> <span class="h8064">the skies</span> <span class="h6960 repeated-let">be gathered</span> into <span class="h259">one</span> <span class="h4725">place</span>,</div>
-                        <div class="hebrew-line"><span class="h6960 repeated-let">יִקָּו֨וּ</span> <span class="h4325">הַמַּ֜יִם</span> <span class="h8478">מִתַּ֤חַת</span> <span class="h8064">הַשָּׁמַ֙יִם֙</span> <span class="h413">אֶל</span> <span class="h4725">מָק֣וֹם</span> <span class="h259">אֶחָ֔ד</span></div>
+                        <div class="hebrew-line"><span class="h6960 repeated-let">יִקָּו֨וּ</span> <span class="h4325">הַמַּ֜יִם</span> <span class="h8478">מִתַּ֤חַת</span> <span class="h8064">הַשָּׁמַ֙יִם֙</span> <span class="h413">אֶל</span> <span class="h4725">מָק֣وֹם</span> <span class="h259">אֶחָ֔ד</span></div>
 
                         <div class="english-line">and <span class="h7200">let the</span> <span class="h3004">dry ground</span> <span class="h7200">be seen</span>”; and <span class="h1961">it was</span> <span class="h3651">so</span>.</div>
                         <div class="hebrew-line"><span class="h7200">וְתֵרָאֶ֖ה</span> <span class="h3004">הַיַּבָּשָׁ֑ה</span> <span class="h1961">וַֽיְהִי</span>-<span class="h3651">כֵֽן׃</span></div>
@@ -304,7 +312,7 @@
                      </div>
                 </div>
                 <!-- Day 6 -->
-                <div class="card">
+                <div id="day6" class="card">
                     <h2 class="card-title">Day 6: Inhabitants = Land Animals & Humans</h2>
                     <div class="interlinear-grid">
                         <div class="english-line">and <span class="h559 repeated-said">God said</span> (7),</div>
@@ -347,10 +355,10 @@
                         <div class="hebrew-line"><span class="h1288">וַיְבָ֣רֶךְ</span> <span class="h853">אֹתָם֮</span> <span class="h430">אֱלֹהִ֗ים</span> <span class="h559 repeated-said">וַיֹּ֨אמֶר</span> <span class="h0">לָהֶ֜ם</span> <span class="h430 repeated-said">אֱלֹהִ֗ים</span></div>
 
                         <div class="english-line">“<span class="h6509">Be fruitful</span> and <span class="h7235">multiply</span>, and <span class="h4390">fill</span> the <span class="h776">land</span>, and <span class="h3533">subdue</span> it;</div>
-                        <div class="hebrew-line"><span class="h6509">פְּר֥וּ</span> <span class="h7235">וּרְב֛וּ</span> <span class="h4390">וּמִלְא֥וּ</span> <span class="h853">אֶת</span> <span class="h776">הָאָֽרֶץ׃</span> <span class="h3533">וְכִבְשֻׁ֑הָ</span></div>
+                        <div class="hebrew-line"><span class="h6509">פְּר֥וּ</span> <span class="h7235">וּרְב֛وּ</span> <span class="h4390">וּמִלְא֥وּ</span> <span class="h853">אֶת</span> <span class="h776">הָאָֽרֶץ׃</span> <span class="h3533">וְכִבְשֻׁ֑הָ</span></div>
                         
                         <div class="english-line">and <span class="h7287">rule</span> over the <span class="h1710">fish of the</span> <span class="h3220">sea</span> and over the <span class="h5775">birds of the</span> <span class="h8064">sky</span></div>
-                        <div class="hebrew-line"><span class="h7287">וּרְד֞וּ</span> <span class="h1710">בִּדְגַ֤ת</span> <span class="h3220">הַיָּם֙</span> <span class="h5775">וּבְע֣وֹף</span> <span class="h8064">הַשָּׁמַ֔יִם</span></div>
+                        <div class="hebrew-line"><span class="h7287">וּרְד֞وּ</span> <span class="h1710">בִּדְגַ֤ת</span> <span class="h3220">הַיָּם֙</span> <span class="h5775">וּבְע֣وֹף</span> <span class="h8064">הַשָּׁמַ֔יִם</span></div>
                         
                         <div class="english-line">and over <span class="h2416">living creatures</span> that <span class="h7430">creep</span> on the <span class="h776">land</span>.”</div>
                         <div class="hebrew-line"><span class="h3605">וּבְכָל</span> <span class="h2416">חַיָּ֖ה</span> <span class="h7430">הָֽרֹמֶ֥שֶׂת</span> <span class="h5921">עַל</span> <span class="h776">הָאָֽרֶץ׃</span></div>
@@ -365,13 +373,13 @@
                         <div class="hebrew-line"><span class="h834">אֲשֶׁר֙</span> <span class="h5921">עַל</span> <span class="h6440">פְּנֵ֣י</span> <span class="h3605">כָל</span> <span class="h776">הָאָ֔רֶץ</span></div>
 
                         <div class="english-line">and <span class="h3605">every</span> <span class="h6086">tree</span> which has <span class="h6529">fruit</span> <span class="h6086">producing</span> <span class="h2233">seed</span>; it shall be <span class="h402">food</span> for y’all;</div>
-                        <div class="hebrew-line"><span class="h853">וְאֶת</span> <span class="h3605">כָּל</span> <span class="h6086">הָעֵ֖ץ</span> <span class="h834">אֲשֶׁר</span> <span class="h0">בּ֥וֹ</span> <span class="h6529">פְרִי</span> <span class="h6086">עֵ֖ץ</span> <span class="h2232">זֹרֵ֣עַ</span> <span class="h2233">זָ֑רַע</span> <span class="h0">לָכֶ֥ם</span> <span class="h1961">יִֽהְיֶ֖ה</span> <span class="h402">לְאָכְלָֽה׃</span></div>
+                        <div class="hebrew-line"><span class="h853">וְאֶת</span> <span class="h3605">כָּל</span> <span class="h6086">הָעֵ֖ץ</span> <span class="h834">אֲשֶׁר</span> <span class="h0">בּ֥وֹ</span> <span class="h6529">פְרִי</span> <span class="h6086">עֵ֖ץ</span> <span class="h2232">זֹרֵ֣עַ</span> <span class="h2233">זָ֑רַע</span> <span class="h0">לָכֶ֥ם</span> <span class="h1961">יִֽהְיֶ֖ה</span> <span class="h402">לְאָכְלָֽה׃</span></div>
 
                         <div class="english-line">and for <span class="h3605">every</span> <span class="h2416">beast</span> of the <span class="h776">land</span>, and for <span class="h3605">every</span> <span class="h5775">bird</span> of the <span class="h8064">sky</span>,</div>
                         <div class="hebrew-line"><span class="h3605">וּֽלְכָל</span> <span class="h2416">חַיַּ֔ה</span> <span class="h776">הָאָ֗רֶץ</span> <span class="h3605">וּלְכָל</span> <span class="h5775">ע֨وֹף</span> <span class="h8064">הַשָּׁמַ֜יִם</span></div>
                         
                         <div class="english-line">and for <span class="h3605">every</span> thing that <span class="h7430">moves</span> on the <span class="h776">land</span> which has <span class="h2416">living</span> <span class="h5315">being</span> in it,</div>
-                        <div class="hebrew-line"><span class="h3605">וּלְכֹ֣ל׀</span> <span class="h7430">רוֹמֵ֣שׂ</span> <span class="h5921">עַל</span> <span class="h776">הָאָ֗רֶץ</span> <span class="h834">אֲשֶׁר</span> <span class="h0">בּוֹ֙</span> <span class="h5315">נֶ֣פֶשׁ</span> <span class="h2416">חַיָּ֔ה</span></div>
+                        <div class="hebrew-line"><span class="h3605">וּלְכֹ֣ל׀</span> <span class="h7430">רוֹמֵ֣שׂ</span> <span class="h5921">עַל</span> <span class="h776">הָאָ֗רֶץ</span> <span class="h834">אֲשֶׁר</span> <span class="h0">בּوֹ֙</span> <span class="h5315">נֶ֣פֶשׁ</span> <span class="h2416">חַיָּ֔ה</span></div>
 
                         <div class="english-line"><span class="h3605">every</span> <span class="h3418">green</span> <span class="h6212">plant</span> is for <span class="h402">food</span>” and <span class="h1961">it was</span> <span class="h3651">so</span>.</div>
                         <div class="hebrew-line"><span class="h853">אֶת</span> <span class="h3605">כָּל</span> <span class="h3418">יֶ֥רֶק</span> <span class="h6212">עֵ֖שֶׂב</span> <span class="h402">לְאָכְלָ֑ה</span> <span class="h1961">וַֽיְהִי</span>-<span class="h3651">כֵֽן׃</span></div>
@@ -386,23 +394,23 @@
             </div>
 
             <!-- Day 7 -->
-            <div class="card">
+            <div id="day7" class="card">
                 <h2 class="card-title">Day 7: Completion & Rest</h2>
                 <div class="interlinear-grid">
                      <div class="english-line">and <span class="h3615">they were completed</span>, the <span class="h8064">skies</span> and the <span class="h776">land</span> and <span class="h3605">all their</span> <span class="h6635">hosts</span>,</div>
                      <div class="hebrew-line"><span class="h3615">וַיְכֻלּ֛וּ</span> <span class="h8064">הַשָּׁמַ֥יִם</span> <span class="h776">וְהָאָ֖רֶץ</span> <span class="h3605">וְכָל</span> <span class="h6635">צְבָאָֽם׃</span></div>
 
                      <div class="english-line">and <span class="h430">God</span> <span class="h3615">completed</span> on the <span class="h7637">seventh</span> <span class="h3117">day</span> his <span class="h4399">work</span> <span class="h834">which</span> he had <span class="h6213">made</span></div>
-                     <div class="hebrew-line"><span class="h3615">וַיְכַ֤ל</span> <span class="h430">אֱלֹהִים֙</span> <span class="h3117">בַּיּ֣וֹם</span> <span class="h7637">הַשְּׁבִיעִ֔י</span> <span class="h4399">מְלַאכְתּ֖וֹ</span> <span class="h834">אֲשֶׁ֣ר</span> <span class="h6213">עָשָֽׂה׃</span></div>
+                     <div class="hebrew-line"><span class="h3615">וַיְכַ֤ל</span> <span class="h430">אֱלֹהִים֙</span> <span class="h3117">בַּיּ֣وֹם</span> <span class="h7637">הַשְּׁבִיעִ֔י</span> <span class="h4399">מְלַאכְתּ֖וֹ</span> <span class="h834">אֲשֶׁ֣ר</span> <span class="h6213">עָשָֽׂה׃</span></div>
                      
                      <div class="english-line">and he <span class="h7673">rested</span> on the <span class="h7637">seventh</span> <span class="h3117">day</span> from <span class="h3605">all his</span> <span class="h4399">work</span> <span class="h834">which</span> he had <span class="h6213">made</span></div>
-                     <div class="hebrew-line"><span class="h7673">וַיִּשְׁבֹּת֙</span> <span class="h3117">בַּיּ֣וֹם</span> <span class="h7637">הַשְּׁבִיעִ֔י</span> <span class="h3605">מִכָּל</span> <span class="h4399">מְלַאכְתּ֖וֹ</span> <span class="h834">אֲשֶׁ֥ר</span> <span class="h6213">עָשָֽׂה׃</span></div>
+                     <div class="hebrew-line"><span class="h7673">וַיִּשְׁבֹּת֙</span> <span class="h3117">בַּיּ֣وֹם</span> <span class="h7637">הַשְּׁבִיעִ֔י</span> <span class="h3605">מִכָּל</span> <span class="h4399">מְלַאכְתּ֖وֹ</span> <span class="h834">אֲשֶׁ֥ר</span> <span class="h6213">עָשָֽׂה׃</span></div>
 
                      <div class="english-line">and <span class="h430">God</span> <span class="h1288">blessed</span> the <span class="h7637">seventh</span> <span class="h3117">day</span> and he <span class="h6942">set it apart as holy</span>,</div>
                      <div class="hebrew-line"><span class="h1288">וַיְבָ֤רֶךְ</span> <span class="h430">אֱלֹהִ֖ים</span> <span class="h853">אֶת</span> <span class="h3117">י֣وֹם</span> <span class="h7637">הַשְּׁבִיעִ֔י</span> <span class="h6942">וַיְקַדֵּ֖שׁ</span> <span class="h853">אֹת֑وֹ</span></div>
                      
                      <div class="english-line">because <span class="h3588">on it</span> he <span class="h7673">rested</span> from <span class="h3605">all his</span> <span class="h4399">work</span> <span class="h834">which</span> <span class="h430">God</span> <span class="h1254">created</span> to <span class="h6213">make</span>.</div>
-                     <div class="hebrew-line"><span class="h3588">כִּ֣י</span> <span class="h0">ב֤وֹ</span> <span class="h7673">שָׁבַת֙</span> <span class="h3605">מִכָּל</span> <span class="h4399">מְלַאכְתּ֔וֹ</span> <span class="h834">אֲשֶׁר</span> <span class="h1254">בָּרָ֥א</span> <span class="h430">אֱלֹהִ֖ים</span> <span class="h6213">לַֽעֲשׂוֹת׃</span></div>
+                     <div class="hebrew-line"><span class="h3588">כִּ֣י</span> <span class="h0">ב֤وֹ</span> <span class="h7673">שָׁבַת֙</span> <span class="h3605">מִכָּל</span> <span class="h4399">מְלַאכְתּ֔وֹ</span> <span class="h834">אֲשֶׁר</span> <span class="h1254">בָּרָ֥א</span> <span class="h430">אֱלֹהִ֖ים</span> <span class="h6213">לַֽעֲשׂוֹת׃</span></div>
                 </div>
             </div>
         </main>
@@ -460,11 +468,30 @@
                     drawerContent.innerHTML = `<p>No data found for ${strongsClass}.</p>`;
                 } else {
                     // Collect all lines where this word appears
-                    let occurrences = '';
+                    let occurrencesHTML = '';
+                    let occurrenceIndex = 1;
                     const allLines = document.querySelectorAll('.english-line');
+                    
+                    // Add header for the new grid
+                    occurrencesHTML += `
+                        <div class="font-bold text-gray-500 text-right pr-2">#</div>
+                        <div class="font-bold text-gray-500">Day</div>
+                        <div class="font-bold text-gray-500">Line</div>
+                    `;
+
                     allLines.forEach(line => {
                         if (line.querySelector(`.${strongsClass}`)) {
-                           occurrences += `<li class="border-l-2 border-gray-200 pl-2 mb-2">${line.innerText}</li>`;
+                           const card = line.closest('.card');
+                           const dayId = card ? card.id : ''; // e.g., 'day1'
+                           const dayNumber = dayId.replace('day', '');
+                           const dayText = `Day ${dayNumber}`;
+
+                           occurrencesHTML += `
+                                <div class="text-right pr-2 text-gray-500">${occurrenceIndex}</div>
+                                <div>${dayText}</div>
+                                <div>${line.innerText}</div>
+                            `;
+                           occurrenceIndex++;
                         }
                     });
 
@@ -476,7 +503,7 @@
                         <p class="text-sm text-gray-500 mb-4">(Strongs: ${wordData.strongs})</p>
                         <p class="italic mb-4">"${wordData.data.def.short || 'No definition available.'}"</p>
                         <h4 class="font-bold border-b pb-1 mb-2">Occurrences in this text:</h4>
-                        <ul class="text-sm list-none overflow-y-auto" style="max-height: 40vh;">${occurrences}</ul>
+                        <div class="occurrences-grid text-sm mt-2">${occurrencesHTML}</div>
                     `;
                      // Re-add event listener for the new close button
                     document.getElementById('close-drawer').addEventListener('click', closeDrawer);
