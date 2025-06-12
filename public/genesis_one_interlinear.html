@@ -13,11 +13,6 @@
             font-family: 'Inter', sans-serif;
             background-color: #f3f4f6;
         }
-        .hebrew {
-            font-family: 'Noto Sans Hebrew', sans-serif;
-            direction: rtl;
-            text-align: right;
-        }
         .card {
             background-color: white;
             border-radius: 0.75rem;
@@ -34,17 +29,82 @@
             padding-bottom: 0.5rem;
             margin-bottom: 1rem;
         }
-        /* Style for highlighted words */
+        
+        /* --- Highlighting Styles --- */
+        .repeated-said { background-color: rgba(253, 230, 138, 0.5); } /* Yellow */
+        .repeated-let { background-color: rgba(251, 191, 143, 0.5); } /* Orange */
+        .repeated-good { background-color: rgba(167, 243, 208, 0.6); } /* Green */
+
         .highlight {
-            background-color: #ffec80; /* A pleasant yellow highlight */
+            background-color: #facc15; /* A strong, solid yellow */
             cursor: pointer;
             transition: background-color 0.2s ease-in-out;
+            box-shadow: 0 0 5px rgba(0,0,0,0.3);
         }
-        /* Ensure spans are inline but can have padding/margin */
+        
         [class*="h"] {
             display: inline-block;
             padding: 0 2px;
             border-radius: 3px;
+            transition: background-color 0.2s ease-in-out;
+            cursor: pointer;
+        }
+
+        /* --- Interlinear Grid Layout --- */
+        .interlinear-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 2 equal columns for English and Hebrew */
+            gap: 0.5rem 1.5rem; /* Vertical and horizontal gap */
+            align-items: start;
+        }
+
+        .hebrew-line {
+            font-family: 'Noto Sans Hebrew', sans-serif;
+            direction: rtl;
+            text-align: right;
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+        }
+
+        .english-line {
+            line-height: 1.75rem;
+        }
+
+        /* --- Drawer Styles --- */
+        #drawer-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 40;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        }
+        #drawer-backdrop.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #drawer {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 90%;
+            max-width: 400px;
+            height: 100%;
+            background-color: white;
+            box-shadow: -2px 0 8px rgba(0,0,0,0.15);
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+            z-index: 50;
+            overflow-y: auto;
+            padding: 1.5rem;
+        }
+        #drawer.active {
+            transform: translateX(0);
         }
     </style>
 </head>
@@ -60,19 +120,12 @@
             <!-- Pre-creation State -->
             <div class="card">
                 <h2 class="card-title">Pre-creation State</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <h3 class="font-semibold text-lg mb-2">Title</h3>
-                        <p><span class="h7225">In the beginning</span>, <span class="h1254">created</span> <span class="h430">God</span> <span class="h853">the</span> <span class="h8064">heavens(skies)</span> <span class="h853">and the</span> <span class="h776">earth(land)</span>,</p>
-                        <h3 class="font-semibold text-lg mt-4 mb-2">Prologue</h3>
-                        <p>now, <span class="h776">the land</span> <span class="h1961">was</span> <span class="h8414">wild and waste</span> and <span class="h922">darkness</span> <span class="h2822">was</span> <span class="h5921">over</span> <span class="h6440">the face of</span> <span class="h8415">the watery deep</span> but <span class="h7307">the breath/wind of</span> <span class="h430">God</span> <span class="h7363">was hovering</span> <span class="h5921">over</span> <span class="h6440">the face of</span> <span class="h4325">the waters</span></p>
-                    </div>
-                    <div class="hebrew">
-                        <h3 class="font-semibold text-lg mb-2">בְּרֵאשִׁ֖ית</h3>
-                        <p class="text-xl leading-loose">
-                           <span class="h7225">בְּרֵאשִׁ֖ית</span> <span class="h1254">בָּרָ֣א</span> <span class="h430">אֱלֹהִ֑ים</span> <span class="h853">וְאֵ֥ת</span> <span class="h8064">הַשָּׁמַ֖יִם</span> <span class="h853">וְאֵ֥ת</span> <span class="h776">הָאָֽרֶץ׃</span> <span class="h776">וְהָאָ֗רֶץ</span> <span class="h1961">הָיְתָ֥ה</span> <span class="h8414">תֹ֙הוּ֙</span> <span class="h922">וָבֹ֔הוּ</span> <span class="h2822">וְחֹ֖שֶׁךְ</span> <span class="h5921">עַל</span> <span class="h6440">פְּנֵ֥י</span> <span class="h8415">תְה֑וֹם</span> <span class="h7307">וְר֣וּחַ</span> <span class="h430">אֱלֹהִ֔ים</span> <span class="h7363">מְרַחֶ֖פֶת</span> <span class="h5921">עַל</span>-<span class="h6440">פְּנֵ֥י</span> <span class="h4325">הַמָּֽיִם׃</span>
-                        </p>
-                    </div>
+                <div class="interlinear-grid">
+                    <div class="english-line"><span class="h7225">In the beginning</span>, <span class="h1254">created</span> <span class="h430">God</span> <span class="h853">the</span> <span class="h8064">heavens(skies)</span> <span class="h853">and the</span> <span class="h776">earth(land)</span>,</div>
+                    <div class="hebrew-line"><span class="h7225">בְּרֵאשִׁ֖ית</span> <span class="h1254">בָּרָ֣א</span> <span class="h430">אֱלֹהִ֑ים</span> <span class="h853">וְאֵ֥ת</span> <span class="h8064">הַשָּׁמַ֖יִם</span> <span class="h853">וְאֵ֥ת</span> <span class="h776">הָאָֽרֶץ׃</span></div>
+                    
+                    <div class="english-line">now, <span class="h776">the land</span> <span class="h1961">was</span> <span class="h8414">wild and waste</span> and <span class="h922">darkness</span> <span class="h2822">was</span> <span class="h5921">over</span> <span class="h6440">the face of</span> <span class="h8415">the watery deep</span> but <span class="h7307">the breath/wind of</span> <span class="h430">God</span> <span class="h7363">was hovering</span> <span class="h5921">over</span> <span class="h6440">the face of</span> <span class="h4325">the waters</span></div>
+                    <div class="hebrew-line"><span class="h776">וְהָאָ֗רֶץ</span> <span class="h1961">הָיְתָ֥ה</span> <span class="h8414">תֹ֙הוּ֙</span> <span class="h922">וָבֹ֔הוּ</span> <span class="h2822">וְחֹ֖שֶׁךְ</span> <span class="h5921">עַל</span> <span class="h6440">פְּנֵ֥י</span> <span class="h8415">תְה֑וֹם</span> <span class="h7307">וְר֣וּחַ</span> <span class="h430">אֱלֹהִ֔ים</span> <span class="h7363">מְרַחֶ֖פֶת</span> <span class="h5921">עַל</span>-<span class="h6440">פְּנֵ֥י</span> <span class="h4325">הַמָּֽיִם׃</span></div>
                 </div>
             </div>
 
@@ -81,82 +134,253 @@
                  <!-- Day 1 -->
                 <div class="card">
                     <h2 class="card-title">Day 1: Environment = Heavens (skies)</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <p>and <span class="h559">God said</span> (1), “<span class="h1961">Let there be</span> <span class="h216">light</span>” and <span class="h1961">there was</span> <span class="h216">light</span>. and <span class="h430">God</span> <span class="h7200">saw</span> that the <span class="h216">light</span> <span class="h3588">was</span> <span class="h2896">good</span> (1); and <span class="h430">God</span> <span class="h914">separated</span> the <span class="h216">light</span> <span class="h996">from</span> the <span class="h2822">darkness</span>. and <span class="h430">God</span> <span class="h7121">called</span> the <span class="h216">light</span> “<span class="h3117">day</span>,” and the <span class="h2822">darkness</span> he <span class="h7121">called</span> “<span class="h3915">night</span>.” and <span class="h1961">there was</span> <span class="h6153">evening</span> and <span class="h1961">there was</span> <span class="h1242">morning</span>, <span class="h259">one</span> <span class="h3117">day</span>.</p>
-                        </div>
-                        <div class="hebrew">
-                            <h3 class="font-semibold text-lg mb-2">י֥וֹם אֶחָֽד</h3>
-                            <p class="text-xl leading-loose"><span class="h559">וַיֹּ֥אמֶר</span> <span class="h430">אֱלֹהִ֖ים</span> <span class="h1961">וַֽיְהִי</span> <span class="h216">אֽוֹר׃</span> <span class="h1961">וַֽיְהִי</span> <span class="h216">אֽוֹר׃</span> <span class="h7200">וַיַּ֧רְא</span> <span class="h430">אֱלֹהִ֔ים</span> <span class="h853">אֶת</span>-<span class="h216">הָא֖וֹר</span> <span class="h3588">כִּי</span>-<span class="h2896">ט֑וֹב</span> <span class="h914">וַיַּבְדֵּ֣ל</span> <span class="h430">אֱלֹהִ֔ים</span> <span class="h996">וּבֵ֥ין</span> <span class="h216">הָא֖וֹר</span> <span class="h996">וּבֵ֥ין</span> <span class="h2822">הַחֹֽשֶׁךְ׃</span> <span class="h7121">קָ֣רָא</span> <span class="h430">אֱלֹהִ֤ים׀</span> <span class="h216">לָאוֹר֙</span> <span class="h3117">י֥וֹם</span> <span class="h2822">וְלַחֹ֖שֶׁךְ</span> <span class="h7121">קָ֣רָא</span> <span class="h3915">לָ֑יְלָה</span> <span class="h1961">וַֽיְהִי</span>-<span class="h6153">עֶ֥רֶב</span> <span class="h1961">וַֽיְהִי</span>-<span class="h1242">בֹ֖קֶר</span> <span class="h3117">י֥וֹם</span> <span class="h259">אֶחָֽד׃</span></p>
-                        </div>
+                    <div class="interlinear-grid">
+                        <div class="english-line">and <span class="h559 repeated-said">God said</span> (1),</div>
+                        <div class="hebrew-line"><span class="h559 repeated-said">וַיֹּ֥אמֶר</span> <span class="h430 repeated-said">אֱלֹהִ֖ים</span></div>
+
+                        <div class="english-line">“<span class="h1961 repeated-let">Let there be</span> <span class="h216">light</span>” and <span class="h1961">there was</span> <span class="h216">light</span>.</div>
+                        <div class="hebrew-line"><span class="h1961 repeated-let">וַֽיְהִי</span> <span class="h216">אֽוֹר׃</span> <span class="h1961">וַֽיְהִי</span> <span class="h216">אֽوֹר׃</span></div>
+
+                        <div class="english-line">and <span class="h430 repeated-good">God</span> <span class="h7200 repeated-good">saw</span> that the <span class="h216">light</span> <span class="h3588 repeated-good">was</span> <span class="h2896 repeated-good">good</span> (1);</div>
+                        <div class="hebrew-line"><span class="h7200 repeated-good">וַיַּ֧רְא</span> <span class="h430 repeated-good">אֱלֹהִ֔ים</span> <span class="h853">אֶת</span>-<span class="h216">הָא֖וֹר</span> <span class="h3588 repeated-good">כִּי</span>-<span class="h2896 repeated-good">ט֑וֹב</span></div>
+
+                        <div class="english-line">and <span class="h430">God</span> <span class="h914">separated</span> the <span class="h216">light</span> <span class="h996">from</span> the <span class="h2822">darkness</span>.</div>
+                        <div class="hebrew-line"><span class="h914">וַיַּבְדֵּ֣ל</span> <span class="h430">אֱלֹהִ֔ים</span> <span class="h996">וּבֵ֥ין</span> <span class="h216">הָא֖וֹר</span> <span class="h996">וּבֵ֥ין</span> <span class="h2822">הַחֹֽשֶׁךְ׃</span></div>
+
+                        <div class="english-line">and <span class="h430">God</span> <span class="h7121">called</span> the <span class="h216">light</span> “<span class="h3117">day</span>,” and the <span class="h2822">darkness</span> he <span class="h7121">called</span> “<span class="h3915">night</span>.”</div>
+                        <div class="hebrew-line"><span class="h7121">קָ֣רָא</span> <span class="h430">אֱלֹהִ֤ים׀</span> <span class="h216">לָאוֹר֙</span> <span class="h3117">י֥וֹם</span> <span class="h2822">וְלַחֹ֖שֶׁךְ</span> <span class="h7121">קָ֣רָא</span> <span class="h3915">לָ֑יְלָה</span></div>
+
+                        <div class="english-line">and <span class="h1961">there was</span> <span class="h6153">evening</span> and <span class="h1961">there was</span> <span class="h1242">morning</span>, <span class="h259">one</span> <span class="h3117">day</span>.</div>
+                        <div class="hebrew-line"><span class="h1961">וַֽיְהִי</span>-<span class="h6153">עֶ֥רֶב</span> <span class="h1961">וַֽיְהִי</span>-<span class="h1242">בֹ֖קֶר</span> <span class="h3117">י֥وֹם</span> <span class="h259">אֶחָֽד׃</span></div>
                     </div>
                 </div>
                  <!-- Day 4 -->
                 <div class="card">
                     <h2 class="card-title">Day 4: Inhabitants = Heavens</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <p>and <span class="h559">God said</span> (5), “<span class="h1961">Let there be</span> <span class="h3974">lights</span> <span class="h7549">in the dome of</span> <span class="h8064">the skies</span> <span class="h914">to separate</span> the <span class="h3117">day</span> from the <span class="h3915">night</span>, and let them <span class="h1961">be</span> for <span class="h226">signs</span> and for <span class="h4150">sacred feasts</span> and for <span class="h3117">days</span> and <span class="h8141">years</span>; and let them <span class="h1961">be</span> for <span class="h3974">lights</span> <span class="h7549">in the dome of</span> <span class="h8064">the skies</span> <span class="h215">to give light</span> on <span class="h776">the land</span>.” and <span class="h1961">it was</span> <span class="h3651">so</span>. and <span class="h430">God</span> <span class="h6213">made</span> the <span class="h8147">two</span> <span class="h1419">great</span> <span class="h3974">lights</span>, the <span class="h1419">great</span> <span class="h3974">light</span> to <span class="h4475">rule</span> the <span class="h3117">day</span>, and the <span class="h6996">small</span> <span class="h3974">light</span> to <span class="h4475">rule</span> the <span class="h3915">night</span>; and also <span class="h853">the</span> <span class="h3556">stars</span>. and <span class="h430">God</span> <span class="h5414">placed</span> them <span class="h7549">in the dome of the</span> <span class="h8064">skies</span> <span class="h215">to give light</span> on <span class="h776">the land</span>, and <span class="h4910">to rule</span> the <span class="h3117">day</span> and the <span class="h3915">night</span>, and <span class="h914">to separate</span> the <span class="h216">light</span> from the <span class="h2822">darkness</span>.; and <span class="h1961">there was</span> <span class="h6153">evening</span> and <span class="h1961">there was</span> <span class="h1242">morning</span>, a <span class="h7243">fourth</span> <span class="h3117">day</span>.</p>
-                        </div>
-                        <div class="hebrew">
-                            <h3 class="font-semibold text-lg mb-2">י֥וֹם רְבִיעִֽי</h3>
-                            <p class="text-xl leading-loose"><span class="h559">וַיֹּ֣אמֶר</span> <span class="h430">אֱלֹהִ֗ים</span> <span class="h1961">יְהִ֤י</span> <span class="h3974">מְאֹרֹת֙</span> <span class="h7549">בִּרְקִ֣יעַ</span> <span class="h8064">הַשָּׁמַ֔יִם</span> <span class="h914">לְהַבְדִּ֕יל</span> <span class="h996">בֵּ֥ין</span> <span class="h3117">וּלְיָמִ֖ים</span> <span class="h996">וּבֵ֣ין</span> <span class="h3915">הַלָּ֑יְלָה</span> <span class="h1961">וְהָי֤וּ</span> <span class="h226">לְאֹתֹת֙</span> <span class="h4150">וּלְמ֣וֹעֲדִ֔ים</span> <span class="h3117">וּלְיָמִ֖ים</span> <span class="h8141">וְשָׁנִֽים׃</span> <span class="h1961">וְהָי֤וּ</span> <span class="h3974">לִמְאוֹרֹת֙</span> <span class="h7549">בִּרְקִ֣יעַ</span> <span class="h8064">הַשָּׁמַ֔יִם</span> <span class="h215">לְהָאִ֖יר</span> <span class="h5921">עַל</span> <span class="h776">הָאָ֑רֶץ</span> <span class="h1961">וַֽיְהִי</span> <span class="h3651">כֵֽן׃</span> <span class="h6213">וַיַּ֣עַשׂ</span> <span class="h430">אֱלֹהִ֔ים</span> <span class="h853">אֶת</span> <span class="h8147">שְׁנֵ֥י</span> <span class="h3974">הַמָּא֤וֹר</span> <span class="h1419">הַגָּדֹל֙</span> <span class="h853">אֶת</span> <span class="h3974">הַמָּא֤וֹר</span> <span class="h1419">הַגָּדֹל֙</span> <span class="h4475">לְמֶמְשֶׁ֣לֶת</span> <span class="h3117">הַיּ֔וֹם</span> <span class="h853">וְאֶת</span> <span class="h3974">הַמָּא֤וֹר</span> <span class="h6996">הַקָּטֹן֙</span> <span class="h4475">לְמֶמְשֶׁ֣לֶת</span> <span class="h3915">הַלַּ֔יְלָה</span> <span class="h853">וְאֵ֖ת</span> <span class="h3556">הַכּוֹכָבִֽים׃</span> <span class="h5414">וַיִּתֵּ֥ן</span> <span class="h853">אֹתָ֛ם</span> <span class="h430">אֱלֹהִ֖ים</span> <span class="h7549">בִּרְקִ֣יעַ</span> <span class="h8064">הַשָּׁמָ֑יִם</span> <span class="h215">לְהָאִ֖יר</span> <span class="h5921">עַל</span> <span class="h776">הָאָֽרֶץ׃</span> <span class="h4910">וְלִמְשֹׁל֙</span> <span class="h3117">בַּיּ֣וֹם</span> <span class="h3915">וּבַלַּ֔יְלָה</span> <span class="h914">וּֽלֲהַבְדִּ֔יל</span> <span class="h996">בֵּ֥ין</span> <span class="h216">הָא֖וֹר</span> <span class="h996">וּבֵ֣ין</span> <span class="h2822">הַחֹ֑שֶׁךְ</span> <span class="h7200">וַיַּ֥רְא</span> <span class="h430">אֱלֹהִ֖ים</span> <span class="h3588">כִּי</span> <span class="h2896">טֽוֹב׃</span> <span class="h1961">וַֽיְהִי</span> <span class="h6153">עֶ֥רֶב</span> <span class="h1961">וַֽיְהִי</span> <span class="h1242">בֹ֖קֶר</span> <span class="h3117">י֥וֹם</span> <span class="h7243">רְבִיעִֽי׃</span></p>
-                        </div>
+                    <div class="interlinear-grid">
+                        <div class="english-line">and <span class="h559 repeated-said">God said</span> (5),</div>
+                        <div class="hebrew-line"><span class="h559 repeated-said">וַיֹּ֣אמֶר</span> <span class="h430 repeated-said">אֱלֹהִ֗ים</span></div>
+
+                        <div class="english-line">“<span class="h1961 repeated-let">Let there be</span> <span class="h3974">lights</span> <span class="h7549">in the dome of</span> <span class="h8064">the skies</span></div>
+                        <div class="hebrew-line"><span class="h1961 repeated-let">יְהִ֤י</span> <span class="h3974">מְאֹרֹת֙</span> <span class="h7549">בִּרְקִ֣יעַ</span> <span class="h8064">הַשָּׁמַ֔יִם</span></div>
+                        
+                        <div class="english-line">to <span class="h914">separate</span> the <span class="h3117">day</span> from the <span class="h3915">night</span>, and let them <span class="h1961">be</span> for <span class="h226">signs</span></div>
+                        <div class="hebrew-line"><span class="h914">לְהַבְדִּ֕יל</span> <span class="h996">בֵּ֥ין</span> <span class="h3117">וּלְיָמִ֖ים</span> <span class="h996">וּבֵ֣ין</span> <span class="h3915">הַלָּ֑יְלָה</span> <span class="h1961">וְהָי֤וּ</span> <span class="h226">לְאֹתֹת֙</span></div>
+
+                        <div class="english-line">and for <span class="h4150">sacred feasts</span> and for <span class="h3117">days</span> and <span class="h8141">years</span>; and let them <span class="h1961">be</span> for <span class="h3974">lights</span></div>
+                        <div class="hebrew-line"><span class="h4150">וּלְמ֣וֹעֲדִ֔ים</span> <span class="h3117">וּלְיָמִ֖ים</span> <span class="h8141">וְשָׁנִֽים׃</span> <span class="h1961">וְהָי֤וּ</span> <span class="h3974">לִמְאוֹרֹת֙</span></div>
+
+                        <div class="english-line"><span class="h7549">in the dome of</span> <span class="h8064">the skies</span> <span class="h215">to give light</span> on <span class="h776">the land</span>.” and <span class="h1961">it was</span> <span class="h3651">so</span>.</div>
+                        <div class="hebrew-line"><span class="h7549">בִּרְקִ֣יעַ</span> <span class="h8064">הַשָּׁמַ֔יִם</span> <span class="h215">לְהָאִ֖יר</span> <span class="h5921">עַל</span> <span class="h776">הָאָ֑רֶץ</span> <span class="h1961">וַֽיְהִי</span> <span class="h3651">כֵֽן׃</span></div>
+                        
+                        <div class="english-line">and <span class="h430">God</span> <span class="h6213">made</span> the <span class="h8147">two</span> <span class="h1419">great</span> <span class="h3974">lights</span>, the <span class="h1419">great</span> <span class="h3974">light</span> to <span class="h4475">rule</span> the <span class="h3117">day</span>,</div>
+                        <div class="hebrew-line"><span class="h6213">וַיַּ֣עַשׂ</span> <span class="h430">אֱלֹהִ֔ים</span> <span class="h853">אֶת</span> <span class="h8147">שְׁנֵ֥י</span> <span class="h3974">הַמָּא֤וֹר</span> <span class="h1419">הַגָּדֹל֙</span> <span class="h853">אֶת</span> <span class="h3974">הַמָּא֤וֹר</span> <span class="h1419">הַגָּדֹל֙</span> <span class="h4475">לְמֶמְשֶׁ֣לֶת</span> <span class="h3117">הַיּ֔וֹם</span></div>
+
+                        <div class="english-line">and the <span class="h6996">small</span> <span class="h3974">light</span> to <span class="h4475">rule</span> the <span class="h3915">night</span>; and also <span class="h853">the</span> <span class="h3556">stars</span>.</div>
+                        <div class="hebrew-line"><span class="h853">וְאֶת</span> <span class="h3974">הַמָּא֤וֹר</span> <span class="h6996">הַקָּטֹן֙</span> <span class="h4475">לְמֶמְשֶׁ֣לֶת</span> <span class="h3915">הַלַּ֔יְלָה</span> <span class="h853">וְאֵ֖ת</span> <span class="h3556">הַכּוֹכָבִֽים׃</span></div>
+
+                        <div class="english-line">and <span class="h430">God</span> <span class="h5414">placed</span> them <span class="h7549">in the dome of the</span> <span class="h8064">skies</span></div>
+                        <div class="hebrew-line"><span class="h5414">וַיִּתֵּ֥ן</span> <span class="h853">אֹתָ֛ם</span> <span class="h430">אֱלֹהִ֖ים</span> <span class="h7549">בִּרְקִ֣יעַ</span> <span class="h8064">הַשָּׁמָ֑יִם</span></div>
+                        
+                        <div class="english-line">to <span class="h215">give light</span> on <span class="h776">the land</span>, and <span class="h4910">to rule</span> the <span class="h3117">day</span> and the <span class="h3915">night</span>,</div>
+                        <div class="hebrew-line"><span class="h215">לְהָאִ֖יר</span> <span class="h5921">עַל</span> <span class="h776">הָאָֽרֶץ׃</span> <span class="h4910">וְלִמְשֹׁל֙</span> <span class="h3117">בַּיּ֣וֹם</span> <span class="h3915">וּבַלַּ֔יְלָה</span></div>
+
+                        <div class="english-line">and <span class="h914">to separate</span> the <span class="h216">light</span> from the <span class="h2822">darkness</span>.;</div>
+                        <div class="hebrew-line"><span class="h914">וּֽלֲהַבְדִּ֔יל</span> <span class="h996">בֵּ֥ין</span> <span class="h216">הָא֖וֹר</span> <span class="h996">וּבֵ֣ין</span> <span class="h2822">הַחֹ֑שֶׁךְ</span></div>
+
+                        <div class="english-line">and <span class="h430 repeated-good">God</span> <span class="h7200 repeated-good">saw</span> that it <span class="h3588 repeated-good">was</span> <span class="h2896 repeated-good">good</span> (4).</div>
+                        <div class="hebrew-line"><span class="h7200 repeated-good">וַיַּ֥רְא</span> <span class="h430 repeated-good">אֱלֹהִ֖ים</span> <span class="h3588 repeated-good">כִּי</span> <span class="h2896 repeated-good">טֽוֹב׃</span></div>
+
+                        <div class="english-line">and <span class="h1961">there was</span> <span class="h6153">evening</span> and <span class="h1961">there was</span> <span class="h1242">morning</span>, a <span class="h7243">fourth</span> <span class="h3117">day</span>.</div>
+                        <div class="hebrew-line"><span class="h1961">וַֽיְהִי</span> <span class="h6153">עֶ֥רֶב</span> <span class="h1961">וַֽיְהִי</span> <span class="h1242">בֹ֖קֶר</span> <span class="h3117">י֥וֹם</span> <span class="h7243">רְבִיעִֽי׃</span></div>
                     </div>
                 </div>
                  <!-- Day 2 -->
                 <div class="card">
                     <h2 class="card-title">Day 2: Environment = Splitting the Waters</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <p>and <span class="h559">God said</span> (2), “<span class="h1961">Let there be</span> a <span class="h7549">dome</span> <span class="h8432">in the middle of</span> the <span class="h4325">waters</span>, and <span class="h1961">let it</span> <span class="h914">separate</span> the <span class="h4325">waters</span> <span class="h996">from</span> the <span class="h4325">waters</span>.” and <span class="h430">God</span> <span class="h6213">made</span> the <span class="h7549">dome</span> (raqia), and he <span class="h914">separated</span> the <span class="h4325">waters</span> <span class="h834">which were</span> <span class="h8478">below</span> the <span class="h7549">dome</span> <span class="h996">from</span> the <span class="h4325">waters</span> <span class="h834">which were</span> <span class="h5921">above</span> the <span class="h7549">dome</span>; and <span class="h1961">it was</span> <span class="h3651">so</span>. and <span class="h430">God</span> <span class="h7121">called</span> the <span class="h7549">dome</span> “<span class="h8064">skies</span>”. and <span class="h1961">there was</span> <span class="h6153">evening</span> and <span class="h1961">there was</span> <span class="h1242">morning</span>, a <span class="h8145">second</span> <span class="h3117">day</span>.</p>
-                        </div>
-                        <div class="hebrew">
-                            <h3 class="font-semibold text-lg mb-2">י֥וֹם שֵׁנִֽי</h3>
-                            <p class="text-xl leading-loose"><span class="h559">וַיֹּ֣אמֶר</span> <span class="h430">אֱלֹהִ֔ים</span> <span class="h1961">יְהִ֥י</span> <span class="h7549">רָקִ֖יעַ</span> <span class="h8432">בְּת֣וֹךְ</span> <span class="h4325">לָמָֽיִם׃</span> <span class="h1961">וִיהִ֣י</span> <span class="h914">מַבְדִּ֔יל</span> <span class="h996">בֵּ֥ין</span> <span class="h4325">לָמָֽיִם׃</span> <span class="h4325">לָמָֽיִם׃</span> <span class="h6213">וַיַּ֣עַשׂ</span> <span class="h430">אֱלֹהִים֮</span> <span class="h853">אֶת</span> <span class="h7549">לָרָקִ֑יעַ</span> <span class="h914">וַיַּבְדֵּ֗ל</span> <span class="h996">בֵּ֤ין</span> <span class="h4325">הַמַּ֔יִם</span> <span class="h834">אֲשֶׁ֖ר</span> <span class="h8478">מִתַּ֣חַת</span> <span class="h7549">לָרָקִ֑יעַ</span> <span class="h996">וּבֵ֣ין</span> <span class="h4325">הַמַּ֔יִם</span> <span class="h834">אֲשֶׁ֖ר</span> <span class="h5921">מֵעַ֣ל</span> <span class="h7549">לָרָקִ֑יעַ</span> <span class="h1961">וַֽיְהִי</span> <span class="h3651">כֵֽן׃</span> <span class="h7121">וַיִּקְרָ֧א</span> <span class="h430">אֱלֹהִ֛ים</span> <span class="h7549">לָֽרָקִ֖יעַ</span> <span class="h8064">שָׁמָ֑יִם</span> <span class="h1961">וַֽיְהִי</span> <span class="h6153">עֶ֥רֶב</span> <span class="h1961">וַֽיְהִי</span> <span class="h1242">בֹ֖קֶר</span> <span class="h3117">י֥וֹם</span> <span class="h8145">שֵׁנִֽי׃</span></p>
-                        </div>
+                    <div class="interlinear-grid">
+                        <div class="english-line">and <span class="h559 repeated-said">God said</span> (2),</div>
+                        <div class="hebrew-line"><span class="h559 repeated-said">וַיֹּ֣אמֶר</span> <span class="h430 repeated-said">אֱלֹהִ֔ים</span></div>
+                        
+                        <div class="english-line">“<span class="h1961 repeated-let">Let there be</span> a <span class="h7549">dome</span> <span class="h8432">in the middle of</span> the <span class="h4325">waters</span>,</div>
+                        <div class="hebrew-line"><span class="h1961 repeated-let">יְהִ֥י</span> <span class="h7549">רָקִ֖יעַ</span> <span class="h8432">בְּת֣וֹךְ</span> <span class="h4325">לָמָֽיִם׃</span></div>
+
+                        <div class="english-line">and <span class="h1961">let it</span> <span class="h914">separate</span> the <span class="h4325">waters</span> <span class="h996">from</span> the <span class="h4325">waters</span>.”</div>
+                        <div class="hebrew-line"><span class="h1961">וִיהִ֣י</span> <span class="h914">מַבְדִּ֔יל</span> <span class="h996">בֵּ֥ין</span> <span class="h4325">לָמָֽיִם׃</span> <span class="h4325">לָמָֽיִם׃</span></div>
+
+                        <div class="english-line">and <span class="h430">God</span> <span class="h6213">made</span> the <span class="h7549">dome</span> (raqia),</div>
+                        <div class="hebrew-line"><span class="h6213">וַיַּ֣עַשׂ</span> <span class="h430">אֱלֹהִים֮</span> <span class="h853">אֶת</span> <span class="h7549">לָרָקִ֑יעַ</span></div>
+
+                        <div class="english-line">and he <span class="h914">separated</span> the <span class="h4325">waters</span> <span class="h834">which were</span> <span class="h8478">below</span> the <span class="h7549">dome</span></div>
+                        <div class="hebrew-line"><span class="h914">וַיַּבְדֵּ֗ל</span> <span class="h996">בֵּ֤ין</span> <span class="h4325">הַמַּ֔יִם</span> <span class="h834">אֲשֶׁ֖ר</span> <span class="h8478">מִתַּ֣חַת</span> <span class="h7549">לָרָקִ֑יעַ</span></div>
+                        
+                        <div class="english-line">from the <span class="h4325">waters</span> <span class="h834">which were</span> <span class="h5921">above</span> the <span class="h7549">dome</span>; and <span class="h1961">it was</span> <span class="h3651">so</span>.</div>
+                        <div class="hebrew-line"><span class="h996">וּבֵ֣ין</span> <span class="h4325">הַמַּ֔יִם</span> <span class="h834">אֲשֶׁ֖ר</span> <span class="h5921">מֵעַ֣ל</span> <span class="h7549">לָרָקִ֑יעַ</span> <span class="h1961">וַֽיְהִי</span> <span class="h3651">כֵֽן׃</span></div>
+
+                        <div class="english-line">and <span class="h430">God</span> <span class="h7121">called</span> the <span class="h7549">dome</span> “<span class="h8064">skies</span>”.</div>
+                        <div class="hebrew-line"><span class="h7121">וַיִּקְרָ֧א</span> <span class="h430">אֱלֹהִ֛ים</span> <span class="h7549">לָֽרָקִ֖יעַ</span> <span class="h8064">שָׁמָ֑יִם</span></div>
+                        
+                        <div class="english-line">and <span class="h1961">there was</span> <span class="h6153">evening</span> and <span class="h1961">there was</span> <span class="h1242">morning</span>, a <span class="h8145">second</span> <span class="h3117">day</span>.</div>
+                        <div class="hebrew-line"><span class="h1961">וַֽיְהִי</span> <span class="h6153">עֶ֥רֶב</span> <span class="h1961">וַֽיְהִי</span> <span class="h1242">בֹ֖קֶר</span> <span class="h3117">י֥وֹם</span> <span class="h8145">שֵׁנִֽי׃</span></div>
                     </div>
                 </div>
                  <!-- Day 5 -->
                 <div class="card">
                     <h2 class="card-title">Day 5: Inhabitants = Waters & Skies</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                       <div>
-                            <p>and <span class="h559">God said</span> (6), “<span class="h8317">Let the waters swarm</span> with a <span class="h8318">swarm of</span> <span class="h2416">living</span> <span class="h5315">creatures</span>, and let <span class="h5775">birds</span> <span class="h5774">fly</span> <span class="h5921">above</span> <span class="h776">the land</span> <span class="h5921">against</span> <span class="h6440">the face of the</span> <span class="h7549">dome of the</span> <span class="h8064">skies</span>” and <span class="h430">God</span> <span class="h1254">created</span> the <span class="h1419">great</span> <span class="h8577">sea-monsters</span> and <span class="h3605">every</span> <span class="h2416">living</span> <span class="h5315">creature</span> that <span class="h7430">moves</span>, with <span class="h834">which</span> the <span class="h4325">waters</span> <span class="h8317">swarmed</span> after <span class="h4327">their kind</span>, and <span class="h3605">every</span> <span class="h3671">bird of wing</span> after <span class="h4327">its kind</span>; and <span class="h430">God</span> <span class="h7200">saw</span> that it <span class="h3588">was</span> <span class="h2896">good</span> (4). and <span class="h430">God</span> <span class="h1288">blessed</span> them, <span class="h559">saying</span>, “<span class="h6509">Be fruitful</span> and <span class="h7235">multiply</span>, and <span class="h4390">fill</span> the <span class="h4325">waters</span> in the <span class="h3220">seas</span>, and let <span class="h5775">birds</span> <span class="h7235">multiply</span> on the <span class="h776">land</span>.” and <span class="h1961">there was</span> <span class="h6153">evening</span> and <span class="h1961">there was</span> <span class="h1242">morning</span>, a <span class="h2549">fifth</span> <span class="h3117">day</span>.</p>
-                       </div>
-                       <div class="hebrew">
-                           <h3 class="font-semibold text-lg mb-2">י֥וֹם חֲמִישִֽׁי</h3>
-                           <p class="text-xl leading-loose"><span class="h559">וַיֹּ֣אמֶר</span> <span class="h430">אֱלֹהִ֔ים</span> <span class="h8317">יִשְׁרְצ֣וּ</span> <span class="h4325">הַמַּ֔יִם</span> <span class="h8318">שֶׁ֖רֶץ</span> <span class="h5315">נֶ֣פֶשׁ</span> <span class="h2416">חַיָּ֑ה</span> <span class="h5775">וְעוֹף֙</span> <span class="h5774">יְעוֹפֵ֣ף</span> <span class="h5921">עַל</span> <span class="h776">הָאָ֔רֶץ</span> <span class="h5921">עַל</span> <span class="h6440">פְּנֵ֖י</span> <span class="h7549">רְקִ֥יעַ</span> <span class="h8064">הַשָּׁמָֽיִם׃</span> <span class="h1254">וַיִּבְרָ֣א</span> <span class="h430">אֱלֹהִ֖ים</span> <span class="h853">אֶת</span> <span class="h8577">הַתַּנִּינִ֖ם</span> <span class="h1419">הַגְּדֹלִ֑ים</span> <span class="h853">וְאֵ֣ת</span> <span class="h3605">כָּל</span> <span class="h5315">נֶ֣פֶשׁ</span> <span class="h2416">הַֽחַיָּ֣ה׀</span> <span class="h7430">הָֽרֹמֶ֡שֶׂת</span> <span class="h834">אֲשֶׁר֩</span> <span class="h8317">שָׁרְצ֨וּ</span> <span class="h4325">הַמַּ֜יִם</span> <span class="h4327">לְמִינֵ֔הוּ</span> <span class="h853">וְאֵ֨ת</span> <span class="h3605">כָּל</span> <span class="h5775">ע֤וֹף</span> <span class="h3671">כָּנָף֙</span> <span class="h4327">לְמִינֵ֔הוּ</span> <span class="h7200">וַיַּ֥רְא</span> <span class="h430">אֱלֹהִ֖ים</span> <span class="h3588">כִּי</span> <span class="h2896">טֽוֹב׃</span> <span class="h1288">וַיְבָ֧רֶךְ</span> <span class="h853">אֹתָ֛ם</span> <span class="h430">אֱלֹהִ֖ים</span> <span class="h559">לֵאמֹ֑ר</span> <span class="h6509">פְּר֣וּ</span> <span class="h7235">יִ֥רֶב</span> <span class="h4390">וּמִלְא֤וּ</span> <span class="h853">אֶת</span> <span class="h4325">הַמַּ֙יִם֙</span> <span class="h3220">בַּיַּמִּ֔ים</span> <span class="h5775">וְהָע֖וֹף</span> <span class="h7235">יִ֥רֶב</span> <span class="h776">בָּאָֽרֶץ׃</span> <span class="h1961">וַֽיְהִי</span> <span class="h6153">עֶ֥רֶב</span> <span class="h1961">וַֽיְהִי</span> <span class="h1242">בֹ֖קֶר</span> <span class="h3117">י֥וֹם</span> <span class="h2549">חֲמִישִֽׁי׃</span></p>
-                       </div>
+                    <div class="interlinear-grid">
+                        <div class="english-line">and <span class="h559 repeated-said">God said</span> (6),</div>
+                        <div class="hebrew-line"><span class="h559 repeated-said">וַיֹּ֣אמֶר</span> <span class="h430 repeated-said">אֱלֹהִ֔ים</span></div>
+                        
+                        <div class="english-line">“<span class="h8317 repeated-let">Let the waters swarm</span> with a <span class="h8318">swarm of</span> <span class="h2416">living</span> <span class="h5315">creatures</span>, and let <span class="h5775">birds</span> <span class="h5774">fly</span> <span class="h5921">above</span> <span class="h776">the land</span></div>
+                        <div class="hebrew-line"><span class="h8317 repeated-let">יִשְׁרְצ֣וּ</span> <span class="h4325">הַמַּ֔יִם</span> <span class="h8318">שֶׁ֖רֶץ</span> <span class="h5315">נֶ֣פֶשׁ</span> <span class="h2416">חַיָּ֑ה</span> <span class="h5775">וְעוֹף֙</span> <span class="h5774">יְעוֹפֵ֣ף</span> <span class="h5921">עַל</span> <span class="h776">הָאָ֔רֶץ</span></div>
+
+                        <div class="english-line"><span class="h5921">against</span> <span class="h6440">the face of the</span> <span class="h7549">dome of the</span> <span class="h8064">skies</span>”</div>
+                        <div class="hebrew-line"><span class="h5921">עַל</span> <span class="h6440">פְּנֵ֖י</span> <span class="h7549">רְקִ֥יעַ</span> <span class="h8064">הַשָּׁמָֽיִם׃</span></div>
+
+                        <div class="english-line">and <span class="h430">God</span> <span class="h1254">created</span> the <span class="h1419">great</span> <span class="h8577">sea-monsters</span></div>
+                        <div class="hebrew-line"><span class="h1254">וַיִּבְרָ֣א</span> <span class="h430">אֱלֹהִ֖ים</span> <span class="h853">אֶת</span> <span class="h8577">הַתַּנִּינִ֖ם</span> <span class="h1419">הַגְּדֹלִ֑ים</span></div>
+
+                        <div class="english-line">and <span class="h3605">every</span> <span class="h2416">living</span> <span class="h5315">creature</span> that <span class="h7430">moves</span>,</div>
+                        <div class="hebrew-line"><span class="h853">וְאֵ֣ת</span> <span class="h3605">כָּל</span> <span class="h5315">נֶ֣פֶשׁ</span> <span class="h2416">הַֽחַיָּ֣ה׀</span> <span class="h7430">הָֽרֹמֶ֡שֶׂת</span></div>
+                        
+                        <div class="english-line">with <span class="h834">which</span> the <span class="h4325">waters</span> <span class="h8317">swarmed</span> after <span class="h4327">their kind</span>, and <span class="h3605">every</span> <span class="h3671">bird of wing</span> after <span class="h4327">its kind</span>;</div>
+                        <div class="hebrew-line"><span class="h834">אֲשֶׁר֩</span> <span class="h8317">שָׁרְצ֨וּ</span> <span class="h4325">הַמַּ֜יִם</span> <span class="h4327">לְמִינֵ֔הוּ</span> <span class="h853">וְאֵ֨ת</span> <span class="h3605">כָּל</span> <span class="h5775">ע֤وֹף</span> <span class="h3671">כָּנָף֙</span> <span class="h4327">לְמִינֵ֔הוּ</span></div>
+
+                        <div class="english-line">and <span class="h430 repeated-good">God</span> <span class="h7200 repeated-good">saw</span> that it <span class="h3588 repeated-good">was</span> <span class="h2896 repeated-good">good</span> (5).</div>
+                        <div class="hebrew-line"><span class="h7200 repeated-good">וַיַּ֥רְא</span> <span class="h430 repeated-good">אֱלֹהִ֖ים</span> <span class="h3588 repeated-good">כִּי</span> <span class="h2896 repeated-good">טֽוֹב׃</span></div>
+
+                        <div class="english-line">and <span class="h430">God</span> <span class="h1288">blessed</span> them, <span class="h559">saying</span>, “<span class="h6509">Be fruitful</span> and <span class="h7235">multiply</span>,</div>
+                        <div class="hebrew-line"><span class="h1288">וַיְבָ֧רֶךְ</span> <span class="h853">אֹתָ֛ם</span> <span class="h430">אֱלֹהִ֖ים</span> <span class="h559">לֵאמֹ֑ר</span> <span class="h6509">פְּר֣וּ</span> <span class="h7235">יִ֥רֶב</span></div>
+
+                        <div class="english-line">and <span class="h4390">fill</span> the <span class="h4325">waters</span> in the <span class="h3220">seas</span>, and let <span class="h5775">birds</span> <span class="h7235">multiply</span> on the <span class="h776">land</span>.”</div>
+                        <div class="hebrew-line"><span class="h4390">וּמִלְא֤וּ</span> <span class="h853">אֶת</span> <span class="h4325">הַמַּ֙יִם֙</span> <span class="h3220">בַּיַּמִּ֔ים</span> <span class="h5775">וְהָע֖וֹף</span> <span class="h7235">יִ֥רֶב</span> <span class="h776">בָּאָֽרֶץ׃</span></div>
+                        
+                        <div class="english-line">and <span class="h1961">there was</span> <span class="h6153">evening</span> and <span class="h1961">there was</span> <span class="h1242">morning</span>, a <span class="h2549">fifth</span> <span class="h3117">day</span>.</div>
+                        <div class="hebrew-line"><span class="h1961">וַֽיְהִי</span> <span class="h6153">עֶ֥רֶב</span> <span class="h1961">וַֽיְהִי</span> <span class="h1242">בֹ֖קֶר</span> <span class="h3117">י֥וֹם</span> <span class="h2549">חֲמִישִֽׁי׃</span></div>
                     </div>
                 </div>
                  <!-- Day 3 -->
                 <div class="card">
                      <h2 class="card-title">Day 3: Environment = Land & Vegetation</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                       <div>
-                            <p class="mb-4"><strong>Part 1:</strong> and <span class="h559">God said</span> (3), “Let the <span class="h4325">waters</span> <span class="h8478">below</span> <span class="h8064">the skies</span> <span class="h6960">be gathered</span> into <span class="h259">one</span> <span class="h4725">place</span>, and <span class="h7200">let the</span> <span class="h3004">dry ground</span> <span class="h7200">be seen</span>”; and <span class="h1961">it was</span> <span class="h3651">so</span>. and <span class="h430">God</span> <span class="h7121">called</span> the <span class="h3004">dry ground</span> “<span class="h776">land</span>,” and the <span class="h4723">gathering of the waters</span> He <span class="h7121">called</span> “<span class="h3220">seas</span>” and <span class="h430">God</span> <span class="h7200">saw</span> that <span class="h3588">it was</span> <span class="h2896">good</span> (2).</p>
-                            <p><strong>Part 2:</strong> and <span class="h559">God said</span> (4), “Let the <span class="h776">land</span> <span class="h1876">sprout</span> <span class="h1877">vegetation</span>, <span class="h6212">vegetative plants</span> that <span class="h2232">produce</span> <span class="h2233">seed</span>, <span class="h6086">fruit</span> <span class="h6086">trees</span> that <span class="h6213">make</span> <span class="h6529">fruit</span> <span class="h4327">according to its kind</span>, <span class="h834">which</span> has its <span class="h2233">seed</span> inside it, <span class="h5921">upon</span> the <span class="h776">land</span> and <span class="h1961">it was</span> <span class="h3651">so</span>. and the <span class="h776">land</span> <span class="h3318">brought out</span> <span class="h1877">vegetative plants</span> that <span class="h2232">produce</span> <span class="h2233">seed</span> <span class="h4327">according to its kind</span> and <span class="h6086">trees</span> that <span class="h6213">make</span> <span class="h6529">fruit</span> <span class="h834">which has</span> its <span class="h2233">seed</span> in it <span class="h4327">according to its kind</span> and <span class="h430">God</span> <span class="h7200">saw</span> that it <span class="h3588">was</span> <span class="h2896">good</span> (3). and <span class="h1961">there was</span> <span class="h6153">evening</span> and <span class="h1961">there was</span> <span class="h1242">morning</span>, a <span class="h7992">third</span> <span class="h3117">day</span>.</p>
-                       </div>
-                       <div class="hebrew">
-                            <h3 class="font-semibold text-lg mb-2">י֥וֹם שְׁלִישִֽׁי</h3>
-                            <p class="text-xl leading-loose"><span class="h559">וַיֹּ֣אמֶר</span> <span class="h430">אֱלֹהִ֗ים</span> <span class="h6960">יִקָּו֨וּ</span> <span class="h4325">הַמַּ֜יִם</span> <span class="h8478">מִתַּ֤חַת</span> <span class="h8064">הַשָּׁמַ֙יִם֙</span> <span class="h413">אֶל</span> <span class="h4725">מָק֣וֹם</span> <span class="h259">אֶחָ֔ד</span> <span class="h7200">וְתֵרָאֶ֖ה</span> <span class="h3004">הַיַּבָּשָׁ֑ה</span> <span class="h1961">וַֽיְהִי</span>-<span class="h3651">כֵֽן׃</span> <span class="h7121">קָרָ֣א</span> <span class="h430">אֱלֹהִ֖ים</span> <span class="h3004">לַיַּבָּשָׁה֙</span> <span class="h776">אֶ֔רֶץ</span> <span class="h4723">וּלְמִקְוֵ֥ה</span> <span class="h4325">הַמַּ֖יִם</span> <span class="h7121">קָרָ֣א</span> <span class="h3220">יַמִּ֑ים</span> <span class="h7200">וַיַּ֥רְא</span> <span class="h430">אֱלֹהִ֖ים</span> <span class="h3588">כִּי</span>-<span class="h2896">טֽוֹב׃</span> <span class="h559">וַיֹּ֣אמֶר</span> <span class="h430">אֱלֹהִ֗ים</span> <span class="h1876">תַּֽדְשֵׁ֤א</span> <span class="h776">הָאָ֑רֶץ</span> <span class="h1877">דֶּ֔שֶׁא</span> <span class="h6212">עֵ֚שֶׂב</span> <span class="h2232">מַזְרִ֣יעַ</span> <span class="h2233">זַרְעוֹ</span> <span class="h6086">עֵ֣ץ</span> <span class="h6529">פְּרִי֙</span> <span class="h6213">עֹ֤שֶׂה</span> <span class="h6529">פְּרִי֙</span> <span class="h4327">לְמִינ֔וֹ</span> <span class="h834">אֲשֶׁ֥ר</span> <span class="h2233">זַרְעוֹ</span>-<span class="h0">ב֖וֹ</span> <span class="h5921">עַל</span> <span class="h776">הָאָ֑רֶץ</span> <span class="h1961">וַֽיְהִי</span>-<span class="h3651">כֵֽן׃</span> <span class="h3318">וַתּוֹצֵ֨א</span> <span class="h776">הָאָ֜רֶץ</span> <span class="h1877">דֶּ֠שֶׁא</span> <span class="h6212">עֵ֣שֶׂב</span> <span class="h2232">מַזְרִ֤יעַ</span> <span class="h2233">זַרְעוֹ</span> <span class="h4327">לְמִינֵ֑הוּ</span> <span class="h6086">וְעֵ֧ץ</span> <span class="h6213">עֹֽשֶׂה</span>-<span class="h6529">פְּרִ֛י</span> <span class="h834">אֲשֶׁ֥ר</span> <span class="h2233">זַרְעוֹ</span>-<span class="h0">ב֖וֹ</span> <span class="h4327">לְמִינֵ֑הוּ</span> <span class="h7200">וַיַּ֥רְא</span> <span class="h430">אֱלֹהִ֖ים</span> <span class="h3588">כִּי</span>-<span class="h2896">טֽוֹב׃</span> <span class="h1961">וַֽיְהִי</span> <span class="h6153">עֶ֥רֶב</span> <span class="h1961">וַֽיְהִי</span> <span class="h1242">בֹ֖קֶר</span> <span class="h3117">י֥וֹם</span> <span class="h7992">שְׁלִישִֽׁי׃</span></p>
-                       </div>
-                    </div>
+                     <div class="interlinear-grid">
+                        <div class="english-line">and <span class="h559 repeated-said">God said</span> (3),</div>
+                        <div class="hebrew-line"><span class="h559 repeated-said">וַיֹּ֣אמֶר</span> <span class="h430 repeated-said">אֱלֹהִ֗ים</span></div>
+
+                        <div class="english-line">“<span class="h6960 repeated-let">Let the</span> <span class="h4325">waters</span> <span class="h8478">below</span> <span class="h8064">the skies</span> <span class="h6960 repeated-let">be gathered</span> into <span class="h259">one</span> <span class="h4725">place</span>,</div>
+                        <div class="hebrew-line"><span class="h6960 repeated-let">יִקָּו֨וּ</span> <span class="h4325">הַמַּ֜יִם</span> <span class="h8478">מִתַּ֤חַת</span> <span class="h8064">הַשָּׁמַ֙יִם֙</span> <span class="h413">אֶל</span> <span class="h4725">מָק֣וֹם</span> <span class="h259">אֶחָ֔ד</span></div>
+
+                        <div class="english-line">and <span class="h7200">let the</span> <span class="h3004">dry ground</span> <span class="h7200">be seen</span>”; and <span class="h1961">it was</span> <span class="h3651">so</span>.</div>
+                        <div class="hebrew-line"><span class="h7200">וְתֵרָאֶ֖ה</span> <span class="h3004">הַיַּבָּשָׁ֑ה</span> <span class="h1961">וַֽיְהִי</span>-<span class="h3651">כֵֽן׃</span></div>
+
+                        <div class="english-line">and <span class="h430">God</span> <span class="h7121">called</span> the <span class="h3004">dry ground</span> “<span class="h776">land</span>,”</div>
+                        <div class="hebrew-line"><span class="h7121">קָרָ֣א</span> <span class="h430">אֱלֹהִ֖ים</span> <span class="h3004">לַיַּבָּשָׁה֙</span> <span class="h776">אֶ֔רֶץ</span></div>
+
+                        <div class="english-line">and the <span class="h4723">gathering of the waters</span> He <span class="h7121">called</span> “<span class="h3220">seas</span>” and <span class="h430 repeated-good">God</span> <span class="h7200 repeated-good">saw</span> that <span class="h3588 repeated-good">it was</span> <span class="h2896 repeated-good">good</span> (2).</div>
+                        <div class="hebrew-line"><span class="h4723">וּלְמִקְוֵ֥ה</span> <span class="h4325">הַמַּ֖יִם</span> <span class="h7121">קָרָ֣א</span> <span class="h3220">יַמִּ֑ים</span> <span class="h7200 repeated-good">וַיַּ֥רְא</span> <span class="h430 repeated-good">אֱלֹהִ֖ים</span> <span class="h3588 repeated-good">כִּי</span>-<span class="h2896 repeated-good">טֽוֹב׃</span></div>
+                        
+                        <div class="english-line mt-4">and <span class="h559 repeated-said">God said</span> (4),</div>
+                        <div class="hebrew-line mt-4"><span class="h559 repeated-said">וַיֹּ֣אמֶר</span> <span class="h430 repeated-said">אֱלֹהִ֗ים</span></div>
+
+                        <div class="english-line">“<span class="h1876 repeated-let">Let the land sprout</span> <span class="h1877">vegetation</span>, <span class="h6212">vegetative plants</span> that <span class="h2232">produce</span> <span class="h2233">seed</span>,</div>
+                        <div class="hebrew-line"><span class="h1876 repeated-let">תַּֽדְשֵׁ֤א</span> <span class="h776">הָאָ֑רֶץ</span> <span class="h1877">דֶּ֔שֶׁא</span> <span class="h6212">עֵ֚שֶׂב</span> <span class="h2232">מַזְרִ֣יעַ</span> <span class="h2233">זַרְעוֹ</span></div>
+
+                        <div class="english-line"><span class="h6086">fruit</span> <span class="h6086">trees</span> that <span class="h6213">make</span> <span class="h6529">fruit</span> <span class="h4327">according to its kind</span>, which has its <span class="h2233">seed</span> inside it, <span class="h5921">upon</span> the <span class="h776">land</span></div>
+                        <div class="hebrew-line"><span class="h6086">עֵ֣ץ</span> <span class="h6529">פְּרִי֙</span> <span class="h6213">עֹ֤שֶׂה</span> <span class="h6529">פְּרִי֙</span> <span class="h4327">לְמִינ֔וֹ</span> <span class="h834">אֲשֶׁ֥ר</span> <span class="h2233">זַרְעוֹ</span>-<span class="h0">ב֖וֹ</span> <span class="h5921">עַל</span> <span class="h776">הָאָ֑רֶץ</span></div>
+
+                        <div class="english-line">and <span class="h1961">it was</span> <span class="h3651">so</span>.</div>
+                        <div class="hebrew-line"><span class="h1961">וַֽיְהִי</span>-<span class="h3651">כֵֽן׃</span></div>
+                        
+                        <div class="english-line">and the <span class="h776">land</span> <span class="h3318">brought out</span> <span class="h1877">vegetative plants</span> that <span class="h2232">produce</span> <span class="h2233">seed</span> <span class="h4327">according to its kind</span></div>
+                        <div class="hebrew-line"><span class="h3318">וַתּוֹצֵ֨א</span> <span class="h776">הָאָ֜רֶץ</span> <span class="h1877">דֶּ֠שֶׁא</span> <span class="h6212">עֵ֣שֶׂב</span> <span class="h2232">מַזְרִ֤יעַ</span> <span class="h2233">זַרְעוֹ</span> <span class="h4327">לְמִינֵ֑הוּ</span></div>
+
+                        <div class="english-line">and <span class="h6086">trees</span> that <span class="h6213">make</span> <span class="h6529">fruit</span> <span class="h834">which has</span> its <span class="h2233">seed</span> in it <span class="h4327">according to its kind</span></div>
+                        <div class="hebrew-line"><span class="h6086">וְעֵ֧ץ</span> <span class="h6213">עֹֽשֶׂה</span>-<span class="h6529">פְּרִ֛י</span> <span class="h834">אֲשֶׁ֥ר</span> <span class="h2233">זַרְעוֹ</span>-<span class="h0">ב֖וֹ</span> <span class="h4327">לְמִינֵ֑הוּ</span></div>
+
+                        <div class="english-line">and <span class="h430 repeated-good">God</span> <span class="h7200 repeated-good">saw</span> that it <span class="h3588 repeated-good">was</span> <span class="h2896 repeated-good">good</span> (3).</div>
+                        <div class="hebrew-line"><span class="h7200 repeated-good">וַיַּ֥רְא</span> <span class="h430 repeated-good">אֱלֹהִ֖ים</span> <span class="h3588 repeated-good">כִּי</span>-<span class="h2896 repeated-good">טֽוֹב׃</span></div>
+                        
+                        <div class="english-line">and <span class="h1961">there was</span> <span class="h6153">evening</span> and <span class="h1961">there was</span> <span class="h1242">morning</span>, a <span class="h7992">third</span> <span class="h3117">day</span>.</div>
+                        <div class="hebrew-line"><span class="h1961">וַֽיְהִי</span> <span class="h6153">עֶ֥רֶב</span> <span class="h1961">וַֽיְהִי</span> <span class="h1242">בֹ֖קֶר</span> <span class="h3117">י֥وֹם</span> <span class="h7992">שְׁלִישִֽׁי׃</span></div>
+                     </div>
                 </div>
                 <!-- Day 6 -->
                 <div class="card">
                     <h2 class="card-title">Day 6: Inhabitants = Land Animals & Humans</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <p class="mb-2"><strong>Part A:</strong> and <span class="h559">God said</span> (7), “<span class="h3318">Let</span> the <span class="h776">land</span> <span class="h3318">bring out</span> <span class="h2416">living</span> <span class="h5315">creatures</span> <span class="h4327">according to their kind</span>, <span class="h929">cattle</span> and <span class="h7431">creeping things</span> and <span class="h2416">beasts of the</span> <span class="h776">land</span> <span class="h4327">according to their kind</span>”; and <span class="h1961">it was</span> <span class="h3651">so</span>. and <span class="h430">God</span> <span class="h6213">made</span> the <span class="h2416">beasts of the</span> <span class="h776">land</span> <span class="h4327">according to their kind</span>, and the <span class="h929">cattle</span> <span class="h4327">according to their kind</span>, and the <span class="h7431">creepers</span> of the <span class="h127">ground</span> <span class="h4327">according to its kind</span> and <span class="h430">God</span> <span class="h7200">saw</span> that <span class="h3588">it was</span> <span class="h2896">good</span> (5).</p>
-                            <p class="mb-2"><strong>Part B:</strong> and <span class="h559">God said</span> (8), “Let <span class="h6213">us make</span> <span class="h120">human</span> in <span class="h6754">our image</span>, according to <span class="h1823">our likeness</span>; and let them <span class="h7287">rule</span> over the <span class="h1710">fish of the</span> <span class="h3220">sea</span> and over the <span class="h5775">birds of the</span> <span class="h8064">sky</span> and over the <span class="h929">cattle</span> and over <span class="h3605">all</span> the <span class="h776">land</span>, and over <span class="h3605">every</span> <span class="h7431">creeper</span> that <span class="h7430">creeps</span> on the <span class="h776">land</span>.” and <span class="h430">God</span> <span class="h1254">created</span> <span class="h120">human</span> in his <span class="h6754">image</span>, in the <span class="h6754">image of</span> <span class="h430">God</span> he <span class="h1254">created</span> him; <span class="h2145">male</span> and <span class="h5347">female</span> he <span class="h1254">created</span> them. and <span class="h430">God</span> <span class="h1288">blessed</span> them, and <span class="h430">God</span> <span class="h559">said</span> (9) to them, “<span class="h6509">Be fruitful</span> and <span class="h7235">multiply</span>, and <span class="h4390">fill</span> the <span class="h776">land</span>, and <span class="h3533">subdue</span> it; and <span class="h7287">rule</span> over the <span class="h1710">fish of the</span> <span class="h3220">sea</span> and over the <span class="h5775">birds of the</span> <span class="h8064">sky</span> and over <span class="h2416">living creatures</span> that <span class="h7430">creep</span> on the <span class="h776">land</span>.”</p>
-                            <p><strong>Part C:</strong> and <span class="h430">God</span> <span class="h559">said</span> (10), “<span class="h2009">Behold</span>, I have <span class="h5414">given</span> to you <span class="h3605">every</span> <span class="h6212">plant</span> <span class="h2232">producing</span> <span class="h2233">seed</span> that is on the <span class="h6440">face of</span> <span class="h3605">all</span> the <span class="h776">land</span>, and <span class="h3605">every</span> <span class="h6086">tree</span> which has <span class="h6529">fruit</span> <span class="h6086">producing</span> <span class="h2233">seed</span>; it shall be <span class="h402">food</span> for y’all; and for <span class="h3605">every</span> <span class="h2416">beast</span> of the <span class="h776">land</span>, and for <span class="h3605">every</span> <span class="h5775">bird</span> of the <span class="h8064">sky</span>, and for <span class="h3605">every</span> thing that <span class="h7430">moves</span> on the <span class="h776">land</span> which has <span class="h2416">living</span> <span class="h5315">being</span> in it, <span class="h3605">every</span> <span class="h3418">green</span> <span class="h6212">plant</span> is for <span class="h402">food</span>” and <span class="h1961">it was</span> <span class="h3651">so</span>. and <span class="h430">God</span> <span class="h7200">saw</span> <span class="h3605">all</span> that He had <span class="h6213">made</span>, and <span class="h2009">behold</span>, it was <span class="h3966">very</span> <span class="h2896">good</span> (6 goods, not 7 goods, it’s not complete yet!). and <span class="h1961">there was</span> <span class="h6153">evening</span> and <span class="h1961">there was</span> <span class="h1242">morning</span>, a <span class="h8345">sixth</span> <span class="h3117">day</span>.</p>
-                        </div>
-                        <div class="hebrew">
-                            <h3 class="font-semibold text-lg mb-2">י֥וֹם הַשִּׁשִּֽׁי</h3>
-                            <p class="text-xl leading-loose"><span class="h559">וַיֹּ֣אמֶר</span> <span class="h430">אֱלֹהִ֗ים</span> <span class="h3318">תּוֹצֵ֨א</span> <span class="h776">אֶ֖רֶץ</span> <span class="h5315">נֶ֤פֶשׁ</span> <span class="h2416">וְחַֽיְתוֹ</span> <span class="h4327">לְמִינָ֑הּ</span> <span class="h929">בְּהֵמָ֥ה</span> <span class="h7431">וָרֶ֛מֶשׂ</span> <span class="h2416">וְחַֽיְתוֹ</span> <span class="h776">אֶ֖רֶץ</span> <span class="h4327">לְמִינָ֑הּ</span> <span class="h1961">וַֽיְהִי</span>-<span class="h3651">כֵֽן׃</span> <span class="h6213">וַיַּ֣עַשׂ</span> <span class="h430">אֱלֹהִ֖ים</span> <span class="h853">אֶת</span> <span class="h2416">חַיַּ֨ת</span> <span class="h776">הָאָ֜רֶץ</span> <span class="h4327">לְמִינֵ֑הוּ</span> <span class="h853">וְאֶת</span>-<span class="h929">הַבְּהֵמָה֙</span> <span class="h4327">לְמִינֵ֑הוּ</span> <span class="h853">וְאֵ֛ת</span> <span class="h3605">כָּל</span> <span class="h7431">רֶ֥מֶשׂ</span> <span class="h127">הָֽאֲדָמָ֖ה</span> <span class="h4327">לְמִינֵ֑הוּ</span> <span class="h7200">וַיַּ֥רְא</span> <span class="h430">אֱלֹהִ֖ים</span> <span class="h3588">כִּי</span>-<span class="h2896">טֽוֹב׃</span> <span class="h559">וַיֹּ֣אמֶר</span> <span class="h430">אֱלֹהִ֔ים</span> <span class="h6213">נַֽעֲשֶׂ֥ה</span> <span class="h120">אָדָ֛ם</span> <span class="h6754">בְּצַלְמֵ֖נוּ</span> <span class="h1823">כִּדְמוּתֵ֑נוּ</span> <span class="h7287">וְיִרְדּוּ֩</span> <span class="h1710">בִדְגַ֨ת</span> <span class="h3220">הַיָּ֜ם</span> <span class="h5775">וּבְע֣וֹף</span> <span class="h8064">הַשָּׁמַ֗יִם</span> <span class="h929">וּבַבְּהֵמָה֙</span> <span class="h3605">וּבְכָל</span>-<span class="h776">הָאָֽרֶץ׃</span> <span class="h3605">וּבְכָל</span> <span class="h7431">הָרֶ֖מֶשׂ</span> <span class="h7430">הָֽרֹמֵ֥שׂ</span> <span class="h5921">עַל</span> <span class="h776">הָאָֽרֶץ׃</span> <span class="h1254">בָּרָ֥א</span> <span class="h430">אֱלֹהִ֖ים</span> <span class="h853">אֶת</span> <span class="h120">הָֽאָדָם֙</span> <span class="h6754">בְּצֶ֥לֶם</span> <span class="h6754">בְּצֶ֥לֶם</span> <span class="h430">אֱלֹהִ֖ים</span> <span class="h1254">בָּרָ֥א</span> <span class="h853">אֹת֑וֹ</span> <span class="h2145">זָכָ֥ר</span> <span class="h5347">וּנְקֵבָ֖ה</span> <span class="h1254">בָּרָ֥א</span> <span class="h853">אֹתָֽם׃</span> <span class="h1288">וַיְבָ֣רֶךְ</span> <span class="h853">אֹתָם֮</span> <span class="h430">אֱלֹהִ֗ים</span> <span class="h559">וַיֹּ֨אמֶר</span> <span class="h0">לָהֶ֜ם</span> <span class="h430">אֱלֹהִ֗ים</span> <span class="h6509">פְּר֥וּ</span> <span class="h7235">וּרְב֛וּ</span> <span class="h4390">וּמִלְא֥וּ</span> <span class="h853">אֶת</span> <span class="h776">הָאָֽרֶץ׃</span> <span class="h3533">וְכִבְשֻׁ֑הָ</span> <span class="h7287">וּרְד֞וּ</span> <span class="h1710">בִּדְגַ֤ת</span> <span class="h3220">הַיָּם֙</span> <span class="h5775">וּבְע֣וֹף</span> <span class="h8064">הַשָּׁמַ֔יִם</span> <span class="h3605">וּבְכָל</span> <span class="h2416">חַיָּ֖ה</span> <span class="h7430">הָֽרֹמֶ֥שֶׂת</span> <span class="h5921">עַל</span> <span class="h776">הָאָֽרֶץ׃</span> <span class="h559">וַיֹּ֣אמֶר</span> <span class="h430">אֱלֹהִ֗ים</span> <span class="h2009">הִנֵּה֩</span> <span class="h5414">נָתַ֨תִּי</span> <span class="h0">לָכֶ֜ם</span> <span class="h853">אֶת</span> <span class="h3605">כָּל</span> <span class="h6212">עֵ֣שֶׂב׀</span> <span class="h2232">זֹרֵ֣עַ</span> <span class="h2233">זָ֑רַע</span> <span class="h834">אֲשֶׁר֙</span> <span class="h5921">עַל</span> <span class="h6440">פְּנֵ֣י</span> <span class="h3605">כָל</span> <span class="h776">הָאָ֔רֶץ</span> <span class="h853">וְאֶת</span> <span class="h3605">כָּל</span> <span class="h6086">הָעֵ֖ץ</span> <span class="h834">אֲשֶׁר</span> <span class="h0">בּ֥וֹ</span> <span class="h6529">פְרִי</span> <span class="h6086">עֵ֖ץ</span> <span class="h2232">זֹרֵ֣עַ</span> <span class="h2233">זָ֑רַע</span> <span class="h0">לָכֶ֥ם</span> <span class="h1961">יִֽהְיֶ֖ה</span> <span class="h402">לְאָכְלָֽה׃</span> <span class="h3605">וּֽלְכָל</span> <span class="h2416">חַיַּ֔ה</span> <span class="h776">הָאָ֗רֶץ</span> <span class="h3605">וּלְכָל</span> <span class="h5775">ע֨וֹף</span> <span class="h8064">הַשָּׁמַ֜יִם</span> <span class="h3605">וּלְכֹ֣ל׀</span> <span class="h7430">רוֹמֵ֣שׂ</span> <span class="h5921">עַל</span> <span class="h776">הָאָ֗רֶץ</span> <span class="h834">אֲשֶׁר</span> <span class="h0">בּוֹ֙</span> <span class="h5315">נֶ֣פֶשׁ</span> <span class="h2416">חַיָּ֔ה</span> <span class="h853">אֶת</span> <span class="h3605">כָּל</span> <span class="h3418">יֶ֥רֶק</span> <span class="h6212">עֵ֖שֶׂב</span> <span class="h402">לְאָכְלָ֑ה</span> <span class="h1961">וַֽיְהִי</span>-<span class="h3651">כֵֽן׃</span> <span class="h7200">וַיַּ֤רְא</span> <span class="h430">אֱלֹהִים֙</span> <span class="h853">אֶת</span> <span class="h3605">כָּל</span> <span class="h834">אֲשֶׁ֣ר</span> <span class="h6213">עָשָׂ֔ה</span> <span class="h2009">וְהִנֵּה</span> <span class="h2896">ט֖וֹב</span> <span class="h3966">מְאֹ֑ד</span> <span class="h1961">וַֽיְהִי</span> <span class="h6153">עֶ֥רֶב</span> <span class="h1961">וַֽיְהִי</span> <span class="h1242">בֹ֖קֶר</span> <span class="h3117">י֥וֹם</span> <span class="h8345">הַשִּׁשִּֽׁי׃</span></p>
-                        </div>
+                    <div class="interlinear-grid">
+                        <div class="english-line">and <span class="h559 repeated-said">God said</span> (7),</div>
+                        <div class="hebrew-line"><span class="h559 repeated-said">וַיֹּ֣אמֶר</span> <span class="h430 repeated-said">אֱלֹהִ֗ים</span></div>
+                        
+                        <div class="english-line">“<span class="h3318 repeated-let">Let</span> the <span class="h776">land</span> <span class="h3318 repeated-let">bring out</span> <span class="h2416">living</span> <span class="h5315">creatures</span> <span class="h4327">according to their kind</span>,</div>
+                        <div class="hebrew-line"><span class="h3318 repeated-let">תּוֹצֵ֨א</span> <span class="h776">אֶ֖רֶץ</span> <span class="h5315">נֶ֤פֶשׁ</span> <span class="h2416">וְחַֽיְתוֹ</span> <span class="h4327">לְמִינָ֑הּ</span></div>
+
+                        <div class="english-line"><span class="h929">cattle</span> and <span class="h7431">creeping things</span> and <span class="h2416">beasts of the</span> <span class="h776">land</span> <span class="h4327">according to their kind</span>”; and <span class="h1961">it was</span> <span class="h3651">so</span>.</div>
+                        <div class="hebrew-line"><span class="h929">בְּהֵמָ֥ה</span> <span class="h7431">וָרֶ֛מֶשׂ</span> <span class="h2416">וְחַֽיְתוֹ</span> <span class="h776">אֶ֖רֶץ</span> <span class="h4327">לְמִינָ֑הּ</span> <span class="h1961">וַֽיְהִי</span>-<span class="h3651">כֵֽן׃</span></div>
+
+                        <div class="english-line">and <span class="h430">God</span> <span class="h6213">made</span> the <span class="h2416">beasts of the</span> <span class="h776">land</span> <span class="h4327">according to their kind</span>,</div>
+                        <div class="hebrew-line"><span class="h6213">וַיַּ֣עַשׂ</span> <span class="h430">אֱלֹהִ֖ים</span> <span class="h853">אֶת</span> <span class="h2416">חַיַּ֨ת</span> <span class="h776">הָאָ֜רֶץ</span> <span class="h4327">לְמִינֵ֑הוּ</span></div>
+
+                        <div class="english-line">and the <span class="h929">cattle</span> <span class="h4327">according to their kind</span>, and the <span class="h7431">creepers</span> of the <span class="h127">ground</span> <span class="h4327">according to its kind</span></div>
+                        <div class="hebrew-line"><span class="h853">וְאֶת</span>-<span class="h929">הַבְּהֵמָה֙</span> <span class="h4327">לְמִינֵ֑הוּ</span> <span class="h853">וְאֵ֛ת</span> <span class="h3605">כָּל</span> <span class="h7431">רֶ֥מֶשׂ</span> <span class="h127">הָֽאֲדָמָ֖ה</span> <span class="h4327">לְמִינֵ֑הוּ</span></div>
+
+                        <div class="english-line">and <span class="h430 repeated-good">God</span> <span class="h7200 repeated-good">saw</span> that <span class="h3588 repeated-good">it was</span> <span class="h2896 repeated-good">good</span> (6).</div>
+                        <div class="hebrew-line"><span class="h7200 repeated-good">וַיַּ֥רְא</span> <span class="h430 repeated-good">אֱלֹהִ֖ים</span> <span class="h3588 repeated-good">כִּי</span>-<span class="h2896 repeated-good">טֽוֹב׃</span></div>
+                        
+                        <div class="english-line mt-4">and <span class="h559 repeated-said">God said</span> (8),</div>
+                        <div class="hebrew-line mt-4"><span class="h559 repeated-said">וַיֹּ֣אמֶר</span> <span class="h430 repeated-said">אֱלֹהִ֔ים</span></div>
+                        
+                        <div class="english-line">“Let <span class="h6213">us make</span> <span class="h120">human</span> in <span class="h6754">our image</span>, according to <span class="h1823">our likeness</span>; and let them <span class="h7287">rule</span></div>
+                        <div class="hebrew-line"><span class="h6213">נַֽעֲשֶׂ֥ה</span> <span class="h120">אָדָ֛ם</span> <span class="h6754">בְּצַלְמֵ֖נוּ</span> <span class="h1823">כִּדְמוּתֵ֑נוּ</span> <span class="h7287">וְיִרְדּוּ֩</span></div>
+
+                        <div class="english-line">over the <span class="h1710">fish of the</span> <span class="h3220">sea</span> and over the <span class="h5775">birds of the</span> <span class="h8064">sky</span> and over the <span class="h929">cattle</span></div>
+                        <div class="hebrew-line"><span class="h1710">בִדְגַ֨ת</span> <span class="h3220">הַיָּ֜ם</span> <span class="h5775">וּבְע֣وֹף</span> <span class="h8064">הַשָּׁמַ֗יִם</span> <span class="h929">וּבַבְּהֵמָה֙</span></div>
+                        
+                        <div class="english-line">and over <span class="h3605">all</span> the <span class="h776">land</span>, and over <span class="h3605">every</span> <span class="h7431">creeper</span> that <span class="h7430">creeps</span> on the <span class="h776">land</span>.”</div>
+                        <div class="hebrew-line"><span class="h3605">וּבְכָל</span>-<span class="h776">הָאָֽרֶץ׃</span> <span class="h3605">וּבְכָל</span> <span class="h7431">הָרֶ֖מֶשׂ</span> <span class="h7430">הָֽרֹמֵ֥שׂ</span> <span class="h5921">עַל</span> <span class="h776">הָאָֽרֶץ׃</span></div>
+                        
+                        <div class="english-line">and <span class="h430">God</span> <span class="h1254">created</span> <span class="h120">human</span> in his <span class="h6754">image</span>, in the <span class="h6754">image of</span> <span class="h430">God</span> he <span class="h1254">created</span> him;</div>
+                        <div class="hebrew-line"><span class="h1254">בָּרָ֥א</span> <span class="h430">אֱלֹהִ֖ים</span> <span class="h853">אֶת</span> <span class="h120">הָֽאָדָם֙</span> <span class="h6754">בְּצֶ֥לֶם</span> <span class="h6754">בְּצֶ֥לֶם</span> <span class="h430">אֱלֹהִ֖ים</span> <span class="h1254">בָּרָ֥א</span> <span class="h853">אֹת֑וֹ</span></div>
+
+                        <div class="english-line"><span class="h2145">male</span> and <span class="h5347">female</span> he <span class="h1254">created</span> them.</div>
+                        <div class="hebrew-line"><span class="h2145">זָכָ֥ר</span> <span class="h5347">וּנְקֵבָ֖ה</span> <span class="h1254">בָּרָ֥א</span> <span class="h853">אֹתָֽם׃</span></div>
+
+                        <div class="english-line">and <span class="h430">God</span> <span class="h1288">blessed</span> them, and <span class="h430 repeated-said">God</span> <span class="h559 repeated-said">said</span> (9) to them,</div>
+                        <div class="hebrew-line"><span class="h1288">וַיְבָ֣רֶךְ</span> <span class="h853">אֹתָם֮</span> <span class="h430">אֱלֹהִ֗ים</span> <span class="h559 repeated-said">וַיֹּ֨אמֶר</span> <span class="h0">לָהֶ֜ם</span> <span class="h430 repeated-said">אֱלֹהִ֗ים</span></div>
+
+                        <div class="english-line">“<span class="h6509">Be fruitful</span> and <span class="h7235">multiply</span>, and <span class="h4390">fill</span> the <span class="h776">land</span>, and <span class="h3533">subdue</span> it;</div>
+                        <div class="hebrew-line"><span class="h6509">פְּר֥וּ</span> <span class="h7235">וּרְב֛וּ</span> <span class="h4390">וּמִלְא֥וּ</span> <span class="h853">אֶת</span> <span class="h776">הָאָֽרֶץ׃</span> <span class="h3533">וְכִבְשֻׁ֑הָ</span></div>
+                        
+                        <div class="english-line">and <span class="h7287">rule</span> over the <span class="h1710">fish of the</span> <span class="h3220">sea</span> and over the <span class="h5775">birds of the</span> <span class="h8064">sky</span></div>
+                        <div class="hebrew-line"><span class="h7287">וּרְד֞וּ</span> <span class="h1710">בִּדְגַ֤ת</span> <span class="h3220">הַיָּם֙</span> <span class="h5775">וּבְע֣وֹף</span> <span class="h8064">הַשָּׁמַ֔יִם</span></div>
+                        
+                        <div class="english-line">and over <span class="h2416">living creatures</span> that <span class="h7430">creep</span> on the <span class="h776">land</span>.”</div>
+                        <div class="hebrew-line"><span class="h3605">וּבְכָל</span> <span class="h2416">חַיָּ֖ה</span> <span class="h7430">הָֽרֹמֶ֥שֶׂת</span> <span class="h5921">עַל</span> <span class="h776">הָאָֽרֶץ׃</span></div>
+                        
+                        <div class="english-line mt-4">and <span class="h430 repeated-said">God</span> <span class="h559 repeated-said">said</span> (10),</div>
+                        <div class="hebrew-line mt-4"><span class="h559 repeated-said">וַיֹּ֣אמֶר</span> <span class="h430 repeated-said">אֱלֹהִ֗ים</span></div>
+                        
+                        <div class="english-line">“<span class="h2009">Behold</span>, I have <span class="h5414">given</span> to you <span class="h3605">every</span> <span class="h6212">plant</span> <span class="h2232">producing</span> <span class="h2233">seed</span></div>
+                        <div class="hebrew-line"><span class="h2009">הִנֵּה֩</span> <span class="h5414">נָתַ֨תִּי</span> <span class="h0">לָכֶ֜ם</span> <span class="h853">אֶת</span> <span class="h3605">כָּל</span> <span class="h6212">עֵ֣שֶׂב׀</span> <span class="h2232">זֹרֵ֣עַ</span> <span class="h2233">זָ֑רַע</span></div>
+
+                        <div class="english-line">that is on the <span class="h6440">face of</span> <span class="h3605">all</span> the <span class="h776">land</span>,</div>
+                        <div class="hebrew-line"><span class="h834">אֲשֶׁר֙</span> <span class="h5921">עַל</span> <span class="h6440">פְּנֵ֣י</span> <span class="h3605">כָל</span> <span class="h776">הָאָ֔רֶץ</span></div>
+
+                        <div class="english-line">and <span class="h3605">every</span> <span class="h6086">tree</span> which has <span class="h6529">fruit</span> <span class="h6086">producing</span> <span class="h2233">seed</span>; it shall be <span class="h402">food</span> for y’all;</div>
+                        <div class="hebrew-line"><span class="h853">וְאֶת</span> <span class="h3605">כָּל</span> <span class="h6086">הָעֵ֖ץ</span> <span class="h834">אֲשֶׁר</span> <span class="h0">בּ֥וֹ</span> <span class="h6529">פְרִי</span> <span class="h6086">עֵ֖ץ</span> <span class="h2232">זֹרֵ֣עַ</span> <span class="h2233">זָ֑רַע</span> <span class="h0">לָכֶ֥ם</span> <span class="h1961">יִֽהְיֶ֖ה</span> <span class="h402">לְאָכְלָֽה׃</span></div>
+
+                        <div class="english-line">and for <span class="h3605">every</span> <span class="h2416">beast</span> of the <span class="h776">land</span>, and for <span class="h3605">every</span> <span class="h5775">bird</span> of the <span class="h8064">sky</span>,</div>
+                        <div class="hebrew-line"><span class="h3605">וּֽלְכָל</span> <span class="h2416">חַיַּ֔ה</span> <span class="h776">הָאָ֗רֶץ</span> <span class="h3605">וּלְכָל</span> <span class="h5775">ע֨وֹף</span> <span class="h8064">הַשָּׁמַ֜יִם</span></div>
+                        
+                        <div class="english-line">and for <span class="h3605">every</span> thing that <span class="h7430">moves</span> on the <span class="h776">land</span> which has <span class="h2416">living</span> <span class="h5315">being</span> in it,</div>
+                        <div class="hebrew-line"><span class="h3605">וּלְכֹ֣ל׀</span> <span class="h7430">רוֹמֵ֣שׂ</span> <span class="h5921">עַל</span> <span class="h776">הָאָ֗רֶץ</span> <span class="h834">אֲשֶׁר</span> <span class="h0">בּוֹ֙</span> <span class="h5315">נֶ֣פֶשׁ</span> <span class="h2416">חַיָּ֔ה</span></div>
+
+                        <div class="english-line"><span class="h3605">every</span> <span class="h3418">green</span> <span class="h6212">plant</span> is for <span class="h402">food</span>” and <span class="h1961">it was</span> <span class="h3651">so</span>.</div>
+                        <div class="hebrew-line"><span class="h853">אֶת</span> <span class="h3605">כָּל</span> <span class="h3418">יֶ֥רֶק</span> <span class="h6212">עֵ֖שֶׂב</span> <span class="h402">לְאָכְלָ֑ה</span> <span class="h1961">וַֽיְהִי</span>-<span class="h3651">כֵֽן׃</span></div>
+                        
+                        <div class="english-line">and <span class="h430">God</span> <span class="h7200">saw</span> <span class="h3605">all</span> that He had <span class="h6213">made</span>, and <span class="h2009">behold</span>, it was <span class="h3966">very</span> <span class="h2896 repeated-good">good</span> (7).</div>
+                        <div class="hebrew-line"><span class="h7200">וַיַּ֤רְא</span> <span class="h430">אֱלֹהִים֙</span> <span class="h853">אֶת</span> <span class="h3605">כָּל</span> <span class="h834">אֲשֶׁ֣ר</span> <span class="h6213">עָשָׂ֔ה</span> <span class="h2009">וְהִנֵּה</span> <span class="h2896 repeated-good">ט֖وֹב</span> <span class="h3966">מְאֹ֑ד</span></div>
+
+                        <div class="english-line">and <span class="h1961">there was</span> <span class="h6153">evening</span> and <span class="h1961">there was</span> <span class="h1242">morning</span>, a <span class="h8345">sixth</span> <span class="h3117">day</span>.</div>
+                        <div class="hebrew-line"><span class="h1961">וַֽיְהִי</span> <span class="h6153">עֶ֥רֶב</span> <span class="h1961">וַֽיְהִי</span> <span class="h1242">בֹ֖קֶר</span> <span class="h3117">י֥וֹם</span> <span class="h8345">הַשִּׁשִּֽׁי׃</span></div>
                     </div>
                 </div>
             </div>
@@ -164,15 +388,21 @@
             <!-- Day 7 -->
             <div class="card">
                 <h2 class="card-title">Day 7: Completion & Rest</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                         <p class="mb-2"><strong>Complete:</strong> and <span class="h3615">they were completed</span>, the <span class="h8064">skies</span> and the <span class="h776">land</span> and <span class="h3605">all their</span> <span class="h6635">hosts</span>,</p>
-                         <p><strong>Epilogue:</strong> and <span class="h430">God</span> <span class="h3615">completed</span> on the <span class="h7637">seventh</span> <span class="h3117">day</span> his <span class="h4399">work</span> <span class="h834">which</span> he had <span class="h6213">made</span> and he <span class="h7673">rested</span> on the <span class="h7637">seventh</span> <span class="h3117">day</span> from <span class="h3605">all his</span> <span class="h4399">work</span> <span class="h834">which</span> he had <span class="h6213">made</span> and <span class="h430">God</span> <span class="h1288">blessed</span> the <span class="h7637">seventh</span> <span class="h3117">day</span> (no evening+morning, also incomplete) and he <span class="h6942">set it apart as holy</span>, because <span class="h3588">on it</span> he <span class="h7673">rested</span> from <span class="h3605">all his</span> <span class="h4399">work</span> <span class="h834">which</span> <span class="h430">God</span> <span class="h1254">created</span> to <span class="h6213">make</span>.</p>
-                    </div>
-                    <div class="hebrew">
-                        <h3 class="font-semibold text-lg mb-2">י֣וֹם הַשְּׁבִיעִ֔י</h3>
-                        <p class="text-xl leading-loose"><span class="h3615">וַיְכֻלּ֛וּ</span> <span class="h8064">הַשָּׁמַ֥יִם</span> <span class="h776">וְהָאָ֖רֶץ</span> <span class="h3605">וְכָל</span> <span class="h6635">צְבָאָֽם׃</span> <span class="h3615">וַיְכַ֤ל</span> <span class="h430">אֱלֹהִים֙</span> <span class="h3117">בַּיּ֣וֹם</span> <span class="h7637">הַשְּׁבִיעִ֔י</span> <span class="h4399">מְלַאכְתּ֖וֹ</span> <span class="h834">אֲשֶׁ֣ר</span> <span class="h6213">עָשָֽׂה׃</span> <span class="h7673">וַיִּשְׁבֹּת֙</span> <span class="h3117">בַּיּ֣וֹם</span> <span class="h7637">הַשְּׁבִיעִ֔י</span> <span class="h3605">מִכָּל</span> <span class="h4399">מְלַאכְתּ֖וֹ</span> <span class="h834">אֲשֶׁ֥ר</span> <span class="h6213">עָשָֽׂה׃</span> <span class="h1288">וַיְבָ֤רֶךְ</span> <span class="h430">אֱלֹהִ֖ים</span> <span class="h853">אֶת</span> <span class="h3117">י֣וֹם</span> <span class="h7637">הַשְּׁבִיעִ֔י</span> <span class="h6942">וַיְקַדֵּ֖שׁ</span> <span class="h853">אֹת֑וֹ</span> <span class="h3588">כִּ֣י</span> <span class="h0">ב֤וֹ</span> <span class="h7673">שָׁבַת֙</span> <span class="h3605">מִכָּל</span> <span class="h4399">מְלַאכְתּ֔וֹ</span> <span class="h834">אֲשֶׁר</span> <span class="h1254">בָּרָ֥א</span> <span class="h430">אֱלֹהִ֖ים</span> <span class="h6213">לַֽעֲשֽׂוֹת׃</span></p>
-                    </div>
+                <div class="interlinear-grid">
+                     <div class="english-line">and <span class="h3615">they were completed</span>, the <span class="h8064">skies</span> and the <span class="h776">land</span> and <span class="h3605">all their</span> <span class="h6635">hosts</span>,</div>
+                     <div class="hebrew-line"><span class="h3615">וַיְכֻלּ֛וּ</span> <span class="h8064">הַשָּׁמַ֥יִם</span> <span class="h776">וְהָאָ֖רֶץ</span> <span class="h3605">וְכָל</span> <span class="h6635">צְבָאָֽם׃</span></div>
+
+                     <div class="english-line">and <span class="h430">God</span> <span class="h3615">completed</span> on the <span class="h7637">seventh</span> <span class="h3117">day</span> his <span class="h4399">work</span> <span class="h834">which</span> he had <span class="h6213">made</span></div>
+                     <div class="hebrew-line"><span class="h3615">וַיְכַ֤ל</span> <span class="h430">אֱלֹהִים֙</span> <span class="h3117">בַּיּ֣וֹם</span> <span class="h7637">הַשְּׁבִיעִ֔י</span> <span class="h4399">מְלַאכְתּ֖וֹ</span> <span class="h834">אֲשֶׁ֣ר</span> <span class="h6213">עָשָֽׂה׃</span></div>
+                     
+                     <div class="english-line">and he <span class="h7673">rested</span> on the <span class="h7637">seventh</span> <span class="h3117">day</span> from <span class="h3605">all his</span> <span class="h4399">work</span> <span class="h834">which</span> he had <span class="h6213">made</span></div>
+                     <div class="hebrew-line"><span class="h7673">וַיִּשְׁבֹּת֙</span> <span class="h3117">בַּיּ֣וֹם</span> <span class="h7637">הַשְּׁבִיעִ֔י</span> <span class="h3605">מִכָּל</span> <span class="h4399">מְלַאכְתּ֖וֹ</span> <span class="h834">אֲשֶׁ֥ר</span> <span class="h6213">עָשָֽׂה׃</span></div>
+
+                     <div class="english-line">and <span class="h430">God</span> <span class="h1288">blessed</span> the <span class="h7637">seventh</span> <span class="h3117">day</span> and he <span class="h6942">set it apart as holy</span>,</div>
+                     <div class="hebrew-line"><span class="h1288">וַיְבָ֤רֶךְ</span> <span class="h430">אֱלֹהִ֖ים</span> <span class="h853">אֶת</span> <span class="h3117">י֣وֹם</span> <span class="h7637">הַשְּׁבִיעִ֔י</span> <span class="h6942">וַיְקַדֵּ֖שׁ</span> <span class="h853">אֹת֑وֹ</span></div>
+                     
+                     <div class="english-line">because <span class="h3588">on it</span> he <span class="h7673">rested</span> from <span class="h3605">all his</span> <span class="h4399">work</span> <span class="h834">which</span> <span class="h430">God</span> <span class="h1254">created</span> to <span class="h6213">make</span>.</div>
+                     <div class="hebrew-line"><span class="h3588">כִּ֣י</span> <span class="h0">ב֤وֹ</span> <span class="h7673">שָׁבַת֙</span> <span class="h3605">מִכָּל</span> <span class="h4399">מְלַאכְתּ֔וֹ</span> <span class="h834">אֲשֶׁר</span> <span class="h1254">בָּרָ֥א</span> <span class="h430">אֱלֹהִ֖ים</span> <span class="h6213">לַֽעֲשׂוֹת׃</span></div>
                 </div>
             </div>
         </main>
@@ -181,55 +411,113 @@
             <p>A fun reverse interlinear.</p>
         </footer>
     </div>
+    
+    <!-- Drawer and Backdrop -->
+    <div id="drawer-backdrop"></div>
+    <div id="drawer">
+        <div id="drawer-content" class="relative">
+             <!-- Close button -->
+            <button id="close-drawer" class="absolute top-0 right-0 text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
+            <!-- Content will be injected here by JavaScript -->
+        </div>
+    </div>
+
     <script>
-        // --- Interactivity for word highlighting ---
         document.addEventListener('DOMContentLoaded', () => {
-            // Get all spans that have a Strong's number class (e.g., starts with 'h')
             const words = document.querySelectorAll('span[class*="h"]');
+            const drawer = document.getElementById('drawer');
+            const backdrop = document.getElementById('drawer-backdrop');
+            const drawerContent = document.getElementById('drawer-content');
+            const closeButton = document.getElementById('close-drawer');
+            
+            let hebrewDictionary = null;
             let currentlyActive = null;
 
-            // Function to handle highlighting
-            const handleHighlight = (event) => {
-                const className = event.target.className.split(' ').find(c => c.startsWith('h'));
-                if (!className) return;
+            // Fetch the Hebrew dictionary data
+            fetch('hebrew.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    hebrewDictionary = data;
+                })
+                .catch(error => {
+                    console.error('Error fetching Hebrew dictionary:', error);
+                    drawerContent.innerHTML = '<p>Could not load word data.</p>';
+                });
 
-                // If a word is already clicked and we are hovering a new one, clear the old one
-                if (currentlyActive && currentlyActive !== className) {
-                    document.querySelectorAll('.' + currentlyActive).forEach(el => {
-                        el.classList.remove('highlight');
+            // Function to open and populate the drawer
+            const openDrawer = (strongsClass) => {
+                if (!hebrewDictionary) return; // Don't open if data isn't loaded
+
+                const strongsNumber = strongsClass.substring(1); // Remove the 'h'
+                const wordData = hebrewDictionary.find(entry => entry.strongs === `h${strongsNumber}`);
+                
+                if (!wordData) {
+                    drawerContent.innerHTML = `<p>No data found for ${strongsClass}.</p>`;
+                } else {
+                    // Collect all lines where this word appears
+                    let occurrences = '';
+                    const allLines = document.querySelectorAll('.english-line');
+                    allLines.forEach(line => {
+                        if (line.querySelector(`.${strongsClass}`)) {
+                           occurrences += `<li class="border-l-2 border-gray-200 pl-2 mb-2">${line.innerText}</li>`;
+                        }
                     });
+
+                    // Populate the drawer
+                    drawerContent.innerHTML = `
+                        <button id="close-drawer" class="absolute -top-4 -right-4 text-gray-500 hover:text-gray-900 text-3xl font-bold">&times;</button>
+                        <h3 class="text-3xl hebrew-line mb-2">${wordData.hebrew || ''}</h3>
+                        <p class="text-lg font-semibold text-sky-700 mb-1">${wordData.word || 'N/A'}</p>
+                        <p class="text-sm text-gray-500 mb-4">(Strongs: ${wordData.strongs})</p>
+                        <p class="italic mb-4">"${wordData.data.def.short || 'No definition available.'}"</p>
+                        <h4 class="font-bold border-b pb-1 mb-2">Occurrences in this text:</h4>
+                        <ul class="text-sm list-none overflow-y-auto" style="max-height: 40vh;">${occurrences}</ul>
+                    `;
+                     // Re-add event listener for the new close button
+                    document.getElementById('close-drawer').addEventListener('click', closeDrawer);
                 }
-                
-                const elementsToHighlight = document.querySelectorAll('.' + className);
-                
-                // Toggle highlight on click
-                if (event.type === 'click') {
-                    const isHighlighted = event.target.classList.contains('highlight');
-                    if (isHighlighted) {
-                        elementsToHighlight.forEach(el => el.classList.remove('highlight'));
-                        currentlyActive = null;
-                    } else {
-                        elementsToHighlight.forEach(el => el.classList.add('highlight'));
-                        currentlyActive = className;
-                    }
-                } else if (event.type === 'mouseover') {
-                    // Highlight on hover only if no word is 'active' from a click
-                    if (!currentlyActive) {
-                        elementsToHighlight.forEach(el => el.classList.add('highlight'));
-                    }
-                } else if (event.type === 'mouseout') {
-                     // Remove highlight on mouseout only if no word is 'active' from a click
-                    if (!currentlyActive) {
-                        elementsToHighlight.forEach(el => el.classList.remove('highlight'));
-                    }
-                }
+
+                drawer.classList.add('active');
+                backdrop.classList.add('active');
             };
 
+            // Function to close the drawer
+            const closeDrawer = () => {
+                drawer.classList.remove('active');
+                backdrop.classList.remove('active');
+            };
+
+            // Main event handler for words
+            const handleWordInteraction = (event) => {
+                const classList = event.target.className.split(' ');
+                const strongsClass = classList.find(c => c.startsWith('h'));
+                
+                if (!strongsClass || strongsClass === 'h0') return;
+
+                if (event.type === 'click') {
+                    openDrawer(strongsClass);
+                } else if (event.type === 'mouseover') {
+                    document.querySelectorAll('.' + strongsClass).forEach(el => el.classList.add('highlight'));
+                } else if (event.type === 'mouseout') {
+                    document.querySelectorAll('.' + strongsClass).forEach(el => el.classList.remove('highlight'));
+                }
+            };
+            
             words.forEach(word => {
-                word.addEventListener('mouseover', handleHighlight);
-                word.addEventListener('mouseout', handleHighlight);
-                word.addEventListener('click', handleHighlight);
+                word.addEventListener('click', handleWordInteraction);
+                word.addEventListener('mouseover', handleWordInteraction);
+                word.addEventListener('mouseout', handleWordInteraction);
             });
+
+            // Add event listeners to close the drawer
+            backdrop.addEventListener('click', closeDrawer);
+            closeButton.addEventListener('click', closeDrawer);
+
         });
     </script>
 </body>
