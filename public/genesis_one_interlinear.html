@@ -33,6 +33,7 @@
         
         /* --- Highlighting Styles --- */
         .repeated-said { background-color: rgba(253, 230, 138, 0.5); } /* Yellow */
+        .repeated-over-the-face { background-color: rgba(148, 96, 160, 0.5); } /* Yellow */
         .repeated-let { background-color: rgba(251, 191, 143, 0.5); } /* Orange */
         .repeated-good { background-color: rgba(167, 243, 208, 0.6); } /* Green */
 
@@ -124,6 +125,11 @@
             overflow-y: auto;
             max-height: none;
         }
+        .bdb_def + ol {
+            padding-left: 1.5rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0;
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800 p-4 sm:p-6 md:p-8">
@@ -139,11 +145,17 @@
             <div id="day0" class="card">
                 <h2 class="card-title">Pre-creation State</h2>
                 <div class="interlinear-grid">
-                    <div class="english-line"><span class="h7225" data-id="0">In the beginning</span>, <span class="h1254" data-id="1">created</span> <span class="h430" data-id="2">God</span> <span class="h853" data-id="3">the</span> <span class="h8064" data-id="4">heavens(skies)</span> <span class="h853" data-id="5">and the</span> <span class="h776" data-id="6">earth(land)</span>,</div>
-                    <div class="hebrew-line"><span class="h7225" data-id="0">בְּרֵאשִׁ֖ית</span> <span class="h1254" data-id="1">בָּרָ֣א</span> <span class="h430" data-id="2">אֱלֹהִ֑ים</span> <span class="h853" data-id="3">וְאֵ֥ת</span> <span class="h8064" data-id="4">הַשָּׁמַ֖יִם</span> <span class="h853" data-id="5">וְאֵ֥ת</span> <span class="h776" data-id="6">הָאָֽרֶץ׃</span></div>
+                    <div class="english-line"><span class="h7225" data-id="1">In the beginning</span>, <span class="h430" data-id="3">God</span> <span class="h1254" data-id="2">created</span> <span class="h8064" data-id="5">the heavens(skies)</span> <span class="h776" data-id="7">and the earth(land)</span>,</div>
+                    <div class="hebrew-line"><span class="h7225" data-id="1">בְּרֵאשִׁ֖ית</span> <span class="h1254" data-id="2">בָּרָ֣א</span> <span class="h430" data-id="3">אֱלֹהִ֑ים</span> <span class="h853" data-id="4">וְאֵ֥ת</span> <span class="h8064" data-id="5">הַשָּׁמַ֖יִם</span> <span class="h776" data-id="7">וְאֵ֥ת הָאָֽרֶץ׃</span></div>
                     
-                    <div class="english-line">now, <span class="h776" data-id="7">the land</span> <span class="h1961" data-id="8">was</span> <span class="h8414" data-id="9">wild and waste</span> and <span class="h922" data-id="10">darkness</span> <span class="h2822" data-id="11">was</span> <span class="h5921" data-id="12">over</span> <span class="h6440" data-id="13">the face of</span> <span class="h8415" data-id="14">the watery deep</span> but <span class="h7307" data-id="15">the breath/wind of</span> <span class="h430" data-id="16">God</span> <span class="h7363" data-id="17">was hovering</span> <span class="h5921" data-id="18">over</span> <span class="h6440" data-id="19">the face of</span> <span class="h4325" data-id="20">the waters</span></div>
-                    <div class="hebrew-line"><span class="h776" data-id="7">וְהָאָ֗רֶץ</span> <span class="h1961" data-id="8">הָיְתָ֥ה</span> <span class="h8414" data-id="9">תֹ֙הוּ֙</span> <span class="h922" data-id="10">וָבֹ֔הוּ</span> <span class="h2822" data-id="11">וְחֹ֖שֶׁךְ</span> <span class="h5921" data-id="12">עַל</span> <span class="h6440" data-id="13">פְּנֵ֥י</span> <span class="h8415" data-id="14">תְה֑וֹם</span> <span class="h7307" data-id="15">וְר֣וּחַ</span> <span class="h430" data-id="16">אֱלֹהִ֔ים</span> <span class="h7363" data-id="17">מְרַחֶ֖פֶת</span> <span class="h5921" data-id="18">עַל</span>-<span class="h6440" data-id="19">פְּנֵ֥י</span> <span class="h4325" data-id="20">הַמָּֽיִם׃</span></div>
+                    <div class="english-line">now, <span class="h776" data-id="8">the land</span> <span class="h1961" data-id="9">was</span> <span class="h8414" data-id="10">wild</span> <span class="h922" data-id="11">and waste</span></div>
+                    <div class="hebrew-line"><span class="h776" data-id="8">וְהָאָ֗רֶץ</span> <span class="h1961" data-id="9">הָיְתָ֥ה</span> <span class="h8414" data-id="10">תֹ֙הוּ֙</span> <span class="h922" data-id="11">וָבֹ֔הוּ</span></div>
+                    
+                    <div class="english-line"><span class="h2822" data-id="12">and darkness</span> was <span class="repeated-over-the-face"><span class="h5921" data-id="13">over</span> the <span class="h6440" data-id="14">face</span> of</span> <span class="h8415" data-id="15">the watery deep</span></div>
+                    <div class="hebrew-line"><span class="h2822" data-id="12">וְחֹ֖שֶׁךְ</span> <span class="repeated-over-the-face"><span class="h5921" data-id="13">עַל</span> <span class="h6440" data-id="14">פְּנֵ֥י</span></span> <span class="h8415" data-id="15">תְה֑וֹם</span></div>
+                    
+                    <div class="english-line">but <span class="h7307" data-id="16">the breath/wind</span> of <span class="h430" data-id="17">God</span> was <span class="h7363" data-id="18">hovering</span> <span class="repeated-over-the-face"><span class="h5921" data-id="19">over</span> the <span class="h6440" data-id="20">face</span> of</span> <span class="h4325" data-id="21">the waters</span></div>
+                    <div class="hebrew-line"><span class="h7307" data-id="16">וְר֣וּחַ</span> <span class="h430" data-id="17">אֱלֹהִ֔ים</span> <span class="h7363" data-id="18">מְרַחֶ֖פֶת</span> <span class="repeated-over-the-face"><span class="h5921" data-id="19">עַל</span> <span class="h6440" data-id="20">פְּנֵ֥י</span></span> <span class="h4325" data-id="21">הַמָּֽיִם׃</span></div>
                 </div>
             </div>
 
@@ -153,23 +165,23 @@
                 <div id="day1" class="card">
                     <h2 class="card-title">Day 1: Environment = Heavens (skies)</h2>
                     <div class="interlinear-grid">
-                        <div class="english-line">and <span class="h559 repeated-said" data-id="21">God said</span> (1),</div>
-                        <div class="hebrew-line"><span class="h559 repeated-said" data-id="21">וַיֹּ֥אמֶר</span> <span class="h430 repeated-said" data-id="22">אֱלֹהִ֖ים</span></div>
+                        <div class="english-line"><span class="repeated-said">and <span class="h559" data-id="23">God</span> <span class="h559" data-id="22">said</span> (1),</span></div>
+                        <div class="hebrew-line"><span class="repeated-said"><span class="h559" data-id="22">וַיֹּ֥אמֶר</span> <span class="h430" data-id="23">אֱלֹהִ֖ים</span></span></div>
 
-                        <div class="english-line">“<span class="h1961 repeated-let" data-id="23">Let there be</span> <span class="h216" data-id="24">light</span>” and <span class="h1961" data-id="25">there was</span> <span class="h216" data-id="26">light</span>.</div>
-                        <div class="hebrew-line"><span class="h1961 repeated-let" data-id="23">וַֽיְהִי</span> <span class="h216" data-id="24">אֽוֹר׃</span> <span class="h1961" data-id="25">וַֽיְהִי</span> <span class="h216" data-id="26">אֽוֹר׃</span></div>
+                        <div class="english-line"><span class="repeated-let">“<span class="h1961" data-id="24">Let there be</span> <span class="h216" data-id="25">light</span>”</span> and <span class="h1961" data-id="26">there was</span> <span class="h216" data-id="27">light</span>.</div>
+                        <div class="hebrew-line"><span class="repeated-let"><span class="h1961" data-id="24">וַֽיְהִי</span> <span class="h216" data-id="25">אֽוֹר׃</span></span> <span class="h1961" data-id="26">וַֽיְהִי</span> <span class="h216" data-id="27">אֽוֹר׃</span></div>
 
-                        <div class="english-line">and <span class="h430 repeated-good" data-id="28">God</span> <span class="h7200 repeated-good" data-id="27">saw</span> that the <span class="h216" data-id="30">light</span> <span class="h3588 repeated-good" data-id="31">was</span> <span class="h2896 repeated-good" data-id="32">good</span> (1);</div>
-                        <div class="hebrew-line"><span class="h7200 repeated-good" data-id="27">וַיַּ֧רְא</span> <span class="h430 repeated-good" data-id="28">אֱלֹהִ֔ים</span> <span class="h853" data-id="29">אֶת</span>-<span class="h216" data-id="30">הָא֖וֹר</span> <span class="h3588 repeated-good" data-id="31">כִּי</span>-<span class="h2896 repeated-good" data-id="32">ט֑וֹב</span></div>
+                        <div class="english-line"><span class="repeated-good"><span class="h430" data-id="29">God</span> <span class="h7200" data-id="28">saw</span> that the <span class="h216" data-id="31">light</span> <span class="h3588" data-id="32">was</span> <span class="h2896" data-id="33">good</span> (1)</span></div>
+                        <div class="hebrew-line"><span class="repeated-good"><span class="h7200" data-id="28">וַיַּ֧רְא</span> <span class="h430" data-id="29">אֱלֹהִ֔ים</span> <span class="h853" data-id="30">אֶת</span>-<span class="h216" data-id="31">הָא֖וֹר</span> <span class="h3588" data-id="32">כִּי</span> <span class="h2896" data-id="33">ט֑וֹב</span></span></div>
 
-                        <div class="english-line">and <span class="h430" data-id="34">God</span> <span class="h914" data-id="33">separated</span> the <span class="h216" data-id="36">light</span> <span class="h996" data-id="35">from</span> the <span class="h2822" data-id="38">darkness</span>.</div>
-                        <div class="hebrew-line"><span class="h914" data-id="33">וַיַּבְדֵּ֣ל</span> <span class="h430" data-id="34">אֱלֹהִ֔ים</span> <span class="h996" data-id="35">וּבֵ֥ין</span> <span class="h216" data-id="36">הָא֖וֹר</span> <span class="h996" data-id="37">וּבֵ֥ין</span> <span class="h2822" data-id="38">הַחֹֽשֶׁךְ׃</span></div>
+                        <div class="english-line">and <span class="h430" data-id="35">God</span> <span class="h914" data-id="34">separated</span> the <span class="h216" data-id="37">light</span> <span class="h996" data-id="38">from</span> the <span class="h2822" data-id="39">darkness</span>.</div>
+                        <div class="hebrew-line"><span class="h914" data-id="34">וַיַּבְדֵּ֣ל</span> <span class="h430" data-id="35">אֱלֹהִ֔ים</span> <span class="h996" data-id="36">וּבֵ֥ין</span> <span class="h216" data-id="37">הָא֖וֹר</span> <span class="h996" data-id="38">וּבֵ֥ין</span> <span class="h2822" data-id="39">הַחֹֽשֶׁךְ׃</span></div>
 
-                        <div class="english-line">and <span class="h430" data-id="40">God</span> <span class="h7121" data-id="39">called</span> the <span class="h216" data-id="41">light</span> “<span class="h3117" data-id="42">day</span>,” and the <span class="h2822" data-id="43">darkness</span> he <span class="h7121" data-id="44">called</span> “<span class="h3915" data-id="45">night</span>.”</div>
-                        <div class="hebrew-line"><span class="h7121" data-id="39">קָ֣רָא</span> <span class="h430" data-id="40">אֱלֹהִ֤ים׀</span> <span class="h216" data-id="41">לָאוֹר֙</span> <span class="h3117" data-id="42">י֥וֹם</span> <span class="h2822" data-id="43">וְלַחֹ֖שֶׁךְ</span> <span class="h7121" data-id="44">קָ֣רָא</span> <span class="h3915" data-id="45">לָ֑יְלָה</span></div>
+                        <div class="english-line">and <span class="h430" data-id="41">God</span> <span class="h7121" data-id="40">called</span> <span class="h216" data-id="42">the light</span> “<span class="h3117" data-id="43">day</span>,” <span class="h2822" data-id="44">and the darkness</span> he <span class="h7121" data-id="45">called</span> “<span class="h3915" data-id="46">night</span>.”</div>
+                        <div class="hebrew-line"><span class="h7121" data-id="40">קָ֣רָא</span> <span class="h430" data-id="41">אֱלֹהִ֤ים׀</span> <span class="h216" data-id="42">לָאוֹר֙</span> <span class="h3117" data-id="43">י֥וֹם</span> <span class="h2822" data-id="44">וְלַחֹ֖שֶׁךְ</span> <span class="h7121" data-id="45">קָ֣רָא</span> <span class="h3915" data-id="46">לָ֑יְלָה</span></div>
 
-                        <div class="english-line">and <span class="h1961" data-id="46">there was</span> <span class="h6153" data-id="47">evening</span> and <span class="h1961" data-id="48">there was</span> <span class="h1242" data-id="49">morning</span>, <span class="h259" data-id="51">one</span> <span class="h3117" data-id="50">day</span>.</div>
-                        <div class="hebrew-line"><span class="h1961" data-id="46">וַֽיְהִי</span>-<span class="h6153" data-id="47">עֶ֥רֶב</span> <span class="h1961" data-id="48">וַֽיְהִי</span>-<span class="h1242" data-id="49">בֹ֖קֶר</span> <span class="h3117" data-id="50">י֥וֹם</span> <span class="h259" data-id="51">אֶחָֽד׃</span></div>
+                        <div class="english-line">and <span class="h1961" data-id="47">there was</span> <span class="h6153" data-id="48">evening</span> <span class="h1961" data-id="49">and there was</span> <span class="h1242" data-id="50">morning</span>, <span class="h259" data-id="52">one</span> <span class="h3117" data-id="51">day</span>.</div>
+                        <div class="hebrew-line"><span class="h1961" data-id="47">וַֽיְהִי</span> <span class="h6153" data-id="48">עֶ֥רֶב</span> <span class="h1961" data-id="49">וַֽיְהִי</span>-<span class="h1242" data-id="50">בֹ֖קֶר</span> <span class="h3117" data-id="51">י֥וֹם</span> <span class="h259" data-id="52">אֶחָֽד׃</span></div>
                     </div>
                 </div>
                  <!-- Day 4 -->
@@ -209,8 +221,8 @@
                         <div class="english-line">and <span class="h430 repeated-good">God</span> <span class="h7200 repeated-good">saw</span> that it <span class="h3588 repeated-good">was</span> <span class="h2896 repeated-good">good</span> (4).</div>
                         <div class="hebrew-line"><span class="h7200 repeated-good">וַיַּ֥רְא</span> <span class="h430 repeated-good">אֱלֹהִ֖ים</span> <span class="h3588 repeated-good">כִּי</span> <span class="h2896 repeated-good">טֽוֹב׃</span></div>
 
-                        <div class="english-line">and <span class="h1961">there was</span> <span class="h6153">evening</span> and <span class="h1961">there was</span> <span class="h1242" data-id="50">morning</span>, a <span class="h7243">fourth</span> <span class="h3117">day</span>.</div>
-                        <div class="hebrew-line"><span class="h1961" data-id="47">וַֽיְהִי</span> <span class="h6153" data-id="48">עֶ֥רֶב</span> <span class="h1961" data-id="49">וַֽיְהִי</span> <span class="h1242" data-id="50">בֹ֖קֶר</span> <span class="h3117" data-id="51">י֥וֹם</span> <span class="h7243">רְבִיעִֽי׃</span></div>
+                        <div class="english-line">and <span class="h1961">there was</span> <span class="h6153">evening</span> and <span class="h1961">there was</span> <span class="h1242">morning</span>, a <span class="h7243">fourth</span> <span class="h3117">day</span>.</div>
+                        <div class="hebrew-line"><span class="h1961">וַֽיְהִי</span> <span class="h6153">עֶ֥רֶב</span> <span class="h1961">וַֽיְהִי</span> <span class="h1242">בֹ֖קֶר</span> <span class="h3117">י֥וֹם</span> <span class="h7243">רְבִיעִֽי׃</span></div>
                     </div>
                 </div>
                  <!-- Day 2 -->
@@ -274,7 +286,7 @@
                         <div class="hebrew-line"><span class="h4390">וּמִלְא֤וּ</span> <span class="h853">אֶת</span> <span class="h4325">הַמַּ֙יִם֙</span> <span class="h3220">בַּיַּמִּ֔ים</span> <span class="h5775">וְהָע֖וֹף</span> <span class="h7235">יִ֥רֶב</span> <span class="h776">בָּאָֽרֶץ׃</span></div>
                         
                         <div class="english-line">and <span class="h1961">there was</span> <span class="h6153">evening</span> and <span class="h1961">there was</span> <span class="h1242">morning</span>, a <span class="h2549">fifth</span> <span class="h3117">day</span>.</div>
-                        <div class="hebrew-line"><span class="h1961">וַֽיְהִי</span> <span class="h6153">עֶ֥רֶב</span> <span class="h1961">וַֽיְהִי</span> <span class="h1242">בֹ֖קֶר</span> <span class="h3117" data-id="51">י֥וֹם</span> <span class="h2549">חֲמִישִֽׁי׃</span></div>
+                        <div class="hebrew-line"><span class="h1961">וַֽיְהִי</span> <span class="h6153">עֶ֥רֶב</span> <span class="h1961">וַֽיְהִי</span> <span class="h1242">בֹ֖קֶר</span> <span class="h3117">י֥וֹם</span> <span class="h2549">חֲמִישִֽׁי׃</span></div>
                     </div>
                 </div>
                  <!-- Day 3 -->
@@ -486,15 +498,52 @@
 
             // Function to open and populate the drawer
             const openDrawer = (wordId, strongsClass) => {
-                if (!hebrewDictionary) return; // Don't open if data isn't loaded
+                if (!hebrewDictionary || !genesisOneWords) return; // Don't open if data isn't loaded
 
                 const strongsNumber = strongsClass.substring(1); // Remove the 'h'
-                
                 const hebrewDictionaryWordData = hebrewDictionary.find(entry => entry.strongs === `h${strongsNumber}`);
-                const concordanceWordData = genesisOneWords.find(entry => entry.id === `wordId`);
-                console.log('Concordance word data:', concordanceWordData);
+                const concordanceWordData = genesisOneWords.find(entry => entry.id === wordId);
+                
+                if (hebrewDictionaryWordData && !concordanceWordData) {
+                    // Collect all lines where this word appears
+                    let occurrencesHTML = '';
+                    let occurrenceIndex = 1;
+                    const allLines = document.querySelectorAll('.english-line');
+                    
+                    // Add header for the new grid
+                    occurrencesHTML += `
+                        <div class="font-bold text-gray-500 text-right pr-2">#</div>
+                        <div class="font-bold text-gray-500">Day</div>
+                        <div class="font-bold text-gray-500">Line</div>
+                    `;
 
-                if (!hebrewDictionaryWordData) {
+                    allLines.forEach(line => {
+                        if (line.querySelector(`.${strongsClass}`)) {
+                           const card = line.closest('.card');
+                           const dayId = card ? card.id : ''; // e.g., 'day1'
+                           const dayNumber = dayId.replace('day', '');
+                           const dayText = `Day ${dayNumber}`;
+
+                           occurrencesHTML += `
+                                <div class="text-right pr-2 text-gray-500">${occurrenceIndex}</div>
+                                <div>${dayText}</div>
+                                <div>${line.innerText}</div>
+                            `;
+                           occurrenceIndex++;
+                        }
+                    });
+
+                    // Populate the drawer
+                    drawerContent.innerHTML = `
+                        <button id="close-drawer" class="absolute -top-4 -right-4 text-gray-500 hover:text-gray-900 text-3xl font-bold">&times;</button>
+                        <h3 class="text-3xl hebrew-line mb-2">${hebrewDictionaryWordData.hebrew || ''}</h3>
+                        <p class="text-lg font-semibold text-sky-700 mb-1">${hebrewDictionaryWordData.word || 'N/A'}</p>
+                        <p class="text-sm text-gray-500 mb-4">(Strongs: ${hebrewDictionaryWordData.strongs})</p>
+                        <p class="italic mb-4">"${hebrewDictionaryWordData.data.def.short || 'No definition available.'}"</p>
+                        <h4 class="font-bold border-b pb-1 mb-2">Occurrences in this text:</h4>
+                        <div class="occurrences-grid text-sm mt-2">${occurrencesHTML}</div>
+                    `;
+                } else if (!hebrewDictionaryWordData || !concordanceWordData) {
                     drawerContent.innerHTML = `<p>No data found for ${strongsClass}.</p>`;
                 } else {
                     // Collect all lines where this word appears
@@ -528,12 +577,16 @@
                     // Populate the drawer
                     drawerContent.innerHTML = `
                         <button id="close-drawer" class="absolute -top-4 -right-4 text-gray-500 hover:text-gray-900 text-3xl font-bold">&times;</button>
-                        
-                        <h3 class="text-3xl hebrew-line mb-2">${hebrewDictionaryWordData.hebrew || ''}</h3>
+                        <h3 class="text-3xl hebrew-line mb-2 text-center">${concordanceWordData.hebrew_word || ''}</h3> 
+                        <h3 class="text-lg font-semibold text-sky-700 mb-1 text-center">${concordanceWordData.gloss_transliteration || ''}</h3>   
+                        <p class="text-xsm text-gray-500 mb-4 text-center">(Strongs: ${concordanceWordData.strongs_number}) </p>                     
+                        <hr>
+                        <h3 class="text-3xl hebrew-line mb-2 text-left">${concordanceWordData.lexeme}</h3>
                         <p class="text-lg font-semibold text-sky-700 mb-1">${hebrewDictionaryWordData.word || 'N/A'}</p>
                         <p class="text-sm text-gray-500 mb-4">(Strongs: ${hebrewDictionaryWordData.strongs})</p>
-                        <p class="italic mb-4">"${hebrewDictionaryWordData.data.def.short || 'No definition available.'}"</p>
+                        <p class="italic ml-4 mb-4">"${concordanceWordData.definition || 'No definition available.'}"</p>
                         <h4 class="font-bold border-b pb-1 mb-2">Occurrences in this text:</h4>
+                        <hr>
                         <div class="occurrences-grid text-sm mt-2">${occurrencesHTML}</div>
                     `;
                      // Re-add event listener for the new close button
@@ -555,7 +608,7 @@
                 const classList = event.target.className.split(' ');
                 const strongsClass = classList.find(c => c.startsWith('h'));
                 const wordId = event.target.dataset.id;
-                console.log('Word clicked:', wordId, strongsClass);
+                
                 
                 if (!strongsClass || strongsClass === 'h0') return;
 
