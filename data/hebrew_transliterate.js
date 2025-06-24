@@ -7,8 +7,8 @@ const fs = require('fs');
 const { transliterate } = require('hebrew-transliteration');
 
 // Define the input and output file names
-const inputFile = './genesis.json';
-const outputFile = 'genesis_one_edit.json';
+const inputFile = './genesis_concordance.json';
+const outputFile = './genesis_concordance_transliterated.json';
 
 // Read the input JSON file
 fs.readFile(inputFile, 'utf8', (err, data) => {

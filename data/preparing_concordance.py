@@ -26,3 +26,32 @@
 #     "word_index": 15,
 #   }
 
+# Step #1: Run the first_concordance_scripts.py to generate the initial concordance data.
+# Inputs: genesis.json, greek_hebrew_dictionary.json, hebrew.json
+# Outputs: genesis_concordance.json
+#
+#   {
+#     "id": "1:1.0",
+#     "chapter": 1,
+#     "verse": 1,
+#     "word_index": 0,
+#     "hebrew_word": "בְּרֵאשִׁ֖ית",
+#     "english_text": "In the beginning",
+#     "strongs_number": "h7225",
+#     "definition": "Original: <b><he>ראשׁית</he></b> <p />Transliteration: <b>rê'shı̂yth</b> <p />Phonetic: <b>ray-sheeth'</b> <p class=\"bdb_def\"><b>BDB Definition</b>:</p><ol><li>first, beginning, best, chief<ol type='a'><li>beginning</li><li>first</li><li>chief</li><li>choice part</li></ol></li></ol> <p />",
+#     "transliteration": "rêʼshîyth",
+#     "lexeme": "ראשית",
+#     "pronunciation": "ray-sheeth'",
+#     "short_definition": "beginning",
+#     "words": "beginning, chief(-est), first(-fruits) (part, time), principal thing"
+#   },
+#
+# missing:     "gloss_transliteration": "laʿăśôt",
+
+
+# Step #2: Run hebrew_transliterate.js just to add the gloss_transliteration field.
+# Inputs: genesis_concordance.json
+# Outputs: genesis_concordance_transliterated.json
+
+# Step #3: Run the page_generator.py to create the HTML pages.
+# Step #4: Run this file to convert the list to a map.
