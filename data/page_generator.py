@@ -48,7 +48,7 @@ def generate_chapter_html(chapter_number, concordance_data):
     <div id="page-container">
         <div id="main-content" class="p-2 sm:p-4">
           <header class="text-center mb-10">
-              <h1 class="text-4xl font-bold text-gray-900">The Adam and Eve Narrative</h1>
+              <h1 class="text-4xl font-bold text-gray-900">Some Literary Unit</h1>
               <p class="text-2xl text-gray-700"><i>A BibleProject Translation</i></p>
               <p class="text-lg text-gray-600 mt-2">Genesis {chapter_number}</p>
           </header>
@@ -74,7 +74,7 @@ def generate_chapter_html(chapter_number, concordance_data):
 </body>
 </html>
 """
-    filename = f"public/text/chapter{chapter_number}.html"
+    filename = f"public/generated/chapter{chapter_number}.html"
     try:
         with open(filename, "w", encoding="utf-8") as f:
             f.write(html_template)
