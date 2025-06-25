@@ -1,470 +1,334 @@
 Chapter 1
-1 - In the beginning, Elohim created the skies and the land, 
-2 - now, the land was wild and waste and darkness was over the face of the watery deep but the breath/wind of Elohim was hovering over the face of the waters 
-3 - and Elohim said, “Let there be light” and there was light. 
-4 - And Elohim saw that the light was good; and Elohim separated the light from the darkness. 
-5 - And Elohim called the light “day,” and the darkness he called “night.” and there was evening and there was morning, one day.
-6 - And Elohim said, “Let there be a dome in the middle of the waters, and let it separate the waters from the waters.” 
-7 - And Elohim made the dome, and he separated the waters which were below the dome from the waters which were above the dome; and it was so. 
-8 - And Elohim called the dome “skies.” And there was evening and there was morning, a second day.
-9 - And Elohim said, “Let the waters below the skies be gathered into one place, and let the dry ground be seen;” and it was so. 
-10 - And Elohim called the dry ground “land,” and the gathering of the waters he called “seas” and Elohim saw that it was good. 
-11 - and Elohim said, “Let the land sprout vegetation, vegetative plants that produce seed, fruit trees that make fruit according to its kind, which has its seed inside it, upon the land and it was so. 
-12 - And the land brought out vegetative plants that produce seed according to its kind and trees that make fruit which has its seed in it according to its kind and Elohim saw that it was good. 
+1 - In the beginning, Elohim created the skies and the land,
+2 - now, the land was wild and waste and darkness was over the face of the watery deep but the breath/wind of Elohim was hovering over the face of the waters
+3 - and Elohim said, “Let there be light” and there was light.
+4 - And Elohim saw that the light was good; and Elohim separated the light from the darkness.
+5 - And Elohim called the light “day,” and the darkness he called “night.”
+And there was evening and there was morning, one day.
+6 - And Elohim said, “Let there be a dome in the middle of the waters, and let it separate the waters from the waters.”
+7 - And Elohim made the dome, and he separated the waters which were below the dome from the waters which were above the dome;
+and it was so.
+8 - And Elohim called the dome “skies.”
+And there was evening and there was morning, a second day.
+9 - And Elohim said, “Let the waters below the skies be gathered into one place, and let the dry ground be seen;”
+10 - and it was so.
+And Elohim called the dry ground “land,” and the gathering of the waters he called “seas” and Elohim saw that it was good.
+11 - and Elohim said, “Let the land sprout vegetation, vegetative plants that produce seed, fruit trees that make fruit according to its kind, which has its seed inside it, upon the land and it was so.
+12 - And the land brought out vegetative plants that produce seed according to its kind and trees that make fruit which has its seed in it according to its kind and Elohim saw that it was good.
 13 - And there was evening and there was morning, a third day.
 14 - And Elohim said, “Let there be lights in the dome of the skies to separate the day from the night, and let them be for signs and for sacred feasts and for days and years;
-15and let them be
-for lights in the dome of the skies to give light on the land.” And it was so. 16And Elohim made
-the two great lights, the great light to rule the day, and the small light to rule the night; and also
-the stars. 17And Elohim placed them in the dome of the skies to give light on the land, 18and to
-rule the day and the night, and to separate the light from the darkness; and Elohim saw that it
-was good. 19And there was evening and there was morning, a fourth day.
-20And Elohim said, “Let the waters swarm with a swarm of living creatures, and let birds fly
-above the land against the face of the dome of the skies” 21and Elohim created the great sea-
-monsters and every living creature that moves, with which the waters swarmed after their kind,
-and every bird of wing after its kind; and Elohim saw that it was good. 22And Elohim blessed
-them, saying, “Be fruitful and multiply, and fill the waters in the seas, and let birds multiply on
-the land.” 23And there was evening and there was morning, a fifth day.
-24And Elohim said, “Let the land bring out living creatures according to their kind, cattle and
-creeping things and beasts of the land according to their kind”; and it was so. 25And Elohim
-made the beasts of the land according to their kind, and the cattle according to their kind,
-and the creepers of the ground according to its kind and Elohim saw that it was good.
-26And Elohim said, “Let us make human in our image, according to our likeness; and let them
-rule over the fish of the sea and over the birds of the sky and over the cattle and over all the
-land, and over every creeper that creeps on the land.” 27And Elohim created human in his
-image, in the image of Elohim he created him; male and female he created them. 28And Elohim
-blessed them, and Elohim said to them, “Be fruitful and multiply, and fill the land, and subdue
-it; and rule over the fish of the sea and over the birds of the sky and over living creature that
-creeps on the land.” 29And Elohim said, “Behold, I have given to you every plant producing
-seed that is on the face of all the land, and every tree which has fruit producing seed; it shall
-be food for y’all; 30and for every beast of the land, and for every bird of the sky, and for every
-thing that moves on the land which has living being in it, every green plant is for food” and it
-was so. 31And Elohim saw all that he had made, and behold, it was very good. and there was
-evening and there was morning, a sixth day.
+15 - and let them be for lights in the dome of the skies to give light on the land.”
+And it was so.
+16 - And Elohim made the two great lights, the great light to rule the day, and the small light to rule the night; and also the stars.
+17 - And Elohim placed them in the dome of the skies to give light on the land,
+18 - and to rule the day and the night, and to separate the light from the darkness; and Elohim saw that it was good.
+19 - And there was evening and there was morning, a fourth day.
+20 - And Elohim said, “Let the waters swarm with a swarm of living creatures, and let birds fly above the land against the face of the dome of the skies”
+21 - and Elohim created the great sea-monsters and every living creature that moves, with which the waters swarmed after their kind, and every bird of wing after its kind; and Elohim saw that it was good.
+22 - And Elohim blessed them, saying, “Be fruitful and multiply, and fill the waters in the seas, and let birds multiply on the land.”
+23 - And there was evening and there was morning, a fifth day.
+24 - And Elohim said, “Let the land bring out living creatures according to their kind, cattle and creeping things and beasts of the land according to their kind”; and it was so.
+25 - And Elohim made the beasts of the land according to their kind, and the cattle according to their kind, and the creepers of the ground according to its kind and Elohim saw that it was good.
+26 - And Elohim said, “Let us make human in our image, according to our likeness;
+27 - and let them rule over the fish of the sea and over the birds of the sky and over the cattle and over all the land, and over every creeper that creeps on the land.”
+And Elohim created human in his image, in the image of Elohim he created him; male and female he created them.
+28 - And Elohim blessed them, and Elohim said to them, “Be fruitful and multiply, and fill the land, and subdue it;
+29 - and rule over the fish of the sea and over the birds of the sky and over living creature that creeps on the land.”
+And Elohim said, “Behold, I have given to you every plant producing seed that is on the face of all the land, and every tree which has fruit producing seed;
+30 - it shall be food for y’all; and for every beast of the land, and for every bird of the sky, and for every thing that moves on the land which has living being in it, every green plant is for food” and it was so.
+31 - And Elohim saw all that he had made, and behold, it was very good. and there was evening and there was morning, a sixth day.
+
 Chapter 2
-1And they were completed, the skies and the land and all their hosts, 2and Elohim completed
-on the seventh day his work which he had made and he rested on the seventh day from all
-his work which he had made 3and Elohim blessed the seventh day and he set it apart as holy,
-because on it he rested from all his work which Elohim created to make.
-4These are the generations of the skies and the land, when they were created: In the day when
-Yahweh Elohim made the land and skies, 5and no shrub of the field was yet in the land, and no
-plant of the field had yet sprouted, for the Lord Elohim had not sent rain upon the land, and
-there was no human to work the ground, 6but a stream/flow would go up from the land and
-it would water the whole face of the ground, 7then Yahweh Elohim formed the human of dust
-from the ground, and he breathed into his nostrils the breath of life; and the human became a
-living being. 8And Yahweh Elohim planted a garden in Eden, toward the east [or: from of old],
-and he placed there the human whom he had formed. 9And Yahweh Elohim caused to sprout
-from the ground every tree that is desirable to sight and good for eating; and the tree of life
-also in the middle of the garden, and the tree of the knowing of good and bad.
-10Now, a river went out from Eden to water the garden; and from there it separated and
-became four heads: 11The name of the first is Pishon; it goes around the whole land of Havilah,
-which has there gold 12and the gold of that land is good; there are the bdellium and the onyx
-stone. 13And the name of the second river is Gihon; it goes around the whole land of Cush.
-14And the name of the third river is Tigris; it goes east of Assyria. And the fourth river, it is
-the Euphrates.
-15And Yahweh Elohim took the human and he rested him in the garden of Eden to serve it
-and to keep it. 16and Yahweh Elohim commanded the human, saying, “From every tree of the
-garden you will surely eat; 17but from the tree of the knowledge of good and bad you will not
-eat from it, for in the day that you eat from it you will surely die.”
-18And Yahweh Elohim said, “It is not good for the human to be alone, I will make a help-
-counterpart for him.” 19And Yahweh formed from the ground every living creature of the field
-and every bird of the skies and he brought them to the human to see what he would call it, and
-everything which the human would call it a living being, that was its name. 20And the human
-called the names of every beast and bird of the skies and every living creature of the field 20but
-for the human there was not found a help-counterpart 21and Yahweh caused to fall a deep
-sleep on the human and he slept and he took one from his sides and he closed the flesh of its
-place 22and Yahweh built the side which he took from the human into woman and he brought
-her to the human.
-23And the human said
-“This time, bone from my bones, and flesh from my flesh.
-This one will be called ‘woman’ for from ‘man’ this one was taken.”
-24For this reason, a man will leave his father and his mother, and he will cling to his woman, and
-they will become one flesh. 25And the two of them were naked, the human and his woman, and
-they were not ashamed.
+1 - And they were completed, the skies and the land and all their hosts,
+2 - and Elohim completed on the seventh day his work which he had made and he rested on the seventh day from all his work which he had made
+3 - and Elohim blessed the seventh day and he set it apart as holy, because on it he rested from all his work which Elohim created to make.
+4 - These are the generations of the skies and the land, when they were created: In the day when Yahweh Elohim made the land and skies,
+5 - and no shrub of the field was yet in the land, and no plant of the field had yet sprouted, for the Lord Elohim had not sent rain upon the land, and there was no human to work the ground,
+6 - but a stream/flow would go up from the land and it would water the whole face of the ground,
+7 - then Yahweh Elohim formed the human of dust from the ground, and he breathed into his nostrils the breath of life;
+and the human became a living being.
+8 - And Yahweh Elohim planted a garden in Eden, toward the east [or: from of old], and he placed there the human whom he had formed.
+9 - And Yahweh Elohim caused to sprout from the ground every tree that is desirable to sight and good for eating; and the tree of life also in the middle of the garden, and the tree of the knowing of good and bad.
+10 - Now, a river went out from Eden to water the garden; and from there it separated and became four heads:
+11 - The name of the first is Pishon; it goes around the whole land of Havilah, which has there gold
+12 - and the gold of that land is good; there are the bdellium and the onyx stone.
+13 - And the name of the second river is Gihon; it goes around the whole land of Cush.
+14 - And the name of the third river is Tigris; it goes east of Assyria. And the fourth river, it is the Euphrates.
+15 - And Yahweh Elohim took the human and he rested him in the garden of Eden to serve it and to keep it.
+16 - and Yahweh Elohim commanded the human, saying, “From every tree of the garden you will surely eat;
+17 - but from the tree of the knowledge of good and bad you will not eat from it, for in the day that you eat from it you will surely die.”
+18 - And Yahweh Elohim said, “It is not good for the human to be alone, I will make a help-counterpart for him.”
+19 - And Yahweh formed from the ground every living creature of the field and every bird of the skies and he brought them to the human to see what he would call it, and everything which the human would call it a living being, that was its name.
+20 - And the human called the names of every beast and bird of the skies and every living creature of the field but for the human there was not found a help-counterpart
+21 - and Yahweh caused to fall a deep sleep on the human and he slept and he took one from his sides and he closed the flesh of its place
+22 - and Yahweh built the side which he took from the human into woman and he brought her to the human.
+23 - And the human said “This time, bone from my bones, and flesh from my flesh. This one will be called ‘woman’ for from ‘man’ this one was taken.”
+24 - For this reason, a man will leave his father and his mother, and he will cling to his woman, and they will become one flesh.
+25 - And the two of them were naked, the human and his woman, and they were not ashamed.
+
 Chapter 3
-1Now, the snake was more shrewd than any beast of the field which Yahweh Elohim had made,
-and it said to the woman, “Indeed, has Elohim said, ‘You shall not eat from any tree of the
-garden’?” 2And the woman said to the snake, “From the fruit of the trees of the garden we may
-eat; 3but from the fruit of the tree which is in the middle of the garden; Elohim has said, ‘You
-shall not eat from it or touch it, or you will die.’” 4And the snake said to the woman, “You surely
-will not die! 5For Elohim knows that in the day you eat from it your eyes will be opened, and you
-will be like Elohim, knowers of good and bad.” 6And the woman saw that the tree was good for
-eating, and that it was desirable to the eyes, and that the tree was desirable to make one wise,
-and she took from its fruit and she ate; and she gave also to her husband with her, and he ate.
-7And the eyes of both of them were opened, and they knew that they were naked (ערום); and
-they sewed leaves of fig tree together and made themselves loin coverings.
-8And they heard the sound of Yahweh Elohim walking in the garden in the wind of the day
-and the human and his woman hid themselves from before the face of Yahweh Elohim among
-the trees of the garden. 9And Yahweh Elohim called to the human, and said to him, “Where
-are you?” 10And he [the human] said, “I heard the sound of you in the garden, and I was afraid
-because I was naked; and I hid myself.” 11And he [Yahweh Elohim] said, “Who told you that you
-were naked? Have you eaten from the tree of which I commanded you not to eat?” 12And the
-human said, “The woman whom you gave to be with me, she gave me from the tree, and I ate.”
-13And Yahweh Elohim said to the woman, “What is this you have done?” And the woman said,
-“The snake deceived me, and I ate.”
-14And Yahweh Elohim said to the snake, “Because you have done this thing,
-you are cursed more than every beast
-and more than every living creature of the field
-on your belly you will go,
-and dust you will eat,
-all the days of your life.
-15And I will set hostility
-between you and the woman,
-and between your seed and her seed;
-he will strike your head
-and you will strike his heel.”
-16And to the woman he said,
-“I will greatly multiply your grief and your conception,
-in grief you will birth children,
-and your desire will be for your husband,
-and he will rule over you.”
-17And to human he said, “Because you have listened to the voice of your wife, and you have
-eaten from the tree about which I commanded you, saying, ‘You shall not eat from it.’
-Cursed is the ground on account of you;
-in grief you will eat from it
-all the days of your life.
-18Thorns and thistles it shall sprout for you;
-and you will eat the plants of the field;
-19by the sweat of your face
-you will eat bread,
-until you return to the ground,
-because from it you were taken;
-for you are dust,
-and to dust you will return.”
-20And the human called the name of his woman “Eve,” “for she is the mother of all living,” 21and
-Elohim made for human and his wife, garments of skin, and he clothed them. 22And Yahweh
-Elohim said, “Look, the human has become like one of us, knowing good and bad, and now
-so that he won’t send out his hand and take also from the tree of life, and eat and live forever.”
-23And Yahweh Elohim sent him out from the garden to work the ground from which he was
-taken 24and he banished the human and he made to dwell at the east of the garden of Eden
-cherubim and the flame of the whirling sword to guard way to the tree of life.
+1 - Now, the snake was more shrewd than any beast of the field which Yahweh Elohim had made, and it said to the woman, “Indeed, has Elohim said, ‘You shall not eat from any tree of the garden’?”
+2 - And the woman said to the snake, “From the fruit of the trees of the garden we may eat;
+3 - but from the fruit of the tree which is in the middle of the garden; Elohim has said, ‘You shall not eat from it or touch it, or you will die.’”
+4 - And the snake said to the woman, “You surely will not die!
+5 - For Elohim knows that in the day you eat from it your eyes will be opened, and you will be like Elohim, knowers of good and bad.”
+6 - And the woman saw that the tree was good for eating, and that it was desirable to the eyes, and that the tree was desirable to make one wise, and she took from its fruit and she ate;
+7 - and she gave also to her husband with her, and he ate. And the eyes of both of them were opened, and they knew that they were naked (ערום); and they sewed leaves of fig tree together and made themselves loin coverings.
+8 - And they heard the sound of Yahweh Elohim walking in the garden in the wind of the day and the human and his woman hid themselves from before the face of Yahweh Elohim among the trees of the garden.
+9 - And Yahweh Elohim called to the human, and said to him, “Where are you?”
+10 - And he [the human] said, “I heard the sound of you in the garden, and I was afraid because I was naked; and I hid myself.”
+11 - And he [Yahweh Elohim] said, “Who told you that you were naked? Have you eaten from the tree of which I commanded you not to eat?”
+12 - And the human said, “The woman whom you gave to be with me, she gave me from the tree, and I ate.”
+13 - And Yahweh Elohim said to the woman, “What is this you have done?” And the woman said, “The snake deceived me, and I ate.”
+14 - And Yahweh Elohim said to the snake, “Because you have done this thing, you are cursed more than every beast and more than every living creature of the field on your belly you will go, and dust you will eat, all the days of your life.
+15 - And I will set hostility between you and the woman, and between your seed and her seed; he will strike your head and you will strike his heel.”
+16 - And to the woman he said, “I will greatly multiply your grief and your conception, in grief you will birth children, and your desire will be for your husband, and he will rule over you.”
+17 - And to human he said, “Because you have listened to the voice of your wife, and you have eaten from the tree about which I commanded you, saying, ‘You shall not eat from it.’ Cursed is the ground on account of you; in grief you will eat from it all the days of your life.
+18 - Thorns and thistles it shall sprout for you; and you will eat the plants of the field;
+19 - by the sweat of your face you will eat bread, until you return to the ground, because from it you were taken; for you are dust, and to dust you will return.”
+20 - And the human called the name of his woman “Eve,” “for she is the mother of all living,”
+21 - and Elohim made for human and his wife, garments of skin, and he clothed them.
+22 - And Yahweh Elohim said, “Look, the human has become like one of us, knowing good and bad, and now so that he won’t send out his hand and take also from the tree of life, and eat and live forever.”
+23 - And Yahweh Elohim sent him out from the garden to work the ground from which he was taken
+24 - and he banished the human and he made to dwell at the east of the garden of Eden cherubim and the flame of the whirling sword to guard way to the tree of life.
+
 Chapter 4
-1Now, the human knew his wife Eve, and she conceived and she gave birth to Cain, and she
-said, “I have created a man (in comparison) with Yahweh.” 2And again she gave birth to his
-brother Abel, and Abel was a shepherd of flocks, but Cain was a tiller of the ground. 3And
-it came from the end of days and Cain brought from the fruit of the ground an offering to
-Yahweh. 4And Abel, also he brought from the firstborn of his flock and from their fat portions,
-and Yahweh gazed upon Abel and for his offering; 5but upon Cain and upon his offering he did
-not gaze. And there was heat-anger to Cain, and his face fell, 6and Yahweh said to Cain, “Why
-is there heat-anger to you? And why has your face fallen? 7If you do good, won’t there be lifting
-up? And if you do not do good, at the door, sin is a croucher, and its desire is for you, but you
-can rule it.” 8And Cain spoke to Abel his brother, 2and it came about when they were in the
-field, and Cain rose up to Abel his brother and he killed him.
-9And Yahweh said to Cain, “Where is Abel your brother?” And he said, “I do not know. Am I the
-keeper of my brother?” 10And he said, “What have you done? The voice of the shed-blood of
-your brother is crying out to me from the ground. 11And now, you are cursed from the ground,
-which has opened its mouth to receive the shed-blood of your brother from your hand. 12When
-you work the ground, it will no longer yield its strength to you; you will be a vagrant and a
-wanderer in the land.” 13And Cain said to the Lord, “My punishment is too great to lift up,
-14behold, you have banished me this day from the face of the ground; and from your face I will
-be hidden, and I will be a vagrant and a wanderer in the land, and whoever finds me will kill
-me.” 15And Yahweh said to him, “Therefore whoever kills Cain, seven times he will be avenged,”
-and Yahweh established a sign for Cain, so that anyone who finds him would not strike him.
-16And Cain went out from the face of Yahweh, and he dwelt in the land of Wandering/Nod,
-east of Eden.
-17And Cain knew his wife and she conceived, and gave birth to Enoch; and he built a city,
-and called the name of the city “Enoch,” according to the name of his son. 18And to Enoch
-was born Irad, and Irad birthed Mehuyael, and Mehuyael birthed Methushael, and Methushael
-birthed Lamech. 19And Lamech took for himself two wives: the name of the one was Adah, and
-the name of the other, Zillah. 20And Adah gave birth to Yabal; he was the father of those who
-dwell in tents and have livestock. 21And his brother’s name was Yubal; he was the father of all
-those who play the lyre and pipe. 22And Zillah, she also gave birth to Tubal-Cain, the forger of
-all implements of bronze and iron; and the sister of Tubal-cain was Naamah.
-23And Lamech said to his wives,
-“Adah and Zillah, listen to my voice,
-wives of Lamech, hear my speech,
-for I have killed a man for wounding me;
-and a young man for striking me;
-24if Cain is avenged seven times,
-then Lamech seventy seven times.”
-25And Adam knew his wife again and she gave birth to a son, and she named him “Seth,”
-because “God has appointed me another seed in place of Abel, for Cain killed him.” 26And to
-Seth, to him also a son was born; and he called his name Enosh. Then it was begun, to call on
-the name of Yahweh.
+1 - Now, the human knew his wife Eve, and she conceived and she gave birth to Cain, and she said, “I have created a man (in comparison) with Yahweh.”
+2 - And again she gave birth to his brother Abel, and Abel was a shepherd of flocks, but Cain was a tiller of the ground.
+3 - And it came from the end of days and Cain brought from the fruit of the ground an offering to Yahweh.
+4 - And Abel, also he brought from the firstborn of his flock and from their fat portions, and Yahweh gazed upon Abel and for his offering;
+5 - but upon Cain and upon his offering he did not gaze. And there was heat-anger to Cain, and his face fell,
+6 - and Yahweh said to Cain, “Why is there heat-anger to you? And why has your face fallen?
+7 - If you do good, won’t there be lifting up? And if you do not do good, at the door, sin is a croucher, and its desire is for you, but you can rule it.”
+8 - And Cain spoke to Abel his brother, 2and it came about when they were in the field, and Cain rose up to Abel his brother and he killed him.
+9 - And Yahweh said to Cain, “Where is Abel your brother?”
+10 - And he said, “I do not know. Am I the keeper of my brother?” And he said, “What have you done? The voice of the shed-blood of your brother is crying out to me from the ground.
+11 - And now, you are cursed from the ground, which has opened its mouth to receive the shed-blood of your brother from your hand.
+12 - When you work the ground, it will no longer yield its strength to you; you will be a vagrant and a wanderer in the land.”
+13 - And Cain said to the Lord, “My punishment is too great to lift up,
+14 - behold, you have banished me this day from the face of the ground; and from your face I will be hidden, and I will be a vagrant and a wanderer in the land, and whoever finds me will kill me.”
+15 - And Yahweh said to him, “Therefore whoever kills Cain, seven times he will be avenged,” and Yahweh established a sign for Cain, so that anyone who finds him would not strike him.
+16 - And Cain went out from the face of Yahweh, and he dwelt in the land of Wandering/Nod, east of Eden.
+17 - And Cain knew his wife and she conceived, and gave birth to Enoch; and he built a city, and called the name of the city “Enoch,” according to the name of his son.
+18 - And to Enoch was born Irad, and Irad birthed Mehuyael, and Mehuyael birthed Methushael, and Methushael birthed Lamech.
+19 - And Lamech took for himself two wives: the name of the one was Adah, and the name of the other, Zillah.
+20 - And Adah gave birth to Yabal; he was the father of those who dwell in tents and have livestock.
+21 - And his brother’s name was Yubal; he was the father of all those who play the lyre and pipe.
+22 - And Zillah, she also gave birth to Tubal-Cain, the forger of all implements of bronze and iron; and the sister of Tubal-cain was Naamah.
+23 - And Lamech said to his wives, “Adah and Zillah, listen to my voice, wives of Lamech, hear my speech, for I have killed a man for wounding me; and a young man for striking me;
+24 - if Cain is avenged seven times, then Lamech seventy seven times.”
+25 - And Adam knew his wife again and she gave birth to a son, and she named him “Seth,” because “God has appointed me another seed in place of Abel, for Cain killed him.”
+26 - And to Seth, to him also a son was born; and he called his name Enosh.
+27 - Then it was begun, to call on the name of Yahweh.
+
 Chapter 5
-1This is the scroll of the generations of human/Adam: In the day when Elohim created
-humanity, he made him as the likeness of Elohim, 2male and female he created them, and he
-blessed them and he named them “human” in the day when they were created.
-3And human/Adam had lived 130 years, and he caused the birth of one in his own likeness,
-according to his image, and named him Seth. 4And the days of Adam after he caused the birth
-of Seth were 800 years, and he caused the birth of sons and daughters. 5And all the days that
-Adam lived were 930 years, and he died.
-6And Seth lived 105 years, and he caused the birth of Enosh. 7And Seth lived 807 years after he
-caused the birth of Enosh, and he caused the birth of sons and daughters, 8and all the days of
-Seth were 912 years, and he died.
-9And Enosh lived 90 years, and he caused the birth of Cainan. 10And Enosh lived 815 years after
-he caused the birth of Cainan, and he caused the birth of sons and daughters. 11And all the
-days of Enosh were 905 years, and he died.
-12And Cainan lived 70 years, and he caused the birth of Mahalalel. 13and Cainan lived 840 years
-after he he caused the birth of Mahalalel, and he caused the birth of sons and daughters. 14And
-all the days of Cainan were 910 years, and he died.
-15And Mahalalel lived 65 years, and he caused the birth of Jared. 16And Mahalalel lived 830
-years after he became the father of Jared, and he caused the birth of sons and daughters.
-17And all the days of Mahalalel were 895 years, and he died.
-18And Jared lived 162 years, and he caused the birth of Enoch. 19And Jared lived 800 after he
-became the father of Enoch, and he caused the birth of sons and daughters. 20And all the days
-of Jared were 962 years, and he died.
-21And Enoch lived 65 years, and he caused the birth of Methuselah, 22and Enoch walked with
-God 300 years after he became the father of Methuselah, and he caused the birth of sons and
-daughters, 23and all the days of Enoch were 365 years, 24and Enoch walked with God; and he
-was not, for God took him.
-25And Methuselah lived 187 years, and he became the father of Lamech, 26and Methuselah
-lived 782 years after he became the father of Lamech, and he caused the birth of sons and
-daughters. 27And all the days of Methuselah were 969 years, and he died.
-28And Lamech lived 182 years, and he caused the birth of a son, 29and he called his name
-“Noakh,” saying, “This one will give us comfort from our work and from the toil of our hands
-from the ground which the Lord has cursed.” 30And Lamech lived 595 years after he became
-the father of Noakh, and he caused the birth of sons and daughters, 31and all the days of
-Lamech were 777 years, and he died.
-32And Noakh was 500 years old, and Noakh he caused the birth of Shem, Ham, and Yapheth.
+1 - This is the scroll of the generations of human/Adam: In the day when Elohim created humanity, he made him as the likeness of Elohim,
+2 - male and female he created them, and he blessed them and he named them “human” in the day when they were created.
+3 - And human/Adam had lived 130 years, and he caused the birth of one in his own likeness, according to his image, and named him Seth.
+4 - And the days of Adam after he caused the birth of Seth were 800 years, and he caused the birth of sons and daughters.
+5 - And all the days that Adam lived were 930 years, and he died.
+6 - And Seth lived 105 years, and he caused the birth of Enosh.
+7 - And Seth lived 807 years after he caused the birth of Enosh, and he caused the birth of sons and daughters,
+8 - and all the days of Seth were 912 years, and he died.
+9 - And Enosh lived 90 years, and he caused the birth of Cainan.
+10 - And Enosh lived 815 years after he caused the birth of Cainan, and he caused the birth of sons and daughters.
+11 - And all the days of Enosh were 905 years, and he died.
+12 - And Cainan lived 70 years, and he caused the birth of Mahalalel.
+13 - and Cainan lived 840 years after he he caused the birth of Mahalalel, and he caused the birth of sons and daughters.
+14 - And all the days of Cainan were 910 years, and he died.
+15 - And Mahalalel lived 65 years, and he caused the birth of Jared.
+16 - And Mahalalel lived 830 years after he became the father of Jared, and he caused the birth of sons and daughters.
+17 - And all the days of Mahalalel were 895 years, and he died.
+18 - And Jared lived 162 years, and he caused the birth of Enoch.
+19 - And Jared lived 800 after he became the father of Enoch, and he caused the birth of sons and daughters.
+20 - And all the days of Jared were 962 years, and he died.
+21 - And Enoch lived 65 years, and he caused the birth of Methuselah,
+22 - and Enoch walked with God 300 years after he became the father of Methuselah, and he caused the birth of sons and daughters,
+23 - and all the days of Enoch were 365 years,
+24 - and Enoch walked with God; and he was not, for God took him.
+25 - And Methuselah lived 187 years, and he became the father of Lamech,
+26 - and Methuselah lived 782 years after he became the father of Lamech, and he caused the birth of sons and daughters.
+27 - And all the days of Methuselah were 969 years, and he died.
+28 - And Lamech lived 182 years, and he caused the birth of a son,
+29 - and he called his name “Noakh,” saying, “This one will give us comfort from our work and from the toil of our hands from the ground which the Lord has cursed.”
+30 - And Lamech lived 595 years after he became the father of Noakh, and he caused the birth of sons and daughters,
+31 - and all the days of Lamech were 777 years, and he died.
+32 - And Noakh was 500 years old, and Noakh he caused the birth of Shem, Ham, and Yapheth.
+
 Chapter 6
-1And it came about, when humanity began to multiply on the face of the land, and daughters
-were born to/for them, 2and the sons of elohim saw the daughters of humanity that they were
-good and they took wives for themselves, whomever they chose 3and Yahweh said, “My Spirit/
-breath will not dwell with humanity forever, because he also is flesh; and his days will be 120
-years.” 4The Nephilim were in the land in those days, and also afterward, when the sons of
-elohim went into the daughters of humanity, and they bore children for them; these are the
-mighty warriors who are from ancient time, men of the name.
-5And Yahweh saw that multiplied was the badness of humanity in the land, and every purpose
-of the plans of his heart was only bad all the day, 6and Yahweh regretted that he made
-humanity in the land, and he was pained in his heart. 7And Yahweh said, “I will wipe away
-humanity that I created from the face of the ground, from humanity to animals to creeping
-things and to birds of the skies for I regret that I have made them.” 8but Noakh found favor in
-the eyes of Yahweh.
-9These are the birth-generations of Noakh; Noakh was a righteous one, blameless in his
-generation; Noakh walked with Elohim; 10and Noakh birthed three sons: Shem, Ham,
-and Yapheth.
-11 And the land was ruined before Elohim, and the land was filled with violence, 12 and Elohim
-saw the land: and behold, it was ruined, for all flesh had ruined its/his way upon the land.
-13And Elohim said to Noakh, “The end of all flesh has come before me, because the land
-is filled with violence because of them, and behold, I am going to ruin the land. 14Make for
-yourself an ark of gopher trees you will make the ark with nests, and shall pitch it inside and
-out with pitch. 15This is how you will make it: 300 cubits: the length of the ark, 50 cubits: its
-width, 30 cubits: its height. 16You will make a window for the ark, and you will finish it to a cubit
-from the top; and you will set the door of the ark in its side; you will it with lowers, seconds,
-and thirds. 17and behold, I am going to bring the flood of water upon the land, to ruin all
-flesh, which has in it the breath of life, from under the skies, everything that is on the land will
-expire, 18and I will set up my covenant with you; and you will go into the ark you and your sons
-and your wife, and your sons’ wives with you. 19And of every living thing of all flesh, two of
-everything you will make go into the ark, to keep them alive with you; they shall be male and
-female. 20Of the birds after their kind, and of the animals after their kind, of every creeping
-thing of the ground after its kind, two of every kind will go to you to keep them alive; 21and as
-for you, take for yourself some of all edible-food that you will eat, and gather it to yourself; and
-it shall be for edible-food for you and for them.” 22And Noakh did according to all that Elohim
-had commanded him, so he did.
+1 - And it came about, when humanity began to multiply on the face of the land, and daughters were born to/for them,
+2 - and the sons of elohim saw the daughters of humanity that they were good and they took wives for themselves, whomever they chose
+3 - and Yahweh said, “My Spirit/breath will not dwell with humanity forever, because he also is flesh; and his days will be 120 years.”
+4 - The Nephilim were in the land in those days, and also afterward, when the sons of elohim went into the daughters of humanity, and they bore children for them; these are the mighty warriors who are from ancient time, men of the name.
+5 - And Yahweh saw that multiplied was the badness of humanity in the land, and every purpose of the plans of his heart was only bad all the day,
+6 - and Yahweh regretted that he made humanity in the land, and he was pained in his heart.
+7 - And Yahweh said, “I will wipe away humanity that I created from the face of the ground, from humanity to animals to creeping things and to birds of the skies for I regret that I have made them.”
+8 - but Noakh found favor in the eyes of Yahweh.
+9 - These are the birth-generations of Noakh; Noakh was a righteous one, blameless in his generation; Noakh walked with Elohim;
+10 - and Noakh birthed three sons: Shem, Ham, and Yapheth.
+11 - And the land was ruined before Elohim, and the land was filled with violence,
+12 - and Elohim saw the land: and behold, it was ruined, for all flesh had ruined its/his way upon the land.
+13 - And Elohim said to Noakh, “The end of all flesh has come before me, because the land is filled with violence because of them, and behold, I am going to ruin the land.
+14 - Make for yourself an ark of gopher trees you will make the ark with nests, and shall pitch it inside and out with pitch.
+15 - This is how you will make it: 300 cubits: the length of the ark, 50 cubits: its width, 30 cubits: its height.
+16 - You will make a window for the ark, and you will finish it to a cubit from the top; and you will set the door of the ark in its side; you will it with lowers, seconds, and thirds.
+17 - and behold, I am going to bring the flood of water upon the land, to ruin all flesh, which has in it the breath of life, from under the skies, everything that is on the land will expire,
+18 - and I will set up my covenant with you; and you will go into the ark you and your sons and your wife, and your sons’ wives with you.
+19 - And of every living thing of all flesh, two of everything you will make go into the ark, to keep them alive with you; they shall be male and female.
+20 - Of the birds after their kind, and of the animals after their kind, of every creeping thing of the ground after its kind, two of every kind will go to you to keep them alive;
+21 - and as for you, take for yourself some of all edible-food that you will eat, and gather it to yourself;
+22 - and it shall be for edible-food for you and for them.” And Noakh did according to all that Elohim had commanded him, so he did.
+
 Chapter 7
-1And Yahweh said to Noakh, “Go into the ark, you and all your household, for you I have seen as
-a righteous one before me in this generation; 2you will take for yourself from every pure animal
-seven each, a man and his wife and from the animal which is not pure, two each, a man and his
-wife, 3also from the birds of the skies, seven each, male and female, to keep alive seed on the
-face of the land, 4for in seven more days, I will send rain on the land forty days and forty nights;
-and I will wipe away from the face of the land every standing-thing that I have made.” 5And
-Noakh did according to all that Yahweh had commanded him.
-6And Noakh was 600 years old, and the flood of waters came upon the land. 7And Noakh went,
-and his sons and his wife and his sons’ wives with him into the ark because of the waters of the
-flood; 8from the pure animals and from the animals that are not pure and from the birds and
-from everything that creeps on the ground, 9two by two they went to Noakh, into the ark, male
-and female, just as Elohim had commanded Noakh. 10And it came about after the seven days,
-and the waters of the flood came upon the land. 11And in the 600th year of Noakh’s life, in the
-second month, on the 17th day of the month, on that day all the fountains of the great deep
-burst open, and the windows of the skies were opened. 12And there was rain upon the land for
-40 days and 40 nights.
-13On that very day Noakh went and Shem and Ham and Yapheth, the sons of Noakh, and
-Noakh’s wife and the three wives of his sons with them, into the ark, 14they, and every living
-creature after its kind, and all the beast after their kind, and every creeper that creeps on the
-land after its kind, and every bird after its kind, every bird of every wing. 15And they went to
-Noakh, into the ark, two by two, from all flesh in which was the breath of life, 16and those
-going, male and female of all flesh, went as Elohim had commanded him; and Yahweh
-closed behind him.
-17And the flood was 40 days upon the land, and the waters were great and they lifted up the
-ark, and it rose up over the land, 18and the waters were mighty, and they were very great upon
-the land, and the ark went on the face of the waters, 19and the waters were mighty, very very
-much, upon the land, and they covered all the high mountains which are under the skies, 2015
-cubits above, the waters were mighty, and they covered the mountains; 21and all flesh expired,
-what creeps on the land, with the birds and with the beasts and with the living creatures, and
-with all the swarmers that swarm upon the land, and all humanity, 22everything that had the
-inhalation of the breath of life in its nostrils, from everything that was on the dry land, they
-died. 23And he wiped away every standing-thing that was upon the face of the land, from
-humanity to animals to creepers and to birds of the skies, and they were wiped away from the
-land; and only Noakh was left remaining, and those with him in the ark. 24And the waters were
-mighty upon the land 150 days.
+1 - And Yahweh said to Noakh, “Go into the ark, you and all your household, for you I have seen as a righteous one before me in this generation;
+2 - you will take for yourself from every pure animal seven each, a man and his wife and from the animal which is not pure, two each, a man and his wife,
+3 - also from the birds of the skies, seven each, male and female, to keep alive seed on the face of the land,
+4 - for in seven more days, I will send rain on the land forty days and forty nights; and I will wipe away from the face of the land every standing-thing that I have made.”
+5 - And Noakh did according to all that Yahweh had commanded him.
+6 - And Noakh was 600 years old, and the flood of waters came upon the land.
+7 - And Noakh went, and his sons and his wife and his sons’ wives with him into the ark because of the waters of the flood;
+8 - from the pure animals and from the animals that are not pure and from the birds and from everything that creeps on the ground,
+9 - two by two they went to Noakh, into the ark, male and female, just as Elohim had commanded Noakh.
+10 - And it came about after the seven days, and the waters of the flood came upon the land.
+11 - And in the 600th year of Noakh’s life, in the second month, on the 17th day of the month, on that day all the fountains of the great deep burst open, and the windows of the skies were opened.
+12 - And there was rain upon the land for 40 days and 40 nights.
+13 - On that very day Noakh went and Shem and Ham and Yapheth, the sons of Noakh, and Noakh’s wife and the three wives of his sons with them, into the ark,
+14 - they, and every living creature after its kind, and all the beast after their kind, and every creeper that creeps on the land after its kind, and every bird after its kind, every bird of every wing.
+15 - And they went to Noakh, into the ark, two by two, from all flesh in which was the breath of life,
+16 - and those going, male and female of all flesh, went as Elohim had commanded him; and Yahweh closed behind him.
+17 - And the flood was 40 days upon the land, and the waters were great and they lifted up the ark, and it rose up over the land,
+18 - and the waters were mighty, and they were very great upon the land, and the ark went on the face of the waters,
+19 - and the waters were mighty, very very much, upon the land, and they covered all the high mountains which are under the skies,
+20 - 15 cubits above, the waters were mighty, and they covered the mountains;
+21 - and all flesh expired, what creeps on the land, with the birds and with the beasts and with the living creatures, and with all the swarmers that swarm upon the land, and all humanity,
+22 - everything that had the inhalation of the breath of life in its nostrils, from everything that was on the dry land, they died.
+23 - And he wiped away every standing-thing that was upon the face of the land, from humanity to animals to creepers and to birds of the skies, and they were wiped away from the land;
+24 - and only Noakh was left remaining, and those with him in the ark. And the waters were mighty upon the land 150 days.
+
 Chapter 8
-1And Elohim remembered Noakh and all the living creatures and all the beasts that were with
-him in the ark, and Elohim caused a Spirit/wind to pass over the land, and the waters subsided;
-2and the fountains of the deep and the windows of the skies were closed, and the rain from
-the skies was restrained; 3and the waters receded steadily from upon the land, and the waters
-decreased at the end of 150 days, 4and the ark rested, in the seventh month, on the 17th day
-of the month, upon the mountains of Ararat. 5And the waters continually decreased until the
-10th month; in the 10th month, on the first day of the month, the heads of the mountains
-became visible.
-6And it came about at the end of 40 days, and Noakh opened the window of the ark which he
-had made; 7and he sent out a raven, and it flew here and there until the waters were dried up
-from upon the land; 8and he sent out a dove from him, to see if the waters were abated from
-the face of the ground; 9and the dove found no place of rest for the sole of its foot, and it
-returned to him into the ark, because the water was on the surface of all the land; and he put
-out his hand and took it, and he brought it into the ark to himself; 10and he waited yet another
-seven days; and again he sent out the dove from the ark; 11and the dove came to him at the
-time of evening, and behold, in its mouth was an olive leaf, freshly picked, and Noakh knew
-that the waters were abated from upon the land, 12and he waited yet another seven days, and
-he sent out the dove; and it did not again return to him.
-13And it came about in the 601st year, in the first month, on the first of the month, the water
-was dried up from upon the land; and Noakh removed the covering of the ark, and he looked,
-and behold, the face of the land was dried up. 14And in the second month, on the 27th day of
-the month, the land was dry. 15and Elohim spoke to Noakh, saying, 16“Go out from the ark, you
-and your wife and your sons and your sons’ wives with you. 17From every living thing with you
-from all flesh, birds and animals and every creeper that creeps on the land, make them go out
-with you, so they can swarm in the land and be fruitful and multiply in the land.” 18And Noakh
-went out, and his sons and his wife and his sons’ wives with him. 19Every living thing, every
-creeper, and every bird, everything that creeps on the land, by their families they went out
-from the ark.
-20And Noakh built an altar to Yahweh, and he took from every pure animal and from every
-pure bird and he caused to go up a going-up offering on the altar. 21And Yahweh smelled the
-soothing smell; and Yahweh said to his heart, “I will never again curse the ground on account
-of humanity,
-because the purpose of the heart of humanity is bad from his youth; and I will never again
-strike all life, as I just did.
-22“For all the days of the land,
-seedtime and harvest,
-and cold and heat,
-and summer and winter,
-and day and night
-will not stop.”
+1 - And Elohim remembered Noakh and all the living creatures and all the beasts that were with him in the ark, and Elohim caused a Spirit/wind to pass over the land, and the waters subsided;
+2 - and the fountains of the deep and the windows of the skies were closed, and the rain from the skies was restrained;
+3 - and the waters receded steadily from upon the land, and the waters decreased at the end of 150 days,
+4 - and the ark rested, in the seventh month, on the 17th day of the month, upon the mountains of Ararat.
+5 - And the waters continually decreased until the 10th month; in the 10th month, on the first day of the month, the heads of the mountains became visible.
+6 - And it came about at the end of 40 days, and Noakh opened the window of the ark which he had made;
+7 - and he sent out a raven, and it flew here and there until the waters were dried up from upon the land;
+8 - and he sent out a dove from him, to see if the waters were abated from the face of the ground;
+9 - and the dove found no place of rest for the sole of its foot, and it returned to him into the ark, because the water was on the surface of all the land;
+10 - and he put out his hand and took it, and he brought it into the ark to himself; and he waited yet another seven days; and again he sent out the dove from the ark;
+11 - and the dove came to him at the time of evening, and behold, in its mouth was an olive leaf, freshly picked, and Noakh knew that the waters were abated from upon the land,
+12 - and he waited yet another seven days, and he sent out the dove; and it did not again return to him.
+13 - And it came about in the 601st year, in the first month, on the first of the month, the water was dried up from upon the land; and Noakh removed the covering of the ark, and he looked, and behold, the face of the land was dried up.
+14 - And in the second month, on the 27th day of the month, the land was dry.
+15 - and Elohim spoke to Noakh, saying,
+16 - “Go out from the ark, you and your wife and your sons and your sons’ wives with you.
+17 - From every living thing with you from all flesh, birds and animals and every creeper that creeps on the land, make them go out with you, so they can swarm in the land and be fruitful and multiply in the land.”
+18 - And Noakh went out, and his sons and his wife and his sons’ wives with him.
+19 - Every living thing, every creeper, and every bird, everything that creeps on the land, by their families they went out from the ark.
+20 - And Noakh built an altar to Yahweh, and he took from every pure animal and from every pure bird and he caused to go up a going-up offering on the altar.
+21 - And Yahweh smelled the soothing smell; and Yahweh said to his heart, “I will never again curse the ground on account of humanity, because the purpose of the heart of humanity is bad from his youth; and I will never again strike all life, as I just did.
+22 - “For all the days of the land, seedtime and harvest, and cold and heat, and summer and winter, and day and night will not stop.”
+
 Chapter 9
-1And Elohim blessed Noakh and his sons and he said to them, “Be fruitful and multiply, and fill
-the land. 2The fear of you and the terror of you will be upon every living creature of the land
-and upon every bird of the skies; with everything that creeps on the ground, and with all the
-fish of the sea; into your hand they are given; 3every creeper that is alive shall be food for you;
-I give all to you, as I gave the green plant; 4only the flesh with its life, its blood, you will not eat;
-5indeed, I will require your life-blood; from every beast I will require it, and from every human,
-from every man’s brother, I will require the life of a human.
-6“He who pours out the blood of a human,
-by a human will his blood be poured out,
-because in the image of God
-he made humanity.
-7And as for you all, be fruitful and multiply; populate in the land and multiply in it.”
-8And Elohim said to Noakh and to his sons with him, saying, 9“And I myself, behold, I set up my
-covenant with y’all, and with your seed after you; 10and with every living creature that is with
-you, the birds, the beast, and every living creature of the land with you; from everything that
-comes out of the ark, even every living thing of the land. 11And I set up my covenant with y’all;
-and all flesh will never again be cut off by the waters of the flood, and there will never again
-be a flood to ruin the land.” 12And Elohim said, “This is the sign of the covenant which I am
-giving between me and between you and between every living creature that is with you, for
-everlasting generations; 13I have set my bow in the cloud, and it will be for a sign of a covenant
-between me and between the land; 14and it will come about when I cloud a cloud over the
-land, that the bow will be seen in the cloud, 15and I will remember my covenant, which is
-between me and between you and between every living creature of all flesh; and never again
-will the waters become a flood to ruin all flesh.
-16And the bow is in the cloud, then I will see it, to remember the everlasting covenant between
-Elohim and between every living creature, with all flesh that is on the land.” 17And Elohim said
-to Noakh, “This is the sign of the covenant which I have set up between me and all flesh that
-is on the land.” 18and the sons of Noakh who came out of the ark, were Shem and Ham and
-Yapheth; and Ham was the father of Canaan; 19these three were the sons of Noakh, and from
-these all the land was scattered; 20and Noakh began to be a man of the ground and he planted
-vineyard; 21and he drank of the wine and became drunk, and he uncovered himself in the
-middle of his tent; 22and Ham, the father of Canaan, saw the nakedness of his father, and he
-reported to his two brothers outside; 23and Shem and Yapheth took a garment and they laid
-it upon the shoulders of the two of them, and they walked backward and they covered the
-nakedness of their father; and their faces were backward, and the nakedness of their father
-they did not see; 24and Noakh awoke from his wine, and he knew what his younger son had
-done to him; 25and he said,
-“Cursed be Canaan;
-a servant of servants
-he will be to his brothers.”
-26And he said,
-“Blessed be Yahweh the Elohim of Shem,
-and let Canaan be his servant;
-27may Elohim enlarge Yapheth,
-and let him dwell in the tents of Shem,
-and let Canaan be his servant.”
-28And Noakh lived, after the flood, 350 years, 29and all the days of Noakh were 950 years,
-and he died.
+1 - And Elohim blessed Noakh and his sons and he said to them, “Be fruitful and multiply, and fill the land.
+2 - The fear of you and the terror of you will be upon every living creature of the land and upon every bird of the skies;
+3 - with everything that creeps on the ground, and with all the fish of the sea; into your hand they are given;
+4 - every creeper that is alive shall be food for you; I give all to you, as I gave the green plant; only the flesh with its life, its blood, you will not eat;
+5 - indeed, I will require your life-blood; from every beast I will require it, and from every human, from every man’s brother, I will require the life of a human.
+6 - “He who pours out the blood of a human, by a human will his blood be poured out, because in the image of God he made humanity.
+7 - And as for you all, be fruitful and multiply; populate in the land and multiply in it.”
+8 - And Elohim said to Noakh and to his sons with him, saying,
+9 - “And I myself, behold, I set up my covenant with y’all, and with your seed after you;
+10 - and with every living creature that is with you, the birds, the beast, and every living creature of the land with you; from everything that comes out of the ark, even every living thing of the land.
+11 - And I set up my covenant with y’all; and all flesh will never again be cut off by the waters of the flood, and there will never again be a flood to ruin the land.”
+12 - And Elohim said, “This is the sign of the covenant which I am giving between me and between you and between every living creature that is with you, for everlasting generations;
+13 - I have set my bow in the cloud, and it will be for a sign of a covenant between me and between the land;
+14 - and it will come about when I cloud a cloud over the land, that the bow will be seen in the cloud,
+15 - and I will remember my covenant, which is between me and between you and between every living creature of all flesh; and never again will the waters become a flood to ruin all flesh.
+16 - And the bow is in the cloud, then I will see it, to remember the everlasting covenant between Elohim and between every living creature, with all flesh that is on the land.”
+17 - And Elohim said to Noakh, “This is the sign of the covenant which I have set up between me and all flesh that is on the land.”
+18 - and the sons of Noakh who came out of the ark, were Shem and Ham and Yapheth;
+19 - and Ham was the father of Canaan; these three were the sons of Noakh, and from these all the land was scattered;
+20 - and Noakh began to be a man of the ground and he planted vineyard;
+21 - and he drank of the wine and became drunk, and he uncovered himself in the middle of his tent;
+22 - and Ham, the father of Canaan, saw the nakedness of his father, and he reported to his two brothers outside;
+23 - and Shem and Yapheth took a garment and they laid it upon the shoulders of the two of them, and they walked backward and they covered the nakedness of their father;
+24 - and their faces were backward, and the nakedness of their father they did not see; and Noakh awoke from his wine, and he knew what his younger son had done to him;
+25 - and he said, “Cursed be Canaan; a servant of servants he will be to his brothers.”
+26 - And he said, “Blessed be Yahweh the Elohim of Shem, and let Canaan be his servant;
+27 - may Elohim enlarge Yapheth, and let him dwell in the tents of Shem, and let Canaan be his servant.”
+28 - And Noakh lived, after the flood, 350 years,
+29 - and all the days of Noakh were 950 years, and he died.
+
 Chapter 10
-1Now these are the generations of Shem, Ham, and Yapheth, the sons of Noakh; and sons were
-born to them after the flood.
-2The sons of Yapheth: Gomer and Magog and Madai and Javan and Tubal and Meshech and
-Tiras. 3The sons of Gomer were Ashkenaz and Riphath and Togarmah. 4The sons of Javan
-were Elishah and Tarshish, Kittim and Dodanim. 5From these the islands of the nations were
-separated into their lands, every one according to his language, according to their families,
-into their nations.
-6The sons of Ham; Cush and Mizraim and Put and Canaan. 7The sons of Cush were Seba and
-Havilah and Sabtah and Raamah and Sabteca; and the sons of Raamah were Sheba and Dedan.
-8Now, Cush became the father of Nimrod; he began to be a mighty warrior in the land. 9He
-was a mighty warrior-hunter before Yahweh; therefore it is said, “Like Nimrod a mighty warrior-
-hunter before Yahweh.” 10And the beginning of his kingdom was Babylon and Erech and
-Accad and Calneh, in the land of Shinar. 11From that land he went forth into Assyria, and built
-Nineveh and Rehoboth-Ir and Calah, 12and Resen between Nineveh and Calah; that is the great
-city. 13Mizraim became the father of Ludim and Anamim and Lehabim and Naphtuhim 14and
-Pathrusim and Casluhim (from which came the Philistines) and Caphtorim.
-15Canaan became the father of Sidon, his firstborn, and Heth 16and the Jebusite and the
-Amorite and the Girgashite 17and the Hivite and the Arkite and the Sinite 18and the Arvadite
-and the Zemarite and the Hamathite; and afterward the families of the Canaanite were
-scattered. 19And the border of the Canaanite was from Sidon as you go toward Gerar, as far
-as Gaza; as you go toward Sodom and Gomorrah and Admah and Zeboiim, as far as Lasha.
-20These are the sons of Ham, according to their families, according to their languages, by their
-lands, by their nations.
-21Now, to Shem also children were born, he is the father of all the children of Eber/Hebrew,
-the brother of Yapheth, the older one. 22The sons of Shem: Elam and Asshur and Arpachshad
-and Lud and Aram. 23The sons of Aram were Uz and Hul and Gether and Mash. 24Arpachshad
-became the father of Shelah; and Shelah became the father of Eber. 25Now, to Eber, two
-sons were born, the name of the one was Peleg, for in his days the earth was divided; and
-his brother’s name was Joktan. 26Joktan became the father of Almodad and Sheleph and
-Hazarmaveth and Jerah 27and Hadoram and Uzal and Diklah 28and Obal and Abimael and Sheba
-29and Ophir and Havilah and Jobab; all these were the sons of Joktan. 30And their settlement
-extended from Mesha as you go toward Sephar, the hill country of the east. 31These are
-the sons of Shem, according to their families, according to their languages, by their lands,
-according to their nations.
-32These are the families of the sons of Noakh, according to their genealogies, by their nations;
-and out of these the nations were separated on the land after the flood.
+1 - Now these are the generations of Shem, Ham, and Yapheth, the sons of Noakh; and sons were born to them after the flood.
+2 - The sons of Yapheth: Gomer and Magog and Madai and Javan and Tubal and Meshech and Tiras.
+3 - The sons of Gomer were Ashkenaz and Riphath and Togarmah.
+4 - The sons of Javan were Elishah and Tarshish, Kittim and Dodanim.
+5 - From these the islands of the nations were separated into their lands, every one according to his language, according to their families, into their nations.
+6 - The sons of Ham; Cush and Mizraim and Put and Canaan.
+7 - The sons of Cush were Seba and Havilah and Sabtah and Raamah and Sabteca; and the sons of Raamah were Sheba and Dedan.
+8 - Now, Cush became the father of Nimrod; he began to be a mighty warrior in the land.
+9 - He was a mighty warrior-hunter before Yahweh; therefore it is said, “Like Nimrod a mighty warrior-hunter before Yahweh.”
+10 - And the beginning of his kingdom was Babylon and Erech and Accad and Calneh, in the land of Shinar.
+11 - From that land he went forth into Assyria, and built Nineveh and Rehoboth-Ir and Calah,
+12 - and Resen between Nineveh and Calah; that is the great city.
+13 - Mizraim became the father of Ludim and Anamim and Lehabim and Naphtuhim
+14 - and Pathrusim and Casluhim (from which came the Philistines) and Caphtorim.
+15 - Canaan became the father of Sidon, his firstborn, and Heth
+16 - and the Jebusite and the Amorite and the Girgashite
+17 - and the Hivite and the Arkite and the Sinite
+18 - and the Arvadite and the Zemarite and the Hamathite; and afterward the families of the Canaanite were scattered.
+19 - And the border of the Canaanite was from Sidon as you go toward Gerar, as far as Gaza;
+20 - as you go toward Sodom and Gomorrah and Admah and Zeboiim, as far as Lasha. These are the sons of Ham, according to their families, according to their languages, by their lands, by their nations.
+21 - Now, to Shem also children were born, he is the father of all the children of Eber/Hebrew, the brother of Yapheth, the older one.
+22 - The sons of Shem: Elam and Asshur and Arpachshad and Lud and Aram.
+23 - The sons of Aram were Uz and Hul and Gether and Mash.
+24 - Arpachshad became the father of Shelah; and Shelah became the father of Eber.
+25 - Now, to Eber, two sons were born, the name of the one was Peleg, for in his days the earth was divided; and his brother’s name was Joktan.
+26 - Joktan became the father of Almodad and Sheleph and Hazarmaveth and Jerah
+27 - and Hadoram and Uzal and Diklah
+28 - and Obal and Abimael and Sheba
+29 - and Ophir and Havilah and Jobab; all these were the sons of Joktan.
+30 - And their settlement extended from Mesha as you go toward Sephar, the hill country of the east.
+31 - These are the sons of Shem, according to their families, according to their languages, by their lands, according to their nations.
+32 - These are the families of the sons of Noakh, according to their genealogies, by their nations; and out of these the nations were separated on the land after the flood.
+
 Chapter 11
-1 Now the whole land was one language and one in words 2and it came about as they journeyed
-east, that they found a plain in the land of Shinar and they settled there. 3And they said each
-to his neighbor, “Come, let us brick bricks and burn them as burnt.” And they used brick for
-stone, and they used tar for mortar. 4And they said, “Come, let us build for ourselves a city,
-and a tower whose head will be in the skies, and let us make for ourselves a name, lest we
-be scattered upon the face of all the land.” 5And Yahweh came down to see the city and the
-tower that the sons of humanity had built. 6And Yahweh said, “Behold, they are one people,
-and they all have the one language, and this is what they have begun to do, and now, nothing
-will be inaccessible for them, anything that they devise to do. 7Come, let us go down and let
-us confuse their language there, so that each one will not hear the language of his neighbor.”
-8And Yahweh scattered them from there upon the face of all the land, and they stopped
-building the city. 9Therefore its name was called Babylon, because there Yahweh made-babble
-of the language of all the land, and from there Yahweh scattered them upon the face of
-all the land.
-10These are the generations of Shem. Shem was 100 years old, and he caused the birth of
-Arpachshad two years after the flood; 11and Shem lived 500 years after he caused the birth of
-Arpachshad, and he caused the birth of sons and daughters, 12and Arpachshad lived 35 years,
-and he caused the birth of Shelah; 13and Arpachshad lived 403 years after he caused the birth
-of Shelah, and he caused the birth of sons and daughters.
-14And Shelah lived 30 years, and he caused the birth of Eber; 15and Shelah lived 403 after he
-caused the birth of Eber, and he caused the birth of sons and daughters.
-16And Eber lived 34 years, and he caused the birth of Peleg; 17and Eber lived 430 years after he
-caused the birth of Peleg, and he caused the birth of sons and daughters.
-18And Peleg lived 30 years, and he caused the birth of Reu; 19and Peleg lived 209 years after he
-caused the birth of Reu, and he caused the birth of sons and daughters.
-20And Reu lived 32 years, and he caused the birth of Serug; 21and Reu lived 207 years after he
-became the father of Serug, and he had other sons and daughters.
-22And Serug lived 30 years, and he caused the birth of of Nahor; 23and Serug lived 200 years
-after he caused the birth of of Nahor, and he caused the birth of sons and daughters.
-24and Nahor lived 29 years, and he caused the birth of Terakh; 25and Nahor lived 119 years after
-he caused the birth of Terakh, and he caused the birth of sons and daughters.
-26And Terakh lived 70 years, and he caused the birth of of Avram, Nahor and Haran.
-27Now these are the generations of Terakh. Terakh caused the birth of Avram, Nahor, and
-Haran; and Haran caused the birth of Lot, 28and Haran died before his father Terakh in the land
-of his birth, in Ur of the Chaldeans, 29and Avram and Nahor took wives for themselves. The
-name of Avram’s wife was Sarai; and the name of Nahor’s wife was Milcah, the daughter of
-Haran, the father of Milcah and Iscah. 30And Sarai was barren; she had no child.
-31And Terakh took Avram his son and Lot, the son of Haran, his grandson, and Sarai his
-daughter-in-law, his son Avram’s wife; and they went out together from Ur of the Chaldeans in
-order to enter the land of Canaan; and they went as far as Haran, and they settled there. 32And
-the days of Terakh were 205 years; and Terakh died in Haran.
+1 - Now the whole land was one language and one in words
+2 - and it came about as they journeyed east, that they found a plain in the land of Shinar and they settled there.
+3 - And they said each to his neighbor, “Come, let us brick bricks and burn them as burnt.” And they used brick for stone, and they used tar for mortar.
+4 - And they said, “Come, let us build for ourselves a city, and a tower whose head will be in the skies, and let us make for ourselves a name, lest we be scattered upon the face of all the land.”
+5 - And Yahweh came down to see the city and the tower that the sons of humanity had built.
+6 - And Yahweh said, “Behold, they are one people, and they all have the one language, and this is what they have begun to do, and now, nothing will be inaccessible for them, anything that they devise to do.
+7 - Come, let us go down and let us confuse their language there, so that each one will not hear the language of his neighbor.”
+8 - And Yahweh scattered them from there upon the face of all the land, and they stopped building the city.
+9 - Therefore its name was called Babylon, because there Yahweh made-babble of the language of all the land, and from there Yahweh scattered them upon the face of all the land.
+10 - These are the generations of Shem. Shem was 100 years old, and he caused the birth of Arpachshad two years after the flood;
+11 - and Shem lived 500 years after he caused the birth of Arpachshad, and he caused the birth of sons and daughters,
+12 - and Arpachshad lived 35 years, and he caused the birth of Shelah;
+13 - and Arpachshad lived 403 years after he caused the birth of Shelah, and he caused the birth of sons and daughters.
+14 - And Shelah lived 30 years, and he caused the birth of Eber;
+15 - and Shelah lived 403 after he caused the birth of Eber, and he caused the birth of sons and daughters.
+16 - And Eber lived 34 years, and he caused the birth of Peleg;
+17 - and Eber lived 430 years after he caused the birth of Peleg, and he caused the birth of sons and daughters.
+18 - And Peleg lived 30 years, and he caused the birth of Reu;
+19 - and Peleg lived 209 years after he caused the birth of Reu, and he caused the birth of sons and daughters.
+20 - And Reu lived 32 years, and he caused the birth of Serug;
+21 - and Reu lived 207 years after he became the father of Serug, and he had other sons and daughters.
+22 - And Serug lived 30 years, and he caused the birth of of Nahor;
+23 - and Serug lived 200 years after he caused the birth of of Nahor, and he caused the birth of sons and daughters.
+24 - and Nahor lived 29 years, and he caused the birth of Terakh;
+25 - and Nahor lived 119 years after he caused the birth of Terakh, and he caused the birth of sons and daughters.
+26 - And Terakh lived 70 years, and he caused the birth of of Avram, Nahor and Haran.
+27 - Now these are the generations of Terakh. Terakh caused the birth of Avram, Nahor, and Haran;
+28 - and Haran caused the birth of Lot, and Haran died before his father Terakh in the land of his birth, in Ur of the Chaldeans,
+29 - and Avram and Nahor took wives for themselves. The name of Avram’s wife was Sarai; and the name of Nahor’s wife was Milcah, the daughter of Haran, the father of Milcah and Iscah.
+30 - And Sarai was barren; she had no child.
+31 - And Terakh took Avram his son and Lot, the son of Haran, his grandson, and Sarai his daughter-in-law, his son Avram’s wife;
+32 - and they went out together from Ur of the Chaldeans in order to enter the land of Canaan; and they went as far as Haran, and they settled there. And the days of Terakh were 205 years; and Terakh died in Haran.
+
 Chapter 12
-1And Yahweh said to Avram, “Go forth from your land, and from your family, and from your
-father’s house, to the land which I will show you;
-2and I will make you a great nation,
-and I will bless you,
-and I will make your name great;
-and so you shall be a blessing;
-3and I will bless those who bless you,
-and the one who curses you I will curse;
-and in you all the families of the earth
-will be blessed.”
+1 - And Yahweh said to Avram, “Go forth from your land, and from your family, and from your father’s house, to the land which I will show you;
+2 - and I will make you a great nation, and I will bless you, and I will make your name great; and so you shall be a blessing;
+3 - and I will bless those who bless you, and the one who curses you I will curse; and in you all the families of the earth will be blessed.”
