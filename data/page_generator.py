@@ -16,20 +16,38 @@ def load_concordance():
       return None
 from collections import defaultdict
 
-def generate_chapter_html(chapter_number, concordance_data):
+def get_improved_translation(chapter_number, bible_project_translation, niv_translation):
+    improved_translation = []
+    for entry in bible_project_translation:
+        if entry['chapter'] == chapter_number:
+            improved_translation.append(entry['text'])
+    
+    # Add NIV translation for the same verses
+    for entry in niv_translation:
+        if entry['chapter'] == chapter_number:
+            improved_translation.append(entry['text'])
+    
+    return improved_translation
+
+def generate_chapter_html(chapter_number, concordance_data, improved_translation_list):
     chapter_data = [entry for entry in concordance_data if entry['chapter'] == chapter_number]
     verse_data = defaultdict(list)
     for entry in chapter_data:
         verse_data[entry['verse']].append(entry)
 
     chapter_html = ""
+    next_verse = 0
     for verse_number, words in verse_data.items():
+        chapter_html += f'                  <div class="english-line"><span class="verse">{verse_number + 1}</span>{improved_translation_list[next_verse]}</div>\n'
+        next_verse += 1
         english_line = ""
         hebrew_line = ""
         for word in words:
-            english_line += f'<span data-id="{word["id"]}" class="{word["strongs_number"]}">{word["english_text"]}</span> '
+            english_word = word["english_text"].strip()
+            if english_word != "x":
+                english_line += f'<span data-id="{word["id"]}" class="{word["strongs_number"]}">{english_word}</span> '
             hebrew_line += f'<span data-id="{word["id"]}" class="{word["strongs_number"]}">{word["hebrew_word"]}</span> '
-        chapter_html += f'                  <div class="english-line"><span class="verse">{verse_number}</span>{english_line.strip()}</div>\n'
+        chapter_html += f'                  <div class="org-english-line"><span class="verse">{verse_number}</span>{english_line.strip()}</div>\n'
         chapter_html += f'                  <div class="hebrew-line">{hebrew_line.strip()}</div>\n\n'
 
     html_template = f"""<!DOCTYPE html>
@@ -87,10 +105,22 @@ if __name__ == "__main__":
     genesis_concordance = load_concordance()
     # print(genesis_concordance[0])
 
-    # generate_chapter_html(1, genesis_concordance)
+    # Load the .json files bible_project_translation.json and niv_translation.json
+    # then pass that data into the generate_chapter_html function.
+
+    with open('data/bible_project_translation.json', 'r', encoding='utf-8') as f:
+        bible_project_translation = json.load(f)
+    with open('data/niv_translation.json', 'r', encoding='utf-8') as f:
+        niv_translation = json.load(f)
+
+    # chapter_number = 1
+    # improved_translation_list = get_improved_translation(chapter_number, bible_project_translation, niv_translation)
+    # print(improved_translation_list)
+    # generate_chapter_html(1, genesis_concordance, improved_translation_list)
 
     # Generate HTML for each chapter
     chapters = set(entry['chapter'] for entry in genesis_concordance)
     for chapter in sorted(chapters):
-        result = generate_chapter_html(chapter, genesis_concordance)
+        improved_translation_list = get_improved_translation(chapter, bible_project_translation, niv_translation)
+        result = generate_chapter_html(chapter, genesis_concordance, improved_translation_list)
         print(result)
