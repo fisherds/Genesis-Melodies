@@ -38,7 +38,7 @@ def generate_chapter_html(chapter_number, concordance_data, improved_translation
     chapter_html = ""
     next_verse = 0
     for verse_number, words in verse_data.items():
-        chapter_html += f'                  <div class="english-line"><span class="verse">{verse_number + 1}</span>{improved_translation_list[next_verse]}</div>\n'
+        chapter_html += f'                  <div class="english-line"><span class="verse">{verse_number}</span>{improved_translation_list[next_verse]}</div>\n'
         next_verse += 1
         english_line = ""
         hebrew_line = ""
