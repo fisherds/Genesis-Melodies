@@ -56,11 +56,46 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
+
+            let hebrewOccurrencesHTML = `
+                        <div class="font-bold text-sm text-center text-gray-500">#</div>
+                        <div class="font-bold text-sm text-center text-gray-500">Ref</div>
+                        <div class="font-bold text-sm text-gray-500">Line</div>
+                    `;
+            let hebrewOccurrenceIndex = 1;
+            document.querySelectorAll('.hebrew-line').forEach(line => {
+                if (line.querySelector(`.${strongsClass}`)) {
+                    let chapter = "";
+                    let verse = "";
+
+                    const tempLine = document.createElement('div');
+                    tempLine.innerHTML = line.innerHTML;
+                    tempLine.querySelectorAll('.' + strongsClass).forEach(el => {
+                        el.classList.add('drawer-highlight');
+                        const wordData = concordanceWords[el.dataset.id];
+                        if (wordData) {
+                            chapter = wordData.chapter || chapter;
+                            verse = wordData.verse || verse;
+                        }
+                    });
+                    const highlightedLineHTML = tempLine.innerHTML;
+
+                    hebrewOccurrencesHTML += `
+                                <div class="text-sm text-center text-sky-600">${hebrewOccurrenceIndex++}</div>
+                                <div class="text-sm text-center text-gray-500">${chapter}:${verse}</div>
+                                <div>${highlightedLineHTML}</div>
+                            `;
+                }
+            });
+
             contentHTML += `
                         <h3 class="text-3xl hebrew-line mb-2 text-center">${concordanceWordData.hebrew_word || ''}</h3> 
                         <h3 class="text-lg font-semibold text-sky-700 mb-1 text-center">${concordanceWordData.gloss_transliteration || ''}</h3>   
-                        <h4 class="font-bold border-b pb-1 mb-2 mt-2">Occurrences in this text:</h4>
+                        <h4 class="font-bold border-b pb-1 mb-2 mt-2">English Occurrences in this text:</h4>
                         <div class="occurrences-grid mt-2">${occurrencesHTML}</div>
+                        <hr class="my-4">
+                        <h4 class="font-bold border-b pb-1 mb-2 mt-2">Hebrew Occurrences in this text:</h4>
+                        <div class="occurrences-grid mt-2">${hebrewOccurrencesHTML}</div>
                         <hr class="my-4">
                         <h3 class="text-3xl hebrew-line mb-2 text-center">${concordanceWordData.lexeme}</h3>
                         <h3 class="text-lg font-semibold text-sky-700 mb-1 text-center">${concordanceWordData.transliteration || ''}</h3>   
