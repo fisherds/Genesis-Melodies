@@ -76,6 +76,7 @@ def write_split_lines(english_words, hebrew_words, outfile):
         word = english_words.pop(0)
         if word.strip() == "line_break":
             write_line_carefully(english_line, "english-line", outfile)
+            hebrew_word = "" # so that the final word is available after the loop
             while len(hebrew_words) > 0:
                 hebrew_word = hebrew_words.pop(0)
                 if "data-id" in hebrew_word:
@@ -88,7 +89,7 @@ def write_split_lines(english_words, hebrew_words, outfile):
             write_line_carefully(hebrew_line, "hebrew-line", outfile)
             outfile.write('\n')
             english_line = ""
-            hebrew_line = "<span "
+            hebrew_line = "<span " + hebrew_word + " "
             continue
         
         if "data-id" in word:
@@ -97,7 +98,7 @@ def write_split_lines(english_words, hebrew_words, outfile):
         english_line += word + " "
 
     write_line_carefully(english_line, "english-line", outfile)
-    write_line_carefully("<span " + " ".join(hebrew_words), "hebrew-line", outfile)
+    write_line_carefully("<span " + hebrew_word + " " + " ".join(hebrew_words), "hebrew-line", outfile)
 
 if insert_line_breaks:
 
