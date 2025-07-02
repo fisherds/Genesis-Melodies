@@ -101,13 +101,13 @@ def write_split_lines(english_words, hebrew_words, outfile):
 
 if insert_line_breaks:
 
-    # Copy the file to make a backup
+    # Copy the file to make a backup (note, for this to be useful you should do a git commit after running this script)
     shutil.copyfile(destination_filename, f"public/chapters/{filename}_line_break_backup.html")
 
     with open(destination_filename, "r") as infile:
         lines = infile.readlines()
 
-    destination_filename = f"public/chapters/{filename}_line_break.html"  # for development purposes don't mess with the original file at all.
+    # destination_filename = f"public/chapters/{filename}_line_break.html"  # for development purposes don't mess with the original file at all.
     with open(destination_filename, "w") as outfile:
         english_words = []
         hebrew_words = []
