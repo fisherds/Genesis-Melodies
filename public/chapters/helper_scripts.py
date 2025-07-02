@@ -9,11 +9,15 @@ destination_filename = f"public/chapters/{filename}.html"
 
 # Assumes the file is here in this folder.
 # inserts sections (cards) with title when the marker 
+# Example:
+# card - Day 1
 insert_sections = False
 
 
 # Assumes the file is here in this folder.
-insert_line_breaks = True
+# Example:
+# line_break
+insert_line_breaks = False
 
 if copy_file:
     source_filename = f"public/comparisons/{filename}.html"
