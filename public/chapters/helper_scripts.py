@@ -19,6 +19,12 @@ insert_sections = False
 # line_break
 insert_line_breaks = False
 
+
+# Adds a blank line after the verses in both the English and Hebrew text.
+# Example:
+# br
+insert_my_br = True
+
 if copy_file:
     source_filename = f"public/comparisons/{filename}.html"
     destination_filename = f"public/chapters/{filename}.html"
