@@ -1,0 +1,512 @@
+{
+  "data": {
+    "classBySlug": {
+      "title": "Noah to Abraham",
+      "slug": "noah-to-abraham",
+      "id": "8c5703d8-8709-406b-9d4f-27d41face9be",
+      "description": "Why did God choose to flood the world? There’s much to discover in the story of Noah and his descendants, as these chapters develop major themes seen throughout the biblical story.  See how the literary design of this movement reveals God’s character and informs the covenant promises God makes in response to human rebellion.",
+      "scripture": "Genesis 6-11",
+      "createdAt": "2021-04-30T11:00:00.000Z",
+      "artwork": [
+        {
+          "url": "https://dpl8xh3azv1ec.cloudfront.net/_static/assets/artwork/noah-to-abraham/class-noah-to-abraham-square.jpg"
+        },
+        {
+          "url": "https://dpl8xh3azv1ec.cloudfront.net/_static/assets/artwork/noah-to-abraham/class-noah-to-abraham-wide.jpg"
+        },
+        {
+          "url": "https://dpl8xh3azv1ec.cloudfront.net/_static/assets/artwork/noah-to-abraham/class-noah-to-abraham-tall.jpg"
+        }
+      ],
+      "sessionCount": 28,
+      "modules": {
+        "nodes": [
+          {
+            "sessions": {
+              "nodes": [
+                {
+                  "title": "How We Read the Flood Story",
+                  "id": "5bc36afa-f08e-490c-ba88-aab04a58befa",
+                  "description": "Listen in as the students discuss how acknowledging our modern experience of the cosmos is the first step to reading the first pages of the Bible well.",
+                  "position": 1,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/p9JRBFHGQn01B01SRigVVHZb34C01VlpSt913klYgnMDPw.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "The Flood Story in the Hebrew Bible",
+                  "id": "f688e7d1-6cb9-4957-bab2-293c0ff9c65d",
+                  "description": "How did Jesus understand the flood story? Consider Jesus’ perspective on the flood, and see how the Bible is like a family quilt.",
+                  "position": 2,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/DaO5XeQ901qZQmdah3KWE46I9Y9C00jdBFz952nxyZCGY.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "The Design of Genesis 1-11",
+                  "id": "7e3e025d-5042-4db1-b960-47eceded52b7",
+                  "description": "Where does the flood story fit in the larger narrative? Walk through the key themes of Genesis 1-11.",
+                  "position": 3,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/85lsIZzd77AybiLA01Nhl4nvJqc027AuyK2H7HIN00JIk8.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Reflecting on Genesis 1-11",
+                  "id": "bdb3d57a-5462-407d-899e-ea3b60109311",
+                  "description": "Did you know the Bible starts by setting a pattern of thematic events? Reflect on the cycle of themes from Genesis 1-11.",
+                  "position": 4,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/Rgr1oRn302rua9h02m3fVIT3kmKktD01b365lDL5doYHog.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Tale of Two Seeds",
+                  "id": "194ac24c-0a80-4a89-8801-5215f585ead2",
+                  "description": "Trace the family of Adam and Eve through the generations to see the way the biblical authors used genealogies to illustrate the story they were telling.",
+                  "position": 5,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/jmjzvfj659xdPwMeWvr01JreouCxnjuoJf00edl02ftyeM.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "The Flood Narrative in Ancient Near Eastern Context",
+                  "id": "01071fe5-9d5b-4a66-b897-440100ad94e2",
+                  "description": "Compare ancient flood stories to develop a more detailed picture of the ancient cultural context of the Bible’s flood account.",
+                  "position": 6,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/01dsvvrzomAWCyv58xsIVqgC2wyBoeEK9c01fYDPSU3tE.m3u8"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "sessions": {
+              "nodes": [
+                {
+                  "title": "Design of Genesis 6:1-12",
+                  "id": "2f3ef6a3-d773-447b-af4a-8a35623af227",
+                  "description": "In Genesis 6, the land is ruined. But how did it get that way? Follow the literary clues to the source of this corruption.",
+                  "position": 7,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/PQ3SZryQmsO6x00obDY1z4CpgoPvzpG00lKh1Ag4Xqsho.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "The Rebellion of the Sons of Elohim",
+                  "id": "575c430c-cf21-4ec9-8976-a26ca509f7f9",
+                  "description": "Who are the sons of Elohim? Look into biblical themes, Hebrew idioms, and various interpretations to gain insight into what’s going on in Genesis 6.",
+                  "position": 8,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/PezU8HgwhzWpaBBStEE2okTbGdWAgHGJAkYyg0243cng.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "The Identity of the Nephilim",
+                  "id": "afe08edb-76b8-4825-b413-0c157d31beba",
+                  "description": "What 120 years is God referring to? Who are the Nephilim? Continue to unpack the mysterious characters and events of Genesis 6:1-4.",
+                  "position": 9,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/yOWVoTzdc5oKwxTNi8BMlwFLAmMV8McC002g2MKCPesg.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Giants in Ancient Near Eastern Context",
+                  "id": "4cddf9fa-a777-42c6-8a49-90b1efb274f0",
+                  "description": "What’s with all these giant warrior kings in the Bible? Study some ancient cultural context to better grasp the meaning of these imposing characters.",
+                  "position": 10,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/r7dry1eFUfReten02LDY7c56SfF5e9jzn00bwCzzEB8LU.m3u8"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "sessions": {
+              "nodes": [
+                {
+                  "title": "The Rebellion of the Sons of Adam",
+                  "id": "7434d9a8-946b-4936-baca-eba472a099d4",
+                  "description": "What reason does the Bible give for God flooding the land? Study key words and the shape of the text to find out.",
+                  "position": 11,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/GavfvDBa5fV500m5vSGN6s9sAVNlRUXbMF8py02r7gwas.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Noah the Righteous Remnant",
+                  "id": "5e526c3d-4cea-4201-868a-8a954679843c",
+                  "description": "God has a habit of counting the righteousness of one for the rescue of many, and Noah’s story is our first glimpse. Trace this theme as it develops in Genesis.",
+                  "position": 12,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/m8HSASgCIl1K1Tj023mZj4PUqNfjI600WXMnCFf1ON02pw.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "The Ark as a Symbolic Eden and Tabernacle",
+                  "id": "9afd13b2-9c94-4716-a1a1-23b0c1d03ea3",
+                  "description": "Examine the design of Noah’s ark and discover the symbolic connection between the ark and ancient temples.",
+                  "position": 13,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/Y013wKYyNw7hiV02XU01102RGo301ipLLbQCSqFBPe7mVsjQ.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Reflecting on the Ark as a Symbolic Eden",
+                  "id": "fe9b86c8-52e1-4054-9485-9870d731cac2",
+                  "description": "Reflect on the design of Noah’s ark and its connection to Eden and the temple. See how the different writers emphasize this theme throughout the Bible.",
+                  "position": 14,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/D4U9a4zEWKuyniuqypDC39BdLRj01J01STlQjsHDHKfj4.m3u8"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "sessions": {
+              "nodes": [
+                {
+                  "title": "The Flood as Cosmic Collapse",
+                  "id": "1e2dbd09-d475-46ec-a3f4-662d2c6ae6a9",
+                  "description": "Where did the flood waters come from? Glimpse the viewpoint of the biblical authors and see why their ancient cosmology is key to understanding the flood.",
+                  "position": 15,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/XQp4oMD02sH5FwZJMFggWsfH9cuCEQ8wCjnBpZcrPO2w.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "The Flood Overwhelms the Land",
+                  "id": "386e1555-44db-410e-8056-50914baaeaea",
+                  "description": "Trace the pattern of the righteous remnant, and see how Noah, his family, and the animals in the ark are prototypes of an important biblical theme.",
+                  "position": 16,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/00Uprf2l9R4hXwTHhzXqXYUnOV9g6ag8kI02kkYT1seQg.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "The Flood Waters Recede",
+                  "id": "6b9dcf97-3dff-42fb-af21-95d9bf7ad07f",
+                  "description": "Compare the post-flood renewal to the seven days of Genesis 1 and see all the ways the biblical authors have carried forward the theme of creation.",
+                  "position": 17,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/lercWsZGuCgPUpyl5ccIyZx9jZsSKUf4YU00NBvxb18o.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Noah’s Sacrifice and God’s Blessing",
+                  "id": "3eba8a04-1e7d-47ff-8c5e-970fe6b035d7",
+                  "description": "As the flood waters recede, what is different about the story? Learn two Hebrew words for “curse” that add nuance to how God responds after the flood.",
+                  "position": 18,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/HPCMCblFbzi01cAya00HzRdjf2lJoiDG02bybP026vMLIBI.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "The Pattern of the High Place Sacrifice",
+                  "id": "62314ae5-cb6b-4abe-8fbb-0563ee4128d1",
+                  "description": "Trace the pattern of the high place sacrifice through Genesis and beyond to see how Noah’s sacrifice adds new detail to this developing pattern.",
+                  "position": 19,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/wLYOm01Ty4eNstMn4yd6IOw02Wxpz6Db1UFDFyJ2T9GuE.m3u8"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "sessions": {
+              "nodes": [
+                {
+                  "title": "God’s Covenant With Noah",
+                  "id": "c18c09e1-bcab-444b-94ee-57abe670e549",
+                  "description": "What does it mean for God to make a covenant with humans? Trace the covenant theme through the biblical story to find out.",
+                  "position": 20,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/nmKe3NUq6TN8Anra402n8vZBqhgsPJdNR76ejL5nmK02Y.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Reflecting on God’s Covenant",
+                  "id": "ff476a98-7989-4c53-8bed-e3e05d8b7801",
+                  "description": "Continue to meditate on the covenant theme symbolized by God’s bow in the sky and explore how covenants shape the biblical story.",
+                  "position": 21,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/cAPtwzQwS8NRIWOgq00iEKwMDepBxxD7Fo7GJtkNk634.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Noah's Ark and the Flood Debate",
+                  "id": "8f5f19f7-cee5-489c-b7cc-7d95b339d091",
+                  "description": "How do we relate the biblical story to the modern questions that many people bring to the text? Discover a helpful framework for moving forward.",
+                  "position": 22,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/24UkB5uMR00uKl00R23p7CIY02WQvJSHngx027BAeBCu00pY.m3u8"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "sessions": {
+              "nodes": [
+                {
+                  "title": "God’s Covenant with Noah",
+                  "id": "c761ecf8-fb7c-41d7-a1e9-29031dfb2f46",
+                  "description": "As the narrative shifts from Noah to the next generation, trace the cycle of themes from Genesis 1-11 and carefully interpret the nature of the sin of Ham. (The following session includes discussion of sexual abuse portrayed in the Bible.)",
+                  "position": 23,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/HO7D2wyFElplEMFd01pQkWLUT7Ln7fXtR6odw5oTm41o.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Reflecting on the Sin of Ham",
+                  "id": "f94dd147-ea1a-4816-9527-a80d3b47ceb5",
+                  "description": "What happened when Noah cursed Canaan? Examine the biblical theme of blessing and cursing to gain insight into God’s character.",
+                  "position": 24,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/Qz4WHMsOkSrcZLlPg4vIRFScRLIPI01nIdBw9EC5j02SQ.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Blessing and Cursing Noah’s Sons",
+                  "id": "0eb41dae-c326-45f7-b72a-3b559d79562a",
+                  "description": "Discover how the biblical authors use genealogy to set narrative expectations as Noah pronounces blessings and curses over his sons and future generations.",
+                  "position": 25,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/UUD01MoRwKLY6fsa00S5BwZHCyM6B8kh3twQBA801jtZdQ.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "The Brothers Come Together in Peace",
+                  "id": "c66e4f08-6dc7-489b-a585-7d7fa7757d58",
+                  "description": "In this session, we continue to explore the theme of a hoped-for unity of the divided nations. We’ll explore Isaiah’s vision for reconciliation and also see the way Paul was driven by this hope.",
+                  "position": 26,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/YombkHVi5ILNdJ028pHu00em9QFsYcYn5JnWKDxkH00tcA.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "The Founding of Babylon",
+                  "id": "a1ed5709-645f-4a2d-ac39-20e5a5f76bab",
+                  "description": "Unpack the meaning of the tower of Babylon story through its ancient cultural context and hyperlinks to other biblical passages.",
+                  "position": 27,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/lGIDS51glN6QIae00VyPpgPynh9FicVNbSnMIlBdghhg.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "From Shem to Abraham",
+                  "id": "bef5e59f-8cc5-4e09-ac59-beec44f8206a",
+                  "description": "Trace the genealogy of Shem to Abraham and reflect on key insights from this class as a whole.",
+                  "position": 28,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/02aASu02t8RujqyZMsgLKkdJjIB02AU02ZzxvAF1E401LgJ8.m3u8"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}
