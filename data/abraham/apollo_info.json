@@ -1,0 +1,544 @@
+{
+  "data": {
+    "classBySlug": {
+      "title": "Abraham",
+      "slug": "abraham",
+      "id": "f0a96495-e40e-46c7-ba43-24a4c9b4aeab",
+      "description": "How can the story of one family who lived thousands of years ago help us see God at work today? As God shapes Abraham through calling and testing, the story of the people of Israel and all of humanity is told in the ups and downs of his life. Journey with Abraham through a lifetime of failures and faithfulness as he learns to trust God’s promise and becomes the father of many nations.",
+      "scripture": "Genesis 11-25",
+      "createdAt": "2021-04-30T11:00:00.000Z",
+      "artwork": [
+        {
+          "url": "https://dpl8xh3azv1ec.cloudfront.net/_static/assets/artwork/abraham/class-abraham-square.jpg"
+        },
+        {
+          "url": "https://dpl8xh3azv1ec.cloudfront.net/_static/assets/artwork/abraham/class-abraham-wide.jpg"
+        },
+        {
+          "url": "https://dpl8xh3azv1ec.cloudfront.net/_static/assets/artwork/abraham/class-abraham-tall.jpg"
+        }
+      ],
+      "sessionCount": 30,
+      "modules": {
+        "nodes": [
+          {
+            "sessions": {
+              "nodes": [
+                {
+                  "title": "Abraham and Sarah in the Biblical Imagination",
+                  "id": "fd3184a2-7f9d-460c-bd61-07468ba56be4",
+                  "description": "Is the story of Abraham important for understanding the Bible? Study how the Bible builds on God’s promises to Abraham to shape its entire story.",
+                  "position": 1,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/oYxRuysln5dwwz00gLBmQ9wdmBXbcqMYTB01Zpr4WIEn8.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "The Abraham Story as a Whole",
+                  "id": "1b5f8ea1-124b-4c2c-887e-64ca4a731682",
+                  "description": "How can literary design help us understand the Bible? Examine the shape of Abraham's story to learn how its authors use structure to communicate a message.",
+                  "position": 2,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/7NijWE6Pa1n1g5qrNNJG5mXeKONNQozfmLyvw1VhqN00.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "The Literary Design of Genesis 1-11",
+                  "id": "1d389bb5-49bb-4620-99f6-c782f6066058",
+                  "description": "Genesis 1-11 establishes a cycle of themes that forms the framework of the biblical story. Learn how this pattern shapes the Abraham story.",
+                  "position": 3,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/suyPL01asHHVjU8hlkXUETgmWMgPipgCuFc4geXEPd6M.m3u8"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "sessions": {
+              "nodes": [
+                {
+                  "title": "A Tale of Two Journeys",
+                  "id": "b06acaec-ee40-4bdd-bbb4-9b4c120e148f",
+                  "description": "God calls Abram to follow him into the unknown, kicking off the central drama of the Hebrew Bible. Reflect on the beginning of the Abraham story.",
+                  "position": 4,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/iA02g95fkaM9oPAC00wX02bjVrIFi168hoZ02BZq2uqi8cc.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "God Calls Abram and Promises Blessing",
+                  "id": "906c006c-b543-464a-a2a5-1c4fe28562b1",
+                  "description": "What’s in a name? Trace the theme of giving and making names through Genesis to see layers of meaning in God’s promise to make Abram’s name great.",
+                  "position": 5,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/40002naVaAtw02Ue6DkpZp4RtjYI7cqEM69NsuCPl4tJ4M.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Abram the Snake",
+                  "id": "d20f699f-8beb-408d-affd-22ac89c8f46f",
+                  "description": "What happens when God’s chosen representative lies? Compare Abram’s schemes to the snake in the garden and see how the biblical authors develop the portrait of God’s partnership with humanity.",
+                  "position": 6,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/dvGFkmZeUSJxZWcrrfW2m3WStTEDw01zNYdHhJmrtzb8.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Abram and Lot Separate",
+                  "id": "9f9d8b6b-1a5d-4a8c-aa1b-020ab7348daf",
+                  "description": "Abram and Lot separate over their wealth. Is it just too much of a good thing, or is there more at work in this narrative? Trace the literary links to find out.",
+                  "position": 7,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/O65YJNM6jtfKbCz4M1xj2d66fnm00yYE01SxB7Kc01Vqm00.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "God's Second Promise to Abram",
+                  "id": "21a2a031-d384-4fdf-b2bf-c2683913c124",
+                  "description": "God once again promises to bless Abram with descendants and land. Catch God's grand vision of a new humanity in an Eden refuge.",
+                  "position": 8,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/zCfFgC1r6dFAiiDb7HlsR2bAWfplTkp2G4wQB602lAVE.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "A Flood of Violence",
+                  "id": "330071d9-42f4-45cf-acd4-2c9186db67fb",
+                  "description": "A rising tide of warrior kings threatens to destroy Abram’s family. Trace the literary links to the flood story to discover the significance of this dramatic episode.",
+                  "position": 9,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/s00MU52TIhmAPqdgGkIOqALFYNdBIHxIcpXwcIFHSNrI.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Melchizedek the Royal Priest",
+                  "id": "dab7c112-3fd6-4970-b1c7-08c1c9fddfee",
+                  "description": "Abram meets the mysterious King Melchizedek. Connect the biblical themes to see why this character is such an important figure for the story of the Bible.",
+                  "position": 10,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/wBRdIXs00PmJWYBSOE5Htzidi028WjCFY6urLFl1ilS6w.m3u8"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "sessions": {
+              "nodes": [
+                {
+                  "title": "The Genesis 1-11 Melody Repeats",
+                  "id": "d945d82f-a0c5-4800-8ee4-c9e150ac8563",
+                  "description": "Can a dry wilderness have the same meaning as a flood? Study how the biblical authors link themes together to create resonance between different images.",
+                  "position": 11,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/nhH1as6xGKS902nfkjBk01fsC6r02K4NYdhMFod8ApuDug.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Seed Like Stars",
+                  "id": "417ee7a0-71ba-4ce8-8ee5-7617b433f9c0",
+                  "description": "God promises to make Abram’s descendants as countless as the stars, but is this just about a big family? Discover the layered meaning of God’s words.",
+                  "position": 12,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/HJJeVeN4gFNg01i1Y8kge3ZpL007Ih9cVMsz1k1cggpmk.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "God's Covenant with Abram",
+                  "id": "e97151ce-bd81-4de8-b716-dded0c16063a",
+                  "description": "Explore the meaning of covenants in the Bible as God formalizes his promise to Abram.",
+                  "position": 13,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/QIlTPW9wA49vRY200tUnuqVZIAk4dn027HA3E9Pofr9BY.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "The Oppression of Hagar",
+                  "id": "16e9e43c-ae60-465f-acf7-65c0b586dcc0",
+                  "description": "God’s covenant partners take matters into their own hands with tragic results. Track Abram and Sarai through another failed test narrative.",
+                  "position": 14,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/sj5yR2YbhB27jo00jnucyNY026FpBXS7l5RJz00zshC2os.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "The Covenant of Circumcision",
+                  "id": "91b2d1c3-1ad1-4263-b997-1630c090430b",
+                  "description": "What does God do when his covenant partners mess up? Find out how circumcision demonstrates both God's judgment and his grace.",
+                  "position": 15,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/00VzoulZHIpfJa1GGr1oe9AlLAWfhe00ishRfnxw6rjKg.m3u8"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "sessions": {
+              "nodes": [
+                {
+                  "title": "Abraham, Sarah, and Yahweh at the Tent",
+                  "id": "050db432-5b84-45e2-9f64-eff4cf56dc93",
+                  "description": "Abraham meets with God surrounded by trees and echoes of Eden. Discover how this shared meal flips the garden failure of Genesis 3 on its head.",
+                  "position": 16,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/MQu8xEfVN3rzFjagLFGWRPj1q02iFXw1uxEge02HTaO01Y.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Abraham Intercedes for Lot",
+                  "id": "5214255d-976e-4d00-946b-ce13f9ffe054",
+                  "description": "Abraham bargains with God over the fate of Sodom, but is he missing an opportunity in this moment? Dive in to learn what this scene really teaches us about God’s character.",
+                  "position": 17,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/R5URfGxMm01frs55B7XJoSUj7n3D02OH9z4gDX02OCMPl4.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Lot Delivered From Destruction",
+                  "id": "a4eaac67-a6d6-472c-a117-66ab351e3aea",
+                  "description": "Lot tries to shield angels from the men of Sodom’s abuse as storm clouds of judgment gather on the horizon. Learn how this story replays the flood melody.",
+                  "position": 18,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/UebySmpz00u500djo02JjU8Lon2HvgE2023DCI8VYF1sqlA.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "A Flood of Fire",
+                  "id": "d2b50336-9522-4a59-b7df-af4e21e97698",
+                  "description": "It’s time for Lot to escape the downfall of Sodom, but will he trust in God’s deliverance? Examine the complex portrait of Lot against a tragic backdrop.",
+                  "position": 19,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/mT3RBDW2IzRsQ1v02GJ4MjtwS5m3LCELR7x4TZzfAPk8.m3u8"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "sessions": {
+              "nodes": [
+                {
+                  "title": "Abraham Endangers Sarah Again",
+                  "id": "7d24e576-2daf-418d-86b8-c965ba4535e1",
+                  "description": "Abraham resorts to old deceptions as a Canaanite king shows him how to be righteous. Untangle the apparent paradox of God working through imperfect people.",
+                  "position": 20,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/R2Ig2rXTDfjoj1E3j8aaZygUHEZCM8WXmt4YaoE3b02k.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Isaac’s Birth",
+                  "id": "9e27b0d4-602f-4b31-a82f-e8746d21e99f",
+                  "description": "Sarah finally gives birth to the promised child, yet she can’t quite believe it. See how the Bible's authors convey both her joy and doubt in this moment.",
+                  "position": 21,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/g8x5BQFFCyU7g5ZjrQMVSP5wfktznDaegu7SvxEORck.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Abraham's Covenant with Abimelech",
+                  "id": "96d768fc-bb9c-48c1-b01a-3b0362080530",
+                  "description": "What does Hagar’s exile have to do with Abraham’s covenant with Abimelech? Compare these stories to see why the Bible places them next to each other.",
+                  "position": 22,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/qXkar13fZwnYoSr2l6Vdb5gdWzZZ00PfmyhHGgZ00cF7U.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Abraham’s Ultimate Test",
+                  "id": "1db17629-741e-43cd-84af-b2979cbaf1d8",
+                  "description": "God tells Abraham to sacrifice his son. How do we make sense of this story? Trace the biblical theme of testing to help unpack this tense scene.",
+                  "position": 23,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/jaUpvEpOs8VggVVtFDaTh01Sb02x5a00TaHFtECw5Sa01eQ.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Abraham Surrenders Isaac",
+                  "id": "5123271a-19b4-4eb1-9f8c-b8a2c67023bf",
+                  "description": "God puts Abraham’s trust to the ultimate test. Learn how the binding of Isaac and God’s provision shape the concept of sacrifice throughout the Bible.",
+                  "position": 24,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/t1OaZNnjDDr00YTu01h5uCbypojYXcAXEFt6KmKmOLdyc.m3u8"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "sessions": {
+              "nodes": [
+                {
+                  "title": "A Heroine From the Non-Chosen Family",
+                  "id": "51bdfaf5-827a-4908-8ad9-923383aadd83",
+                  "description": "When the Bible talks about a chosen family, does it mean that the non-chosen are the enemy? Meet a heroine of the faith from a non-chosen family.",
+                  "position": 25,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/lyx7CAnywO9cQsbaSjXPx4xxaN5yuDhw9WWdn6S14Tc.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Sarah’s Tomb as a Mini Eden",
+                  "id": "1178ab9d-ea5f-4f7c-9601-ac7b05b9c8c0",
+                  "description": "Abraham buries Sarah in an act of surrender and hope. Find out how the biblical authors connect Sarah’s tomb to Eden, sacrifice, and resurrection.",
+                  "position": 26,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/z6phGqajCVMK2SC01dmE02vQppim9YmfSrs5ckyQ01V8Wg.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Isaac’s Marriage to Rebekah",
+                  "id": "0aed0128-56ca-46cf-9ca3-b467a08623f6",
+                  "description": "Explore how God brings delivering help through Rebekah to secure the promise in the next generation, mirroring Abraham's own faith journey.",
+                  "position": 27,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/JPBk5TQBPSxvYxOn8bVMSREr7vUHF8h6blPposuqX28.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Not Chosen But Blessed",
+                  "id": "475bd820-af7d-4079-9a38-71a7426c7042",
+                  "description": "Abraham’s story ends in both blessing and division. Delve into the theme of the divided brothers to see the gleam of hope buried within.",
+                  "position": 28,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/xwf7wiGRLPPy0000AeYAFIlPHLKCabOKFDXWzrRq9nlx4.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Reflecting on the Abraham Story",
+                  "id": "181fff34-6f1a-4d94-bb22-8922ce94456f",
+                  "description": "What are your key takeaways from this class? Listen in as the students discuss what they learned.",
+                  "position": 29,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/PqXxrP2JkzidcrKbm99K4V6K02jSFFUWE015cLPkP3ZtY.m3u8"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Studying the Abraham Story in Different Settings",
+                  "id": "cbfe947e-3b76-4a05-b6ed-cd09ec532ab5",
+                  "description": "Explore strategies for talking about Abraham’s story in various contexts.",
+                  "position": 30,
+                  "media": {
+                    "nodes": [
+                      {},
+                      {},
+                      {},
+                      {
+                        "url": "https://stream.mux.com/MhVO3HCw02kXxKErVhQg9fu2o4sk9oBlpL5yIOj5Ab2I.m3u8"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

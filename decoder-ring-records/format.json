@@ -1,0 +1,12 @@
+[
+    {
+        "title": "Title goes here",
+        "text": "English from the BibleProject Translation",
+        "verses": [
+            {"chapter": 1, "verse": 1},
+            {"chapter": 1, "verse": 2}
+        ],
+        "hebrew": "WLC Hebrew Text",
+        "strongs": "Strong's Numbers"
+    }
+]
