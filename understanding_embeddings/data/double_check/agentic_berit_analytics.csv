@@ -1,0 +1,231 @@
+record id,title,number of Hebrew words,number of English words,number of Tokens (Hebrew ST),number of Tokens (BERiT),number of Tokens (English)
+agentic_berit_001,"Genesis 1:1, 1:2",19,40,86,82,51
+agentic_berit_002,"Genesis 1:2.8, 1:3, 1:4",23,57,109,110,76
+agentic_berit_003,"Genesis 1:4.5, 1:5, 1:6.3",21,61,96,94,86
+agentic_berit_004,"Genesis 1:5.12, 1:6, 1:7.8",31,72,136,125,96
+agentic_berit_005,"Genesis 1:7.3, 1:8.6",9,44,54,53,58
+agentic_berit_006,"Genesis 1:8.3, 1:9, 1:10.1",15,65,77,73,92
+agentic_berit_007,"Genesis 1:9.9, 1:10, 1:11.4",25,83,114,110,116
+agentic_berit_008,"Genesis 1:11, 1:12.3",20,71,87,76,91
+agentic_berit_009,"Genesis 1:11.16, 1:12, 1:13.2",33,82,154,132,104
+agentic_berit_010,"Genesis 1:12.14, 1:13, 1:14.12",31,82,145,124,98
+agentic_berit_011,"Genesis 1:14.8, 1:15, 1:16.1",16,83,82,73,101
+agentic_berit_012,"Genesis 1:15.5, 1:16.14",19,48,102,93,59
+agentic_berit_013,"Genesis 1:16.1, 1:17, 1:18.5",13,65,66,63,81
+agentic_berit_014,"Genesis 1:18.2, 1:19, 1:20.4",11,63,56,55,78
+agentic_berit_015,"Genesis 1:20, 1:21.4",17,64,87,83,83
+agentic_berit_016,Genesis 1:21.18,18,35,85,79,48
+agentic_berit_017,"Genesis 1:21.16, 1:22, 1:23.2",30,69,145,139,96
+agentic_berit_018,"Genesis 1:22.11, 1:23, 1:24",28,65,136,130,89
+agentic_berit_019,"Genesis 1:24.9, 1:25.13",22,67,106,104,85
+agentic_berit_020,"Genesis 1:25.9, 1:26.12",21,50,107,106,66
+agentic_berit_021,"Genesis 1:26.9, 1:27.1",10,70,49,49,90
+agentic_berit_022,"Genesis 1:27.5, 1:28.12",17,100,79,83,130
+agentic_berit_023,"Genesis 1:28.9, 1:29.6",15,80,69,74,108
+agentic_berit_024,"Genesis 1:29.3, 1:30.1",4,75,23,23,92
+agentic_berit_025,"Genesis 1:29.18, 1:30",33,75,163,144,92
+agentic_berit_026,"Genesis 1:30.12, 1:31, 2:1.3",26,77,136,125,93
+agentic_berit_027,"Genesis 1:31.1, 2:1, 2:2.11",16,66,86,76,79
+agentic_berit_028,"Genesis 2:2.9, 2:3.12",21,55,101,91,65
+agentic_berit_029,"Genesis 2:3.9, 2:4, 2:5.4",24,92,101,88,115
+agentic_berit_030,"Genesis 2:4.1, 2:5.2",3,65,9,8,82
+agentic_berit_031,"Genesis 2:5.16, 2:6, 2:7.6",27,87,127,114,107
+agentic_berit_032,"Genesis 2:7.2, 2:8.6",8,53,39,43,74
+agentic_berit_033,"Genesis 2:8.3, 2:9.11",14,67,68,69,90
+agentic_berit_034,"Genesis 2:9.7, 2:10",17,62,85,76,77
+agentic_berit_035,"Genesis 2:10.6, 2:11, 2:12.6",22,55,94,85,71
+agentic_berit_036,"Genesis 2:12.1, 2:13, 2:14.4",13,55,60,57,75
+agentic_berit_037,"Genesis 2:14.1, 2:15.7",8,44,43,45,61
+agentic_berit_038,"Genesis 2:15.4, 2:16, 2:17.5",18,69,79,69,89
+agentic_berit_039,"Genesis 2:17, 2:18.8",21,51,87,75,68
+agentic_berit_040,"Genesis 2:18.5, 2:19.11",16,68,82,77,88
+agentic_berit_041,"Genesis 2:19.8, 2:20.5",13,78,69,60,88
+agentic_berit_042,"Genesis 2:20.2, 2:21.6",8,60,37,36,67
+agentic_berit_043,"Genesis 2:21.2, 2:22.7",9,49,45,43,58
+agentic_berit_044,"Genesis 2:22.4, 2:23.12",16,48,62,55,64
+agentic_berit_045,"Genesis 2:23.7, 2:24, 2:25.2",18,70,88,80,90
+agentic_berit_046,"Genesis 2:24.7, 2:25, 3:1.1",15,79,82,76,108
+agentic_berit_047,"Genesis 3:1.6, 3:2.5",11,56,50,41,80
+agentic_berit_048,"Genesis 3:2.1, 3:3, 3:4.1",15,62,68,64,79
+agentic_berit_049,"Genesis 3:3.1, 3:4, 3:5.1",7,70,37,31,93
+agentic_berit_050,"Genesis 3:5.7, 3:6.12",19,65,79,71,80
+agentic_berit_051,"Genesis 3:6.8, 3:7.6",14,80,62,59,99
+agentic_berit_052,"Genesis 3:7.2, 3:8.7",9,81,46,47,107
+agentic_berit_053,"Genesis 3:8.3, 3:9.5",8,53,44,46,76
+agentic_berit_054,"Genesis 3:9.1, 3:10, 3:11.5",14,66,63,58,98
+agentic_berit_055,"Genesis 3:11, 3:12.6",19,48,82,70,68
+agentic_berit_056,"Genesis 3:12.2, 3:13.1",3,46,16,18,70
+agentic_berit_057,"Genesis 3:13.7, 3:14.15",22,70,100,88,99
+agentic_berit_058,"Genesis 3:14.11, 3:15.1",12,74,54,49,91
+agentic_berit_059,"Genesis 3:15.6, 3:16.8",14,63,61,52,77
+agentic_berit_060,"Genesis 3:16.5, 3:17.8",13,90,63,56,110
+agentic_berit_061,"Genesis 3:17.4, 3:18.2",6,72,30,30,89
+agentic_berit_062,"Genesis 3:17.18, 3:18, 3:19.9",34,104,154,137,127
+agentic_berit_063,"Genesis 3:19.6, 3:20, 3:21.1",17,65,62,58,84
+agentic_berit_064,"Genesis 3:20.7, 3:21, 3:22.9",25,73,96,95,101
+agentic_berit_065,"Genesis 3:22.5, 3:23.3",8,58,35,36,80
+agentic_berit_066,"Genesis 3:22.22, 3:23, 3:24.6",37,92,162,150,119
+agentic_berit_067,"Genesis 3:24.3, 4:1.6",9,62,45,47,81
+agentic_berit_068,"Genesis 4:1.3, 4:2",14,52,66,62,71
+agentic_berit_069,"Genesis 4:2.6, 4:3, 4:4.6",21,70,102,92,88
+agentic_berit_070,"Genesis 4:4.3, 4:5, 4:6.1",13,63,63,64,86
+agentic_berit_071,"Genesis 4:5.6, 4:6, 4:7.9",24,72,103,97,99
+agentic_berit_072,"Genesis 4:7.5, 4:8.1",6,63,27,27,80
+agentic_berit_073,"Genesis 4:8.6, 4:9, 4:10.1",19,76,83,80,100
+agentic_berit_074,"Genesis 4:9.9, 4:10, 4:11.8",26,70,112,101,95
+agentic_berit_075,"Genesis 4:11.4, 4:12, 4:13.2",16,62,71,67,78
+agentic_berit_076,"Genesis 4:12.8, 4:13, 4:14.12",26,79,108,102,98
+agentic_berit_077,"Genesis 4:14.8, 4:15.11",19,72,76,74,96
+agentic_berit_078,"Genesis 4:15.7, 4:16, 4:17.3",17,85,82,78,118
+agentic_berit_079,"Genesis 4:16.6, 4:17, 4:18.3",24,71,108,103,112
+agentic_berit_080,"Genesis 4:17.14, 4:18, 4:19.3",29,72,141,137,111
+agentic_berit_081,"Genesis 4:19, 4:20, 4:21.2",21,59,81,79,79
+agentic_berit_082,"Genesis 4:20.7, 4:21, 4:22.8",24,62,100,96,89
+agentic_berit_083,"Genesis 4:22.5, 4:23.11",16,59,70,70,89
+agentic_berit_084,"Genesis 4:23.7, 4:24, 4:25.3",16,79,70,70,107
+agentic_berit_085,"Genesis 4:24.5, 4:25, 4:26.1",25,71,100,93,95
+agentic_berit_086,"Genesis 4:25.15, 4:26, 5:1.6",33,84,129,111,112
+agentic_berit_087,"Genesis 5:1.2, 5:2",12,46,52,45,61
+agentic_berit_088,"Genesis 5:2.6, 5:3, 5:4.3",20,71,92,80,85
+agentic_berit_089,"Genesis 5:4, 5:5.7",18,37,84,72,43
+agentic_berit_090,"Genesis 5:5.3, 5:6, 5:7.4",14,46,74,65,57
+agentic_berit_091,"Genesis 5:7, 5:8.6",18,33,89,73,42
+agentic_berit_092,"Genesis 5:8.2, 5:9, 5:10.6",14,45,73,63,59
+agentic_berit_093,"Genesis 5:10.2, 5:11.7",9,33,40,35,44
+agentic_berit_094,"Genesis 5:11.3, 5:12, 5:13.6",15,46,81,73,62
+agentic_berit_095,"Genesis 5:13.3, 5:14",12,34,53,47,44
+agentic_berit_096,"Genesis 5:14.4, 5:15, 5:16.5",17,45,83,75,59
+agentic_berit_097,"Genesis 5:16.2, 5:17.7",9,33,46,43,45
+agentic_berit_098,"Genesis 5:17.3, 5:18, 5:19.2",13,44,71,66,55
+agentic_berit_099,"Genesis 5:18.7, 5:19, 5:20.6",23,44,116,107,53
+agentic_berit_100,"Genesis 5:20.2, 5:21, 5:22.3",12,47,70,66,62
+agentic_berit_101,"Genesis 5:22, 5:23.6",18,32,90,78,40
+agentic_berit_102,"Genesis 5:23.2, 5:24, 5:25.3",13,34,66,61,46
+agentic_berit_103,"Genesis 5:24.7, 5:25, 5:26.8",24,46,123,113,64
+agentic_berit_104,"Genesis 5:26.5, 5:27.9",14,33,67,60,48
+agentic_berit_105,"Genesis 5:27.5, 5:28, 5:29.6",19,56,88,79,76
+agentic_berit_106,"Genesis 5:29.1, 5:30.5",6,52,33,27,68
+agentic_berit_107,"Genesis 5:30.2, 5:31.7",9,33,48,41,44
+agentic_berit_108,"Genesis 5:31.3, 5:32, 6:1.3",15,50,78,73,71
+agentic_berit_109,"Genesis 6:1, 6:2.9",18,44,85,77,56
+agentic_berit_110,"Genesis 6:2.5, 6:3.13",18,46,85,81,63
+agentic_berit_111,"Genesis 6:3.8, 6:4.13",21,66,95,88,89
+agentic_berit_112,"Genesis 6:4.1, 6:5.8",9,71,39,34,89
+agentic_berit_113,"Genesis 6:5.5, 6:6, 6:7.2",14,83,66,61,104
+agentic_berit_114,"Genesis 6:6.6, 6:7.15",21,55,110,98,70
+agentic_berit_115,"Genesis 6:7.12, 6:8, 6:9.1",19,66,88,78,93
+agentic_berit_116,"Genesis 6:9.7, 6:10, 6:11.5",19,42,82,75,69
+agentic_berit_117,"Genesis 6:11.2, 6:12, 6:13.2",13,67,76,71,90
+agentic_berit_118,"Genesis 6:12.8, 6:13, 6:14.3",25,77,122,111,99
+agentic_berit_119,"Genesis 6:13.13, 6:14, 6:15.6",31,79,132,120,103
+agentic_berit_120,"Genesis 6:15.2, 6:16.6",8,61,32,26,80
+agentic_berit_121,"Genesis 6:16.3, 6:17.4",7,77,30,23,93
+agentic_berit_122,"Genesis 6:17.1, 6:18.2",3,67,20,21,80
+agentic_berit_123,"Genesis 6:17.14, 6:18, 6:19.4",28,97,142,119,114
+agentic_berit_124,"Genesis 6:19.1, 6:20.7",8,65,46,36,75
+agentic_berit_125,"Genesis 6:20.3, 6:21.8",11,55,59,53,66
+agentic_berit_126,"Genesis 6:21.4, 6:22, 7:1.5",18,73,78,71,98
+agentic_berit_127,"Genesis 7:1.1, 7:2.7",8,59,36,27,74
+agentic_berit_128,"Genesis 7:2.3, 7:3.5",8,53,30,21,63
+agentic_berit_129,"Genesis 7:3.2, 7:4.1",3,56,10,9,68
+agentic_berit_130,"Genesis 7:4.6, 7:5",11,45,47,39,58
+agentic_berit_131,"Genesis 7:5.2, 7:6, 7:7.7",17,51,78,72,65
+agentic_berit_132,"Genesis 7:7.4, 7:8.9",13,49,71,64,57
+agentic_berit_133,"Genesis 7:8.6, 7:9, 7:10.2",19,61,95,83,75
+agentic_berit_134,"Genesis 7:9.1, 7:10, 7:11.9",17,76,84,64,97
+agentic_berit_135,"Genesis 7:11.5, 7:12.4",9,52,48,41,64
+agentic_berit_136,"Genesis 7:12.1, 7:13.12",13,44,57,56,59
+agentic_berit_137,"Genesis 7:13.8, 7:14.1",9,68,37,37,90
+agentic_berit_138,"Genesis 7:14.6, 7:15",15,58,87,79,73
+agentic_berit_139,"Genesis 7:15.5, 7:16, 7:17.2",19,68,89,81,87
+agentic_berit_140,"Genesis 7:16.11, 7:17, 7:18.3",26,70,123,114,87
+agentic_berit_141,"Genesis 7:18, 7:19.8",17,46,87,82,55
+agentic_berit_142,"Genesis 7:19.5, 7:20, 7:21.3",16,69,71,58,86
+agentic_berit_143,"Genesis 7:20.7, 7:21, 7:22.4",24,69,114,97,87
+agentic_berit_144,"Genesis 7:22, 7:23.1",10,57,43,39,70
+agentic_berit_145,"Genesis 7:23.6, 7:24.3",9,57,45,40,69
+agentic_berit_146,"Genesis 7:24, 8:1.11",17,57,89,86,73
+agentic_berit_147,"Genesis 8:1.7, 8:2",15,56,85,85,70
+agentic_berit_148,"Genesis 8:2.5, 8:3, 8:4.3",20,61,90,86,73
+agentic_berit_149,"Genesis 8:3.11, 8:4, 8:5.8",29,66,128,104,80
+agentic_berit_150,"Genesis 8:5.4, 8:6",14,49,60,57,58
+agentic_berit_151,"Genesis 8:6.6, 8:7, 8:8.4",19,65,90,80,75
+agentic_berit_152,"Genesis 8:8.1, 8:9.9",10,54,59,53,62
+agentic_berit_153,"Genesis 8:9.6, 8:10.6",12,68,59,53,77
+agentic_berit_154,"Genesis 8:10.2, 8:11.12",14,69,58,56,82
+agentic_berit_155,"Genesis 8:11.8, 8:12, 8:13.1",19,103,93,86,126
+agentic_berit_156,"Genesis 8:12.8, 8:13.16",24,69,113,98,85
+agentic_berit_157,"Genesis 8:13.13, 8:14, 8:15.2",23,70,103,85,91
+agentic_berit_158,"Genesis 8:14.7, 8:15, 8:16, 8:17.3",21,81,109,88,104
+agentic_berit_159,"Genesis 8:17.1, 8:18.2",3,57,21,20,72
+agentic_berit_160,"Genesis 8:17.13, 8:18, 8:19",27,80,159,138,102
+agentic_berit_161,"Genesis 8:19.6, 8:20",21,54,96,76,71
+agentic_berit_162,"Genesis 8:20.11, 8:21.14",25,79,110,97,102
+agentic_berit_163,"Genesis 8:21.1, 8:22.5",6,73,26,24,96
+agentic_berit_164,"Genesis 8:22.1, 9:1.8",9,45,42,46,64
+agentic_berit_165,"Genesis 9:1.4, 9:2.12",16,45,77,75,57
+agentic_berit_166,"Genesis 9:2.8, 9:3.1",9,46,45,42,53
+agentic_berit_167,"Genesis 9:3.6, 9:4, 9:5.7",18,83,88,80,106
+agentic_berit_168,"Genesis 9:5.4, 9:6.9",13,56,55,58,73
+agentic_berit_169,"Genesis 9:6.5, 9:7, 9:8",17,56,77,77,76
+agentic_berit_170,"Genesis 9:8.2, 9:9, 9:10.7",16,66,81,79,86
+agentic_berit_171,"Genesis 9:10.3, 9:11.4",7,72,41,39,86
+agentic_berit_172,"Genesis 9:11.1, 9:12.5",6,66,37,34,82
+agentic_berit_173,"Genesis 9:12.3, 9:13.5",8,55,39,39,67
+agentic_berit_174,"Genesis 9:13.1, 9:14, 9:15.3",11,80,60,58,89
+agentic_berit_175,"Genesis 9:15, 9:16.1",16,66,86,74,80
+agentic_berit_176,"Genesis 9:15.13, 9:16, 9:17.1",29,93,146,126,114
+agentic_berit_177,"Genesis 9:16.12, 9:17, 9:18.2",27,76,127,109,100
+agentic_berit_178,"Genesis 9:17.11, 9:18, 9:19",28,66,131,115,86
+agentic_berit_179,"Genesis 9:19.3, 9:20, 9:21, 9:22.3",18,75,76,70,92
+agentic_berit_180,"Genesis 9:21.5, 9:22, 9:23.7",22,70,103,99,86
+agentic_berit_181,"Genesis 9:23.4, 9:24.3",7,63,32,35,77
+agentic_berit_182,"Genesis 9:23.18, 9:24, 9:25, 9:26.3",36,95,168,161,126
+agentic_berit_183,"Genesis 9:25.6, 9:26, 9:27, 9:28.1",25,59,108,100,94
+agentic_berit_184,"Genesis 9:27.6, 9:28, 9:29.7",21,39,99,90,60
+agentic_berit_185,"Genesis 9:29.3, 10:1, 10:2.4",18,52,78,75,77
+agentic_berit_186,"Genesis 10:2, 10:3, 10:4.5",19,38,84,82,69
+agentic_berit_187,"Genesis 10:4.1, 10:5, 10:6.4",14,47,66,59,70
+agentic_berit_188,"Genesis 10:5.8, 10:6, 10:7, 10:8.2",27,76,120,110,111
+agentic_berit_189,"Genesis 10:7.9, 10:8, 10:9.9",26,58,118,111,99
+agentic_berit_190,"Genesis 10:9.5, 10:10, 10:11.4",18,52,87,81,89
+agentic_berit_191,"Genesis 10:11, 10:12, 10:13.1",18,38,92,79,68
+agentic_berit_192,"Genesis 10:12.5, 10:13, 10:14.6",17,34,106,102,65
+agentic_berit_193,"Genesis 10:14.2, 10:15, 10:16, 10:17.1",12,39,85,81,68
+agentic_berit_194,"Genesis 10:16.2, 10:17, 10:18, 10:19.1",13,54,101,97,82
+agentic_berit_195,"Genesis 10:18.5, 10:19, 10:20.2",20,71,110,103,106
+agentic_berit_196,"Genesis 10:19.11, 10:20, 10:21",25,77,127,110,112
+agentic_berit_197,"Genesis 10:21.4, 10:22, 10:23, 10:24.3",20,62,86,92,99
+agentic_berit_198,"Genesis 10:24, 10:25",20,41,84,81,63
+agentic_berit_199,"Genesis 10:25.1, 10:26, 10:27, 10:28.2",12,52,93,94,86
+agentic_berit_200,"Genesis 10:27.2, 10:28, 10:29, 10:30.5",16,42,105,101,65
+agentic_berit_201,"Genesis 10:30.1, 10:31, 10:32.5",12,68,68,62,87
+agentic_berit_202,"Genesis 10:32.1, 11:1, 11:2.2",9,63,43,42,76
+agentic_berit_203,"Genesis 11:1.4, 11:2, 11:3.7",20,62,93,91,75
+agentic_berit_204,"Genesis 11:3.3, 11:4.6",9,69,44,40,86
+agentic_berit_205,"Genesis 11:4.3, 11:5.5",8,58,40,37,72
+agentic_berit_206,"Genesis 11:5.3, 11:6.13",16,56,64,61,75
+agentic_berit_207,"Genesis 11:6.1, 11:7, 11:8.2",14,81,54,51,105
+agentic_berit_208,"Genesis 11:7.9, 11:8, 11:9.9",27,73,111,96,96
+agentic_berit_209,"Genesis 11:9.4, 11:10.8",12,53,51,43,75
+agentic_berit_210,"Genesis 11:10.5, 11:11, 11:12.1",16,56,79,70,78
+agentic_berit_211,"Genesis 11:11.7, 11:12, 11:13.8",22,54,109,91,74
+agentic_berit_212,"Genesis 11:13.4, 11:14, 11:15.3",13,53,66,53,69
+agentic_berit_213,"Genesis 11:15, 11:16.5",17,32,87,72,42
+agentic_berit_214,"Genesis 11:16.2, 11:17, 11:18.1",15,45,82,68,59
+agentic_berit_215,"Genesis 11:17.1, 11:18, 11:19.1",7,54,46,41,68
+agentic_berit_216,"Genesis 11:19.6, 11:20, 11:21.7",20,52,97,84,66
+agentic_berit_217,"Genesis 11:21.3, 11:22, 11:23.4",13,54,60,51,68
+agentic_berit_218,"Genesis 11:23, 11:24, 11:25.1",18,55,87,78,69
+agentic_berit_219,"Genesis 11:24.5, 11:25, 11:26.3",20,49,96,86,66
+agentic_berit_220,"Genesis 11:26, 11:27.1",8,32,49,49,50
+agentic_berit_221,"Genesis 11:27.6, 11:28, 11:29.5",20,74,89,81,114
+agentic_berit_222,"Genesis 11:29.1, 11:30.4",5,41,20,19,67
+agentic_berit_223,"Genesis 11:30, 11:31.14",20,30,83,77,51
+agentic_berit_224,"Genesis 11:31.1, 11:32.5",6,64,31,28,94
+agentic_berit_225,"Genesis 11:32.1, 12:1.9",10,71,57,54,97
+agentic_berit_226,"Genesis 12:1.5, 12:2, 12:3.3",16,85,83,87,107
+agentic_berit_227,"Genesis 12:3, 12:4.1",10,45,48,46,54
+agentic_berit_228,"Genesis 12:4.5, 12:5.7",12,70,65,62,88
+agentic_berit_229,Genesis 12:5.4,4,54,20,18,69
+agentic_berit_230,Genesis 12:5.16,16,54,89,80,69

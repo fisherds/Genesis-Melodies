@@ -1,0 +1,1893 @@
+================================================================================
+DOUBLE-CHECK ANALYSIS REPORT
+================================================================================
+
+Total records analyzed: 50
+
+================================================================================
+DETAILED RECORD ANALYSIS
+================================================================================
+
+Record 1: Creation Narrative, Precondition State
+--------------------------------------------------------------------------------
+Verses: 2
+Verse list: [(1, 1), (1, 2)]
+
+English Text:
+  Origin text length: 210
+  Double-check text length: 192
+  Similarity: 0.303
+  Notes: Significantly different; Length difference: 18 chars
+
+Hebrew Text:
+  Origin Hebrew length: 186
+  Double-check Hebrew length: 186
+  Similarity: 0.609
+  Notes: Moderately similar (some differences)
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 31: origin='א' (U+05D0) vs double-check='ו' (U+05D5)
+      Position 32: origin='ֵ' (U+05B5) vs double-check='ְ' (U+05B0)
+      Position 33: origin='֥' (U+05A5) vs double-check='א' (U+05D0)
+      Position 34: origin='ת' (U+05EA) vs double-check='ֵ' (U+05B5)
+      Position 35: origin=' ' (U+0020) vs double-check='֥' (U+05A5)
+      Position 36: origin='ה' (U+05D4) vs double-check='ת' (U+05EA)
+      Position 37: origin='ַ' (U+05B7) vs double-check=' ' (U+0020)
+      Position 38: origin='ש' (U+05E9) vs double-check='ה' (U+05D4)
+      Position 39: origin='ׁ' (U+05C1) vs double-check='ַ' (U+05B7)
+      Position 40: origin='ּ' (U+05BC) vs double-check='ש' (U+05E9)
+
+Strong's Numbers:
+  Origin Strong's count: 21
+  Double-check Strong's count: 21
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 2: Creation Narrative, Day 1
+--------------------------------------------------------------------------------
+Verses: 3
+Verse list: [(1, 3), (1, 4), (1, 5)]
+
+English Text:
+  Origin text length: 273
+  Double-check text length: 288
+  Similarity: 0.316
+  Notes: Significantly different; Length difference: 15 chars
+
+Hebrew Text:
+  Origin Hebrew length: 265
+  Double-check Hebrew length: 256
+  Similarity: 0.351
+  Notes: Significantly different; Length difference: 9 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 21: origin='י' (U+05D9) vs double-check='ו' (U+05D5)
+      Position 22: origin='ְ' (U+05B0) vs double-check='ַ' (U+05B7)
+      Position 23: origin='ה' (U+05D4) vs double-check='ֽ' (U+05BD)
+      Position 24: origin='ִ' (U+05B4) vs double-check='י' (U+05D9)
+      Position 25: origin='֣' (U+05A3) vs double-check='ְ' (U+05B0)
+      Position 26: origin='י' (U+05D9) vs double-check='ה' (U+05D4)
+      Position 27: origin=' ' (U+0020) vs double-check='ִ' (U+05B4)
+      Position 28: origin='א' (U+05D0) vs double-check='י' (U+05D9)
+      Position 29: origin='֑' (U+0591) vs double-check=' ' (U+0020)
+      Position 30: origin='ו' (U+05D5) vs double-check='א' (U+05D0)
+
+Strong's Numbers:
+  Origin Strong's count: 31
+  Double-check Strong's count: 31
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 3: Creation Narrative, Day 1 & 4
+--------------------------------------------------------------------------------
+Verses: 9
+Verse list: [(1, 3), (1, 4), (1, 5), (1, 14), (1, 15), (1, 16), (1, 17), (1, 18), (1, 19)]
+
+English Text:
+  Origin text length: 916
+  Double-check text length: 976
+  Similarity: 0.357
+  Notes: Significantly different; Length difference: 60 chars
+
+Hebrew Text:
+  Origin Hebrew length: 945
+  Double-check Hebrew length: 927
+  Similarity: 0.489
+  Notes: Significantly different; Length difference: 18 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 21: origin='י' (U+05D9) vs double-check='ו' (U+05D5)
+      Position 22: origin='ְ' (U+05B0) vs double-check='ַ' (U+05B7)
+      Position 23: origin='ה' (U+05D4) vs double-check='ֽ' (U+05BD)
+      Position 24: origin='ִ' (U+05B4) vs double-check='י' (U+05D9)
+      Position 25: origin='֣' (U+05A3) vs double-check='ְ' (U+05B0)
+      Position 26: origin='י' (U+05D9) vs double-check='ה' (U+05D4)
+      Position 27: origin=' ' (U+0020) vs double-check='ִ' (U+05B4)
+      Position 28: origin='א' (U+05D0) vs double-check='י' (U+05D9)
+      Position 29: origin='֑' (U+0591) vs double-check=' ' (U+0020)
+      Position 30: origin='ו' (U+05D5) vs double-check='א' (U+05D0)
+
+Strong's Numbers:
+  Origin Strong's count: 100
+  Double-check Strong's count: 100
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 4: Creation Narrative, Day 2
+--------------------------------------------------------------------------------
+Verses: 3
+Verse list: [(1, 6), (1, 17), (1, 8)]
+
+English Text:
+  Origin text length: 285
+  Double-check text length: 309
+  Similarity: 0.383
+  Notes: Significantly different; Length difference: 24 chars
+
+Hebrew Text:
+  Origin Hebrew length: 269
+  Double-check Hebrew length: 265
+  Similarity: 0.559
+  Notes: Moderately similar (some differences); Length difference: 4 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 47: origin='ה' (U+05D4) vs double-check='ל' (U+05DC)
+      Position 48: origin='ַ' (U+05B7) vs double-check='ָ' (U+05B8)
+      Position 50: origin='ּ' (U+05BC) vs double-check='ָ' (U+05B8)
+      Position 51: origin='ָ' (U+05B8) vs double-check='ֽ' (U+05BD)
+      Position 52: origin='֑' (U+0591) vs double-check='י' (U+05D9)
+      Position 53: origin='י' (U+05D9) vs double-check='ִ' (U+05B4)
+      Position 54: origin='ִ' (U+05B4) vs double-check='ם' (U+05DD)
+      Position 55: origin='ם' (U+05DD) vs double-check=' ' (U+0020)
+      Position 56: origin=' ' (U+0020) vs double-check='ו' (U+05D5)
+      Position 57: origin='ו' (U+05D5) vs double-check='ִ' (U+05B4)
+
+Strong's Numbers:
+  Origin Strong's count: 29
+  Double-check Strong's count: 29
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 5: Creation Narrative, Day 2 and 5
+--------------------------------------------------------------------------------
+Verses: 7
+Verse list: [(1, 6), (1, 17), (1, 8), (1, 20), (1, 21), (1, 22), (1, 23)]
+
+English Text:
+  Origin text length: 822
+  Double-check text length: 880
+  Similarity: 0.333
+  Notes: Significantly different; Length difference: 58 chars
+
+Hebrew Text:
+  Origin Hebrew length: 785
+  Double-check Hebrew length: 770
+  Similarity: 0.517
+  Notes: Moderately similar (some differences); Length difference: 15 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 47: origin='ה' (U+05D4) vs double-check='ל' (U+05DC)
+      Position 48: origin='ַ' (U+05B7) vs double-check='ָ' (U+05B8)
+      Position 50: origin='ּ' (U+05BC) vs double-check='ָ' (U+05B8)
+      Position 51: origin='ָ' (U+05B8) vs double-check='ֽ' (U+05BD)
+      Position 52: origin='֑' (U+0591) vs double-check='י' (U+05D9)
+      Position 53: origin='י' (U+05D9) vs double-check='ִ' (U+05B4)
+      Position 54: origin='ִ' (U+05B4) vs double-check='ם' (U+05DD)
+      Position 55: origin='ם' (U+05DD) vs double-check=' ' (U+0020)
+      Position 56: origin=' ' (U+0020) vs double-check='ו' (U+05D5)
+      Position 57: origin='ו' (U+05D5) vs double-check='ִ' (U+05B4)
+
+Strong's Numbers:
+  Origin Strong's count: 86
+  Double-check Strong's count: 86
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 6: Creation Narrative, Day 3
+--------------------------------------------------------------------------------
+Verses: 5
+Verse list: [(1, 9), (1, 10), (1, 11), (1, 12), (1, 13)]
+
+English Text:
+  Origin text length: 691
+  Double-check text length: 629
+  Similarity: 0.277
+  Notes: Significantly different; Length difference: 62 chars
+
+Hebrew Text:
+  Origin Hebrew length: 614
+  Double-check Hebrew length: 600
+  Similarity: 0.507
+  Notes: Moderately similar (some differences); Length difference: 14 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 68: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 117: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 122: origin='׃' (U+05C3) vs double-check=' ' (U+0020)
+      Position 123: origin=' ' (U+0020) vs double-check='ק' (U+05E7)
+      Position 124: origin='ו' (U+05D5) vs double-check='ָ' (U+05B8)
+      Position 125: origin='ַ' (U+05B7) vs double-check='ר' (U+05E8)
+      Position 126: origin='י' (U+05D9) vs double-check='ָ' (U+05B8)
+      Position 127: origin='ּ' (U+05BC) vs double-check='֣' (U+05A3)
+      Position 128: origin='ִ' (U+05B4) vs double-check='א' (U+05D0)
+      Position 129: origin='ק' (U+05E7) vs double-check=' ' (U+0020)
+
+Strong's Numbers:
+  Origin Strong's count: 69
+  Double-check Strong's count: 69
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 7: Creation Narrative, Day 3 and 6
+--------------------------------------------------------------------------------
+Verses: 13
+Verse list: [(1, 9), (1, 10), (1, 11), (1, 12), (1, 13), (1, 24), (1, 25), (1, 26), (1, 27), (1, 28), (1, 29), (1, 30), (1, 31)]
+
+English Text:
+  Origin text length: 2127
+  Double-check text length: 2171
+  Similarity: 0.391
+  Notes: Significantly different; Length difference: 44 chars
+
+Hebrew Text:
+  Origin Hebrew length: 1904
+  Double-check Hebrew length: 1869
+  Similarity: 0.459
+  Notes: Significantly different; Length difference: 35 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 68: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 117: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 122: origin='׃' (U+05C3) vs double-check=' ' (U+0020)
+      Position 123: origin=' ' (U+0020) vs double-check='ק' (U+05E7)
+      Position 124: origin='ו' (U+05D5) vs double-check='ָ' (U+05B8)
+      Position 125: origin='ַ' (U+05B7) vs double-check='ר' (U+05E8)
+      Position 126: origin='י' (U+05D9) vs double-check='ָ' (U+05B8)
+      Position 127: origin='ּ' (U+05BC) vs double-check='֣' (U+05A3)
+      Position 128: origin='ִ' (U+05B4) vs double-check='א' (U+05D0)
+      Position 129: origin='ק' (U+05E7) vs double-check=' ' (U+0020)
+
+Strong's Numbers:
+  Origin Strong's count: 218
+  Double-check Strong's count: 218
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 8: Creation Narrative, Day 4
+--------------------------------------------------------------------------------
+Verses: 6
+Verse list: [(1, 14), (1, 15), (1, 16), (1, 17), (1, 18), (1, 19)]
+
+English Text:
+  Origin text length: 642
+  Double-check text length: 687
+  Similarity: 0.370
+  Notes: Significantly different; Length difference: 45 chars
+
+Hebrew Text:
+  Origin Hebrew length: 679
+  Double-check Hebrew length: 670
+  Similarity: 0.529
+  Notes: Moderately similar (some differences); Length difference: 9 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 82: origin='ה' (U+05D4) vs double-check='ו' (U+05D5)
+      Position 83: origin='ַ' (U+05B7) vs double-check='ּ' (U+05BC)
+      Position 84: origin='י' (U+05D9) vs double-check='ל' (U+05DC)
+      Position 85: origin='ּ' (U+05BC) vs double-check='ְ' (U+05B0)
+      Position 86: origin='֖' (U+0596) vs double-check='י' (U+05D9)
+      Position 87: origin='ו' (U+05D5) vs double-check='ָ' (U+05B8)
+      Position 88: origin='ֹ' (U+05B9) vs double-check='מ' (U+05DE)
+      Position 89: origin='ם' (U+05DD) vs double-check='ִ' (U+05B4)
+      Position 90: origin=' ' (U+0020) vs double-check='֖' (U+0596)
+      Position 91: origin='ו' (U+05D5) vs double-check='י' (U+05D9)
+
+Strong's Numbers:
+  Origin Strong's count: 69
+  Double-check Strong's count: 69
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 9: Creation Narrative, Day 5
+--------------------------------------------------------------------------------
+Verses: 4
+Verse list: [(1, 20), (1, 21), (1, 22), (1, 23)]
+
+English Text:
+  Origin text length: 536
+  Double-check text length: 570
+  Similarity: 0.287
+  Notes: Significantly different; Length difference: 34 chars
+
+Hebrew Text:
+  Origin Hebrew length: 515
+  Double-check Hebrew length: 504
+  Similarity: 0.477
+  Notes: Significantly different; Length difference: 11 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 88: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 101: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 131: origin='׃' (U+05C3) vs double-check=' ' (U+0020)
+      Position 132: origin=' ' (U+0020) vs double-check='ו' (U+05D5)
+      Position 133: origin='ו' (U+05D5) vs double-check='ַ' (U+05B7)
+      Position 134: origin='ַ' (U+05B7) vs double-check='י' (U+05D9)
+      Position 135: origin='י' (U+05D9) vs double-check='ּ' (U+05BC)
+      Position 136: origin='ּ' (U+05BC) vs double-check='ִ' (U+05B4)
+      Position 137: origin='ִ' (U+05B4) vs double-check='ב' (U+05D1)
+      Position 138: origin='ב' (U+05D1) vs double-check='ְ' (U+05B0)
+
+Strong's Numbers:
+  Origin Strong's count: 57
+  Double-check Strong's count: 57
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 10: Creation Narrative, Day 6
+--------------------------------------------------------------------------------
+Verses: 8
+Verse list: [(1, 24), (1, 25), (1, 26), (1, 27), (1, 28), (1, 29), (1, 30), (1, 31)]
+
+English Text:
+  Origin text length: 1435
+  Double-check text length: 1541
+  Similarity: 0.409
+  Notes: Significantly different; Length difference: 106 chars
+
+Hebrew Text:
+  Origin Hebrew length: 1289
+  Double-check Hebrew length: 1268
+  Similarity: 0.416
+  Notes: Significantly different; Length difference: 21 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 30: origin='ה' (U+05D4) vs double-check='א' (U+05D0)
+      Position 31: origin='ָ' (U+05B8) vs double-check='ֶ' (U+05B6)
+      Position 32: origin='א' (U+05D0) vs double-check='֖' (U+0596)
+      Position 33: origin='ָ' (U+05B8) vs double-check='ר' (U+05E8)
+      Position 34: origin='֜' (U+059C) vs double-check='ֶ' (U+05B6)
+      Position 35: origin='ר' (U+05E8) vs double-check='ץ' (U+05E5)
+      Position 36: origin='ֶ' (U+05B6) vs double-check=' ' (U+0020)
+      Position 37: origin='ץ' (U+05E5) vs double-check='נ' (U+05E0)
+      Position 38: origin=' ' (U+0020) vs double-check='ֶ' (U+05B6)
+      Position 39: origin='נ' (U+05E0) vs double-check='֤' (U+05A4)
+
+Strong's Numbers:
+  Origin Strong's count: 149
+  Double-check Strong's count: 149
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 11: Creation Narrative, Day 6, Part 1
+--------------------------------------------------------------------------------
+Verses: 2
+Verse list: [(1, 24), (1, 25)]
+
+English Text:
+  Origin text length: 363
+  Double-check text length: 331
+  Similarity: 0.261
+  Notes: Significantly different; Length difference: 32 chars
+
+Hebrew Text:
+  Origin Hebrew length: 287
+  Double-check Hebrew length: 288
+  Similarity: 0.389
+  Notes: Significantly different; Length difference: 1 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 30: origin='ה' (U+05D4) vs double-check='א' (U+05D0)
+      Position 31: origin='ָ' (U+05B8) vs double-check='ֶ' (U+05B6)
+      Position 32: origin='א' (U+05D0) vs double-check='֖' (U+0596)
+      Position 33: origin='ָ' (U+05B8) vs double-check='ר' (U+05E8)
+      Position 34: origin='֜' (U+059C) vs double-check='ֶ' (U+05B6)
+      Position 35: origin='ר' (U+05E8) vs double-check='ץ' (U+05E5)
+      Position 36: origin='ֶ' (U+05B6) vs double-check=' ' (U+0020)
+      Position 37: origin='ץ' (U+05E5) vs double-check='נ' (U+05E0)
+      Position 38: origin=' ' (U+0020) vs double-check='ֶ' (U+05B6)
+      Position 39: origin='נ' (U+05E0) vs double-check='֤' (U+05A4)
+
+Strong's Numbers:
+  Origin Strong's count: 32
+  Double-check Strong's count: 32
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 12: Creation Narrative, Day 6, Part 2
+--------------------------------------------------------------------------------
+Verses: 3
+Verse list: [(1, 26), (1, 27), (1, 28)]
+
+English Text:
+  Origin text length: 578
+  Double-check text length: 618
+  Similarity: 0.370
+  Notes: Significantly different; Length difference: 40 chars
+
+Hebrew Text:
+  Origin Hebrew length: 516
+  Double-check Hebrew length: 505
+  Similarity: 0.554
+  Notes: Moderately similar (some differences); Length difference: 11 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 141: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 146: origin='֔' (U+0594) vs double-check='ֽ' (U+05BD)
+      Position 158: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 170: origin='ֽ' (U+05BD) vs double-check='ָ' (U+05B8)
+      Position 171: origin='ָ' (U+05B8) vs double-check='ֽ' (U+05BD)
+      Position 183: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 192: origin='׃' (U+05C3) vs double-check=' ' (U+0020)
+      Position 193: origin=' ' (U+0020) vs double-check='ב' (U+05D1)
+      Position 194: origin='ו' (U+05D5) vs double-check='ּ' (U+05BC)
+      Position 195: origin='ַ' (U+05B7) vs double-check='ָ' (U+05B8)
+
+Strong's Numbers:
+  Origin Strong's count: 54
+  Double-check Strong's count: 54
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 13: Creation Narrative, Day 6, Part 3
+--------------------------------------------------------------------------------
+Verses: 3
+Verse list: [(1, 29), (1, 30), (1, 31)]
+
+English Text:
+  Origin text length: 492
+  Double-check text length: 590
+  Similarity: 0.421
+  Notes: Significantly different; Length difference: 98 chars; ⚠️ WARNING: Length difference > 15% (16.6%)
+
+  ⚠️ FULL TEXT COMPARISON (>15% difference):
+  Origin text:
+    And Elohim said, “Behold, I have given to you every plant producing seed that is on the face of all the land, and every tree which has fruit producing seed; it shall be food for y’all; and for every beast of the land, and for every bird of the sky, and for every thing that moves on the land which has living being in it, every green plant is for food” and it was so. And Elohim saw all that he had made, and behold, it was very good. and there was evening and there was morning, a sixth day.
+  Double-check text:
+    said And God Behold I have given  x   x   x  you every herb bearing seed  x   x  which is upon the face  x  of all the earth  x   x  and every tree  x   x  in the which is the fruit and every tree bearing seed  x  to you it shall be for meat  x  And to every beast of the earth  x  and to every fowl of the air  x  and to every thing that creepeth  x  of the earth  x   x   x  And to every beast  x   x  I have given every green herb for meat  x   x  saw And God  x   x  every thing that he had made  x  good and behold it was very  x  And the evening  x  and the morning day were the sixth
+
+Hebrew Text:
+  Origin Hebrew length: 484
+  Double-check Hebrew length: 473
+  Similarity: 0.310
+  Notes: Significantly different; Length difference: 11 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 49: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 54: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 63: origin='׀' (U+05C0) vs double-check='ז' (U+05D6)
+      Position 64: origin=' ' (U+0020) vs double-check='ֹ' (U+05B9)
+      Position 65: origin='ז' (U+05D6) vs double-check='ר' (U+05E8)
+      Position 66: origin='ֹ' (U+05B9) vs double-check='ֵ' (U+05B5)
+      Position 67: origin='ר' (U+05E8) vs double-check='֣' (U+05A3)
+      Position 68: origin='ֵ' (U+05B5) vs double-check='ע' (U+05E2)
+      Position 69: origin='֣' (U+05A3) vs double-check='ַ' (U+05B7)
+      Position 70: origin='ע' (U+05E2) vs double-check=' ' (U+0020)
+
+Strong's Numbers:
+  Origin Strong's count: 63
+  Double-check Strong's count: 63
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 14: Creation Narrative, Day 7
+--------------------------------------------------------------------------------
+Verses: 3
+Verse list: [(2, 1), (2, 2), (2, 3)]
+
+English Text:
+  Origin text length: 340
+  Double-check text length: 373
+  Similarity: 0.413
+  Notes: Significantly different; Length difference: 33 chars
+
+Hebrew Text:
+  Origin Hebrew length: 342
+  Double-check Hebrew length: 338
+  Similarity: 0.486
+  Notes: Significantly different; Length difference: 4 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 41: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 50: origin='׃' (U+05C3) vs double-check=' ' (U+0020)
+      Position 51: origin=' ' (U+0020) vs double-check='ו' (U+05D5)
+      Position 52: origin='ו' (U+05D5) vs double-check='ַ' (U+05B7)
+      Position 53: origin='ַ' (U+05B7) vs double-check='י' (U+05D9)
+      Position 54: origin='י' (U+05D9) vs double-check='ְ' (U+05B0)
+      Position 55: origin='ְ' (U+05B0) vs double-check='כ' (U+05DB)
+      Position 56: origin='כ' (U+05DB) vs double-check='ַ' (U+05B7)
+      Position 57: origin='ַ' (U+05B7) vs double-check='֤' (U+05A4)
+      Position 58: origin='֤' (U+05A4) vs double-check='ל' (U+05DC)
+
+Strong's Numbers:
+  Origin Strong's count: 35
+  Double-check Strong's count: 35
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 15: Eden Narrative, Part 1, Humanity Is Created and Placed in the Garden
+--------------------------------------------------------------------------------
+Verses: 14
+Verse list: [(2, 4), (2, 5), (2, 6), (2, 7), (2, 8), (2, 9), (2, 10), (2, 11), (2, 12), (2, 13), (2, 14), (2, 15), (2, 16), (2, 17)]
+
+English Text:
+  Origin text length: 1708
+  Double-check text length: 1783
+  Similarity: 0.427
+  Notes: Significantly different; Length difference: 75 chars
+
+Hebrew Text:
+  Origin Hebrew length: 1557
+  Double-check Hebrew length: 1545
+  Similarity: 0.548
+  Notes: Moderately similar (some differences); Length difference: 12 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 19: origin='ה' (U+05D4) vs double-check='ו' (U+05D5)
+      Position 20: origin='ַ' (U+05B7) vs double-check='ְ' (U+05B0)
+      Position 23: origin='ּ' (U+05BC) vs double-check='ָ' (U+05B8)
+      Position 24: origin='ָ' (U+05B8) vs double-check='מ' (U+05DE)
+      Position 25: origin='מ' (U+05DE) vs double-check='ָ' (U+05B8)
+      Position 26: origin='ַ' (U+05B7) vs double-check='ֽ' (U+05BD)
+      Position 27: origin='֛' (U+059B) vs double-check='י' (U+05D9)
+      Position 28: origin='י' (U+05D9) vs double-check='ִ' (U+05B4)
+      Position 29: origin='ִ' (U+05B4) vs double-check='ם' (U+05DD)
+      Position 30: origin='ם' (U+05DD) vs double-check=' ' (U+0020)
+
+Strong's Numbers:
+  Origin Strong's count: 177
+  Double-check Strong's count: 177
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 16: Eden Narrative, Part 2, Man and Woman Created and Unified
+--------------------------------------------------------------------------------
+Verses: 8
+Verse list: [(2, 18), (2, 19), (2, 20), (2, 21), (2, 22), (2, 23), (2, 24), (2, 25)]
+
+English Text:
+  Origin text length: 1096
+  Double-check text length: 1062
+  Similarity: 0.374
+  Notes: Significantly different; Length difference: 34 chars
+
+Hebrew Text:
+  Origin Hebrew length: 1042
+  Double-check Hebrew length: 1038
+  Similarity: 0.434
+  Notes: Significantly different; Length difference: 4 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 33: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 69: origin='ֽ' (U+05BD) vs double-check='ֶ' (U+05B6)
+      Position 70: origin='ֶ' (U+05B6) vs double-check='ֽ' (U+05BD)
+      Position 78: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 104: origin='׃' (U+05C3) vs double-check=' ' (U+0020)
+      Position 105: origin=' ' (U+0020) vs double-check='ו' (U+05D5)
+      Position 106: origin='ו' (U+05D5) vs double-check='ַ' (U+05B7)
+      Position 107: origin='ַ' (U+05B7) vs double-check='י' (U+05D9)
+      Position 108: origin='י' (U+05D9) vs double-check='ּ' (U+05BC)
+      Position 109: origin='ּ' (U+05BC) vs double-check='ִ' (U+05B4)
+
+Strong's Numbers:
+  Origin Strong's count: 116
+  Double-check Strong's count: 116
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 17: Eden Narrative, Part 3, Dialogue Between the Snake and the Woman
+--------------------------------------------------------------------------------
+Verses: 6
+Verse list: [(2, 25), (3, 1), (3, 2), (3, 3), (3, 4), (3, 5)]
+
+English Text:
+  Origin text length: 696
+  Double-check text length: 741
+  Similarity: 0.369
+  Notes: Significantly different; Length difference: 45 chars
+
+Hebrew Text:
+  Origin Hebrew length: 658
+  Double-check Hebrew length: 656
+  Similarity: 0.595
+  Notes: Moderately similar (some differences); Length difference: 2 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 81: origin='׃' (U+05C3) vs double-check=' ' (U+0020)
+      Position 82: origin=' ' (U+0020) vs double-check='ו' (U+05D5)
+      Position 83: origin='ו' (U+05D5) vs double-check='ְ' (U+05B0)
+      Position 84: origin='ְ' (U+05B0) vs double-check='ה' (U+05D4)
+      Position 85: origin='ה' (U+05D4) vs double-check='ַ' (U+05B7)
+      Position 86: origin='ַ' (U+05B7) vs double-check='נ' (U+05E0)
+      Position 87: origin='נ' (U+05E0) vs double-check='ּ' (U+05BC)
+      Position 88: origin='ּ' (U+05BC) vs double-check='ָ' (U+05B8)
+      Position 89: origin='ָ' (U+05B8) vs double-check='ח' (U+05D7)
+      Position 90: origin='ח' (U+05D7) vs double-check='ָ' (U+05B8)
+
+Strong's Numbers:
+  Origin Strong's count: 73
+  Double-check Strong's count: 73
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 18: Eden Narrative, Part 4 Pivot, The Woman and Man Eat from the Forbidden Tree
+--------------------------------------------------------------------------------
+Verses: 2
+Verse list: [(3, 6), (3, 7)]
+
+English Text:
+  Origin text length: 401
+  Double-check text length: 348
+  Similarity: 0.500
+  Notes: Significantly different; Length difference: 53 chars
+
+Hebrew Text:
+  Origin Hebrew length: 335
+  Double-check Hebrew length: 336
+  Similarity: 0.561
+  Notes: Moderately similar (some differences); Length difference: 1 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 38: origin='֨' (U+05A8) vs double-check='ץ' (U+05E5)
+      Position 39: origin='ץ' (U+05E5) vs double-check='֙' (U+0599)
+      Position 45: origin='א' (U+05D0) vs double-check='ֽ' (U+05BD)
+      Position 46: origin='ֲ' (U+05B2) vs double-check='א' (U+05D0)
+      Position 47: origin='כ' (U+05DB) vs double-check='ֲ' (U+05B2)
+      Position 48: origin='ָ' (U+05B8) vs double-check='כ' (U+05DB)
+      Position 49: origin='֜' (U+059C) vs double-check='ָ' (U+05B8)
+      Position 50: origin='ל' (U+05DC) vs double-check='֜' (U+059C)
+      Position 51: origin=' ' (U+0020) vs double-check='ל' (U+05DC)
+      Position 52: origin='ו' (U+05D5) vs double-check=' ' (U+0020)
+
+Strong's Numbers:
+  Origin Strong's count: 34
+  Double-check Strong's count: 34
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 19: Eden Narrative, Part 5, Dialogue Between God and the Humans
+--------------------------------------------------------------------------------
+Verses: 6
+Verse list: [(3, 8), (3, 9), (3, 10), (3, 11), (3, 12), (3, 13)]
+
+English Text:
+  Origin text length: 747
+  Double-check text length: 767
+  Similarity: 0.340
+  Notes: Significantly different; Length difference: 20 chars
+
+Hebrew Text:
+  Origin Hebrew length: 685
+  Double-check Hebrew length: 684
+  Similarity: 0.537
+  Notes: Moderately similar (some differences); Length difference: 1 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 19: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 31: origin='֧' (U+05A7) vs double-check='֣' (U+05A3)
+      Position 40: origin='֛' (U+059B) vs double-check='֔' (U+0594)
+      Position 57: origin='ב' (U+05D1) vs double-check='ה' (U+05D4)
+      Position 58: origin='ּ' (U+05BC) vs double-check='ַ' (U+05B7)
+      Position 59: origin='ַ' (U+05B7) vs double-check='ג' (U+05D2)
+      Position 60: origin='ג' (U+05D2) vs double-check='ּ' (U+05BC)
+      Position 61: origin='ּ' (U+05BC) vs double-check='ָ' (U+05B8)
+      Position 62: origin='ָ' (U+05B8) vs double-check='ֽ' (U+05BD)
+      Position 63: origin='֖' (U+0596) vs double-check='ן' (U+05DF)
+
+Strong's Numbers:
+  Origin Strong's count: 75
+  Double-check Strong's count: 75
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 20: Eden Narrative, Part 6, Consequences For the Snake, Man, and Woman Divided
+--------------------------------------------------------------------------------
+Verses: 8
+Verse list: [(3, 14), (3, 15), (3, 16), (3, 17), (3, 18), (3, 19), (3, 20), (3, 21)]
+
+English Text:
+  Origin text length: 1250
+  Double-check text length: 1371
+  Similarity: 0.323
+  Notes: Significantly different; Length difference: 121 chars
+
+Hebrew Text:
+  Origin Hebrew length: 1118
+  Double-check Hebrew length: 1117
+  Similarity: 0.575
+  Notes: Moderately similar (some differences); Length difference: 1 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 14: origin='ֹ' (U+05B9) vs double-check='ו' (U+05D5)
+      Position 15: origin='ו' (U+05D5) vs double-check='ֹ' (U+05B9)
+      Position 30: origin='׀' (U+05C0) vs double-check='א' (U+05D0)
+      Position 31: origin=' ' (U+0020) vs double-check='ֶ' (U+05B6)
+      Position 32: origin='א' (U+05D0) vs double-check='ֽ' (U+05BD)
+      Position 33: origin='ֶ' (U+05B6) vs double-check='ל' (U+05DC)
+      Position 34: origin='ֽ' (U+05BD) vs double-check=' ' (U+0020)
+      Position 35: origin='ל' (U+05DC) vs double-check='ה' (U+05D4)
+      Position 36: origin='־' (U+05BE) vs double-check='ַ' (U+05B7)
+      Position 37: origin='ה' (U+05D4) vs double-check='נ' (U+05E0)
+
+Strong's Numbers:
+  Origin Strong's count: 121
+  Double-check Strong's count: 121
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 21: Eden Narrative, Part 7, Humanity is Banished from the Garden
+--------------------------------------------------------------------------------
+Verses: 5
+Verse list: [(3, 20), (3, 21), (3, 22), (3, 23), (3, 24)]
+
+English Text:
+  Origin text length: 614
+  Double-check text length: 669
+  Similarity: 0.358
+  Notes: Significantly different; Length difference: 55 chars
+
+Hebrew Text:
+  Origin Hebrew length: 628
+  Double-check Hebrew length: 616
+  Similarity: 0.617
+  Notes: Moderately similar (some differences); Length difference: 12 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 78: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 83: origin='׃' (U+05C3) vs double-check=' ' (U+0020)
+      Position 84: origin=' ' (U+0020) vs double-check='ו' (U+05D5)
+      Position 85: origin='ו' (U+05D5) vs double-check='ַ' (U+05B7)
+      Position 86: origin='ַ' (U+05B7) vs double-check='י' (U+05D9)
+      Position 87: origin='י' (U+05D9) vs double-check='ּ' (U+05BC)
+      Position 88: origin='ּ' (U+05BC) vs double-check='ַ' (U+05B7)
+      Position 89: origin='ַ' (U+05B7) vs double-check='ע' (U+05E2)
+      Position 90: origin='ע' (U+05E2) vs double-check='ַ' (U+05B7)
+      Position 91: origin='ַ' (U+05B7) vs double-check='ש' (U+05E9)
+
+Strong's Numbers:
+  Origin Strong's count: 70
+  Double-check Strong's count: 70
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 22: Cain and Seth, Conceived seed contrasted with appointed Sons
+--------------------------------------------------------------------------------
+Verses: 5
+Verse list: [(4, 1), (4, 17), (4, 18), (4, 25), (4, 26)]
+
+English Text:
+  Origin text length: 715
+  Double-check text length: 673
+  Similarity: 0.308
+  Notes: Significantly different; Length difference: 42 chars
+
+Hebrew Text:
+  Origin Hebrew length: 675
+  Double-check Hebrew length: 670
+  Similarity: 0.519
+  Notes: Moderately similar (some differences); Length difference: 5 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 22: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 66: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 105: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 113: origin='׃' (U+05C3) vs double-check=' ' (U+0020)
+      Position 114: origin=' ' (U+0020) vs double-check='ו' (U+05D5)
+      Position 115: origin='ו' (U+05D5) vs double-check='ַ' (U+05B7)
+      Position 116: origin='ַ' (U+05B7) vs double-check='י' (U+05D9)
+      Position 117: origin='י' (U+05D9) vs double-check='ּ' (U+05BC)
+      Position 118: origin='ּ' (U+05BC) vs double-check='ֵ' (U+05B5)
+      Position 119: origin='ֵ' (U+05B5) vs double-check='֤' (U+05A4)
+
+Strong's Numbers:
+  Origin Strong's count: 83
+  Double-check Strong's count: 83
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 23: Cain and Seth, Cain and Abel Story
+--------------------------------------------------------------------------------
+Verses: 16
+Verse list: [(4, 1), (4, 2), (4, 3), (4, 4), (4, 5), (4, 6), (4, 7), (4, 8), (4, 9), (4, 10), (4, 11), (4, 12), (4, 13), (4, 14), (4, 15), (4, 16)]
+
+English Text:
+  Origin text length: 2003
+  Double-check text length: 2164
+  Similarity: 0.285
+  Notes: Significantly different; Length difference: 161 chars
+
+Hebrew Text:
+  Origin Hebrew length: 1692
+  Double-check Hebrew length: 1687
+  Similarity: 0.512
+  Notes: Moderately similar (some differences); Length difference: 5 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 22: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 66: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 105: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 113: origin='׃' (U+05C3) vs double-check=' ' (U+0020)
+      Position 114: origin=' ' (U+0020) vs double-check='ו' (U+05D5)
+      Position 115: origin='ו' (U+05D5) vs double-check='ַ' (U+05B7)
+      Position 116: origin='ַ' (U+05B7) vs double-check='ת' (U+05EA)
+      Position 117: origin='ת' (U+05EA) vs double-check='ּ' (U+05BC)
+      Position 118: origin='ּ' (U+05BC) vs double-check='ֹ' (U+05B9)
+      Position 119: origin='ֹ' (U+05B9) vs double-check='֣' (U+05A3)
+
+Strong's Numbers:
+  Origin Strong's count: 201
+  Double-check Strong's count: 201
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 24: Cain and Seth, Lamech!
+--------------------------------------------------------------------------------
+Verses: 8
+Verse list: [(4, 17), (4, 18), (4, 19), (4, 20), (4, 21), (4, 22), (4, 23), (4, 24)]
+
+English Text:
+  Origin text length: 952
+  Double-check text length: 969
+  Similarity: 0.313
+  Notes: Significantly different; Length difference: 17 chars
+
+Hebrew Text:
+  Origin Hebrew length: 900
+  Double-check Hebrew length: 895
+  Similarity: 0.514
+  Notes: Moderately similar (some differences); Length difference: 5 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 21: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 56: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 60: origin='֑' (U+0591) vs double-check='ֽ' (U+05BD)
+      Position 84: origin='ע' (U+05E2) vs double-check='ה' (U+05D4)
+      Position 85: origin='ִ' (U+05B4) vs double-check='ָ' (U+05B8)
+      Position 86: origin='֔' (U+0594) vs double-check='ע' (U+05E2)
+      Position 87: origin='י' (U+05D9) vs double-check='ִ' (U+05B4)
+      Position 88: origin='ר' (U+05E8) vs double-check='֔' (U+0594)
+      Position 89: origin=' ' (U+0020) vs double-check='י' (U+05D9)
+      Position 90: origin='ו' (U+05D5) vs double-check='ר' (U+05E8)
+
+Strong's Numbers:
+  Origin Strong's count: 104
+  Double-check Strong's count: 104
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 25: Cain and Seth, Appointed Son Seth
+--------------------------------------------------------------------------------
+Verses: 2
+Verse list: [(4, 25), (4, 26)]
+
+English Text:
+  Origin text length: 287
+  Double-check text length: 298
+  Similarity: 0.387
+  Notes: Significantly different; Length difference: 11 chars
+
+Hebrew Text:
+  Origin Hebrew length: 271
+  Double-check Hebrew length: 265
+  Similarity: 0.500
+  Notes: Significantly different; Length difference: 6 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 26: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 69: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 87: origin='֣' (U+05A3) vs double-check='֥' (U+05A5)
+      Position 95: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 161: origin='׃' (U+05C3) vs double-check=' ' (U+0020)
+      Position 162: origin=' ' (U+0020) vs double-check='ו' (U+05D5)
+      Position 163: origin='ו' (U+05D5) vs double-check='ּ' (U+05BC)
+      Position 164: origin='ּ' (U+05BC) vs double-check='ל' (U+05DC)
+      Position 165: origin='ל' (U+05DC) vs double-check='ְ' (U+05B0)
+      Position 166: origin='ְ' (U+05B0) vs double-check='ש' (U+05E9)
+
+Strong's Numbers:
+  Origin Strong's count: 36
+  Double-check Strong's count: 36
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 26: Cain and Seth, Adam-to-Noah Genealogy
+--------------------------------------------------------------------------------
+Verses: 37
+Verse list: [(5, 1), (5, 2), (5, 3), (5, 4), (5, 5), (5, 6), (5, 7), (5, 8), (5, 9), (5, 10), (5, 11), (5, 12), (5, 13), (5, 14), (5, 15), (5, 16), (5, 17), (5, 18), (5, 19), (5, 20), (5, 21), (5, 22), (5, 23), (5, 24), (5, 25), (5, 26), (5, 27), (5, 28), (5, 29), (5, 30), (5, 31), (5, 32), (6, 9), (6, 10), (7, 6), (9, 28), (9, 29)]
+
+English Text:
+  Origin text length: 3064
+  Double-check text length: 3412
+  Similarity: 0.283
+  Notes: Significantly different; Length difference: 348 chars
+
+Hebrew Text:
+  Origin Hebrew length: 3746
+  Double-check Hebrew length: 3693
+  Similarity: 0.426
+  Notes: Significantly different; Length difference: 53 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 53: origin='י' (U+05D9) vs double-check='֖' (U+0596)
+      Position 54: origin='ם' (U+05DD) vs double-check='י' (U+05D9)
+      Position 55: origin='֙' (U+0599) vs double-check='ם' (U+05DD)
+      Position 99: origin='׃' (U+05C3) vs double-check=' ' (U+0020)
+      Position 100: origin=' ' (U+0020) vs double-check='ז' (U+05D6)
+      Position 101: origin='ז' (U+05D6) vs double-check='ָ' (U+05B8)
+      Position 102: origin='ָ' (U+05B8) vs double-check='כ' (U+05DB)
+      Position 103: origin='כ' (U+05DB) vs double-check='ָ' (U+05B8)
+      Position 104: origin='ָ' (U+05B8) vs double-check='֥' (U+05A5)
+      Position 105: origin='֥' (U+05A5) vs double-check='ר' (U+05E8)
+
+Strong's Numbers:
+  Origin Strong's count: 417
+  Double-check Strong's count: 417
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 27: Cain and Seth, Adam-to-Noah Genealogy Pattern Breakers
+--------------------------------------------------------------------------------
+Verses: 9
+Verse list: [(5, 1), (5, 2), (5, 3), (5, 21), (5, 22), (5, 23), (5, 24), (5, 28), (5, 29)]
+
+English Text:
+  Origin text length: 893
+  Double-check text length: 900
+  Similarity: 0.381
+  Notes: Significantly different; Length difference: 7 chars
+
+Hebrew Text:
+  Origin Hebrew length: 930
+  Double-check Hebrew length: 918
+  Similarity: 0.468
+  Notes: Significantly different; Length difference: 12 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 53: origin='י' (U+05D9) vs double-check='֖' (U+0596)
+      Position 54: origin='ם' (U+05DD) vs double-check='י' (U+05D9)
+      Position 55: origin='֙' (U+0599) vs double-check='ם' (U+05DD)
+      Position 99: origin='׃' (U+05C3) vs double-check=' ' (U+0020)
+      Position 100: origin=' ' (U+0020) vs double-check='ז' (U+05D6)
+      Position 101: origin='ז' (U+05D6) vs double-check='ָ' (U+05B8)
+      Position 102: origin='ָ' (U+05B8) vs double-check='כ' (U+05DB)
+      Position 103: origin='כ' (U+05DB) vs double-check='ָ' (U+05B8)
+      Position 104: origin='ָ' (U+05B8) vs double-check='֥' (U+05A5)
+      Position 105: origin='֥' (U+05A5) vs double-check='ר' (U+05E8)
+
+Strong's Numbers:
+  Origin Strong's count: 100
+  Double-check Strong's count: 100
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 28: Cosmic Collapse and Renewal, Part 1, 6:1-4: The Heavenly Rebellion (Take 1)
+--------------------------------------------------------------------------------
+Verses: 4
+Verse list: [(6, 1), (6, 2), (6, 3), (6, 4)]
+
+English Text:
+  Origin text length: 606
+  Double-check text length: 648
+  Similarity: 0.340
+  Notes: Significantly different; Length difference: 42 chars
+
+Hebrew Text:
+  Origin Hebrew length: 562
+  Double-check Hebrew length: 557
+  Similarity: 0.548
+  Notes: Moderately similar (some differences); Length difference: 5 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 15: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 24: origin='ֽ' (U+05BD) vs double-check='ָ' (U+05B8)
+      Position 25: origin='ָ' (U+05B8) vs double-check='ֽ' (U+05BD)
+      Position 43: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 53: origin='ֽ' (U+05BD) vs double-check='ָ' (U+05B8)
+      Position 54: origin='ָ' (U+05B8) vs double-check='ֽ' (U+05BD)
+      Position 90: origin='׃' (U+05C3) vs double-check=' ' (U+0020)
+      Position 91: origin=' ' (U+0020) vs double-check='ו' (U+05D5)
+      Position 92: origin='ו' (U+05D5) vs double-check='ַ' (U+05B7)
+      Position 93: origin='ַ' (U+05B7) vs double-check='י' (U+05D9)
+
+Strong's Numbers:
+  Origin Strong's count: 64
+  Double-check Strong's count: 64
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 29: Cosmic Collapse and Renewal, Part 2, 6:5-12: The Earthly Rebellion (Take 2)
+--------------------------------------------------------------------------------
+Verses: 8
+Verse list: [(6, 5), (6, 6), (6, 7), (6, 8), (6, 9), (6, 10), (6, 11), (6, 12)]
+
+English Text:
+  Origin text length: 829
+  Double-check text length: 895
+  Similarity: 0.299
+  Notes: Significantly different; Length difference: 66 chars
+
+Hebrew Text:
+  Origin Hebrew length: 803
+  Double-check Hebrew length: 794
+  Similarity: 0.387
+  Notes: Significantly different; Length difference: 9 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 33: origin='ָ' (U+05B8) vs double-check='ַ' (U+05B7)
+      Position 34: origin='ע' (U+05E2) vs double-check='֖' (U+0596)
+      Position 35: origin='ַ' (U+05B7) vs double-check='ע' (U+05E2)
+      Position 36: origin='֥' (U+05A5) vs double-check=' ' (U+0020)
+      Position 37: origin='ת' (U+05EA) vs double-check='ה' (U+05D4)
+      Position 38: origin=' ' (U+0020) vs double-check='ָ' (U+05B8)
+      Position 39: origin='ה' (U+05D4) vs double-check='א' (U+05D0)
+      Position 41: origin='א' (U+05D0) vs double-check='ד' (U+05D3)
+      Position 43: origin='ד' (U+05D3) vs double-check='֖' (U+0596)
+      Position 44: origin='ָ' (U+05B8) vs double-check='ם' (U+05DD)
+
+Strong's Numbers:
+  Origin Strong's count: 96
+  Double-check Strong's count: 96
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 30: Cosmic Collapse and Renewal, Part 3, 6:13-22: Divine Speech of Elohim: 1st Warning of Flood (Take 1)
+--------------------------------------------------------------------------------
+Verses: 10
+Verse list: [(6, 13), (6, 14), (6, 15), (6, 16), (6, 17), (6, 18), (6, 19), (6, 20), (6, 21), (6, 22)]
+
+English Text:
+  Origin text length: 1453
+  Double-check text length: 1574
+  Similarity: 0.335
+  Notes: Significantly different; Length difference: 121 chars
+
+Hebrew Text:
+  Origin Hebrew length: 1321
+  Double-check Hebrew length: 1315
+  Similarity: 0.455
+  Notes: Significantly different; Length difference: 6 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 38: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 54: origin='ל' (U+05DC) vs double-check='מ' (U+05DE)
+      Position 55: origin='ְ' (U+05B0) vs double-check='ִ' (U+05B4)
+      Position 57: origin='ָ' (U+05B8) vs double-check='ּ' (U+05BC)
+      Position 58: origin='נ' (U+05E0) vs double-check='ְ' (U+05B0)
+      Position 59: origin='ַ' (U+05B7) vs double-check='נ' (U+05E0)
+      Position 60: origin='֔' (U+0594) vs double-check='ֵ' (U+05B5)
+      Position 62: origin=' ' (U+0020) vs double-check='ה' (U+05D4)
+      Position 63: origin='כ' (U+05DB) vs double-check='ֶ' (U+05B6)
+      Position 64: origin='ּ' (U+05BC) vs double-check='֑' (U+0591)
+
+Strong's Numbers:
+  Origin Strong's count: 145
+  Double-check Strong's count: 145
+  Status: DIFFERENT
+
+================================================================================
+
+Record 31: Cosmic Collapse and Renewal, Part 4, 7:1-5: Divine Speech of Yahweh: 2nd Warning of Flood (Take 2)
+--------------------------------------------------------------------------------
+Verses: 5
+Verse list: [(7, 1), (7, 2), (7, 3), (7, 4), (7, 5)]
+
+English Text:
+  Origin text length: 628
+  Double-check text length: 733
+  Similarity: 0.333
+  Notes: Significantly different; Length difference: 105 chars
+
+Hebrew Text:
+  Origin Hebrew length: 645
+  Double-check Hebrew length: 635
+  Similarity: 0.442
+  Notes: Significantly different; Length difference: 10 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 32: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 46: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 60: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 76: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 130: origin='׃' (U+05C3) vs double-check=' ' (U+0020)
+      Position 131: origin=' ' (U+0020) vs double-check='מ' (U+05DE)
+      Position 132: origin='מ' (U+05DE) vs double-check='ִ' (U+05B4)
+      Position 133: origin='ִ' (U+05B4) vs double-check='כ' (U+05DB)
+      Position 134: origin='כ' (U+05DB) vs double-check='ּ' (U+05BC)
+      Position 135: origin='ּ' (U+05BC) vs double-check='ֹ' (U+05B9)
+
+Strong's Numbers:
+  Origin Strong's count: 74
+  Double-check Strong's count: 74
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 32: Cosmic Collapse and Renewal, Part 5, 7:6-10: Flood Begins and Noah Enters the Ark (Take 1)
+--------------------------------------------------------------------------------
+Verses: 5
+Verse list: [(7, 6), (7, 7), (7, 8), (7, 9), (7, 10)]
+
+English Text:
+  Origin text length: 505
+  Double-check text length: 567
+  Similarity: 0.368
+  Notes: Significantly different; Length difference: 62 chars
+
+Hebrew Text:
+  Origin Hebrew length: 498
+  Double-check Hebrew length: 484
+  Similarity: 0.388
+  Notes: Significantly different; Length difference: 14 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 12: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 67: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 76: origin='׃' (U+05C3) vs double-check=' ' (U+0020)
+      Position 77: origin=' ' (U+0020) vs double-check='ו' (U+05D5)
+      Position 78: origin='ו' (U+05D5) vs double-check='ַ' (U+05B7)
+      Position 79: origin='ַ' (U+05B7) vs double-check='י' (U+05D9)
+      Position 80: origin='י' (U+05D9) vs double-check='ּ' (U+05BC)
+      Position 81: origin='ּ' (U+05BC) vs double-check='ָ' (U+05B8)
+      Position 82: origin='ָ' (U+05B8) vs double-check='֣' (U+05A3)
+      Position 83: origin='֣' (U+05A3) vs double-check='ב' (U+05D1)
+
+Strong's Numbers:
+  Origin Strong's count: 59
+  Double-check Strong's count: 59
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 33: Cosmic Collapse and Renewal, Part 6, 7:11-16: Flood Begins and Noah Enters the Ark (Take 2)
+--------------------------------------------------------------------------------
+Verses: 6
+Verse list: [(7, 11), (7, 12), (7, 13), (7, 14), (7, 15), (7, 16)]
+
+English Text:
+  Origin text length: 810
+  Double-check text length: 897
+  Similarity: 0.325
+  Notes: Significantly different; Length difference: 87 chars
+
+Hebrew Text:
+  Origin Hebrew length: 830
+  Double-check Hebrew length: 822
+  Similarity: 0.333
+  Notes: Significantly different; Length difference: 8 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 0: origin='ב' (U+05D1) vs double-check='ש' (U+05E9)
+      Position 1: origin='ּ' (U+05BC) vs double-check='ׁ' (U+05C1)
+      Position 2: origin='ִ' (U+05B4) vs double-check='ָ' (U+05B8)
+      Position 3: origin='ש' (U+05E9) vs double-check='נ' (U+05E0)
+      Position 4: origin='ׁ' (U+05C1) vs double-check='ָ' (U+05B8)
+      Position 5: origin='ְ' (U+05B0) vs double-check='ה' (U+05D4)
+      Position 6: origin='נ' (U+05E0) vs double-check='֙' (U+0599)
+      Position 7: origin='ַ' (U+05B7) vs double-check=' ' (U+0020)
+      Position 8: origin='֨' (U+05A8) vs double-check='ש' (U+05E9)
+      Position 9: origin='ת' (U+05EA) vs double-check='ׁ' (U+05C1)
+
+Strong's Numbers:
+  Origin Strong's count: 94
+  Double-check Strong's count: 94
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 34: Cosmic Collapse and Renewal, Part 7, 7:17-24: The Flood Overwhelms the Land
+--------------------------------------------------------------------------------
+Verses: 8
+Verse list: [(7, 17), (7, 18), (7, 19), (7, 20), (7, 21), (7, 22), (7, 23), (7, 24)]
+
+English Text:
+  Origin text length: 1042
+  Double-check text length: 1156
+  Similarity: 0.276
+  Notes: Significantly different; Length difference: 114 chars
+
+Hebrew Text:
+  Origin Hebrew length: 948
+  Double-check Hebrew length: 944
+  Similarity: 0.356
+  Notes: Significantly different; Length difference: 4 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 1: origin='ֽ' (U+05BD) vs double-check='ַ' (U+05B7)
+      Position 2: origin='ַ' (U+05B7) vs double-check='י' (U+05D9)
+      Position 3: origin='י' (U+05D9) vs double-check='ְ' (U+05B0)
+      Position 4: origin='ְ' (U+05B0) vs double-check='ה' (U+05D4)
+      Position 5: origin='ה' (U+05D4) vs double-check='ִ' (U+05B4)
+      Position 6: origin='ִ' (U+05B4) vs double-check='֧' (U+05A7)
+      Position 7: origin='֧' (U+05A7) vs double-check='י' (U+05D9)
+      Position 8: origin='י' (U+05D9) vs double-check=' ' (U+0020)
+      Position 9: origin=' ' (U+0020) vs double-check='ה' (U+05D4)
+      Position 10: origin='ה' (U+05D4) vs double-check='ַ' (U+05B7)
+
+Strong's Numbers:
+  Origin Strong's count: 105
+  Double-check Strong's count: 105
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 35: Cosmic Collapse and Renewal, Part 8, 8:1: The Pivot: God Remembers Noah
+--------------------------------------------------------------------------------
+Verses: 1
+Verse list: [(8, 1)]
+
+English Text:
+  Origin text length: 186
+  Double-check text length: 181
+  Similarity: 0.333
+  Notes: Significantly different; Length difference: 5 chars
+
+Hebrew Text:
+  Origin Hebrew length: 173
+  Double-check Hebrew length: 173
+  Similarity: 0.320
+  Notes: Significantly different
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 19: origin='י' (U+05D9) vs double-check='֥' (U+05A5)
+      Position 20: origin='ם' (U+05DD) vs double-check='י' (U+05D9)
+      Position 21: origin='֙' (U+0599) vs double-check='ם' (U+05DD)
+      Position 26: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 44: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 46: origin='ֽ' (U+05BD) vs double-check='ַ' (U+05B7)
+      Position 47: origin='ַ' (U+05B7) vs double-check='ֽ' (U+05BD)
+      Position 61: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 66: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 111: origin='ע' (U+05E2) vs double-check='ֽ' (U+05BD)
+
+Strong's Numbers:
+  Origin Strong's count: 20
+  Double-check Strong's count: 20
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 36: Cosmic Collapse and Renewal, Part 9, 8:2-5: The Flood Recedes from the Land
+--------------------------------------------------------------------------------
+Verses: 4
+Verse list: [(8, 2), (8, 3), (8, 4), (8, 5)]
+
+English Text:
+  Origin text length: 470
+  Double-check text length: 526
+  Similarity: 0.377
+  Notes: Significantly different; Length difference: 56 chars
+
+Hebrew Text:
+  Origin Hebrew length: 456
+  Double-check Hebrew length: 449
+  Similarity: 0.569
+  Notes: Moderately similar (some differences); Length difference: 7 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 37: origin='ֽ' (U+05BD) vs double-check='ַ' (U+05B7)
+      Position 38: origin='ַ' (U+05B7) vs double-check='ֽ' (U+05BD)
+      Position 57: origin='֑' (U+0591) vs double-check='ֽ' (U+05BD)
+      Position 89: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 102: origin='׃' (U+05C3) vs double-check=' ' (U+0020)
+      Position 103: origin=' ' (U+0020) vs double-check='ו' (U+05D5)
+      Position 104: origin='ו' (U+05D5) vs double-check='ָ' (U+05B8)
+      Position 105: origin='ַ' (U+05B7) vs double-check='ש' (U+05E9)
+      Position 106: origin='י' (U+05D9) vs double-check='ׁ' (U+05C1)
+      Position 107: origin='ּ' (U+05BC) vs double-check='֑' (U+0591)
+
+Strong's Numbers:
+  Origin Strong's count: 45
+  Double-check Strong's count: 45
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 37: Cosmic Collapse and Renewal, Part 10, 8:6-14: Noah Sends Out Birds To See if the Waters Have Dried Up
+--------------------------------------------------------------------------------
+Verses: 9
+Verse list: [(8, 6), (8, 7), (8, 8), (8, 9), (8, 10), (8, 11), (8, 12), (8, 13), (8, 14)]
+
+English Text:
+  Origin text length: 1189
+  Double-check text length: 1327
+  Similarity: 0.401
+  Notes: Significantly different; Length difference: 138 chars
+
+Hebrew Text:
+  Origin Hebrew length: 1119
+  Double-check Hebrew length: 1104
+  Similarity: 0.466
+  Notes: Significantly different; Length difference: 15 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 1: origin='ֽ' (U+05BD) vs double-check='ַ' (U+05B7)
+      Position 2: origin='ַ' (U+05B7) vs double-check='י' (U+05D9)
+      Position 3: origin='י' (U+05D9) vs double-check='ְ' (U+05B0)
+      Position 4: origin='ְ' (U+05B0) vs double-check='ה' (U+05D4)
+      Position 5: origin='ה' (U+05D4) vs double-check='ִ' (U+05B4)
+      Position 6: origin='ִ' (U+05B4) vs double-check='֕' (U+0595)
+      Position 7: origin='֕' (U+0595) vs double-check='י' (U+05D9)
+      Position 8: origin='י' (U+05D9) vs double-check=' ' (U+0020)
+      Position 9: origin=' ' (U+0020) vs double-check='מ' (U+05DE)
+      Position 10: origin='מ' (U+05DE) vs double-check='ִ' (U+05B4)
+
+Strong's Numbers:
+  Origin Strong's count: 127
+  Double-check Strong's count: 127
+  Status: DIFFERENT
+
+================================================================================
+
+Record 38: Cosmic Collapse and Renewal, Part 11, 8:15-19: Divine Speech: Noah to Leave the Ark
+--------------------------------------------------------------------------------
+Verses: 5
+Verse list: [(8, 15), (8, 16), (8, 17), (8, 18), (8, 19)]
+
+English Text:
+  Origin text length: 538
+  Double-check text length: 660
+  Similarity: 0.230
+  Notes: Significantly different; Length difference: 122 chars; ⚠️ WARNING: Length difference > 15% (18.5%)
+
+  ⚠️ FULL TEXT COMPARISON (>15% difference):
+  Origin text:
+    and Elohim spoke to Noakh, saying, “Go out from the ark, you and your wife and your sons and your sons’ wives with you. From every living thing with you from all flesh, birds and animals and every creeper that creeps on the land, make them go out with you, so they can swarm in the land and be fruitful and multiply in the land.” And Noakh went out, and his sons and his wife and his sons’ wives with him. Every living thing, every creeper, and every bird, everything that creeps on the land, by their families they went out from the ark.
+  Double-check text:
+    spake And God  x  unto Noah saying Go forth  x  of the ark  x  thou and thy wife and thy sons thou and thy wife and thy sons  x   x  with thee every living thing  x   x   x  that is with thee of all flesh both of fowl and of cattle  x  and of every creeping thing that creepeth  x  in the earth Bring forth  x  that they may breed abundantly in the earth and be fruitful and multiply  x  in the earth went forth And Noah and his sons and his wife and his wife and his sons  x  and whatsoever Every beast and whatsoever every creeping thing and whatsoever and every fowl and whatsoever creepeth  x  upon the earth after their kinds went forth  x  out of the ark
+
+Hebrew Text:
+  Origin Hebrew length: 481
+  Double-check Hebrew length: 479
+  Similarity: 0.171
+  Notes: Significantly different; Length difference: 2 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 25: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 39: origin='׃' (U+05C3) vs double-check=' ' (U+0020)
+      Position 40: origin=' ' (U+0020) vs double-check='צ' (U+05E6)
+      Position 41: origin='צ' (U+05E6) vs double-check='ֵ' (U+05B5)
+      Position 42: origin='ֵ' (U+05B5) vs double-check='֖' (U+0596)
+      Position 43: origin='֖' (U+0596) vs double-check='א' (U+05D0)
+      Position 44: origin='א' (U+05D0) vs double-check=' ' (U+0020)
+      Position 45: origin=' ' (U+0020) vs double-check='מ' (U+05DE)
+      Position 46: origin='מ' (U+05DE) vs double-check='ִ' (U+05B4)
+      Position 47: origin='ִ' (U+05B4) vs double-check='ן' (U+05DF)
+
+Strong's Numbers:
+  Origin Strong's count: 57
+  Double-check Strong's count: 56
+  Status: DIFFERENT
+  Warning: Count mismatch (57 vs 56)
+
+================================================================================
+
+Record 39: Cosmic Collapse and Renewal, Part 12, 8:20-22: Noah’s Sacrifice Deals with the Earthly Rebellion
+--------------------------------------------------------------------------------
+Verses: 3
+Verse list: [(8, 20), (8, 21), (8, 22)]
+
+English Text:
+  Origin text length: 534
+  Double-check text length: 568
+  Similarity: 0.260
+  Notes: Significantly different; Length difference: 34 chars
+
+Hebrew Text:
+  Origin Hebrew length: 507
+  Double-check Hebrew length: 505
+  Similarity: 0.471
+  Notes: Significantly different; Length difference: 2 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 16: origin='מ' (U+05DE) vs double-check='ב' (U+05D1)
+      Position 17: origin='ִ' (U+05B4) vs double-check='ּ' (U+05BC)
+      Position 18: origin='ז' (U+05D6) vs double-check='ַ' (U+05B7)
+      Position 19: origin='ְ' (U+05B0) vs double-check='מ' (U+05DE)
+      Position 20: origin='ב' (U+05D1) vs double-check='ּ' (U+05BC)
+      Position 21: origin='ּ' (U+05BC) vs double-check='ִ' (U+05B4)
+      Position 22: origin='ֵ' (U+05B5) vs double-check='ז' (U+05D6)
+      Position 23: origin='֖' (U+0596) vs double-check='ְ' (U+05B0)
+      Position 24: origin='ח' (U+05D7) vs double-check='ב' (U+05D1)
+      Position 25: origin='ַ' (U+05B7) vs double-check='ּ' (U+05BC)
+
+Strong's Numbers:
+  Origin Strong's count: 60
+  Double-check Strong's count: 60
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 40: Cosmic Collapse and Renewal, Part 13, 9:1-7: Divine Speech: Blessing and Provision of Food
+--------------------------------------------------------------------------------
+Verses: 7
+Verse list: [(9, 1), (9, 2), (9, 3), (9, 4), (9, 5), (9, 6), (9, 7)]
+
+English Text:
+  Origin text length: 862
+  Double-check text length: 966
+  Similarity: 0.299
+  Notes: Significantly different; Length difference: 104 chars
+
+Hebrew Text:
+  Origin Hebrew length: 770
+  Double-check Hebrew length: 751
+  Similarity: 0.416
+  Notes: Significantly different; Length difference: 19 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 25: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 37: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 96: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 105: origin='׃' (U+05C3) vs double-check=' ' (U+0020)
+      Position 106: origin=' ' (U+0020) vs double-check='ו' (U+05D5)
+      Position 107: origin='ו' (U+05D5) vs double-check='ּ' (U+05BC)
+      Position 108: origin='ּ' (U+05BC) vs double-check='מ' (U+05DE)
+      Position 109: origin='מ' (U+05DE) vs double-check='ו' (U+05D5)
+      Position 110: origin='ו' (U+05D5) vs double-check='ֹ' (U+05B9)
+      Position 111: origin='ֹ' (U+05B9) vs double-check='ר' (U+05E8)
+
+Strong's Numbers:
+  Origin Strong's count: 90
+  Double-check Strong's count: 90
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 41: Cosmic Collapse and Renewal, Part 14, 9:8-17: Divine Speech: The Covenant for the Preservation of Life
+--------------------------------------------------------------------------------
+Verses: 10
+Verse list: [(9, 8), (9, 8), (9, 10), (9, 11), (9, 12), (9, 13), (9, 14), (9, 15), (9, 16), (9, 17)]
+
+English Text:
+  Origin text length: 1344
+  Double-check text length: 1518
+  Similarity: 0.402
+  Notes: Significantly different; Length difference: 174 chars
+
+Hebrew Text:
+  Origin Hebrew length: 1213
+  Double-check Hebrew length: 1199
+  Similarity: 0.414
+  Notes: Significantly different; Length difference: 14 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 0: origin='ו' (U+05D5) vs double-check='ל' (U+05DC)
+      Position 1: origin='ַ' (U+05B7) vs double-check='ֵ' (U+05B5)
+      Position 2: origin='י' (U+05D9) vs double-check='א' (U+05D0)
+      Position 3: origin='ּ' (U+05BC) vs double-check='מ' (U+05DE)
+      Position 5: origin='֤' (U+05A4) vs double-check='ֽ' (U+05BD)
+      Position 6: origin='א' (U+05D0) vs double-check='ר' (U+05E8)
+      Position 7: origin='מ' (U+05DE) vs double-check=' ' (U+0020)
+      Position 8: origin='ֶ' (U+05B6) vs double-check='א' (U+05D0)
+      Position 9: origin='ר' (U+05E8) vs double-check='ֱ' (U+05B1)
+      Position 10: origin=' ' (U+0020) vs double-check='ל' (U+05DC)
+
+Strong's Numbers:
+  Origin Strong's count: 141
+  Double-check Strong's count: 141
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 42: Cosmic Collapse and Renewal, Next Generation, 9:18-27: The Rebellion of Ham and Noah’s Blessing and Curse
+--------------------------------------------------------------------------------
+Verses: 12
+Verse list: [(9, 18), (9, 19), (9, 20), (9, 21), (9, 22), (9, 23), (9, 24), (9, 25), (9, 26), (9, 27), (9, 28), (9, 29)]
+
+English Text:
+  Origin text length: 1156
+  Double-check text length: 1154
+  Similarity: 0.364
+  Notes: Significantly different; Length difference: 2 chars
+
+Hebrew Text:
+  Origin Hebrew length: 1087
+  Double-check Hebrew length: 1081
+  Similarity: 0.496
+  Notes: Significantly different; Length difference: 6 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 18: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 42: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 63: origin='֣' (U+05A3) vs double-check='֕' (U+0595)
+      Position 103: origin='׃' (U+05C3) vs double-check=' ' (U+0020)
+      Position 104: origin=' ' (U+0020) vs double-check='ש' (U+05E9)
+      Position 105: origin='ש' (U+05E9) vs double-check='ׁ' (U+05C1)
+      Position 106: origin='ׁ' (U+05C1) vs double-check='ְ' (U+05B0)
+      Position 107: origin='ְ' (U+05B0) vs double-check='ל' (U+05DC)
+      Position 108: origin='ל' (U+05DC) vs double-check='ֹ' (U+05B9)
+      Position 109: origin='ֹ' (U+05B9) vs double-check='ש' (U+05E9)
+
+Strong's Numbers:
+  Origin Strong's count: 121
+  Double-check Strong's count: 121
+  Status: DIFFERENT
+
+================================================================================
+
+Record 43: Scattering, Sons born bookends
+--------------------------------------------------------------------------------
+Verses: 2
+Verse list: [(10, 1), (10, 32)]
+
+English Text:
+  Origin text length: 287
+  Double-check text length: 307
+  Similarity: 0.400
+  Notes: Significantly different; Length difference: 20 chars
+
+Hebrew Text:
+  Origin Hebrew length: 232
+  Double-check Hebrew length: 231
+  Similarity: 0.464
+  Notes: Significantly different; Length difference: 1 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 13: origin='ו' (U+05D5) vs double-check='ֽ' (U+05BD)
+      Position 14: origin='ֹ' (U+05B9) vs double-check='ו' (U+05D5)
+      Position 15: origin='ל' (U+05DC) vs double-check='ֹ' (U+05B9)
+      Position 16: origin='ְ' (U+05B0) vs double-check='ל' (U+05DC)
+      Position 17: origin='ד' (U+05D3) vs double-check='ְ' (U+05B0)
+      Position 18: origin='ֹ' (U+05B9) vs double-check='ד' (U+05D3)
+      Position 19: origin='֣' (U+05A3) vs double-check='ֹ' (U+05B9)
+      Position 20: origin='ת' (U+05EA) vs double-check='֣' (U+05A3)
+      Position 21: origin=' ' (U+0020) vs double-check='ת' (U+05EA)
+      Position 22: origin='ב' (U+05D1) vs double-check=' ' (U+0020)
+
+Strong's Numbers:
+  Origin Strong's count: 24
+  Double-check Strong's count: 24
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 44: Scattering, Sons born to Japheth
+--------------------------------------------------------------------------------
+Verses: 5
+Verse list: [(10, 1), (10, 2), (10, 3), (10, 4), (10, 5)]
+
+English Text:
+  Origin text length: 489
+  Double-check text length: 474
+  Similarity: 0.415
+  Notes: Significantly different; Length difference: 15 chars
+
+Hebrew Text:
+  Origin Hebrew length: 409
+  Double-check Hebrew length: 414
+  Similarity: 0.646
+  Notes: Moderately similar (some differences); Length difference: 5 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 13: origin='ו' (U+05D5) vs double-check='ֽ' (U+05BD)
+      Position 14: origin='ֹ' (U+05B9) vs double-check='ו' (U+05D5)
+      Position 15: origin='ל' (U+05DC) vs double-check='ֹ' (U+05B9)
+      Position 16: origin='ְ' (U+05B0) vs double-check='ל' (U+05DC)
+      Position 17: origin='ד' (U+05D3) vs double-check='ְ' (U+05B0)
+      Position 18: origin='ֹ' (U+05B9) vs double-check='ד' (U+05D3)
+      Position 19: origin='֣' (U+05A3) vs double-check='ֹ' (U+05B9)
+      Position 20: origin='ת' (U+05EA) vs double-check='֣' (U+05A3)
+      Position 21: origin=' ' (U+0020) vs double-check='ת' (U+05EA)
+      Position 22: origin='ב' (U+05D1) vs double-check=' ' (U+0020)
+
+Strong's Numbers:
+  Origin Strong's count: 41
+  Double-check Strong's count: 41
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 45: Scattering, Sons born to Ham
+--------------------------------------------------------------------------------
+Verses: 15
+Verse list: [(10, 6), (10, 7), (10, 8), (10, 9), (10, 10), (10, 11), (10, 12), (10, 13), (10, 14), (10, 15), (10, 16), (10, 17), (10, 18), (10, 19), (10, 20)]
+
+English Text:
+  Origin text length: 1326
+  Double-check text length: 1398
+  Similarity: 0.406
+  Notes: Significantly different; Length difference: 72 chars
+
+Hebrew Text:
+  Origin Hebrew length: 1294
+  Double-check Hebrew length: 1281
+  Similarity: 0.382
+  Notes: Significantly different; Length difference: 13 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 53: origin='׃' (U+05C3) vs double-check=' ' (U+0020)
+      Position 54: origin=' ' (U+0020) vs double-check='ו' (U+05D5)
+      Position 55: origin='ו' (U+05D5) vs double-check='ּ' (U+05BC)
+      Position 56: origin='ּ' (U+05BC) vs double-check='ב' (U+05D1)
+      Position 57: origin='ב' (U+05D1) vs double-check='ְ' (U+05B0)
+      Position 58: origin='ְ' (U+05B0) vs double-check='נ' (U+05E0)
+      Position 59: origin='נ' (U+05E0) vs double-check='ֵ' (U+05B5)
+      Position 60: origin='ֵ' (U+05B5) vs double-check='֥' (U+05A5)
+      Position 61: origin='֣' (U+05A3) vs double-check='י' (U+05D9)
+      Position 62: origin='י' (U+05D9) vs double-check=' ' (U+0020)
+
+Strong's Numbers:
+  Origin Strong's count: 142
+  Double-check Strong's count: 142
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 46: Scattering, Sons born to Shem
+--------------------------------------------------------------------------------
+Verses: 12
+Verse list: [(10, 21), (10, 22), (10, 23), (10, 24), (10, 25), (10, 26), (10, 27), (10, 28), (10, 29), (10, 30), (10, 31), (10, 32)]
+
+English Text:
+  Origin text length: 1067
+  Double-check text length: 1048
+  Similarity: 0.411
+  Notes: Significantly different; Length difference: 19 chars
+
+Hebrew Text:
+  Origin Hebrew length: 907
+  Double-check Hebrew length: 899
+  Similarity: 0.359
+  Notes: Significantly different; Length difference: 8 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 22: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 40: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 47: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 79: origin='׃' (U+05C3) vs double-check=' ' (U+0020)
+      Position 80: origin=' ' (U+0020) vs double-check='ב' (U+05D1)
+      Position 81: origin='ב' (U+05D1) vs double-check='ּ' (U+05BC)
+      Position 82: origin='ּ' (U+05BC) vs double-check='ְ' (U+05B0)
+      Position 83: origin='ְ' (U+05B0) vs double-check='נ' (U+05E0)
+      Position 84: origin='נ' (U+05E0) vs double-check='ֵ' (U+05B5)
+      Position 85: origin='ֵ' (U+05B5) vs double-check='֥' (U+05A5)
+
+Strong's Numbers:
+  Origin Strong's count: 104
+  Double-check Strong's count: 104
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 47: Scattering, Founding of Babylon
+--------------------------------------------------------------------------------
+Verses: 9
+Verse list: [(11, 1), (11, 2), (11, 3), (11, 4), (11, 5), (11, 6), (11, 7), (11, 8), (11, 9)]
+
+English Text:
+  Origin text length: 1199
+  Double-check text length: 1300
+  Similarity: 0.384
+  Notes: Significantly different; Length difference: 101 chars
+
+Hebrew Text:
+  Origin Hebrew length: 1042
+  Double-check Hebrew length: 1034
+  Similarity: 0.417
+  Notes: Significantly different; Length difference: 8 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 1: origin='ֽ' (U+05BD) vs double-check='ַ' (U+05B7)
+      Position 2: origin='ַ' (U+05B7) vs double-check='י' (U+05D9)
+      Position 3: origin='י' (U+05D9) vs double-check='ְ' (U+05B0)
+      Position 4: origin='ְ' (U+05B0) vs double-check='ה' (U+05D4)
+      Position 5: origin='ה' (U+05D4) vs double-check='ִ' (U+05B4)
+      Position 6: origin='ִ' (U+05B4) vs double-check='֥' (U+05A5)
+      Position 7: origin='֥' (U+05A5) vs double-check='י' (U+05D9)
+      Position 8: origin='י' (U+05D9) vs double-check=' ' (U+0020)
+      Position 9: origin=' ' (U+0020) vs double-check='כ' (U+05DB)
+      Position 10: origin='כ' (U+05DB) vs double-check='ָ' (U+05B8)
+
+Strong's Numbers:
+  Origin Strong's count: 121
+  Double-check Strong's count: 121
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 48: Scattering, Shem-to-Abraham Genealogy
+--------------------------------------------------------------------------------
+Verses: 17
+Verse list: [(11, 10), (11, 11), (11, 12), (11, 13), (11, 14), (11, 15), (11, 16), (11, 17), (11, 18), (11, 19), (11, 20), (11, 21), (11, 22), (11, 23), (11, 24), (11, 25), (11, 26)]
+
+English Text:
+  Origin text length: 1495
+  Double-check text length: 1379
+  Similarity: 0.198
+  Notes: Significantly different; Length difference: 116 chars
+
+Hebrew Text:
+  Origin Hebrew length: 1631
+  Double-check Hebrew length: 1612
+  Similarity: 0.330
+  Notes: Significantly different; Length difference: 19 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 10: origin='ו' (U+05D5) vs double-check='ֽ' (U+05BD)
+      Position 11: origin='ֹ' (U+05B9) vs double-check='ו' (U+05D5)
+      Position 12: origin='ל' (U+05DC) vs double-check='ֹ' (U+05B9)
+      Position 13: origin='ְ' (U+05B0) vs double-check='ל' (U+05DC)
+      Position 14: origin='ד' (U+05D3) vs double-check='ְ' (U+05B0)
+      Position 15: origin='ֹ' (U+05B9) vs double-check='ד' (U+05D3)
+      Position 16: origin='֣' (U+05A3) vs double-check='ֹ' (U+05B9)
+      Position 17: origin='ת' (U+05EA) vs double-check='֣' (U+05A3)
+      Position 18: origin=' ' (U+0020) vs double-check='ת' (U+05EA)
+      Position 19: origin='ש' (U+05E9) vs double-check=' ' (U+0020)
+
+Strong's Numbers:
+  Origin Strong's count: 182
+  Double-check Strong's count: 182
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 49: The Two-Stage Journey from Babylon to Canaan, Part 1 Terakh’s Journey
+--------------------------------------------------------------------------------
+Verses: 6
+Verse list: [(11, 27), (11, 28), (11, 29), (11, 30), (11, 31), (11, 32)]
+
+English Text:
+  Origin text length: 770
+  Double-check text length: 794
+  Similarity: 0.347
+  Notes: Significantly different; Length difference: 24 chars
+
+Hebrew Text:
+  Origin Hebrew length: 745
+  Double-check Hebrew length: 752
+  Similarity: 0.386
+  Notes: Significantly different; Length difference: 7 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 13: origin='ו' (U+05D5) vs double-check='ֽ' (U+05BD)
+      Position 14: origin='ֹ' (U+05B9) vs double-check='ו' (U+05D5)
+      Position 15: origin='ל' (U+05DC) vs double-check='ֹ' (U+05B9)
+      Position 16: origin='ְ' (U+05B0) vs double-check='ל' (U+05DC)
+      Position 17: origin='ד' (U+05D3) vs double-check='ְ' (U+05B0)
+      Position 18: origin='ֹ' (U+05B9) vs double-check='ד' (U+05D3)
+      Position 19: origin='֣' (U+05A3) vs double-check='ֹ' (U+05B9)
+      Position 20: origin='ת' (U+05EA) vs double-check='֣' (U+05A3)
+      Position 21: origin=' ' (U+0020) vs double-check='ת' (U+05EA)
+      Position 22: origin='ת' (U+05EA) vs double-check=' ' (U+0020)
+
+Strong's Numbers:
+  Origin Strong's count: 89
+  Double-check Strong's count: 89
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+Record 50: The Two-Stage Journey from Babylon to Canaan, Part 2 Avram’s Journey
+--------------------------------------------------------------------------------
+Verses: 5
+Verse list: [(12, 1), (12, 2), (12, 3), (12, 4), (12, 5)]
+
+English Text:
+  Origin text length: 762
+  Double-check text length: 802
+  Similarity: 0.375
+  Notes: Significantly different; Length difference: 40 chars
+
+Hebrew Text:
+  Origin Hebrew length: 694
+  Double-check Hebrew length: 691
+  Similarity: 0.416
+  Notes: Significantly different; Length difference: 3 chars
+
+  Hebrew Character Analysis:
+    First 10 character differences:
+      Position 22: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 36: origin='־' (U+05BE) vs double-check=' ' (U+0020)
+      Position 43: origin='מ' (U+05DE) vs double-check='ה' (U+05D4)
+      Position 44: origin='ֵ' (U+05B5) vs double-check='ָ' (U+05B8)
+      Position 46: origin='ַ' (U+05B7) vs double-check='ָ' (U+05B8)
+      Position 47: origin='ר' (U+05E8) vs double-check='֖' (U+0596)
+      Position 48: origin='ְ' (U+05B0) vs double-check='ר' (U+05E8)
+      Position 49: origin='צ' (U+05E6) vs double-check='ֶ' (U+05B6)
+      Position 50: origin='ְ' (U+05B0) vs double-check='ץ' (U+05E5)
+      Position 51: origin='ך' (U+05DA) vs double-check=' ' (U+0020)
+
+Strong's Numbers:
+  Origin Strong's count: 74
+  Double-check Strong's count: 74
+  Status: EXACT MATCH ✓
+
+================================================================================
+
+
+================================================================================
+SUMMARY STATISTICS
+================================================================================
+
+--- English Text (origin_field_text vs double_check_text) ---
+Exact matches: 0/50 (0.0%)
+Average similarity: 0.348
+Note: These are different translations, so exact match not expected
+
+--- Hebrew Text (origin_field_hebrew vs double_check_hebrew) ---
+Exact matches: 0/50 (0.0%)
+Average similarity: 0.462
+Note: May differ due to textual variations between sources
+
+--- Strong's Numbers (origin_field_strongs vs double_check_strongs) ---
+Exact matches: 46/50 (92.0%)
+Note: These should match exactly if both sources use same Strong's mapping
+
+================================================================================

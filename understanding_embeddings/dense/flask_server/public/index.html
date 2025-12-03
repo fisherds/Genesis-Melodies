@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Avraham Reuse</title>
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Left side: Bible Reader -->
+        <div class="left-panel" id="left-panel">
+            <button class="panel-toggle" id="left-panel-toggle" title="Hide Bible Reader">×</button>
+            <div class="bible-reader-container">
+                <!-- Navigation Column -->
+                <div class="nav-column" id="nav-column">
+                    <div class="nav-header">
+                        <span>&nbsp;</span>
+                        <button class="mobile-close-btn" id="nav-close-btn" style="display: none;">×</button>
+                    </div>
+                    <div class="nav-list" id="nav-list">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Verse Selection Column -->
+                <div class="verse-selection-column" id="verse-selection-column">
+                    <div class="verse-header">
+                        <div>Verses</div>
+                        <div style="display: flex; gap: 5px;">
+                            <button class="clear-all-btn" id="clear-all-btn" title="Clear all selections">Clear</button>
+                            <button class="mobile-close-btn" id="verse-close-btn" style="display: none;">×</button>
+                        </div>
+                    </div>
+                    <div class="verse-list" id="verse-list">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                    <button class="select-all-btn" id="select-all-btn" style="display: none;">All</button>
+                </div>
+                
+                <!-- Iframe Column -->
+                <div class="iframe-column">
+                    <div class="iframe-controls">
+                        <button id="hamburger-btn" class="hamburger-btn" style="display: none;" title="Show navigation">☰</button>
+                        <div style="flex: 1; display: flex; justify-content: space-between; gap: 10px; align-items: center;">
+                            <button id="prev-btn" class="nav-btn">← Previous</button>
+                            <button id="fullscreen-btn" class="fullscreen-btn" title="Full Screen Bible Reader">Full Screen</button>
+                            <button id="next-btn" class="nav-btn">Next →</button>
+                        </div>
+                    </div>
+                    <iframe 
+                        id="bible-visual-iframe"
+                        src="https://bibleproject-genesis-one.web.app/"
+                        style="width: 100%; height: calc(100% - 40px); border: none;">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Resizable Divider -->
+        <div class="resizer" id="resizer"></div>
+        
+        <!-- Right side: Search Interface -->
+        <div class="right-panel" id="right-panel">
+            <button class="panel-toggle" id="right-panel-toggle" title="Hide Search">×</button>
+            <div class="search-header">Search</div>
+            <div class="right-panel-content">
+            <section name="search_controls">
+        <p>
+            <label for="model_name">Model:</label>
+            <select id="model_name">
+                <option value="hebrew_st">Hebrew Sentence Transformer</option>
+                <option value="berit">BERiT</option>
+                <option value="english_st">English Sentence Transformer</option>
+            </select>
+        </p>
+        <p>
+            <label for="record_level">Record Level:</label>
+            <select id="record_level">
+                <option value="pericope">Pericope</option>
+                <option value="verse">Verse</option>
+                <option value="agentic_berit">Agentic BERiT</option>
+                <option value="agentic_hebrew_st">Agentic Hebrew ST</option>
+                <option value="agentic_english_st">Agentic English ST</option>
+            </select>
+        </p>
+        <p>
+            <label for="top_k">Top K:</label>
+            <input type="number" id="top_k" value="10" min="1" max="50">
+        </p>
+        <p>
+            <label for="search_verses">Search Verses:</label>
+            <textarea id="search_verses" rows="4" cols="50">[]</textarea>
+        </p>
+        <p style="display: flex; justify-content: space-between; align-items: center;">
+            <input id="clear_verses_button" type="button" value="Clear Verses" disabled>
+            <input id="search_button" type="button" value="Search">
+        </p>
+    </section>
+    
+    <section name="results">
+        <div id="results_container">
+            <p>No results yet. Click "Search" to perform a search.</p>
+        </div>
+    </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

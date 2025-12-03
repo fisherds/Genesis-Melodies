@@ -1,4 +1,41 @@
 .DS_Store
 .firebase/hosting.cHVibGlj.cache
 *.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.coverage
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Node modules
+node_modules/
 /data/node_modules
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Cloud Functions / Deployment
+functions/.gcloudignore
+firebase-debug.log
+
+# Data files (if large, consider excluding)
+# Uncomment if you don't want to commit data files:
+# /functions/data/raw/
+# /functions/dense/chroma_db/

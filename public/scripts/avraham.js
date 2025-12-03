@@ -675,8 +675,16 @@ async function performSearch() {
         search_verses: JSON.stringify(searchVerses)
     });
     
-    const url = `/api/search?${params.toString()}`;
+    // For local testing: if on localhost (any port), use the functions-framework port (8080)
+    // Otherwise use relative URL which will work with Firebase rewrites in production
+    const isLocalhost = window.location.hostname === 'localhost' || 
+                       window.location.hostname === '127.0.0.1' ||
+                       window.location.hostname === '::1';
+    // Always use localhost:8080 when testing locally (even if served from firebase on port 5000)
+    const apiBase = isLocalhost ? 'http://localhost:8080' : '';
+    const url = `${apiBase}/api/search?${params.toString()}`;
     console.log("Making request to: " + url);
+    console.log("Hostname: " + window.location.hostname + ", isLocalhost: " + isLocalhost);
     
     try {
         let response = await fetch(url);
