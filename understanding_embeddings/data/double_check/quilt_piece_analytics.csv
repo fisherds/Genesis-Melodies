@@ -1,6 +1,0 @@
-record id,title,number of Hebrew words,number of English words,number of Tokens (Hebrew ST),number of Tokens (BERiT),number of Tokens (English)
-quilt_piece_01,Creation Narrative,404,866,1942,1773,1095
-quilt_piece_02,Eden Narrative,565,1255,2540,2279,1597
-quilt_piece_03,Cain and Seth,771,1468,3497,3137,1929
-quilt_piece_04,Cosmic Collapse and Renewal,1086,2397,5079,4453,2965
-quilt_piece_05,Scattering,742,1565,3544,3212,2154

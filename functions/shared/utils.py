@@ -7,21 +7,29 @@ import sys
 from pathlib import Path
 
 
-def ensure_correct_working_directory():
+def ensure_correct_working_directory_for_local_data_generation():
     """
-    Ensure that scripts are run from the correct directory.
-    For Cloud Functions, this is a no-op since the working directory is fixed.
-    For local development, it checks for the presence of required folders.
+    Ensure that local data generation scripts are run from the project root.
+    
+    Scripts like reindex_all.py should be run from the project root:
+    - python functions/data/reindex_all.py
+    
+    This ensures that relative paths work correctly.
     """
-    # In Cloud Functions, the working directory is always the functions directory
-    # This check is mainly for local development/testing
     cwd = Path(os.getcwd())
     
-    # Check if we're in the functions directory or if dense/data folders exist
-    if (cwd.name == "functions" or 
-        (cwd / "dense").exists() or 
-        (cwd / "data").exists()):
-        return  # We're in the right place
+    # Check if we're in the project root (should have functions/ subdirectory)
+    if (cwd / "functions").exists() and (cwd / "functions" / "data").exists():
+        return  # We're in the right place (project root)
     
-    # If not, just warn but don't exit (Cloud Functions will handle it)
-    print(f"Warning: Current working directory may not be correct: {cwd}", flush=True)
+    # Check if we're in the functions directory (also acceptable for some scripts)
+    if cwd.name == "functions" and (cwd / "data").exists():
+        return  # We're in functions directory
+    
+    # If not, exit with error message
+    print(f"Error: Script must be run from project root or functions directory", flush=True)
+    print(f"Current directory: {cwd}", flush=True)
+    print(f"Expected: Project root (with functions/ subdirectory)", flush=True)
+    print(f"Or: functions/ directory", flush=True)
+    print(f"\nRun from project root: python functions/data/reindex_all.py", flush=True)
+    sys.exit(1)

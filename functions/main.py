@@ -24,7 +24,6 @@ try:
     from dense.vector_store import load_vector_store
     from dense.search import dense_search
     from dense.models import get_persist_directory
-    from shared.utils import ensure_correct_working_directory
     from shared.verse_parser import get_hebrew_for_verses
     from data.decoder_ring_record_generator import concatenate_verses
 except ImportError as e:
@@ -34,7 +33,6 @@ except ImportError as e:
     load_vector_store = None
     dense_search = None
     get_persist_directory = None
-    ensure_correct_working_directory = None
     get_hebrew_for_verses = None
     concatenate_verses = None
 
@@ -233,9 +231,6 @@ def search(request: Request) -> Tuple[dict[str, Any], int, dict[str, str]]:
                 headers
             )
         
-        # Ensure correct working directory (if function exists)
-        if ensure_correct_working_directory:
-            ensure_correct_working_directory()
         
         # Extract search text based on model_name
         if model_name in ['hebrew_st', 'berit']:
