@@ -22,6 +22,17 @@ Deployment...
 See the DEMO_PREP.md file for functions, firebase deploy --only hosting for web
 or firebase deploy might do both, but note functions takes 10 minutes.
 
+curl test for the deployed functions...
+   curl -G "https://us-central1-genesis-melodies.cloudfunctions.net/search" \
+     --data-urlencode "model_name=english_st" \
+     --data-urlencode "record_level=verse" \
+     --data-urlencode "top_k=5" \
+     --data-urlencode 'search_verses=[{"chapter":12,"verse":1}]'
+
+web test, visit...
+https://genesis-melodies.web.app/avraham-dense.html
+I usually try 12:14 & 12:15 + English ST + Verse to get Gen 2:22, 6:2, 3:7
+
 
 # ============================================================================
 # NOTE: All searches are limited to Genesis 1-25 search terms.

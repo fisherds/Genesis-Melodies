@@ -19,6 +19,9 @@ numpy>=1.24.0
 # Sentence Transformers (may be needed for some models)
 sentence-transformers>=2.2.0
 
+# Weaviate client for v2.0 vector database
+weaviate-client>=4.0.0
+
 # Standard library dependencies (usually included, but explicit is better)
 # These are typically included in Python, but listing for completeness:
 # json, re, pathlib, typing, os, sys - all standard library

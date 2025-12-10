@@ -22,6 +22,7 @@ This directory contains several documentation files to help you work with the Cl
 
 ### Troubleshooting
 - **[SETUP_HF_TOKEN.md](./markdown_notes/SETUP_HF_TOKEN.md)** - How to set up HuggingFace token to avoid rate limiting
+- **[SETUP_WEAVIATE.md](./markdown_notes/SETUP_WEAVIATE.md)** - How to set up Weaviate environment variables for v2.0 search
 - **[HUGGINGFACE_FIX.md](./markdown_notes/HUGGINGFACE_FIX.md)** - Alternative troubleshooting guide for HuggingFace rate limits
 
 ### Legacy/Reference

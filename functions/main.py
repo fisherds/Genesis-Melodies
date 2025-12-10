@@ -36,6 +36,20 @@ except ImportError as e:
     get_hebrew_for_verses = None
     concatenate_verses = None
 
+# Import v2.0 modules for Weaviate-based search
+try:
+    import weaviate
+    from weaviate.classes.init import Auth
+    from weaviate.classes.query import MetadataQuery
+    from dense.models_v2 import get_embedding_function, get_text_for_verses as get_text_for_verses_v2
+except ImportError as e:
+    print(f"Warning: Could not import v2.0 modules: {e}", flush=True)
+    weaviate = None
+    Auth = None
+    MetadataQuery = None
+    get_embedding_function = None
+    get_text_for_verses_v2 = None
+
 
 # Determine base directories
 # In Cloud Functions, the functions directory is the working directory
@@ -92,6 +106,35 @@ def get_english_for_verses(bp_translation_path: Path, verse_refs):
     # Extract just (chapter, verse) from (book_num, chapter, verse) tuples
     verses = [(ch, v) for _, ch, v in verse_refs]
     return concatenate_verses(verses, bp_lookup)
+
+
+def router(request: Request) -> Tuple[dict[str, Any], int, dict[str, str]]:
+    """
+    Router function that handles both /api/search (v1.0) and /api/search2 (v2.0) endpoints.
+    Routes to the appropriate handler based on the request path or parameters.
+    """
+    # Try to get the path from various sources
+    path = ''
+    if hasattr(request, 'path'):
+        path = request.path
+    elif hasattr(request, 'url'):
+        # Extract path from URL
+        from urllib.parse import urlparse
+        parsed = urlparse(request.url)
+        path = parsed.path
+    
+    # Also check for v2.0-specific parameter (chunking_level vs record_level)
+    has_chunking_level = request.args.get('chunking_level') is not None
+    has_record_level = request.args.get('record_level') is not None
+    
+    # Route to v2.0 handler if:
+    # 1. Path contains /search2, OR
+    # 2. Has chunking_level parameter (v2.0) but not record_level (v1.0)
+    if '/search2' in path or (has_chunking_level and not has_record_level):
+        return search2(request)
+    else:
+        # Default to v1.0 handler
+        return search(request)
 
 
 def search(request: Request) -> Tuple[dict[str, Any], int, dict[str, str]]:
@@ -321,14 +364,287 @@ def search(request: Request) -> Tuple[dict[str, Any], int, dict[str, str]]:
         )
 
 
+def get_weaviate_client():
+    """
+    Get a Weaviate client connection.
+    
+    The client automatically uses gRPC when connecting to Weaviate Cloud.
+    For WEAVIATE_URL, use the REST endpoint (without 'grpc-' prefix).
+    The client will automatically infer and use the gRPC endpoint for better performance.
+    """
+    import os
+    WEAVIATE_URL = os.getenv('WEAVIATE_URL')
+    WEAVIATE_API_KEY = os.getenv('WEAVIATE_API_KEY')
+    
+    if not WEAVIATE_URL or not WEAVIATE_API_KEY:
+        raise ValueError("WEAVIATE_URL and WEAVIATE_API_KEY must be set in environment variables")
+    
+    # Remove 'grpc-' prefix if present, as connect_to_weaviate_cloud expects REST endpoint
+    # and automatically uses gRPC
+    cluster_url = WEAVIATE_URL
+    if cluster_url.startswith('grpc-'):
+        cluster_url = cluster_url.replace('grpc-', '', 1)
+    elif not cluster_url.startswith('http'):
+        # If no protocol specified, assume https
+        cluster_url = f"https://{cluster_url}"
+    
+    return weaviate.connect_to_weaviate_cloud(
+        cluster_url=cluster_url,
+        auth_credentials=Auth.api_key(WEAVIATE_API_KEY),
+    )
+
+
+def search_weaviate(
+    verse_list: list,
+    model_key: str,
+    chunking_level: str,
+    top_k: int = 10
+) -> list:
+    """
+    Search Weaviate for similar verses.
+    
+    Args:
+        verse_list: List of verse dicts with 'chapter' and 'verse' keys
+        model_key: One of 'english_st', 'dictabert'
+        chunking_level: One of 'quilt_piece', 'pericope', 'note', 'verse'
+        top_k: Number of results to return
+        
+    Returns:
+        List of search results with 'id', 'title', 'text', 'hebrew', 'score', etc.
+    """
+    if not get_text_for_verses_v2 or not get_embedding_function:
+        raise ValueError("v2.0 modules not available")
+    
+    # Get text for the verses
+    search_text = get_text_for_verses_v2(verse_list, model_key, DATA_DIR)
+    
+    # Get embedding function
+    embeddings = get_embedding_function(
+        model_key,
+        use_weighted_pooling=True,
+        data_dir=DATA_DIR
+    )
+    
+    # Generate query embedding
+    query_vector = embeddings.embed_query(search_text)
+    
+    # Collection name matches ChromaDB naming convention
+    collection_name = f"{model_key}_{chunking_level}"
+    
+    # Connect to Weaviate and perform search
+    client = get_weaviate_client()
+    
+    try:
+        # Check if collection exists
+        if not client.collections.exists(collection_name):
+            raise ValueError(
+                f"Collection '{collection_name}' does not exist in Weaviate. "
+                f"Please run the upsert script first to create the collection."
+            )
+        
+        collection = client.collections.get(collection_name)
+        
+        # Perform vector similarity search
+        response = collection.query.near_vector(
+            near_vector=query_vector,
+            limit=top_k,
+            return_metadata=MetadataQuery(distance=True),
+            return_properties=["title", "text", "hebrew", "strongs", "verses", "verse_display"]
+        )
+        
+        # Format results to match ChromaDB format
+        results = []
+        for obj in response.objects:
+            properties = obj.properties
+            metadata = obj.metadata
+            
+            # Use distance directly to match ChromaDB behavior
+            # Distance is 0-2 for cosine, where 0 is most similar (identical)
+            # ChromaDB returns distance where 0.0 = identical, so we match that
+            distance = metadata.distance if metadata.distance is not None else 1.0
+            
+            # Parse verses from string array back to list of dicts
+            verses = []
+            verses_array = properties.get('verses', [])
+            for verse_str in verses_array:
+                if isinstance(verse_str, str) and ':' in verse_str:
+                    parts = verse_str.split(':')
+                    if len(parts) == 2:
+                        try:
+                            verses.append({
+                                'chapter': int(parts[0]),
+                                'verse': float(parts[1]) if '.' in parts[1] else int(parts[1])
+                            })
+                        except ValueError:
+                            pass
+            
+            result = {
+                'id': str(obj.uuid),  # Weaviate uses UUIDs
+                'title': properties.get('title', 'Unknown'),
+                'text': properties.get('text', ''),
+                'hebrew': properties.get('hebrew', ''),
+                'strongs': properties.get('strongs', ''),
+                'verses': verses,
+                'verse_display': properties.get('verse_display', ''),
+                'score': distance  # Return distance to match ChromaDB (0.0 = identical)
+            }
+            results.append(result)
+        
+        return results
+        
+    finally:
+        client.close()
+
+
+def search2(request: Request) -> Tuple[dict[str, Any], int, dict[str, str]]:
+    """
+    Cloud Function entry point for v2.0 search requests (Weaviate-based).
+    
+    Query parameters:
+    - model_name: english_st, dictabert
+    - chunking_level: quilt_piece, pericope, note, or verse
+    - search_verses: JSON array of [{"chapter": int, "verse": int}, ...]
+    - top_k: number of results to return (default: 10)
+    """
+    # CORS headers
+    headers = {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Content-Type": "application/json"
+    }
+    
+    # Handle OPTIONS request
+    if request.method == "OPTIONS":
+        return ("", 204, headers)
+    
+    try:
+        # Get query parameters
+        model_name = request.args.get("model_name", "english_st")
+        chunking_level = request.args.get("chunking_level", "pericope")
+        top_k = int(request.args.get("top_k", 10))
+        
+        # Validate model_name
+        valid_models = ['english_st', 'dictabert']
+        if model_name not in valid_models:
+            return (
+                {"error": f"Invalid model_name: {model_name}. Must be one of: {valid_models}"},
+                400,
+                headers
+            )
+        
+        # Validate chunking_level
+        valid_chunking_levels = ['quilt_piece', 'pericope', 'note', 'verse']
+        if chunking_level not in valid_chunking_levels:
+            return (
+                {"error": f"Invalid chunking_level: {chunking_level}. Must be one of: {valid_chunking_levels}"},
+                400,
+                headers
+            )
+        
+        # Get search_verses from query parameter (JSON string)
+        search_verses_str = request.args.get("search_verses", "[]")
+        
+        # Parse search_verses JSON array
+        verse_list = json.loads(search_verses_str)
+        
+        if not verse_list:
+            return (
+                {"error": "search_verses cannot be empty"},
+                400,
+                headers
+            )
+        
+        # Validate search_verses format
+        if not isinstance(verse_list, list):
+            return (
+                {"error": "search_verses must be a JSON array"},
+                400,
+                headers
+            )
+        
+        # Validate each verse object
+        for verse_obj in verse_list:
+            if not isinstance(verse_obj, dict) or 'chapter' not in verse_obj or 'verse' not in verse_obj:
+                return (
+                    {"error": "Each verse must be an object with 'chapter' and 'verse' fields"},
+                    400,
+                    headers
+                )
+        
+        # Perform search using Weaviate
+        results = search_weaviate(
+            verse_list=verse_list,
+            model_key=model_name,
+            chunking_level=chunking_level,
+            top_k=top_k
+        )
+        
+        # Get English text for display (regardless of model)
+        english_search_text = get_text_for_verses_v2(verse_list, 'english_st', DATA_DIR)
+        
+        # Add english_search_text to response
+        response_data = {
+            "english_search_text": english_search_text,
+            "results": results
+        }
+        
+        return (
+            response_data,
+            200,
+            headers
+        )
+        
+    except json.JSONDecodeError as e:
+        return (
+            {"error": f"Invalid JSON in search_verses: {str(e)}"},
+            400,
+            headers
+        )
+    except ValueError as e:
+        return (
+            {"error": str(e)},
+            400,
+            headers
+        )
+    except Exception as e:
+        # Log error
+        import traceback
+        error_traceback = traceback.format_exc()
+        print(f"Error in search2 function: {str(e)}", flush=True)
+        print(error_traceback, flush=True)
+        # Return JSON error response
+        error_response = {
+            "error": f"Internal server error: {str(e)}",
+            "details": error_traceback.split('\n')[-2] if error_traceback else None
+        }
+        return (
+            error_response,
+            500,
+            headers
+        )
+
+
 # For local testing with Functions Framework
 if __name__ == '__main__':
     from flask import Flask, request as flask_request
     app = Flask(__name__)
     
-    @app.route('/', methods=['GET', 'OPTIONS'])
-    def handler():
+    @app.route('/api/search', methods=['GET', 'OPTIONS'])
+    def handler_search():
         result = search(flask_request)
+        if isinstance(result, tuple) and len(result) == 3:
+            response_data, status_code, headers = result
+            from flask import jsonify, make_response
+            resp = make_response(jsonify(response_data), status_code)
+            for key, value in headers.items():
+                resp.headers[key] = value
+            return resp
+        return result
+    
+    @app.route('/api/search2', methods=['GET', 'OPTIONS'])
+    def handler_search2():
+        result = search2(flask_request)
         if isinstance(result, tuple) and len(result) == 3:
             response_data, status_code, headers = result
             from flask import jsonify, make_response

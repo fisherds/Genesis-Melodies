@@ -17,15 +17,20 @@ gcloud functions deploy search \
   --runtime=python311 \
   --region=us-central1 \
   --source=./functions \
-  --entry-point=search \
+  --entry-point=router \
   --trigger-http \
   --allow-unauthenticated \
   --memory=2GB \
   --timeout=300s \
   --max-instances=3 \
   --min-instances=0 \
-  --set-env-vars HF_TOKEN=YOUR_HUGGINGFACE_TOKEN_HERE
+  --set-env-vars HF_TOKEN=YOUR_HUGGINGFACE_TOKEN_HERE,WEAVIATE_URL=YOUR_WEAVIATE_URL,WEAVIATE_API_KEY=YOUR_WEAVIATE_API_KEY
 ```
+
+**Note:** 
+- `--entry-point=router` routes both v1.0 (`/api/search`) and v2.0 (`/api/search2`) endpoints
+- `WEAVIATE_URL` and `WEAVIATE_API_KEY` are required for v2.0 functionality
+- See [SETUP_WEAVIATE.md](./SETUP_WEAVIATE.md) for detailed Weaviate setup instructions
 
 **Note:** 
 - 2GB memory (required for embedding models)
@@ -33,6 +38,7 @@ gcloud functions deploy search \
 - Max 3 instances (plenty for 1-10 users)
 - Min 0 instances (scales to zero when idle - NO cost when sleeping!)
 - HF_TOKEN required (see SETUP_HF_TOKEN.md for setup)
+- WEAVIATE_URL and WEAVIATE_API_KEY required for v2.0 (see SETUP_WEAVIATE.md for setup)
 - This will take 5-10 minutes
 
 **Watch for:**
