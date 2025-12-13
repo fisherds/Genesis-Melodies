@@ -140,7 +140,9 @@
         "chapter": 2,
         "verse": 3
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen1_to_gen5.m4a",
+    "start_at": 0
   },
   {
     "verse_range": "2:4-17",
@@ -203,7 +205,9 @@
         "chapter": 2,
         "verse": 17
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen1_to_gen5.m4a",
+    "start_at": 1858
   },
   {
     "verse_range": "2:18-25",
@@ -241,7 +245,9 @@
         "chapter": 2,
         "verse": 25
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen1_to_gen5.m4a",
+    "start_at": 2913
   },
   {
     "verse_range": "2:25-3:7",
@@ -279,7 +285,9 @@
         "chapter": 3,
         "verse": 7
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen1_to_gen5.m4a",
+    "start_at": 3165
   },
   {
     "verse_range": "3:8-13",
@@ -309,7 +317,9 @@
         "chapter": 3,
         "verse": 13
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen1_to_gen5.m4a",
+    "start_at": 3580
   },
   {
     "verse_range": "3:14-19",
@@ -339,7 +349,9 @@
         "chapter": 3,
         "verse": 19
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen1_to_gen5.m4a",
+    "start_at": 3723
   },
   {
     "verse_range": "3:20-24",
@@ -365,7 +377,9 @@
         "chapter": 3,
         "verse": 24
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen1_to_gen5.m4a",
+    "start_at": 4427
   },
   {
     "verse_range": "4:1-26",
@@ -476,7 +490,9 @@
         "chapter": 4,
         "verse": 26
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen1_to_gen5.m4a",
+    "start_at": 4601
   },
   {
     "verse_range": "5:1-32",
@@ -610,7 +626,9 @@
         "chapter": 5,
         "verse": 32
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen1_to_gen5.m4a",
+    "start_at": 5955
   },
   {
     "verse_range": "6:1-12",
@@ -665,7 +683,9 @@
         "chapter": 6,
         "verse": 12
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen6_to_gen11.m4a",
+    "start_at": 0
   },
   {
     "verse_range": "6:13-22",
@@ -711,7 +731,9 @@
         "chapter": 6,
         "verse": 22
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen6_to_gen11.m4a",
+    "start_at": 585
   },
   {
     "verse_range": "7:1-5",
@@ -737,7 +759,9 @@
         "chapter": 7,
         "verse": 5
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen6_to_gen11.m4a",
+    "start_at": 1185
   },
   {
     "verse_range": "7:6-10",
@@ -763,7 +787,9 @@
         "chapter": 7,
         "verse": 10
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen6_to_gen11.m4a",
+    "start_at": 1353
   },
   {
     "verse_range": "7:11-16",
@@ -793,7 +819,9 @@
         "chapter": 7,
         "verse": 16
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen6_to_gen11.m4a",
+    "start_at": 1505
   },
   {
     "verse_range": "7:17-24",
@@ -831,7 +859,9 @@
         "chapter": 7,
         "verse": 24
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen6_to_gen11.m4a",
+    "start_at": 1734
   },
   {
     "verse_range": "8:1-1",
@@ -841,7 +871,9 @@
         "chapter": 8,
         "verse": 1
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen6_to_gen11.m4a",
+    "start_at": 1908
   },
   {
     "verse_range": "8:2-5",
@@ -863,7 +895,9 @@
         "chapter": 8,
         "verse": 5
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen6_to_gen11.m4a",
+    "start_at": 2001
   },
   {
     "verse_range": "8:6-14",
@@ -905,7 +939,9 @@
         "chapter": 8,
         "verse": 14
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen6_to_gen11.m4a",
+    "start_at": 2164
   },
   {
     "verse_range": "8:15-19",
@@ -931,7 +967,9 @@
         "chapter": 8,
         "verse": 19
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen6_to_gen11.m4a",
+    "start_at": 2532
   },
   {
     "verse_range": "8:20-22",
@@ -949,7 +987,9 @@
         "chapter": 8,
         "verse": 22
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen6_to_gen11.m4a",
+    "start_at": 2663
   },
   {
     "verse_range": "9:1-7",
@@ -983,7 +1023,9 @@
         "chapter": 9,
         "verse": 7
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen6_to_gen11.m4a",
+    "start_at": 2766
   },
   {
     "verse_range": "9:8-17",
@@ -1029,7 +1071,9 @@
         "chapter": 9,
         "verse": 17
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen6_to_gen11.m4a",
+    "start_at": 2970
   },
   {
     "verse_range": "9:18-29",
@@ -1084,7 +1128,9 @@
         "chapter": 9,
         "verse": 29
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen6_to_gen11.m4a",
+    "start_at": 3237
   },
   {
     "verse_range": "10:1-32",
@@ -1218,7 +1264,9 @@
         "chapter": 10,
         "verse": 32
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen6_to_gen11.m4a",
+    "start_at": 3860
   },
   {
     "verse_range": "11:1-9",
@@ -1260,7 +1308,9 @@
         "chapter": 11,
         "verse": 9
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen6_to_gen11.m4a",
+    "start_at": 4364
   },
   {
     "verse_range": "11:10-26",
@@ -1334,7 +1384,9 @@
         "chapter": 11,
         "verse": 26
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen6_to_gen11.m4a",
+    "start_at": 4747
   },
   {
     "verse_range": "11:27-12:5",
@@ -1385,7 +1437,9 @@
         "chapter": 12,
         "verse": 5
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen11_to_gen14.m4a",
+    "start_at": 0
   },
   {
     "verse_range": "12:6-9",
@@ -1407,7 +1461,9 @@
         "chapter": 12,
         "verse": 9
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen11_to_gen14.m4a",
+    "start_at": 804
   },
   {
     "verse_range": "12:10-20",
@@ -1457,7 +1513,9 @@
         "chapter": 12,
         "verse": 20
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen11_to_gen14.m4a",
+    "start_at": 1026
   },
   {
     "verse_range": "13:1-4",
@@ -1479,7 +1537,9 @@
         "chapter": 13,
         "verse": 4
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen11_to_gen14.m4a",
+    "start_at": 1440
   },
   {
     "verse_range": "13:5-11",
@@ -1513,7 +1573,9 @@
         "chapter": 13,
         "verse": 11
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen11_to_gen14.m4a",
+    "start_at": 1578
   },
   {
     "verse_range": "13:12-18",
@@ -1547,7 +1609,9 @@
         "chapter": 13,
         "verse": 18
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen11_to_gen14.m4a",
+    "start_at": 1818
   },
   {
     "verse_range": "14:1-24",
@@ -1649,7 +1713,9 @@
         "chapter": 14,
         "verse": 24
       }
-    ]
+    ],
+    "audio_file": "audio_tour_guide_gen11_to_gen14.m4a",
+    "start_at": 2132
   },
   {
     "verse_range": "15:1-21",

@@ -32,6 +32,7 @@ window.addEventListener("load", (event) => {
     loadTextVisuals();
     setupResizer();
     setupPanelToggles();
+    setupAudioPlayer();
 });
 
 async function loadTextVisuals() {
@@ -99,6 +100,11 @@ function selectVisual(index) {
     
     // Update navigation buttons
     updateNavButtons();
+    
+    // Only update audio if it's not currently playing (don't interrupt playback)
+    if (!audioPlayer || audioPlayer.paused) {
+        updateAudioForCurrentVisual();
+    }
 }
 
 function populateVerseSelection(verses) {
@@ -754,4 +760,176 @@ function displayResults(results) {
     }
     
     container.innerHTML = html;
+}
+
+// Audio Player Functions
+let audioPlayer = null;
+let currentAudioFile = null;
+
+function setupAudioPlayer() {
+    audioPlayer = document.getElementById('audio-player');
+    if (!audioPlayer) {
+        console.warn('Audio player element not found');
+        return;
+    }
+    
+    const toggleBtn = document.getElementById('audio-player-toggle');
+    const controls = document.getElementById('audio-player-controls');
+    const playPauseBtn = document.getElementById('audio-play-pause');
+    const jumpToSectionBtn = document.getElementById('audio-jump-to-section');
+    const playIcon = document.getElementById('play-icon');
+    const pauseIcon = document.getElementById('pause-icon');
+    const progressSlider = document.getElementById('audio-progress');
+    const currentTimeDisplay = document.getElementById('audio-current-time');
+    const durationDisplay = document.getElementById('audio-duration');
+    
+    if (!toggleBtn || !controls || !playPauseBtn || !jumpToSectionBtn || !progressSlider) {
+        console.warn('Audio player control elements not found');
+        return;
+    }
+    
+    // Toggle controls visibility with slide animation
+    toggleBtn.addEventListener('click', () => {
+        controls.classList.toggle('show');
+    });
+    
+    // Play/Pause button
+    playPauseBtn.addEventListener('click', () => {
+        if (audioPlayer.paused) {
+            audioPlayer.play().catch(err => {
+                console.error('Error playing audio:', err);
+            });
+        } else {
+            audioPlayer.pause();
+        }
+    });
+    
+    // Update play/pause icon based on audio state
+    audioPlayer.addEventListener('play', () => {
+        if (playIcon) playIcon.style.display = 'none';
+        if (pauseIcon) pauseIcon.style.display = 'block';
+    });
+    
+    audioPlayer.addEventListener('pause', () => {
+        if (playIcon) playIcon.style.display = 'block';
+        if (pauseIcon) pauseIcon.style.display = 'none';
+    });
+    
+    // Update progress slider and time displays
+    function updateProgress() {
+        if (!isSeeking && audioPlayer.duration) {
+            const percent = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+            progressSlider.value = percent;
+        }
+        if (currentTimeDisplay) {
+            currentTimeDisplay.textContent = formatTime(audioPlayer.currentTime);
+        }
+    }
+    
+    // Update duration when metadata loads
+    audioPlayer.addEventListener('loadedmetadata', () => {
+        if (durationDisplay && audioPlayer.duration) {
+            durationDisplay.textContent = formatTime(audioPlayer.duration);
+            progressSlider.max = 100;
+        }
+    });
+    
+    // Update progress as audio plays
+    audioPlayer.addEventListener('timeupdate', updateProgress);
+    
+    // Allow seeking via progress slider
+    let isSeeking = false;
+    progressSlider.addEventListener('mousedown', () => {
+        isSeeking = true;
+    });
+    progressSlider.addEventListener('mouseup', () => {
+        isSeeking = false;
+    });
+    progressSlider.addEventListener('input', (e) => {
+        if (audioPlayer.duration) {
+            const percent = parseFloat(e.target.value);
+            const newTime = (percent / 100) * audioPlayer.duration;
+            audioPlayer.currentTime = newTime;
+        }
+    });
+    
+    // Jump to current section - FIXED to properly jump to start_at
+    jumpToSectionBtn.addEventListener('click', () => {
+        if (currentVisualIndex >= 0 && currentVisualIndex < textVisuals.length) {
+            const visual = textVisuals[currentVisualIndex];
+            if (visual.audio_file && visual.start_at !== undefined) {
+                const audioPath = `audio/${visual.audio_file}`;
+                const fullAudioPath = new URL(audioPath, window.location.href).href;
+                
+                // Check if we need to change the audio file
+                if (!audioPlayer.src || audioPlayer.src !== fullAudioPath) {
+                    // Need to load new file
+                    const wasPlaying = !audioPlayer.paused;
+                    audioPlayer.src = audioPath;
+                    audioPlayer.load();
+                    
+                    audioPlayer.addEventListener('loadedmetadata', () => {
+                        audioPlayer.currentTime = visual.start_at || 0;
+                        if (wasPlaying) {
+                            audioPlayer.play().catch(err => {
+                                console.error('Error playing audio:', err);
+                            });
+                        }
+                    }, { once: true });
+                } else {
+                    // Same file, just jump to start_at
+                    audioPlayer.currentTime = visual.start_at || 0;
+                }
+            }
+        }
+    });
+    
+    // Initialize audio will be called after textVisuals are loaded
+}
+
+// Helper function to format time as MM:SS
+function formatTime(seconds) {
+    if (isNaN(seconds) || !isFinite(seconds)) return '0:00';
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${mins}:${secs.toString().padStart(2, '0')}`;
+}
+
+function updateAudioForCurrentVisual() {
+    if (currentVisualIndex < 0 || currentVisualIndex >= textVisuals.length) {
+        return;
+    }
+    
+    const visual = textVisuals[currentVisualIndex];
+    
+    // Check if this visual has audio
+    if (!visual.audio_file || visual.audio_file === '') {
+        // Hide audio player if no audio file
+        document.getElementById('audio-player-container').style.display = 'none';
+        return;
+    }
+    
+    // Show audio player
+    document.getElementById('audio-player-container').style.display = 'flex';
+    
+    // Update audio source if file changed
+    const audioPath = `audio/${visual.audio_file}`;
+    const fullAudioPath = new URL(audioPath, window.location.href).href;
+    
+    // Only update if the file actually changed
+    if (!audioPlayer.src || audioPlayer.src !== fullAudioPath) {
+        audioPlayer.src = audioPath;
+        currentAudioFile = visual.audio_file;
+        
+        // Load the new audio
+        audioPlayer.load();
+        
+        // Set start time after metadata loads
+        audioPlayer.addEventListener('loadedmetadata', () => {
+            const startAt = visual.start_at || 0;
+            audioPlayer.currentTime = startAt;
+        }, { once: true });
+    }
+    // Note: We don't change currentTime if the file hasn't changed
+    // This allows audio to continue playing when navigating
 }
