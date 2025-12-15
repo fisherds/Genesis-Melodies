@@ -517,9 +517,31 @@ textarea {
     border-radius: 4px;
 }
 
+.result-item .result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
 .result-item h3 {
     margin-top: 0;
     color: #333;
+    flex: 1;
+}
+
+.meditation-rating {
+    padding: 4px 8px;
+    font-size: 0.85em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    min-width: 60px;
+}
+
+.meditation-rating:hover {
+    border-color: #4CAF50;
 }
 
 .result-item .score {
@@ -570,6 +592,142 @@ textarea {
     color: #666;
     font-size: 0.9em;
     margin-top: 10px;
+}
+
+/* Voting Feature Styles (only used on avraham-dense.html) */
+.feedback-section {
+    padding: 10px;
+    margin: 15px 0;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+.feedback-header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.feedback-label-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.feedback-label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.feedback-label {
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    display: inline !important;
+    width: auto !important;
+}
+
+.feedback-subtitle {
+    font-size: 0.85em;
+    color: #666;
+    font-style: italic;
+}
+
+.info-icon-wrapper {
+    position: relative;
+    display: inline;
+}
+
+.info-icon {
+    display: inline-block;
+    vertical-align: baseline;
+    cursor: help;
+    margin-left: 3px;
+    flex-shrink: 0;
+    transition: opacity 0.2s;
+    width: 14px;
+    height: 14px;
+    position: relative;
+    top: -2px;
+}
+
+.info-icon:hover {
+    opacity: 0.7;
+}
+
+.info-tooltip {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 4px;
+    width: 300px;
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-weight: normal;
+    line-height: 1.5;
+    z-index: 1000;
+    display: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    white-space: normal;
+}
+
+.info-tooltip::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 10px;
+    border: 6px solid transparent;
+    border-bottom-color: #333;
+}
+
+.submit-feedback-btn {
+    padding: 5px 15px;
+    font-size: 0.9em;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    flex-shrink: 0;
+}
+
+.submit-feedback-btn:hover:not(:disabled) {
+    background-color: #45a049;
+}
+
+.submit-feedback-btn:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Toast notification */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    font-size: 0.9em;
+}
+
+.toast.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
 }
 
 /* Audio Player Styles */

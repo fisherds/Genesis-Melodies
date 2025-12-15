@@ -23,7 +23,8 @@ console.error = function(...args) {
     const message = args.join(' ');
     // Filter out MutationObserver errors from browser extensions
     if (message.includes('web-client-content-script') || 
-        (message.includes('MutationObserver') && message.includes('observe'))) {
+        (message.includes('MutationObserver') && message.includes('observe')) ||
+        (message.includes('Failed to execute') && message.includes('observe') && message.includes('MutationObserver'))) {
         return; // Suppress this error
     }
     originalError.apply(console, args);

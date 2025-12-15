@@ -3,6 +3,21 @@ let textVisuals = [];
 let currentVisualIndex = -1;
 let selectedVerses = new Set(); // Store as "chapter:verse" strings
 
+// Voting feature state (only used on avraham-dense.html)
+let resultRatings = {}; // Store ratings for each result by index: { 0: "5", 1: "", ... }
+let currentResults = []; // Store current search results
+let feedbackSubmitted = false; // Track if feedback has been submitted for current search
+
+// Helper function to detect if we're on avraham-dense.html (has search interface)
+// avraham.html doesn't have a real search interface, so we check for the actual search controls section
+function isDensePage() {
+    const searchControls = document.querySelector('section[name="search_controls"]');
+    if (!searchControls) return false;
+    // Check if it's actually visible (not a dummy element)
+    const computedStyle = window.getComputedStyle(searchControls);
+    return computedStyle.display !== 'none' && searchControls.offsetParent !== null;
+}
+
 // Suppress console warnings from iframe content (Tailwind CSS warnings, etc.)
 const originalWarn = console.warn;
 console.warn = function(...args) {
@@ -20,7 +35,8 @@ console.error = function(...args) {
     const message = args.join(' ');
     // Filter out MutationObserver errors from browser extensions
     if (message.includes('web-client-content-script') || 
-        (message.includes('MutationObserver') && message.includes('observe'))) {
+        (message.includes('MutationObserver') && message.includes('observe')) ||
+        (message.includes('Failed to execute') && message.includes('observe') && message.includes('MutationObserver'))) {
         return; // Suppress this error
     }
     originalError.apply(console, args);
@@ -652,6 +668,13 @@ function toggleFullScreen() {
 async function performSearch() {
     console.log("performSearch");
     
+    // Reset ratings for new search (only on dense page)
+    if (isDensePage()) {
+        resultRatings = {};
+        currentResults = [];
+        feedbackSubmitted = false;
+    }
+    
     // Clear results and show spinner immediately
     const container = document.querySelector("#results_container");
     container.innerHTML = '<div class="spinner-container"><div class="spinner"></div><div class="spinner-text">Searching...</div></div>';
@@ -724,6 +747,11 @@ async function performSearch() {
     } catch (error) {
         console.error("Error performing search:", error);
         container.innerHTML = '<p style="color: red;">Error: ' + error.message + '</p>';
+        // Reset on error (only on dense page)
+        if (isDensePage()) {
+            resultRatings = {};
+            currentResults = [];
+        }
     }
 }
 
@@ -801,6 +829,12 @@ function displaySearchInfo(englishSearchText) {
 function displayResults(results) {
     const container = document.querySelector("#results_container");
     const recordLevel = document.querySelector("#record_level").value;
+    const topK = parseInt(document.querySelector("#top_k").value) || 10;
+    
+    // Store results globally (only on dense page)
+    if (isDensePage()) {
+        currentResults = results;
+    }
     
     // Preserve search info if it exists
     const existingInfo = container.innerHTML;
@@ -813,8 +847,47 @@ function displayResults(results) {
     // Only show verses field for pericope level
     const showVerses = recordLevel === 'pericope';
     
+    // Only show feedback section if top_k >= 5 and we're on dense page
+    const showFeedback = isDensePage() && topK >= 5;
+    
     let html = existingInfo;
-    for (let result of results) {
+    
+    // Add feedback section only if on dense page and top_k >= 5
+    if (showFeedback) {
+        html += `
+            <div class="feedback-section">
+                <div class="feedback-header">
+                    <div class="feedback-label-group">
+                        <div class="feedback-label-row">
+                            <label class="feedback-label">
+                                Provide Feedback:
+                                <span class="info-icon-wrapper">
+                                    <svg class="info-icon" xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px" fill="#999" title="Click for rating instructions">
+                                        <path d="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/>
+                                    </svg>
+                                    <div class="info-tooltip">
+                                        Rank each result based on if it Sparked Interesting Meditation.<br>
+                                        - 5 is a really interesting spark<br>
+                                        - 0 means the result had no value to you<br>
+                                        Then if you are really excited about the meditation for the hyperlink, you can mark it as a 10 (mainly for fun, in the averages it scores a 10 as a 5, but 10 is fun sometimes). Or if you found a result inappropriate for any reason or it just shouldn't be there, mark it as a -1. Thanks for any feedback you have! BTW everything is fully anonymous.
+                                    </div>
+                                </span>
+                            </label>
+                            <button id="submit-feedback-btn" class="submit-feedback-btn" disabled>Submit</button>
+                        </div>
+                        <div class="feedback-subtitle">Rank the Top 5 Results</div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+    
+    // Add results with rating dropdowns (only on top 5 if feedback is shown)
+    for (let i = 0; i < results.length; i++) {
+        const result = results[i];
+        const currentRating = isDensePage() ? (resultRatings[i] || '') : '';
+        const showRating = showFeedback && i < 5; // Only show rating on top 5
+        
         let versesHtml = '';
         if (showVerses) {
             const formattedVerses = formatVerses(result.verses || "");
@@ -824,8 +897,23 @@ function displayResults(results) {
         }
         
         html += `
-            <div class="result-item">
-                <h3>${result.title || result.id}</h3>
+            <div class="result-item" data-result-index="${i}">
+                <div class="result-header">
+                    <h3>${result.title || result.id}</h3>
+                    ${showRating ? `
+                    <select class="meditation-rating" data-result-index="${i}">
+                        <option value="" ${currentRating === '' ? 'selected' : ''}></option>
+                        <option value="10" ${currentRating === '10' ? 'selected' : ''}>10</option>
+                        <option value="5" ${currentRating === '5' ? 'selected' : ''}>5</option>
+                        <option value="4" ${currentRating === '4' ? 'selected' : ''}>4</option>
+                        <option value="3" ${currentRating === '3' ? 'selected' : ''}>3</option>
+                        <option value="2" ${currentRating === '2' ? 'selected' : ''}>2</option>
+                        <option value="1" ${currentRating === '1' ? 'selected' : ''}>1</option>
+                        <option value="0" ${currentRating === '0' ? 'selected' : ''}>0</option>
+                        <option value="-1" ${currentRating === '-1' ? 'selected' : ''}>-1</option>
+                    </select>
+                    ` : ''}
+                </div>
                 ${versesHtml}
                 <div class="score">Score: ${result.score.toFixed(4)}</div>
                 <div class="text">${result.text || ""}</div>
@@ -834,6 +922,123 @@ function displayResults(results) {
     }
     
     container.innerHTML = html;
+    
+    // Attach event listeners to rating dropdowns (only on dense page)
+    if (isDensePage()) {
+        document.querySelectorAll('.meditation-rating').forEach(select => {
+            select.addEventListener('change', (e) => {
+                const index = parseInt(e.target.dataset.resultIndex);
+                resultRatings[index] = e.target.value;
+                updateSubmitButtonState();
+            });
+        });
+        
+        // Attach event listener to submit button
+        const submitBtn = document.getElementById('submit-feedback-btn');
+        if (submitBtn) {
+            submitBtn.addEventListener('click', handleFeedbackSubmit);
+        }
+        
+        // Setup info icon tooltip
+        document.querySelectorAll('.info-icon').forEach(infoIcon => {
+            infoIcon.addEventListener('mouseenter', () => {
+                const tooltip = infoIcon.parentElement.querySelector('.info-tooltip');
+                if (tooltip) {
+                    tooltip.style.display = 'block';
+                }
+            });
+            infoIcon.addEventListener('mouseleave', () => {
+                const tooltip = infoIcon.parentElement.querySelector('.info-tooltip');
+                if (tooltip) {
+                    tooltip.style.display = 'none';
+                }
+            });
+        });
+        
+        // Initialize submit button state
+        updateSubmitButtonState();
+    }
+}
+
+function updateSubmitButtonState() {
+    if (!isDensePage()) return;
+    
+    const submitBtn = document.getElementById('submit-feedback-btn');
+    if (!submitBtn) return;
+    
+    // If already submitted, show "Already submitted" message
+    if (feedbackSubmitted) {
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = '0.6';
+        submitBtn.style.cursor = 'not-allowed';
+        submitBtn.title = 'Already submitted. Thanks!';
+        return;
+    }
+    
+    // Check if top 5 results are rated (no blank values)
+    const top5Rated = Array.from({ length: Math.min(5, currentResults.length) }, (_, i) => i)
+        .every(index => resultRatings[index] !== undefined && resultRatings[index] !== '');
+    
+    if (top5Rated) {
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = '1';
+        submitBtn.style.cursor = 'pointer';
+        submitBtn.title = 'Submit your feedback';
+    } else {
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = '0.6';
+        submitBtn.style.cursor = 'not-allowed';
+        submitBtn.title = 'Must rank the top 5 to submit';
+    }
+}
+
+function handleFeedbackSubmit() {
+    if (!isDensePage()) return;
+    
+    const submitBtn = document.getElementById('submit-feedback-btn');
+    if (!submitBtn || submitBtn.disabled) return;
+    
+    // Mark as submitted
+    feedbackSubmitted = true;
+    
+    // Show toast
+    showToast('Results submitted. Thank you!');
+    
+    // Update button state (will show "Already submitted" tooltip)
+    updateSubmitButtonState();
+    
+    // TODO: Send to Firebase Firestore (will implement later)
+    console.log('Feedback to submit:', {
+        results: currentResults,
+        ratings: resultRatings
+    });
+}
+
+function showToast(message) {
+    // Remove existing toast if any
+    const existingToast = document.querySelector('.toast');
+    if (existingToast) {
+        existingToast.remove();
+    }
+    
+    // Create toast element
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    
+    // Trigger animation
+    setTimeout(() => {
+        toast.classList.add('show');
+    }, 10);
+    
+    // Remove after animation
+    setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => {
+            toast.remove();
+        }, 300);
+    }, 3000);
 }
 
 // Audio Player Functions
