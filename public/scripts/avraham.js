@@ -8,6 +8,9 @@ let resultRatings = {}; // Store ratings for each result by index: { 0: "5", 1: 
 let currentResults = []; // Store current search results
 let feedbackSubmitted = false; // Track if feedback has been submitted for current search
 
+// Firestore instance (initialized on window load)
+let db = null;
+
 // Helper function to detect if we're on avraham-dense.html (has search interface)
 // avraham.html doesn't have a real search interface, so we check for the actual search controls section
 function isDensePage() {
@@ -44,6 +47,15 @@ console.error = function(...args) {
 
 window.addEventListener("load", (event) => {
     console.log("page is fully loaded");
+    
+    // Initialize Firestore if Firebase is available
+    if (typeof firebase !== 'undefined' && firebase.firestore) {
+        db = firebase.firestore();
+        console.log("Firestore initialized");
+    } else {
+        console.warn("Firebase/Firestore not available - feedback saving will be disabled");
+    }
+    
     setupButtonListeners();
     loadTextVisuals();
     setupResizer();
@@ -992,26 +1004,89 @@ function updateSubmitButtonState() {
     }
 }
 
-function handleFeedbackSubmit() {
+async function handleFeedbackSubmit() {
     if (!isDensePage()) return;
     
     const submitBtn = document.getElementById('submit-feedback-btn');
     if (!submitBtn || submitBtn.disabled) return;
     
-    // Mark as submitted
-    feedbackSubmitted = true;
+    // Disable button immediately to prevent double-submission
+    submitBtn.disabled = true;
+    submitBtn.style.opacity = '0.6';
+    submitBtn.style.cursor = 'not-allowed';
     
-    // Show toast
-    showToast('Results submitted. Thank you!');
-    
-    // Update button state (will show "Already submitted" tooltip)
-    updateSubmitButtonState();
-    
-    // TODO: Send to Firebase Firestore (will implement later)
-    console.log('Feedback to submit:', {
-        results: currentResults,
-        ratings: resultRatings
-    });
+    try {
+        // Get current search parameters
+        const modelName = document.querySelector("#model_name").value;
+        const recordLevel = document.querySelector("#record_level").value; // Note: avraham-dense uses "record_level" not "chunking_level"
+        const topK = parseInt(document.querySelector("#top_k").value) || 10;
+        const searchVersesStr = document.querySelector("#search_verses").value;
+        
+        // Parse search_verses
+        let searchVerses;
+        try {
+            searchVerses = JSON.parse(searchVersesStr);
+        } catch (e) {
+            console.error('Error parsing search_verses:', e);
+            throw new Error('Invalid search verses format');
+        }
+        
+        // Build results_and_ranking array (top 5 only)
+        const resultsAndRanking = [];
+        for (let i = 0; i < Math.min(5, currentResults.length); i++) {
+            const result = currentResults[i];
+            // Get rating - should be set since we require top 5 to be rated
+            const ratingStr = resultRatings[i] || '';
+            const rating = ratingStr !== '' ? parseInt(ratingStr) : 0;
+            
+            // Store the entire result object (all fields from server response)
+            const resultMap = JSON.parse(JSON.stringify(result)); // Deep copy to avoid reference issues
+            
+            resultsAndRanking.push({
+                rank: i + 1,
+                result: resultMap,
+                distance: result.score || 0.0,
+                rating: rating
+            });
+        }
+        
+        // Build the Firestore document
+        const feedbackDoc = {
+            created: firebase.firestore.FieldValue.serverTimestamp(),
+            endpoint: 'dense', // avraham-dense.html uses "dense" endpoint
+            model_name: modelName,
+            chunking_level: recordLevel, // Store as chunking_level in Firestore (for consistency with dense-2)
+            top_k: topK,
+            search_verses: searchVerses,
+            results_and_ranking: resultsAndRanking
+        };
+        
+        // Save to Firestore
+        if (db) {
+            await db.collection('SearchFeedback').add(feedbackDoc);
+            console.log('Feedback saved to Firestore successfully');
+        } else {
+            console.warn('Firestore not initialized, skipping save');
+        }
+        
+        // Mark as submitted
+        feedbackSubmitted = true;
+        
+        // Show toast
+        showToast('Results submitted. Thank you!');
+        
+        // Update button state (will show "Already submitted" tooltip)
+        updateSubmitButtonState();
+        
+    } catch (error) {
+        console.error('Error saving feedback to Firestore:', error);
+        showToast('Error saving feedback. Please try again.');
+        
+        // Re-enable button on error
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = '1';
+        submitBtn.style.cursor = 'pointer';
+    }
 }
 
 function showToast(message) {

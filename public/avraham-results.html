@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Feedback Results</title>
+    <!-- Firebase SDKs - Using Firebase Hosting reserved URL for automatic config -->
+    <script src="/__/firebase/9.23.0/firebase-app-compat.js"></script>
+    <script src="/__/firebase/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    <script type="text/javascript" src="scripts/results.js"></script>
+    <link rel="stylesheet" href="styles/results.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Search Feedback Results</h1>
+        <div class="controls">
+            <button id="download-csv-btn" class="download-btn">Download CSV</button>
+        </div>
+        <div id="loading" class="loading">Loading feedback data...</div>
+        <div id="error" class="error" style="display: none;"></div>
+        <div id="results-container">
+            <table id="results-table">
+                <thead>
+                    <tr>
+                        <th>Endpoint</th>
+                        <th>Model</th>
+                        <th>Chunking</th>
+                        <th>Search Verses</th>
+                        <th>Result 1 (Rating/Title)</th>
+                        <th>Result 2 (Rating/Title)</th>
+                        <th>Result 3 (Rating/Title)</th>
+                        <th>Result 4 (Rating/Title)</th>
+                        <th>Result 5 (Rating/Title)</th>
+                    </tr>
+                </thead>
+                <tbody id="results-tbody">
+                    <!-- Populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+
