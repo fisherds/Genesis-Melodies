@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Feedback Admin</title>
+    <!-- Firebase SDKs - Using Firebase Hosting reserved URL for automatic config -->
+    <script src="/__/firebase/9.23.0/firebase-app-compat.js"></script>
+    <script src="/__/firebase/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    <script type="text/javascript" src="scripts/results-admin.js"></script>
+    <link rel="stylesheet" href="styles/results-admin.css">
+</head>
+<body>
+    <div class="container">
+        <div id="login-screen">
+            <h1>Admin Access</h1>
+            <p>Enter password to access admin functions:</p>
+            <input type="password" id="password-input" placeholder="Password" />
+            <button id="login-btn" class="btn btn-primary">Login</button>
+            <div id="login-error" class="error" style="display: none;"></div>
+        </div>
+        
+        <div id="admin-screen" style="display: none;">
+            <a href="/avraham-dense-2.html" class="back-link">← Back</a>
+            <h1>Search Feedback Admin</h1>
+            <div class="controls">
+                <button id="logout-btn" class="btn btn-secondary">Logout</button>
+                <button id="refresh-btn" class="btn btn-primary">Refresh</button>
+            </div>
+            <div id="loading" class="loading">Loading feedback data...</div>
+            <div id="error" class="error" style="display: none;"></div>
+            <div id="results-container">
+                <table id="results-table">
+                    <thead>
+                        <tr>
+                            <th>Select</th>
+                            <th>Created</th>
+                            <th>Endpoint</th>
+                            <th>Model</th>
+                            <th>Chunking</th>
+                            <th>Search Verses</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="results-tbody">
+                        <!-- Populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="bulk-actions" style="display: none;">
+                <button id="delete-selected-btn" class="btn btn-danger">Delete Selected</button>
+                <span id="selected-count"></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

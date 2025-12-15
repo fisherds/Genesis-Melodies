@@ -7,9 +7,11 @@ let selectedVerses = new Set(); // Store as "chapter:verse" strings
 let resultRatings = {}; // Store ratings for each result by index: { 0: "5", 1: "", ... }
 let currentResults = []; // Store current search results
 let feedbackSubmitted = false; // Track if feedback has been submitted for current search
+let isSubmitting = false; // Prevent double submission
 
 // Firestore instance (initialized on window load)
 let db = null;
+let submitButtonHandler = null; // Store reference to submit handler for removal
 
 // Helper function to detect if we're on avraham-dense.html (has search interface)
 // avraham.html doesn't have a real search interface, so we check for the actual search controls section
@@ -685,6 +687,23 @@ async function performSearch() {
         resultRatings = {};
         currentResults = [];
         feedbackSubmitted = false;
+        isSubmitting = false;
+        
+        // Reset submit button styling if it was transformed to a link
+        const submitBtn = document.getElementById('submit-feedback-btn');
+        if (submitBtn) {
+            submitBtn.style.background = '';
+            submitBtn.style.color = '';
+            submitBtn.style.textDecoration = '';
+            submitBtn.textContent = 'Submit';
+            submitBtn.onclick = null; // Remove custom click handler
+            
+            // Re-attach the submit handler if it was removed
+            if (!submitButtonHandler) {
+                submitButtonHandler = handleFeedbackSubmit;
+                submitBtn.addEventListener('click', submitButtonHandler);
+            }
+        }
     }
     
     // Clear results and show spinner immediately
@@ -948,7 +967,13 @@ function displayResults(results) {
         // Attach event listener to submit button
         const submitBtn = document.getElementById('submit-feedback-btn');
         if (submitBtn) {
-            submitBtn.addEventListener('click', handleFeedbackSubmit);
+            // Remove old handler if it exists
+            if (submitButtonHandler) {
+                submitBtn.removeEventListener('click', submitButtonHandler);
+            }
+            // Store reference and add new handler
+            submitButtonHandler = handleFeedbackSubmit;
+            submitBtn.addEventListener('click', submitButtonHandler);
         }
         
         // Setup info icon tooltip
@@ -978,12 +1003,31 @@ function updateSubmitButtonState() {
     const submitBtn = document.getElementById('submit-feedback-btn');
     if (!submitBtn) return;
     
-    // If already submitted, show "Already submitted" message
+    // If already submitted, transform button into a link to results page
     if (feedbackSubmitted) {
-        submitBtn.disabled = true;
-        submitBtn.style.opacity = '0.6';
-        submitBtn.style.cursor = 'not-allowed';
-        submitBtn.title = 'Already submitted. Thanks!';
+        // Change button to a link-styled button
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = '1';
+        submitBtn.style.cursor = 'pointer';
+        submitBtn.style.background = 'none';
+        submitBtn.style.color = '#4CAF50';
+        submitBtn.style.textDecoration = 'underline';
+        submitBtn.style.padding = '5px 15px';
+        submitBtn.textContent = 'See Feedback Results';
+        submitBtn.title = 'View all feedback results';
+        
+        // Remove the original event listener to prevent double submission
+        if (submitButtonHandler) {
+            submitBtn.removeEventListener('click', submitButtonHandler);
+            submitButtonHandler = null;
+        }
+        
+        // Replace click handler to navigate to results page
+        submitBtn.onclick = (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            window.location.href = '/avraham-results.html';
+        };
         return;
     }
     
@@ -1008,7 +1052,10 @@ async function handleFeedbackSubmit() {
     if (!isDensePage()) return;
     
     const submitBtn = document.getElementById('submit-feedback-btn');
-    if (!submitBtn || submitBtn.disabled) return;
+    if (!submitBtn || submitBtn.disabled || isSubmitting || feedbackSubmitted) return;
+    
+    // Set flag to prevent double submission
+    isSubmitting = true;
     
     // Disable button immediately to prevent double-submission
     submitBtn.disabled = true;
@@ -1082,7 +1129,8 @@ async function handleFeedbackSubmit() {
         console.error('Error saving feedback to Firestore:', error);
         showToast('Error saving feedback. Please try again.');
         
-        // Re-enable button on error
+        // Reset flags and re-enable button on error
+        isSubmitting = false;
         submitBtn.disabled = false;
         submitBtn.style.opacity = '1';
         submitBtn.style.cursor = 'pointer';

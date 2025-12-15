@@ -32,23 +32,73 @@ h1 {
     color: #333;
 }
 
-.controls {
-    margin-bottom: 20px;
+/* Login Screen */
+#login-screen {
+    max-width: 400px;
+    margin: 100px auto;
+    text-align: center;
 }
 
-.download-btn {
+#login-screen p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+#password-input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+/* Buttons */
+.btn {
     padding: 10px 20px;
     font-size: 1em;
     cursor: pointer;
-    background-color: #4CAF50;
-    color: white;
     border: none;
     border-radius: 4px;
     transition: background-color 0.2s;
+    margin-right: 10px;
 }
 
-.download-btn:hover {
+.btn-primary {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-primary:hover {
     background-color: #45a049;
+}
+
+.btn-secondary {
+    background-color: #666;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #555;
+}
+
+.btn-danger {
+    background-color: #d32f2f;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #b71c1c;
+}
+
+.btn-small {
+    padding: 5px 10px;
+    font-size: 0.85em;
+}
+
+.controls {
+    margin-bottom: 20px;
 }
 
 .loading {
@@ -84,9 +134,6 @@ h1 {
     text-align: left;
     font-weight: bold;
     border-bottom: 2px solid #ddd;
-    position: sticky;
-    top: 0;
-    background-color: #f5f5f5;
 }
 
 #results-table td {
@@ -106,19 +153,18 @@ h1 {
     background-color: #f5f5f5;
 }
 
-/* Make search verses column narrower */
-#results-table td:nth-child(4) {
-    max-width: 200px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+.bulk-actions {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff3cd;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-/* Make result columns narrower */
-#results-table td:nth-child(n+5) {
-    max-width: 250px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+#selected-count {
+    color: #666;
+    font-weight: bold;
 }
 
