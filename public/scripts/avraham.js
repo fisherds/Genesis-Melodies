@@ -1178,6 +1178,7 @@ function setupAudioPlayer() {
     const toggleBtn = document.getElementById('audio-player-toggle');
     const controls = document.getElementById('audio-player-controls');
     const playPauseBtn = document.getElementById('audio-play-pause');
+    const jumpBack10Btn = document.getElementById('audio-jump-back-10');
     const jumpToSectionBtn = document.getElementById('audio-jump-to-section');
     const playIcon = document.getElementById('play-icon');
     const pauseIcon = document.getElementById('pause-icon');
@@ -1205,6 +1206,16 @@ function setupAudioPlayer() {
             audioPlayer.pause();
         }
     });
+    
+    // Jump Back 10 seconds button
+    if (jumpBack10Btn) {
+        jumpBack10Btn.addEventListener('click', () => {
+            if (audioPlayer && !isNaN(audioPlayer.currentTime)) {
+                const newTime = Math.max(0, audioPlayer.currentTime - 10);
+                audioPlayer.currentTime = newTime;
+            }
+        });
+    }
     
     // Update play/pause icon based on audio state
     audioPlayer.addEventListener('play', () => {
