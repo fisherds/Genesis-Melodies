@@ -50,6 +50,10 @@ except ImportError as e:
     get_embedding_function = None
     get_text_for_verses_v2 = None
 
+# Global cache for embedding models (loaded once per function instance)
+_embedding_cache = {}
+_weaviate_client_cache = None
+
 
 # Determine base directories
 # In Cloud Functions, the functions directory is the working directory
@@ -366,12 +370,17 @@ def search(request: Request) -> Tuple[dict[str, Any], int, dict[str, str]]:
 
 def get_weaviate_client():
     """
-    Get a Weaviate client connection.
+    Get a Weaviate client connection (cached globally).
     
     The client automatically uses gRPC when connecting to Weaviate Cloud.
     For WEAVIATE_URL, use the REST endpoint (without 'grpc-' prefix).
     The client will automatically infer and use the gRPC endpoint for better performance.
     """
+    global _weaviate_client_cache
+    
+    if _weaviate_client_cache is not None:
+        return _weaviate_client_cache
+    
     import os
     WEAVIATE_URL = os.getenv('WEAVIATE_URL')
     WEAVIATE_API_KEY = os.getenv('WEAVIATE_API_KEY')
@@ -388,10 +397,12 @@ def get_weaviate_client():
         # If no protocol specified, assume https
         cluster_url = f"https://{cluster_url}"
     
-    return weaviate.connect_to_weaviate_cloud(
+    print("Connecting to Weaviate (caching connection)...", flush=True)
+    _weaviate_client_cache = weaviate.connect_to_weaviate_cloud(
         cluster_url=cluster_url,
         auth_credentials=Auth.api_key(WEAVIATE_API_KEY),
     )
+    return _weaviate_client_cache
 
 
 def search_weaviate(
@@ -418,11 +429,19 @@ def search_weaviate(
     # Get text for the verses
     search_text = get_text_for_verses_v2(verse_list, model_key, DATA_DIR)
     
-    # Get embedding function
-    embeddings = get_embedding_function(
-        model_key,
-        data_dir=DATA_DIR
-    )
+    # Get embedding function (cached globally)
+    cache_key = model_key
+    if cache_key not in _embedding_cache:
+        print(f"Loading embedding model '{model_key}' (this happens once per function instance)...", flush=True)
+        _embedding_cache[cache_key] = get_embedding_function(
+            model_key,
+            data_dir=DATA_DIR
+        )
+        print(f"✓ Embedding model '{model_key}' loaded and cached", flush=True)
+    else:
+        print(f"Using cached embedding model '{model_key}'", flush=True)
+    
+    embeddings = _embedding_cache[cache_key]
     
     # Generate query embedding
     query_vector = embeddings.embed_query(search_text)
@@ -430,69 +449,65 @@ def search_weaviate(
     # Collection name matches ChromaDB naming convention
     collection_name = f"{model_key}_{chunking_level}"
     
-    # Connect to Weaviate and perform search
+    # Connect to Weaviate and perform search (client is cached globally)
     client = get_weaviate_client()
     
-    try:
-        # Check if collection exists
-        if not client.collections.exists(collection_name):
-            raise ValueError(
-                f"Collection '{collection_name}' does not exist in Weaviate. "
-                f"Please run the upsert script first to create the collection."
-            )
-        
-        collection = client.collections.get(collection_name)
-        
-        # Perform vector similarity search
-        response = collection.query.near_vector(
-            near_vector=query_vector,
-            limit=top_k,
-            return_metadata=MetadataQuery(distance=True),
-            return_properties=["title", "text", "hebrew", "strongs", "verses", "verse_display"]
+    # Check if collection exists
+    if not client.collections.exists(collection_name):
+        raise ValueError(
+            f"Collection '{collection_name}' does not exist in Weaviate. "
+            f"Please run the upsert script first to create the collection."
         )
+    
+    collection = client.collections.get(collection_name)
+    
+    # Perform vector similarity search
+    response = collection.query.near_vector(
+        near_vector=query_vector,
+        limit=top_k,
+        return_metadata=MetadataQuery(distance=True),
+        return_properties=["title", "text", "hebrew", "strongs", "verses", "verse_display"]
+    )
+    
+    # Format results to match ChromaDB format
+    results = []
+    for obj in response.objects:
+        properties = obj.properties
+        metadata = obj.metadata
         
-        # Format results to match ChromaDB format
-        results = []
-        for obj in response.objects:
-            properties = obj.properties
-            metadata = obj.metadata
-            
-            # Use distance directly to match ChromaDB behavior
-            # Distance is 0-2 for cosine, where 0 is most similar (identical)
-            # ChromaDB returns distance where 0.0 = identical, so we match that
-            distance = metadata.distance if metadata.distance is not None else 1.0
-            
-            # Parse verses from string array back to list of dicts
-            verses = []
-            verses_array = properties.get('verses', [])
-            for verse_str in verses_array:
-                if isinstance(verse_str, str) and ':' in verse_str:
-                    parts = verse_str.split(':')
-                    if len(parts) == 2:
-                        try:
-                            verses.append({
-                                'chapter': int(parts[0]),
-                                'verse': float(parts[1]) if '.' in parts[1] else int(parts[1])
-                            })
-                        except ValueError:
-                            pass
-            
-            result = {
-                'id': str(obj.uuid),  # Weaviate uses UUIDs
-                'title': properties.get('title', 'Unknown'),
-                'text': properties.get('text', ''),
-                'hebrew': properties.get('hebrew', ''),
-                'strongs': properties.get('strongs', ''),
-                'verses': verses,
-                'verse_display': properties.get('verse_display', ''),
-                'score': distance  # Return distance to match ChromaDB (0.0 = identical)
-            }
-            results.append(result)
+        # Use distance directly to match ChromaDB behavior
+        # Distance is 0-2 for cosine, where 0 is most similar (identical)
+        # ChromaDB returns distance where 0.0 = identical, so we match that
+        distance = metadata.distance if metadata.distance is not None else 1.0
         
-        return results
+        # Parse verses from string array back to list of dicts
+        verses = []
+        verses_array = properties.get('verses', [])
+        for verse_str in verses_array:
+            if isinstance(verse_str, str) and ':' in verse_str:
+                parts = verse_str.split(':')
+                if len(parts) == 2:
+                    try:
+                        verses.append({
+                            'chapter': int(parts[0]),
+                            'verse': float(parts[1]) if '.' in parts[1] else int(parts[1])
+                        })
+                    except ValueError:
+                        pass
         
-    finally:
-        client.close()
+        result = {
+            'id': str(obj.uuid),  # Weaviate uses UUIDs
+            'title': properties.get('title', 'Unknown'),
+            'text': properties.get('text', ''),
+            'hebrew': properties.get('hebrew', ''),
+            'strongs': properties.get('strongs', ''),
+            'verses': verses,
+            'verse_display': properties.get('verse_display', ''),
+            'score': distance  # Return distance to match ChromaDB (0.0 = identical)
+        }
+        results.append(result)
+    
+    return results
 
 
 def search2(request: Request) -> Tuple[dict[str, Any], int, dict[str, str]]:
