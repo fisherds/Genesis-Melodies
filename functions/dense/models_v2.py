@@ -1,6 +1,6 @@
 """
 Model configurations and embedding functions for version 2.0 (Weaviate-based).
-Includes weighted pooling support.
+Always uses mean pooling.
 """
 
 import json
@@ -9,9 +9,8 @@ from pathlib import Path
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_core.embeddings import Embeddings
 
-# Import custom embeddings for weighted pooling
+# Import custom embeddings for Hebrew models
 from dense.custom_embeddings import HebrewModelEmbeddings
-from dense.weighted_pooling import load_token_weights
 
 
 # Model configurations for v2.0
@@ -37,27 +36,17 @@ MODEL_CONFIGS = {
         },
         'text_field': 'hebrew',  # Embed Hebrew text
     },
-    'tavbert': {
-        'name': 'TavBERT',
-        'model_name': 'tau/tavbert-he',
-        'embedding_class': HebrewModelEmbeddings,
-        'embedding_kwargs': {
-            'model_name': 'tau/tavbert-he',
-            'pooling_mode': 'mean'
-        },
-        'text_field': 'hebrew',  # Embed Hebrew text
-    },
 }
 
 
-def get_embedding_function(model_key: str, use_weighted_pooling: bool = True, data_dir: Optional[Path] = None) -> Embeddings:
+def get_embedding_function(model_key: str, data_dir: Optional[Path] = None) -> Embeddings:
     """
-    Get an embedding function for the specified model (v2.0 with weighted pooling support).
+    Get an embedding function for the specified model (v2.0).
+    Always uses mean pooling.
     
     Args:
-        model_key: One of 'english_st', 'dictabert', 'tavbert'
-        use_weighted_pooling: Whether to use weighted pooling (default: True)
-        data_dir: Optional data directory for loading token weights
+        model_key: One of 'english_st', 'dictabert'
+        data_dir: Optional data directory (not used, kept for compatibility)
         
     Returns:
         LangChain Embeddings instance
@@ -72,40 +61,7 @@ def get_embedding_function(model_key: str, use_weighted_pooling: bool = True, da
     embedding_class = config['embedding_class']
     embedding_kwargs = config['embedding_kwargs'].copy()
     
-    # For all models, try to load token weights for weighted pooling
-    if use_weighted_pooling:
-        # Try to load token weights from frequency analysis
-        # Token frequency files are in the dense folder (same as this file)
-        base_dir = Path(__file__).parent
-        if data_dir is None:
-            data_dir = base_dir.parent / 'data'
-        
-        # Token frequency files are in the dense folder, not data folder
-        token_weights = load_token_weights(embedding_kwargs['model_name'], base_dir, tokenizer=None)
-        
-        if token_weights:
-            # For EnglishST, we need to use HebrewModelEmbeddings to support weighted pooling
-            if model_key == 'english_st':
-                embedding_class = HebrewModelEmbeddings
-                embedding_kwargs = {
-                    'model_name': embedding_kwargs['model_name'],
-                    'pooling_mode': 'weighted',
-                    'token_weights': token_weights
-                }
-            else:
-                # token_weights is actually token_string_weights at this point
-                embedding_kwargs['pooling_mode'] = 'weighted'
-                embedding_kwargs['token_weights'] = token_weights
-            print(f"  Using weighted pooling with {len(token_weights)} token weights")
-        else:
-            if model_key == 'english_st':
-                # EnglishST can use standard HuggingFaceEmbeddings with mean pooling
-                print(f"  Token weights not found, using mean pooling")
-            else:
-                print(f"  Token weights not found, using mean pooling")
-                print(f"  Run compute_token_frequencies.py to enable weighted pooling")
-    
-    print(f"Initializing {config['name']} embedder...")
+    print(f"Initializing {config['name']} embedder with mean pooling...")
     return embedding_class(**embedding_kwargs)
 
 
@@ -149,7 +105,7 @@ def get_text_for_verses(verse_list: List[Dict], model_key: str, data_dir: Path) 
     Args:
         verse_list: List of verse dicts with 'chapter' and 'verse' keys
                    Example: [{"chapter": 1, "verse": 1}, {"chapter": 1, "verse": 2}]
-        model_key: One of 'english_st', 'dictabert', 'tavbert'
+        model_key: One of 'english_st', 'dictabert'
         data_dir: Path to data directory
         
     Returns:
@@ -160,8 +116,7 @@ def get_text_for_verses(verse_list: List[Dict], model_key: str, data_dir: Path) 
     # Map model_key to verse_data field
     field_map = {
         'english_st': 'english',
-        'dictabert': 'hebrew',
-        'tavbert': 'hebrew'
+        'dictabert': 'hebrew'
     }
     text_field = field_map.get(model_key, 'english')
     

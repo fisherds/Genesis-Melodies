@@ -421,7 +421,6 @@ def search_weaviate(
     # Get embedding function
     embeddings = get_embedding_function(
         model_key,
-        use_weighted_pooling=True,
         data_dir=DATA_DIR
     )
     
