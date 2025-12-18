@@ -201,17 +201,45 @@ function toggleVerseSelection(chapter, verse, isSelected) {
 
 function updateSearchVersesField() {
     const searchVersesField = document.getElementById('search_verses');
+    const pillsContainer = document.getElementById('search_verses_pills');
     const versesArray = Array.from(selectedVerses)
         .map(key => {
             const [chapter, verse] = key.split(':');
-            return { chapter: parseInt(chapter), verse: parseInt(verse) };
+            return { chapter: parseInt(chapter), verse: parseFloat(verse) };
         })
         .sort((a, b) => {
             if (a.chapter !== b.chapter) return a.chapter - b.chapter;
             return a.verse - b.verse;
         });
     
+    // Update hidden textarea with JSON (for backward compatibility)
     searchVersesField.value = JSON.stringify(versesArray, null, 2);
+    
+    // Update pill buttons display
+    if (versesArray.length === 0) {
+        pillsContainer.innerHTML = '<span class="verse-pills-empty">No verses selected</span>';
+    } else {
+        pillsContainer.innerHTML = versesArray.map((verse, index) => {
+            const verseKey = `${verse.chapter}:${verse.verse}`;
+            const displayText = `${verse.chapter}:${verse.verse}`;
+            return `<button class="verse-pill" data-verse-key="${verseKey}" title="Click to remove">
+                <span class="verse-pill-text">${displayText}</span>
+                <span class="verse-pill-divider"></span>
+                <span class="verse-pill-remove">×</span>
+            </button>`;
+        }).join('');
+        
+        // Add click handlers to pill buttons
+        pillsContainer.querySelectorAll('.verse-pill').forEach(pill => {
+            pill.addEventListener('click', () => {
+                const verseKey = pill.getAttribute('data-verse-key');
+                const [chapter, verse] = verseKey.split(':');
+                // Remove verse from selection using toggleVerseSelection with isSelected=false
+                toggleVerseSelection(parseInt(chapter), parseFloat(verse), false);
+            });
+        });
+    }
+    
     updateClearVersesButton();
     validateSearchButton(); // Also validate search button when verses change
 }
@@ -245,11 +273,9 @@ function setupButtonListeners() {
     // Add listener for Clear Verses button
     document.getElementById("clear_verses_button").addEventListener("click", clearSearchVerses);
     
-    // Add listener for search_verses textarea changes to enable/disable Clear button and Search button
-    document.getElementById("search_verses").addEventListener("input", () => {
-        updateClearVersesButton();
-        validateSearchButton();
-    });
+    // Note: search_verses textarea is now hidden, but we still need to validate
+    // The pill buttons update the textarea via updateSearchVersesField()
+    // So validation happens automatically when verses are added/removed
     
     // Add listener for "All" button
     document.getElementById("select-all-btn").addEventListener("click", selectAllVerses);
@@ -263,6 +289,8 @@ function setupButtonListeners() {
     // Initial validation
     validateSearchButton();
     updateClearVersesButton();
+    // Initialize pill display
+    updateSearchVersesField();
 }
 
 function selectAllVerses() {
