@@ -2063,7 +2063,9 @@
         "chapter": 18,
         "verse": 15
       }
-    ]
+    ],
+    "audio_file": "audio_guide_gen18_to_gen19.m4a",
+    "start_at": 0
   },
   {
     "verse_range": "18:16-33",
@@ -2141,7 +2143,9 @@
         "chapter": 18,
         "verse": 33
       }
-    ]
+    ],
+    "audio_file": "audio_guide_gen18_to_gen19.m4a",
+    "start_at": 516
   },
   {
     "verse_range": "19:1-14",
@@ -2203,7 +2207,9 @@
         "chapter": 19,
         "verse": 14
       }
-    ]
+    ],
+    "audio_file": "audio_guide_gen18_to_gen19.m4a",
+    "start_at": 868
   },
   {
     "verse_range": "19:15-29",
@@ -2269,7 +2275,9 @@
         "chapter": 19,
         "verse": 29
       }
-    ]
+    ],
+    "audio_file": "audio_guide_gen18_to_gen19.m4a",
+    "start_at": 1474
   },
   {
     "verse_range": "19:30-38",
@@ -2311,7 +2319,9 @@
         "chapter": 19,
         "verse": 38
       }
-    ]
+    ],
+    "audio_file": "audio_guide_gen18_to_gen19.m4a",
+    "start_at": 2011
   },
   {
     "verse_range": "20:1-18",
@@ -2390,7 +2400,9 @@
         "chapter": 20,
         "verse": 18
       }
-    ]
+    ],
+    "audio_file": "audio_guide_gen20_to_gen22.m4a",
+    "start_at": 0
   },
   {
     "verse_range": "21:1-21",
@@ -2480,7 +2492,9 @@
         "chapter": 21,
         "verse": 21
       }
-    ]
+    ],
+    "audio_file": "audio_guide_gen20_to_gen22.m4a",
+    "start_at": 572
   },
   {
     "verse_range": "21:22-34",
@@ -2538,7 +2552,9 @@
         "chapter": 21,
         "verse": 34
       }
-    ]
+    ],
+    "audio_file": "audio_guide_gen20_to_gen22.m4a",
+    "start_at": 1200
   },
   {
     "verse_range": "22:1-19",
@@ -2620,7 +2636,9 @@
         "chapter": 22,
         "verse": 19
       }
-    ]
+    ],
+    "audio_file": "audio_guide_gen20_to_gen22.m4a",
+    "start_at": 1492
   },
   {
     "verse_range": "22:20-24",
@@ -2647,7 +2665,9 @@
         "chapter": 22,
         "verse": 24
       }
-    ]
+    ],
+    "audio_file": "audio_guide_gen22_to_gen25.m4a",
+    "start_at": 0
   },
   {
     "verse_range": "23:1-20",
@@ -2733,7 +2753,9 @@
         "chapter": 23,
         "verse": 20
       }
-    ]
+    ],
+    "audio_file": "audio_guide_gen22_to_gen25.m4a",
+    "start_at": 410
   },
   {
     "verse_range": "24:1-28",
@@ -2851,7 +2873,9 @@
         "chapter": 24,
         "verse": 28
       }
-    ]
+    ],
+    "audio_file": "audio_guide_gen22_to_gen25.m4a",
+    "start_at": 1192
   },
   {
     "verse_range": "24:29-51",
@@ -2949,7 +2973,9 @@
         "chapter": 24,
         "verse": 51
       }
-    ]
+    ],
+    "audio_file": "audio_guide_gen22_to_gen25.m4a",
+    "start_at": 2139
   },
   {
     "verse_range": "24:52-67",
@@ -3019,7 +3045,9 @@
         "chapter": 24,
         "verse": 67
       }
-    ]
+    ],
+    "audio_file": "audio_guide_gen22_to_gen25.m4a",
+    "start_at": 2664
   },
   {
     "verse_range": "25:1-18",
@@ -3097,7 +3125,9 @@
         "chapter": 25,
         "verse": 18
       }
-    ]
+    ],
+    "audio_file": "audio_guide_gen22_to_gen25.m4a",
+    "start_at": 3109
   },
   {
     "verse_range": "25:19-26",
@@ -3136,6 +3166,8 @@
         "chapter": 25,
         "verse": 26
       }
-    ]
+    ],
+    "audio_file": "audio_guide_gen22_to_gen25.m4a",
+    "start_at": 3852
   }
 ]

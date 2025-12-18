@@ -1250,6 +1250,42 @@ function setupAudioPlayer() {
     // Update progress as audio plays
     audioPlayer.addEventListener('timeupdate', updateProgress);
     
+    // Auto-advance to next audio when current audio ends
+    audioPlayer.addEventListener('ended', () => {
+        // Find the next visual with audio
+        let nextIndex = currentVisualIndex + 1;
+        while (nextIndex < textVisuals.length) {
+            const nextVisual = textVisuals[nextIndex];
+            if (nextVisual.audio_file && nextVisual.audio_file !== '') {
+                // Found next visual with audio, navigate to it
+                // selectVisual will update the audio since it's paused (just ended)
+                selectVisual(nextIndex);
+                
+                // Wait for audio metadata to load (updateAudioForCurrentVisual is async)
+                // Then start playing automatically from the correct start_at time
+                const startAt = nextVisual.start_at || 0;
+                const playNextAudio = () => {
+                    audioPlayer.currentTime = startAt;
+                    audioPlayer.play().catch(err => {
+                        console.error('Error auto-playing next audio:', err);
+                    });
+                };
+                
+                // Wait for loadedmetadata event (will fire when updateAudioForCurrentVisual loads the file)
+                audioPlayer.addEventListener('loadedmetadata', playNextAudio, { once: true });
+                
+                // Also check if metadata is already loaded (same file case)
+                if (audioPlayer.readyState >= 1) { // HAVE_METADATA
+                    audioPlayer.removeEventListener('loadedmetadata', playNextAudio);
+                    playNextAudio();
+                }
+                break;
+            }
+            nextIndex++;
+        }
+        // If no next audio found, do nothing (audio just stops)
+    });
+    
     // Allow seeking via progress slider
     let isSeeking = false;
     progressSlider.addEventListener('mousedown', () => {
