@@ -46,6 +46,18 @@ function populateNavigation() {
     const navList = document.getElementById('nav-list');
     navList.innerHTML = '';
     textVisuals.forEach((visual, index) => {
+        if (visual.major_heading) {
+            const header = document.createElement('div');
+            header.className = 'nav-major-header';
+            header.textContent = visual.major_heading;
+            navList.appendChild(header);
+        }
+        if (visual.minor_heading) {
+            const header = document.createElement('div');
+            header.className = 'nav-minor-header';
+            header.textContent = visual.minor_heading;
+            navList.appendChild(header);
+        }
         const navItem = document.createElement('div');
         navItem.className = 'nav-item';
         navItem.textContent = visual.verse_range;
