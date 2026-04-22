@@ -114,9 +114,9 @@ html {
 }
 
 .gdoc-content table {
-  max-width: 100%;
-  overflow-x: auto;
-  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .gdoc-content img {

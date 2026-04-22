@@ -1307,10 +1307,10 @@
     <p class="c24"><span class="c25">and he took the </span><span class="c61 c11">eater [= knife]</span><span
             class="c25">&nbsp;to slay </span><span class="c53 c11">his son</span><span class="c3">,</span></p>
     <p class="c24 c29"><span class="c3"></span></p>
-    <p class="c86"><span class="c11 c17">[Collapse]</span></p>
+    <p class="c86"><span class="c11 c17">Collapse</span></p>
     <hr>
     <p class="c24 c29"><span class="c62 c67"></span></p>
-    <p class="c86"><span class="c90 c11 c50 c109">[Creation]</span></p>
+    <p class="c86"><span class="c90 c11 c50 c109">Creation</span></p>
     <p class="c24 c29"><span class="c62 c67"></span></p>
     <p class="c24"><span class="c23">11</span><span class="c25">&nbsp;</span><span class="c11 c82">and the messenger of
             Yahweh called to him from the skies</span><span class="c33 c11">,</span></p>
@@ -1756,6 +1756,7 @@
         card.className = 'scripture-block';
         group[0].parentNode.insertBefore(card, group[0]);
         group.forEach(p => card.appendChild(p));
+        if (!card.textContent.trim()) card.remove();
         i += group.length;
       }
     })();
