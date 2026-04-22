@@ -16,6 +16,40 @@
     <a class="navbar-brand" href="index.html">The Genesis Melody</a>
   </nav>
 
+  <!-- Audio Player (fixed top-right) -->
+  <div class="gm-audio-wrap" id="gm-audio-wrap">
+    <button class="gm-audio-icon" id="gm-audio-toggle" title="Audio Reading">
+      <svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px" fill="currentColor">
+        <path d="M560-131v-82q90-26 145-100t55-168q0-94-55-168T560-749v-82q124 28 202 125.5T840-481q0 127-78 224.5T560-131ZM120-360v-240h160l200-200v640L280-360H120Zm440 40v-322q47 22 73.5 66t26.5 96q0 51-26.5 94.5T560-320ZM400-606l-86 86H200v80h114l86 86v-252ZM300-480Z"/>
+      </svg>
+    </button>
+    <div class="gm-audio-panel" id="gm-audio-panel">
+      <audio id="gm-audio" src="audio/Reading The Genesis Melody.m4a" preload="metadata"></audio>
+      <div class="gm-audio-section-label" id="gm-audio-section-label">A Quick Foreword</div>
+      <div class="gm-audio-controls">
+        <button class="gm-audio-btn gm-audio-btn-primary" id="gm-play-pause" title="Play / Pause">
+          <svg id="gm-play-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="gm-pause-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/></svg>
+        </button>
+        <button class="gm-audio-btn" id="gm-jump-back" title="Back 10 seconds">
+          <svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px" fill="#888">
+            <path d="M480-80q-75 0-140.5-28.5t-114-77q-48.5-48.5-77-114T120-440h80q0 117 81.5 198.5T480-160q117 0 198.5-81.5T760-440q0-117-81.5-198.5T480-720h-6l62 62-56 58-160-160 160-160 56 58-62 62h6q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-440q0 75-28.5 140.5t-77 114q-48.5 48.5-114 77T480-80ZM360-320v-180h-60v-60h120v240h-60Zm140 0q-17 0-28.5-11.5T460-360v-160q0-17 11.5-28.5T500-560h80q17 0 28.5 11.5T620-520v160q0 17-11.5 28.5T580-320h-80Zm20-60h40v-120h-40v120Z"/>
+          </svg>
+        </button>
+        <div class="gm-audio-progress-wrap">
+          <span class="gm-audio-time" id="gm-current-time">0:00</span>
+          <input type="range" class="gm-audio-progress" id="gm-progress" min="0" max="100" value="0" step="0.1">
+          <span class="gm-audio-time" id="gm-duration">0:00</span>
+        </div>
+        <button class="gm-audio-btn" id="gm-jump-to-section" title="Jump audio to current section">
+          <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="currentColor">
+            <path d="m436-320 164-440h80l164 440h-76l-40-112H552l-40 112h-76Zm138-176h132l-64-182h-4l-64 182ZM240-160 100-300l56-56 44 42v-526h80v526l44-42 56 56-140 140Z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <div class="gm-page-wrap">
 
     <!-- Sidebar TOC -->
@@ -54,9 +88,6 @@
         <p class="c2"><span class="c16"></span></p>
     </div>
     <h1 class="c87" id="the-genesis-melody"><span class="c42 c70 c88">The Genesis Melody</span></h1>
-    <p class="c9"><span class="c21"><a class="c49"
-                href="https://www.google.com/url?q=https://drive.google.com/file/d/1PNTAxgjZf_sl_M2SFV8LSao9264iFfxS/view?usp%3Dsharing&amp;sa=D&amp;source=editors&amp;ust=1776825949980598&amp;usg=AOvVaw1aPG7Ikj6Dpiv9v99M1Wu-">Draft
-                Audio Recording from 3/27/26</a></span><span>&nbsp;</span></p>
     <p class="c9 c29"><span class="c7"></span></p>
     <h2 class="c45" id="a-quick-foreword"><span class="c42 c44">A Quick Foreword</span></h2>
     <p class="c30"><span>Hey. Hi. Before we get started, I wanted to let you know that I love you. Yes, that&rsquo;s
@@ -1729,7 +1760,34 @@
       }
     })();
 
-    // TOC mobile toggle
+    // ── Section timestamps (placeholder: 60s per section) ──
+    // Replace start_at values after re-recording the audio.
+    const GM_SECTIONS = [
+      { id: 'a-quick-foreword',                              label: 'A Quick Foreword',                              start_at: 0    },
+      { id: 'introduction-and-motivation',                   label: 'Introduction and Motivation',                   start_at: 60   },
+      { id: 'summary',                                       label: 'Summary',                                       start_at: 120  },
+      { id: 'background',                                    label: 'Background',                                    start_at: 180  },
+      { id: 'why-study-the-melody',                          label: 'Why Study the Melody',                          start_at: 240  },
+      { id: 'structure',                                     label: 'Structure',                                     start_at: 300  },
+      { id: 'pattern-breakers',                              label: 'Pattern Breakers!',                             start_at: 360  },
+      { id: 'melody-observations',                           label: 'Melody Observations',                           start_at: 420  },
+      { id: 'genesis-1-7-the-melody-template',               label: 'Genesis 1–7: The Melody Template',              start_at: 480  },
+      { id: 'genesis-1-7-pattern-breakers',                  label: 'Genesis 1–7: Pattern Breakers!',                start_at: 540  },
+      { id: 'genesis-8-11-the-second-round',                 label: 'Genesis 8–11: The Second Round',                start_at: 600  },
+      { id: 'genesis-8-11-pattern-breakers',                 label: 'Genesis 8–11: Pattern Breakers!',               start_at: 660  },
+      { id: 'genesis-11-27-cycles-three-to-seven-with-avraham', label: 'Genesis 11:27–22:19: Cycles 3–7 with Avraham', start_at: 720  },
+      { id: 'the-melody-points-to-jesus',                    label: 'The Melody Points to Jesus',                    start_at: 780  },
+      { id: 'the-seventh-collapse',                          label: 'The Seventh Collapse: Avraham\'s Test',         start_at: 840  },
+      { id: 'seeing-the-melody-in-the-new-testament',        label: 'Seeing the Melody in the New Testament',        start_at: 900  },
+      { id: 'beyond-genesis-22',                             label: 'Beyond Genesis 22: After the Sheva Cycle',      start_at: 960  },
+      { id: 'extra-sheva-observations',                      label: 'Extra Sheva Observations',                      start_at: 1020 },
+      { id: 'your-next-steps',                               label: 'Your Next Steps',                               start_at: 1080 },
+      { id: 'closing-thoughts',                              label: 'Closing Thoughts',                              start_at: 1140 },
+      { id: 'a-short-farewell-prayer',                       label: 'A Short Farewell Prayer',                       start_at: 1200 },
+      { id: 'bibliography',                                  label: 'Bibliography',                                  start_at: 1260 },
+    ];
+
+    // ── TOC mobile toggle ──
     const tocToggle = document.getElementById('gm-toc-toggle');
     const toc = document.getElementById('gm-toc');
     tocToggle.addEventListener('click', () => toc.classList.toggle('open'));
@@ -1737,8 +1795,7 @@
       if (!toc.contains(e.target) && e.target !== tocToggle) toc.classList.remove('open');
     });
 
-
-    // Scrollspy — highlight the TOC link for the section currently in view
+    // ── Scrollspy ──
     const tocLinks = Array.from(document.querySelectorAll('.gm-toc a'));
     const headingIds = tocLinks.map(a => a.getAttribute('href').slice(1));
     const headings = headingIds.map(id => document.getElementById(id)).filter(Boolean);
@@ -1752,7 +1809,6 @@
       const match = tocLinks.find(a => a.getAttribute('href') === '#' + id);
       if (match) {
         match.parentElement.classList.add('active');
-        // Keep the active item visible in the sidebar
         const sidebar = document.getElementById('gm-toc');
         const linkTop = match.offsetTop;
         const linkBottom = linkTop + match.offsetHeight;
@@ -1760,22 +1816,91 @@
           match.scrollIntoView({block: 'nearest'});
         }
       }
+      // Update audio player section label
+      const sec = GM_SECTIONS.find(s => s.id === id);
+      const label = document.getElementById('gm-audio-section-label');
+      if (sec && label) label.textContent = sec.label;
     }
 
-    // Use IntersectionObserver: fire when a heading crosses the top 20% of the viewport
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) setActive(entry.target.id);
       });
-    }, {
-      rootMargin: '-70px 0px -75% 0px',  // trigger zone: just below navbar, top 25% of screen
-      threshold: 0
-    });
+    }, { rootMargin: '-70px 0px -75% 0px', threshold: 0 });
 
     headings.forEach(h => observer.observe(h));
-
-    // Fallback: on page load, highlight whichever section is already in view
     setActive(headings[0]?.id);
+
+    // ── TOC links also jump audio to section ──
+    tocLinks.forEach(a => {
+      a.addEventListener('click', () => {
+        const id = a.getAttribute('href').slice(1);
+        const sec = GM_SECTIONS.find(s => s.id === id);
+        if (sec && gmAudio && !gmAudio.paused) {
+          gmAudio.currentTime = sec.start_at;
+        }
+      });
+    });
+
+    // ── Audio Player ──
+    const gmAudio      = document.getElementById('gm-audio');
+    const gmToggle     = document.getElementById('gm-audio-toggle');
+    const gmPanel      = document.getElementById('gm-audio-panel');
+    const gmPlayPause  = document.getElementById('gm-play-pause');
+    const gmPlayIcon   = document.getElementById('gm-play-icon');
+    const gmPauseIcon  = document.getElementById('gm-pause-icon');
+    const gmJumpBack   = document.getElementById('gm-jump-back');
+    const gmJumpSec    = document.getElementById('gm-jump-to-section');
+    const gmProgress   = document.getElementById('gm-progress');
+    const gmCurrent    = document.getElementById('gm-current-time');
+    const gmDuration   = document.getElementById('gm-duration');
+
+    gmToggle.addEventListener('click', () => gmPanel.classList.toggle('show'));
+
+    gmPlayPause.addEventListener('click', () => {
+      if (gmAudio.paused) gmAudio.play().catch(() => {});
+      else gmAudio.pause();
+    });
+
+    gmAudio.addEventListener('play',  () => { gmPlayIcon.style.display='none';  gmPauseIcon.style.display='block'; });
+    gmAudio.addEventListener('pause', () => { gmPlayIcon.style.display='block'; gmPauseIcon.style.display='none';  });
+
+    gmJumpBack.addEventListener('click', () => {
+      gmAudio.currentTime = Math.max(0, gmAudio.currentTime - 10);
+    });
+
+    // Jump to start of the current scrollspy section, then play
+    gmJumpSec.addEventListener('click', () => {
+      const sec = GM_SECTIONS.find(s => s.id === currentId) || GM_SECTIONS[0];
+      if (sec) {
+        gmAudio.currentTime = sec.start_at;
+        gmAudio.play().catch(() => {});
+      }
+    });
+
+    function gmFormatTime(s) {
+      if (!isFinite(s)) return '0:00';
+      const m = Math.floor(s / 60), ss = Math.floor(s % 60);
+      return `${m}:${ss.toString().padStart(2,'0')}`;
+    }
+
+    gmAudio.addEventListener('loadedmetadata', () => {
+      gmDuration.textContent = gmFormatTime(gmAudio.duration);
+    });
+
+    let gmSeeking = false;
+    gmProgress.addEventListener('mousedown', () => gmSeeking = true);
+    gmProgress.addEventListener('mouseup',   () => gmSeeking = false);
+    gmProgress.addEventListener('input', () => {
+      if (gmAudio.duration) gmAudio.currentTime = (gmProgress.value / 100) * gmAudio.duration;
+    });
+
+    gmAudio.addEventListener('timeupdate', () => {
+      gmCurrent.textContent = gmFormatTime(gmAudio.currentTime);
+      if (!gmSeeking && gmAudio.duration) {
+        gmProgress.value = (gmAudio.currentTime / gmAudio.duration) * 100;
+      }
+    });
   </script>
 </body>
 </html>
